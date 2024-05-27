@@ -1,0 +1,12 @@
+{
+  "required": true,
+  "package": "com.scarasol.zombiekit.mixin",
+  "compatibilityLevel": "JAVA_17",
+  "refmap": "zombiekit.refmap.json",
+  "mixins": [
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  },
+  "minVersion": "0.8"
+}
