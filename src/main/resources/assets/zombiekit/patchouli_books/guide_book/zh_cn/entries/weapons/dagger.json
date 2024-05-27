@@ -1,0 +1,18 @@
+{
+  "name": "战术匕首",
+  "icon": "zombiekit:dagger",
+  "category": "zombiekit:weapons",
+  "sortnum": 5,
+  "pages": [
+    {
+      "type": "patchouli:spotlight",
+	  "item": "zombiekit:dagger",
+      "text": "灵活，小巧，轻便，谁会在末日拒绝一把小刀呢，这可是打野的王者，求生最方便的工具。对于大多数未经训练的人来说，常规的武器可能过于沉重了，因此一把快捷的小刀可能正是你需要的！但是说真的，大家都是扛着金块到处跑的人，就不要扭扭捏捏了，所以除非你真的很能打，否则不要尝试"
+    },
+	{
+      "type": "patchouli:crafting",
+      "recipe": "zombiekit:mirror_craft_6",
+	  "text": "用小刀和丧尸战斗，这是高手们的武器。"
+    }
+  ]
+}

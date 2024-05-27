@@ -1,0 +1,18 @@
+{
+  "name": "Barbed Wire",
+  "icon": "zombiekit:barbed_wire",
+  "category": "zombiekit:shelter",
+  "sortnum": 4,
+  "pages": [
+    {
+      "type": "patchouli:spotlight",
+	  "item": "zombiekit:barbed_wire",
+	  "text": "To keep your shelter safe, the easiest trick is to make sure zombies can't spot it. In the world of zombies, it's all about what they can munch on and what they can't. So, throw up some obstacles, and you can basically fool them. Barbed wire is a nifty choice. Sure, zombies don't feel pain, but if any nosy ones want to climb"
+    },
+	{
+      "type": "patchouli:crafting",
+      "recipe": "zombiekit:get_barbed_wire",
+	  "text": "over, that barbed wire can slow them down. And hey, you might even consider some prickly bushes, like sweetberries, as an option. "
+    }
+  ]
+}

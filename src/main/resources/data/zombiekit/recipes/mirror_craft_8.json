@@ -1,0 +1,29 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " 1 ",
+    "345",
+    " 7 "
+  ],
+  "key": {
+    "1": {
+      "item": "minecraft:rotten_flesh"
+    },
+    "3": {
+      "item": "minecraft:rotten_flesh"
+    },
+    "4": {
+      "item": "zombiekit:alcohol"
+    },
+    "5": {
+      "item": "minecraft:rotten_flesh"
+    },
+    "7": {
+      "item": "minecraft:rotten_flesh"
+    }
+  },
+  "result": {
+    "item": "zombiekit:bile_bottle",
+    "count": 3
+  }
+}

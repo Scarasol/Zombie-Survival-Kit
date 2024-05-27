@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:smithing",
+  "base": {
+    "item": "zombiekit:forest_coordinates_helmet"
+  },
+  "addition": {
+    "item": "zombiekit:bulletproof_insert"
+  },
+  "result": {
+    "item": "zombiekit:forest_riot_coordinates_helmet"
+  }
+}

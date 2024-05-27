@@ -1,0 +1,18 @@
+{
+  "name": "Molotov Cocktail",
+  "icon": "zombiekit:molotov_cocktail",
+  "category": "zombiekit:projectile",
+  "sortnum": 2,
+  "pages": [
+    {
+      "type": "patchouli:spotlight",
+	  "item": "zombiekit:molotov_cocktail",
+      "text": "Aha, fire! There's hardly any creature that can escape the scorching grasp of flames, making it the ultimate weapon against the zombie tide. Alcohol – it's the easiest fuel to come by. How about throwing a hearty zombie barbecue party? There's almost nothing that a good barbecue can't fix! While alcohol might be "
+    },
+	{
+      "type": "patchouli:crafting",
+      "recipe": "zombiekit:mirror_craft_21",
+	  "text": "precious, when it comes down to it, survival is what truly matters. Even if there's no way out in the end, a couple of sips before the journey isn't a bad idea either! "
+    }
+  ]
+}

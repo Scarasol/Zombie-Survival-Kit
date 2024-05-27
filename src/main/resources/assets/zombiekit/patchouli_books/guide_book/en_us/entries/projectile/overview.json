@@ -1,0 +1,16 @@
+{
+  "name": "Projectile",
+  "icon": "minecraft:writable_book",
+  "category": "zombiekit:projectile",
+  "sortnum": 1,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "Surviving in the zombie apocalypse? The best strategy is to bid those cities and human hangouts farewell – the farther, the freakin' better! But hold your horses, because a measly stash in the little woods ain't gonna cut it. Nope, what you really crave are those jackpot goodies in the heart of the city. Risk high, reward higher, am I right, mate? Now, if you're daring "
+    },
+	{
+      "type": "patchouli:text",
+      "text": "the city's dark secrets, you gotta gear up for a zombie hordes. A machete against the horde? You might as well be waving a 'bite me' sign! And guns? Well, in the city, that's the undead dinner bell right there. So what's the play? We need some real handy-dandy gear – tools that bite back."
+    }
+  ]
+}

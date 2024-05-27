@@ -1,0 +1,18 @@
+{
+  "name": "Dagger",
+  "icon": "zombiekit:dagger",
+  "category": "zombiekit:weapons",
+  "sortnum": 5,
+  "pages": [
+    {
+      "type": "patchouli:spotlight",
+	  "item": "zombiekit:dagger",
+      "text": "Flexible, compact, and lightweight – who'd refuse a survivalist's best friend, the trusty utility dagger? It's the king of wilderness, the most convenient tool for survival. For most untrained folks, regular weapons might be too heavy, which is why a dagger might be just what you need! But seriously, unless you're "
+    },
+	{
+      "type": "patchouli:crafting",
+      "recipe": "zombiekit:mirror_craft_6",
+	  "text": "truly skilled, don't try fighting zombies with a dagger– leave that to the pros. "
+    }
+  ]
+}

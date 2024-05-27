@@ -1,0 +1,31 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "012",
+    "345"
+  ],
+  "key": {
+    "0": {
+      "item": "zombiekit:plastics"
+    },
+    "1": {
+      "item": "zombiekit:plastics"
+    },
+    "2": {
+      "item": "zombiekit:plastics"
+    },
+    "3": {
+      "item": "zombiekit:plastics"
+    },
+    "4": {
+      "item": "minecraft:sponge"
+    },
+    "5": {
+      "item": "zombiekit:plastics"
+    }
+  },
+  "result": {
+    "item": "zombiekit:standard_coordinates_helmet",
+    "count": 1
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "name": "Suspicious Drug",
+  "icon": "zombiekit:suspicious_drug",
+  "category": "zombiekit:infection",
+  "sortnum": 2,
+  "pages": [
+    {
+      "type": "patchouli:spotlight",
+	  "item": "zombiekit:suspicious_drug",
+      "text": "Well, buddy, I admit this thing sure looks awful – many of the ingredients might even be toxic. But don't you worry, once you inject it into your system, you'll find out it's worse than it looks. This here is a piece of emergency medicine concocted by the government, claiming it can save your life when the chips"
+    },
+	{
+      "type": "patchouli:crafting",
+      "recipe": "zombiekit:mirror_craft_sus_medice",
+	  "text": "are down. Maybe I shouldn't be so harsh; it does manage to eke out a few extra days for you, granted. But with all that money they raked in and a whole six months to cook this sorry excuse up, well, at least they gave it the old college try. "
+    },
+	{
+      "type": "patchouli:text",
+      "text": "$(o)(This is a piece of note:)$()$(br)$(#a97b1d)'Due to the shared nature of fungi and animals as eukaryotic organisms, developing a drug that effectively eradicates fungi while minimizing adverse effects on the human body is an arduous task. This medication does indeed possess the ability to inhibit fungal growth, but its side effects are substantial. It might be worth a shot in dire situations, but refrain from usage until environmental"
+    },
+	{
+      "type": "patchouli:text",
+      "text": "$(#a97b1d)safety is ensured, as thesevere side effects can render you entirely incapacitated. Following the fall of the northeastern region, the government swiftly deployed the military to establish a blockade. However, zombies congregated massively within buildings, heavy firepower was constrained, and delayed compensation for fallen soldiers hindered progress. This led to a prolonged standoff, as the military hesitated to launch an assault."
+    },
+	{
+      "type": "patchouli:text",
+      "text": "$(#a97b1d)There was a proposition to carpet-bomb the infected zone, but protests emerged from the public citing the possible presence of survivors within the zone. Additionally, the reluctance of Congress to approve large-scale operations, coupled with the colossal expenses of city reconstruction, further complicated matters.The introduction of this medication was an attempt by the government to break this deadlock, although the military"
+    },
+	{
+      "type": "patchouli:text",
+      "text": "$(#a97b1d)remained unconvinced. This stalemate persisted for approximately ten months until PAX-12 emerged.' "
+    }
+  ]
+}

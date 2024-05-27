@@ -1,0 +1,8 @@
+{
+  "parent": "zombiekit:custom/chemicallandmine",
+  "textures": {
+    "all": "zombiekit:blocks/chemicallandmine",
+    "particle": "zombiekit:blocks/landmine_break",
+    "1": "zombiekit:blocks/chemicallandmine"
+  }
+}

@@ -1,0 +1,72 @@
+{
+  "display": {
+    "icon": {
+      "item": "zombiekit:molotov_cocktail"
+    },
+    "title": {
+      "translate": "advancements.tomorrow.title"
+    },
+    "description": {
+      "translate": "advancements.tomorrow.descr"
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "tomorrow": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "zombiekit:scarasol"
+            ]
+          },
+          {
+            "items": [
+              "zombiekit:kyoko"
+            ]
+          },
+          {
+            "items": [
+              "zombiekit:konn_gara"
+            ]
+          },
+          {
+            "items": [
+              "zombiekit:white_food_chestplate"
+            ]
+          },
+          {
+            "items": [
+              "zombiekit:karazhan"
+            ]
+          },
+          {
+            "items": [
+              "zombiekit:iron_curtain"
+            ]
+          },
+          {
+            "items": [
+              "zombiekit:flame"
+            ]
+          },
+          {
+            "items": [
+              "zombiekit:lhx_qing"
+            ]
+          },
+          {
+            "items": [
+              "zombiekit:sona_bakemono"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "parent": "zombiekit:grave_digger"
+}

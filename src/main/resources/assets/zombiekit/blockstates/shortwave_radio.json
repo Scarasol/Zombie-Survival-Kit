@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "zombiekit:block/shortwave_radio"
+    },
+    "facing=east": {
+      "model": "zombiekit:block/shortwave_radio",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "zombiekit:block/shortwave_radio",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "zombiekit:block/shortwave_radio",
+      "y": 270
+    }
+  }
+}

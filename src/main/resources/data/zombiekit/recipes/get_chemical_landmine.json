@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:smithing",
+  "base": {
+    "item": "zombiekit:landmine"
+  },
+  "addition": {
+    "item": "zombiekit:potion_jar"
+  },
+  "result": {
+    "item": "zombiekit:chemical_landmine"
+  }
+}

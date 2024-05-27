@@ -1,0 +1,16 @@
+{
+  "name": "医疗物资",
+  "icon": "minecraft:writable_book",
+  "category": "zombiekit:medical",
+  "sortnum": 1,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "我们受到的伤害并不都来自丧尸。尽管我们都愿意认为我们都能安然无恙地度过丧尸末日，但祈祷是没有用的，我们会需要医疗护理。如果团队里刚好有一名医生，几名护士，那自然再好不过了。但即使是医生也难做无米之炊，我们必须做好所有的准备。"
+    },
+	{
+      "type": "patchouli:text",
+      "text": " "
+    }
+  ]
+}

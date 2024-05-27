@@ -1,0 +1,18 @@
+{
+  "name": "Crowbar",
+  "icon": "zombiekit:crowbar",
+  "category": "zombiekit:weapons",
+  "sortnum": 3,
+  "pages": [
+    {
+      "type": "patchouli:spotlight",
+	  "item": "zombiekit:crowbar",
+      "text": "For urban survival, nothing beats the crowbar. In the zombie apocalypse, every decision counts and each action holds the potential for survival. Opening one more crate might bring you an extra stash of supplies. Cracking open another door could mean an additional shelter or a chance for another escape! "
+    },
+	{
+      "type": "patchouli:crafting",
+      "recipe": "zombiekit:mirror_craft_5",
+	  "text": "Besides its practical use as a tool, the crowbar is also highly suitable for combat. The power of this physical Holy Sword can leave unfortunate foes dazed and confused for a good while. "
+    }
+  ]
+}

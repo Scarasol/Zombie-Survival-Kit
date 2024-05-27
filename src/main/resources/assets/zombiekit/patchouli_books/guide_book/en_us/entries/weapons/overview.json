@@ -1,0 +1,16 @@
+{
+  "name": "Melee Weapons",
+  "icon": "minecraft:writable_book",
+  "category": "zombiekit:weapons",
+  "sortnum": 1,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "The only surefire way to obliterate those pesky zombies is by obliterating their host's head and brain.  The optimum scenario?  Pick them off from afar with our wicked ranged arsenal.  But, what if the relentless undead breach our fortified perimeter?  What if we find ourselves locked in an up-close and personal tango with these flesh-hungry monsters? Then, my friends, "
+    },
+	{
+      "type": "patchouli:text",
+      "text": "it's no time to fumble with reloading. Embrace the primal thrill of fighting tooth and nail with melee weapons—it's a desperate dance for your very survival."
+    }
+  ]
+}

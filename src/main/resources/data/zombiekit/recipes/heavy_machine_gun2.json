@@ -1,0 +1,29 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " 1 ",
+    " 4 ",
+    "678"
+  ],
+  "key": {
+    "1": {
+      "item": "minecraft:iron_ingot"
+    },
+    "4": {
+      "item": "zombiekit:machine_gun_components"
+    },
+    "6": {
+      "item": "zombiekit:plastics"
+    },
+    "7": {
+      "tag": "minecraft:planks"
+    },
+    "8": {
+      "item": "zombiekit:plastics"
+    }
+  },
+  "result": {
+    "item": "zombiekit:heavy_machine_gun_summon",
+    "count": 1
+  }
+}

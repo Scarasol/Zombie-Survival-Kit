@@ -1,0 +1,24 @@
+{
+  "name": "Infection",
+  "icon": "minecraft:writable_book",
+  "category": "zombiekit:infection",
+  "sortnum": 1,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "Getting bitten by a zombie isn't something to take lightly – it's no joke, believe me. Sure, some folks might have a natural immunity to the virus, but who's to say whether you're one of them before you've got a bite mark? When facing those ravenous fiends, your only option is to armor up as much as possible!"
+    },
+	{
+      "type": "patchouli:text",
+      "text": "$(o)(This is a piece of note:)$()$(br)$(#a97b1d)'The pathogen behind this infection was actually a fungus. Following the emergence of the PAX-12 mutant variant, there was a noticeable increase in spore production. These spores have begun to spread widely through aerosol transmission. Every individual has become a carrier of the fungus, and those without immunity have already fallen prey to it, which was also the direct cause of the military's collapse. "
+    },
+	{
+      "type": "patchouli:text",
+      "text": "$(#a97b1d)The current survivors all have varying degrees of resistance – they didn't immediately turn into zombies after being attacked. However, the fungus would accumulate inside their bodies. When the fungal load reached a certain level, their immune systems would give in. The infection would progress slowly, and without timely intervention, it would eventually lead to zombification.'"
+    },
+	{
+      "type": "patchouli:text",
+      "text": " "
+    }
+  ]
+}

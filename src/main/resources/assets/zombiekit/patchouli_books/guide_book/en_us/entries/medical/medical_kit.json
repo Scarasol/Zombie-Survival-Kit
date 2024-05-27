@@ -1,0 +1,18 @@
+{
+  "name": "Medical Kit",
+  "icon": "zombiekit:medical_kit",
+  "category": "zombiekit:medical",
+  "sortnum": 4,
+  "pages": [
+    {
+      "type": "patchouli:spotlight",
+	  "item": "zombiekit:medical_kit",
+      "text": "Surviving doomsday isn't child's play; the situations you encounter here are far more complex than a little forest outing for a scout camp. There's no tuna sandwich or Scout cookies around here. Having a warm meal and getting a good night's sleep is already a luxury. The injuries you sustain might be much more "
+    },
+	{
+      "type": "patchouli:crafting",
+      "recipe": "zombiekit:mirror_craft_medical_kit",
+	  "text": "dramatic than just twisting an ankle. When dealing with more severe wounds, mere bandages won't cut it – that's when you need a proper medical first aid kit. Don't complain about it taking up space; it could be a lifesaver!"
+    }
+  ]
+}

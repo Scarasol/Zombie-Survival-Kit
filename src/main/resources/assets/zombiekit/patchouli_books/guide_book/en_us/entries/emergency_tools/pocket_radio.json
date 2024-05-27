@@ -1,0 +1,34 @@
+{
+  "name": "Pocket Radio",
+  "icon": "zombiekit:pocket_radio",
+  "category": "zombiekit:emergency_tools",
+  "sortnum": 2,
+  "pages": [
+    {
+      "type": "patchouli:spotlight",
+	  "item": "zombiekit:pocket_radio",
+	  "text": "Your shelter has just been breached, your teammates unfortunately died, and you were lucky enough to escape; or you may feel that I am alarmist - I wish I really were! - You are not prepared for any supplies, and the apocalypse finally comes. Fortunately, you hid at home and survived the first wave of"
+    },
+	{
+      "type": "patchouli:text",
+	  "text": "impact, but the reserves at home are running out. No matter what situation you are in, you are now tired and hungry, with nothing on you, and occasionally there are low growls of zombies in the distance. You don't know where it's safe, and it seems that your journey in the apocalypse has come to an end. $(br)It's a pity, isn't it? But this is the apocalypse! As long as you are not careful, you are out! You always have to consider all situations and always have"
+    },
+	{
+      "type": "patchouli:text",
+	  "text": "a backhand. Prepare a hand-cranked radio. It's not expensive, and it's small and portable, you can put it in your pocket. It's not very useful in normal times, after all, there are no Los Santos radio stations in the apocalypse, but in desperate times, it will be your last lifesaver. Try to crank it up, and if you are really blessed by God, salvation lay within."
+    },
+	{
+      "type": "patchouli:crafting",
+      "recipe": "zombiekit:pocket_radio",
+	  "text": " "
+    },
+	{
+      "type": "patchouli:text",
+	  "text": "$(o)(There is a manual attached here)$()$(br)$(#6F6F6F)$(l)Communication Star HT-98 Emergency Radio$()$(br)$(#6F6F6F)Frequency range$(li)FM: 87-108MHz$(li)AM: 522-1620kHz$(li)SW: 5.60-18MHz$(br2)Sensitivity$(li)FM: < 5μV$(li)AM: < 1mV/m$(li)SW: < 50μV$(br2)Power$(li)4.5V (three R6 batteries)"
+    },
+	{
+      "type": "patchouli:text",
+	  "text": "$(#6F6F6F)$(li)Emergency hand-cranked generator (3.6V)"
+    }
+  ]
+}

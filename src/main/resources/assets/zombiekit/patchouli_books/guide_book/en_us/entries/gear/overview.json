@@ -1,0 +1,16 @@
+{
+  "name": "Gear",
+  "icon": "minecraft:writable_book",
+  "category": "zombiekit:gear",
+  "sortnum": 1,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "What to wear? This question is crucial, after all, you're a heartthrob now, and as soon as you step out, you'll receive countless invitations. The art of declining these invitations has become essential. Should you wear something light, allowing you to dance with them, or something heavy, letting them know you're tough? If you could combine both, that would be perfect."
+    },
+	{
+      "type": "patchouli:text",
+      "text": " "
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "zombiekit:block/charger_with_battery"
+    },
+    "facing=east": {
+      "model": "zombiekit:block/charger_with_battery",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "zombiekit:block/charger_with_battery",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "zombiekit:block/charger_with_battery",
+      "y": 270
+    }
+  }
+}

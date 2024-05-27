@@ -1,0 +1,38 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "012",
+    "345",
+    "6 8"
+  ],
+  "key": {
+    "0": {
+      "item": "zombiekit:cloth"
+    },
+    "1": {
+      "item": "zombiekit:cloth"
+    },
+    "2": {
+      "item": "zombiekit:cloth"
+    },
+    "3": {
+      "item": "zombiekit:cloth"
+    },
+    "4": {
+      "item": "minecraft:sponge"
+    },
+    "5": {
+      "item": "zombiekit:cloth"
+    },
+    "6": {
+      "item": "zombiekit:cloth"
+    },
+    "8": {
+      "item": "zombiekit:cloth"
+    }
+  },
+  "result": {
+    "item": "zombiekit:skiing_coordinates_leggings",
+    "count": 1
+  }
+}

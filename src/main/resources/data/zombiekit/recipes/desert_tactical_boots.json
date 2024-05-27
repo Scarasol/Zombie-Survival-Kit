@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:smithing",
+  "base": {
+    "tag": "forge:tactical_boots"
+  },
+  "addition": {
+    "item": "zombiekit:desert_camouflage_dye"
+  },
+  "result": {
+    "item": "zombiekit:desert_coordinates_boots"
+  }
+}

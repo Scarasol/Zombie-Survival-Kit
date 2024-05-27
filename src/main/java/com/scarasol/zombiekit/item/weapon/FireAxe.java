@@ -1,6 +1,7 @@
 package com.scarasol.zombiekit.item.weapon;
 
 import com.scarasol.sona.init.SonaMobEffects;
+import com.scarasol.sona.item.IRustItem;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.TextComponent;
 import net.minecraft.network.chat.TranslatableComponent;
@@ -12,7 +13,7 @@ import org.jetbrains.annotations.NotNull;
 
 import java.util.List;
 
-public class FireAxe extends AxeItem {
+public class FireAxe extends AxeItem implements IRustItem {
     public FireAxe(Tier tier, float attackDamage, float speed, Properties properties) {
         super(tier, attackDamage, speed, properties);
     }

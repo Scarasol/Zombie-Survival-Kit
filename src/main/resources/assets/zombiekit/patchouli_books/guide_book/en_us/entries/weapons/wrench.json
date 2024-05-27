@@ -1,0 +1,18 @@
+{
+  "name": "Wrench",
+  "icon": "zombiekit:wrench",
+  "category": "zombiekit:weapons",
+  "sortnum": 8,
+  "pages": [
+    {
+      "type": "patchouli:spotlight",
+	  "item": "zombiekit:wrench",
+      "text": "Even without guns, we can find ways to strike zombies from a distance. After all, half of human civilization is about throwing stones far and true, isn't it? A wrench is a great tool, aside from helping you disassemble and maintain many devices. With the right length and a fine balance, a little training can turn it into an"
+    },
+	{
+      "type": "patchouli:crafting",
+      "recipe": "zombiekit:get_wrench",
+	  "text": "excellent Native American tomahawk. It's time to embark on a primal hunt against the zombies, hoping they won't feel it, because it really hurts!"
+    }
+  ]
+}

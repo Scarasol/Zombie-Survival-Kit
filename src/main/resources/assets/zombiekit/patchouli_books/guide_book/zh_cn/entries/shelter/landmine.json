@@ -1,0 +1,28 @@
+{
+  "name": "地雷",
+  "icon": "zombiekit:landmine",
+  "category": "zombiekit:shelter",
+  "sortnum": 5,
+  "pages": [
+    {
+      "type": "patchouli:spotlight",
+	  "item": "zombiekit:landmine",
+	  "text": "听说了吗，又一批军用物资失窃了，这已经是半年以来的第四起了。谁都知道，这才不是什么失窃，用不了多久这一批物资就会出现在黑市上。他们还天真的以为自己能在这一场灾难中大赚一笔，然后继续过他们的奢靡生活，这可不是金融危机。也多亏了他们，我们才能搞到一点真正的好东西。用地"
+    },
+	{
+      "type": "patchouli:crafting",
+      "recipe": "zombiekit:get_landmine",
+	  "text": "雷教教丧尸城堡法吧，希望它们的脑子还没有彻底烂掉。"
+    },
+	{
+      "type": "patchouli:text",
+	  "text": "$(o)(这里有一段笔记记载着如何改装地雷:)$()$(br)$(br)$(#a97b1d)“传统地雷对于丧尸的效果并不理想，它们不会因为个体的死亡而受到惊吓，相反爆炸声反而会让它们更加兴奋，对付它们需要更大规模的杀伤性武器。可以将地雷的装药减少一部分，并加入一些化学试剂，利用爆炸使试剂快速扩散，从而达到对丧尸的范围杀伤效果。”"
+    },
+	{
+      "type": "patchouli:image",
+	  "title": "化学地雷",
+	  "images": ["zombiekit:textures/gui/entries/chemical_landmine.png"],
+	  "text": " "
+    }
+  ]
+}

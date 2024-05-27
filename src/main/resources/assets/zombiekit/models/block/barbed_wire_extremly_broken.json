@@ -1,0 +1,8 @@
+{
+  "parent": "zombiekit:custom/barbed_wire_extremly_broken",
+  "textures": {
+    "all": "zombiekit:blocks/barbed_wire_extremly_broken",
+    "particle": "zombiekit:blocks/oak_planks",
+    "0": "zombiekit:blocks/barbed_wire_extremly_broken"
+  }
+}

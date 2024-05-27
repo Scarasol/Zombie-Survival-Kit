@@ -1,0 +1,18 @@
+{
+  "name": "铁丝网",
+  "icon": "zombiekit:barbed_wire",
+  "category": "zombiekit:shelter",
+  "sortnum": 4,
+  "pages": [
+    {
+      "type": "patchouli:spotlight",
+	  "item": "zombiekit:barbed_wire",
+	  "text": "想要庇护所安全，最简单的方式就是让丧尸找不到它。在丧尸眼里，世界只有能吃的和不能吃的，因此只要设置一些障碍物，它们不会想到，里面其实是丧尸自助餐厅的。铁丝网就是一个不错的选择，虽然丧尸并没有痛觉，但是如果有哪些好奇宝宝真的想翻过来一探究竟的话，铁丝也可以拖累它们的"
+    },
+	{
+      "type": "patchouli:crafting",
+      "recipe": "zombiekit:get_barbed_wire",
+	  "text": "速度。此外一些带刺的灌木，比如甜浆果也可以是一种选择。"
+    }
+  ]
+}

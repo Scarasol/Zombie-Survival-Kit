@@ -1,0 +1,8 @@
+{
+  "parent": "zombiekit:custom/injector",
+  "textures": {
+    "all": "zombiekit:blocks/injector",
+    "particle": "zombiekit:blocks/injector",
+    "5": "zombiekit:blocks/injector"
+  }
+}

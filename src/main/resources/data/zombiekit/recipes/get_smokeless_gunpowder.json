@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "zombiekit:nitrocellulose"
+    },
+    {
+      "item": "zombiekit:nitrocellulose"
+    },
+    {
+      "item": "zombiekit:nitrocellulose"
+    },
+    {
+      "item": "zombiekit:nitrocellulose"
+    }
+  ],
+  "result": {
+    "item": "zombiekit:smokeless_gunpowder",
+    "count": 6
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "name": "狩猎陷阱",
+  "icon": "zombiekit:trap_cover",
+  "category": "zombiekit:shelter",
+  "sortnum": 3,
+  "pages": [
+    {
+      "type": "patchouli:spotlight",
+	  "item": "zombiekit:trap_cover",
+	  "text": "陷阱是一门古老的手艺，最早可以追溯到石器时代，是人类对抗野兽智慧的结晶。现在的我们，已经不是在东非大草原上成群结队驰骋捕猎，位于食物链顶层的恐怖直立猿了，因此陷阱是我们野外求生的必修课。无论是保卫庇护所还是捕捉动物，陷阱都是我们最好的选择。我们只需要在上面铺上一层"
+    },
+	{
+      "type": "patchouli:crafting",
+      "recipe": "zombiekit:trap_cover",
+	  "text": "草叶，剩下的就是等它们自己跳进来，或许这就是为什么丧尸总想吃大脑的原因，因为它们真的很蠢！"
+    }
+  ]
+}

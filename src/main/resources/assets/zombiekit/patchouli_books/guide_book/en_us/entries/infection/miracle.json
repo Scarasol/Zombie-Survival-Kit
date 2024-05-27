@@ -1,0 +1,26 @@
+{
+  "name": "Miracle Drug",
+  "icon": "zombiekit:miracle",
+  "category": "zombiekit:infection",
+  "sortnum": 3,
+  "pages": [
+    {
+      "type": "patchouli:spotlight",
+	  "item": "zombiekit:miracle",
+	  "text": "Miracle cure? Come on, wake up! It's been six months, and every time they mention a miracle cure, apart from that sorry excuse, the spokesperson just keeps saying they're working on it like crazy, but there's no sign of any progress. Even if they are really working on it, if you just Google it, you'll find"
+    },
+	{
+      "type": "patchouli:text",
+      "text": "out how long it takes to develop a drug! And even if this miracle cure does show up, it's gonna be the rich folks getting it first. So, instead of waiting around for a miracle cure, you might as well use this time to gear yourself up. Get armed and ready."
+    },
+	{
+      "type": "patchouli:text",
+      "text": "$(o)(This is a piece of note:)$()$(br)$(#a97b1d)'The development of the miracle drug has actually achieved preliminary results, and clinical trials have shown minimal side effects. However, the exorbitant cost has doomed the mass production of this drug. The research institute had no choice but to search for substitute ingredients crucial to its composition. Yet, following the collapse of the military defenses, the research was forcibly halted, with no possibility of revival. Only"
+    },
+	{
+      "type": "patchouli:crafting",
+      "recipe": "zombiekit:mirror_craft_7",
+	  "text": "$(#a97b1d)a small quantity of prototypes remains.'"
+    }
+  ]
+}

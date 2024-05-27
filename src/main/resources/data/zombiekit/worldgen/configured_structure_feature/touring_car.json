@@ -1,0 +1,11 @@
+{   
+  "config":{
+      "start_pool": "zombiekit:touring_car",
+      "size": 3
+    },
+    "biomes": "#zombiekit:has_structure/touring_car",
+    "adapt_noise": true,
+    "spawn_overrides": {
+    },
+    "type": "minecraft:village"
+}

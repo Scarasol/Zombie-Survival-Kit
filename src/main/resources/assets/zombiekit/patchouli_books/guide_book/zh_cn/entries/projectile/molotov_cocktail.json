@@ -1,0 +1,18 @@
+{
+  "name": "燃烧瓶",
+  "icon": "zombiekit:molotov_cocktail",
+  "category": "zombiekit:projectile",
+  "sortnum": 2,
+  "pages": [
+    {
+      "type": "patchouli:spotlight",
+	  "item": "zombiekit:molotov_cocktail",
+      "text": "啊哈，火焰！几乎没有什么生物能够逃脱火焰的焚烧，因此火焰也是对付尸潮最好的方式。酒精——这是最好找的燃料了。和丧尸们来一场盛大热情的烤肉派对吧，没有什么是一次烧烤和酒精解决不了的！这酒虽然十分的珍贵，但是相比之下，活下去才是最重要的。即使最后真的走投无路了，死之前也可"
+    },
+	{
+      "type": "patchouli:crafting",
+      "recipe": "zombiekit:mirror_craft_21",
+	  "text": "以喝两口再上路！"
+    }
+  ]
+}

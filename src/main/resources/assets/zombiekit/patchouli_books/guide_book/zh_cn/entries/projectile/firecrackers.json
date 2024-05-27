@@ -1,0 +1,18 @@
+{
+  "name": "鞭炮",
+  "icon": "zombiekit:firecracker",
+  "category": "zombiekit:projectile",
+  "sortnum": 5,
+  "pages": [
+    {
+      "type": "patchouli:spotlight",
+	  "item": "zombiekit:firecracker",
+      "text": "如果在翻箱倒柜的时候发出声音的话，末日生涯就要结束了吧，那就发出更大的声音掩盖过去吧！比起小心翼翼的搜索，提前用能发出声音的东西先把丧尸吸引走是一个不错的选择，而又有什么比一挂两千响的挂鞭更容易吸引好奇宝宝呢？那帮派对客一定会喜欢这种充满节日氛围的小玩意的。等宾客"
+    },
+	{
+      "type": "patchouli:crafting",
+      "recipe": "zombiekit:get_firecracker",
+	  "text": "满堂的时候，也别忘了举办一场篝火晚会——这是规矩！"
+    }
+  ]
+}

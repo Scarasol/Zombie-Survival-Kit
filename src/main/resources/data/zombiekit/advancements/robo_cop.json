@@ -1,0 +1,47 @@
+{
+  "display": {
+    "icon": {
+      "item": "zombiekit:exo_coordinates_helmet"
+    },
+    "title": {
+      "translate": "advancements.robo_cop.title"
+    },
+    "description": {
+      "translate": "advancements.robo_cop.descr"
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "robo_cop": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "zombiekit:exo_coordinates_helmet"
+            ]
+          },
+          {
+            "items": [
+              "zombiekit:exo_coordinates_chestplate"
+            ]
+          },
+          {
+            "items": [
+              "zombiekit:exo_coordinates_leggings"
+            ]
+          },
+          {
+            "items": [
+              "zombiekit:exo_coordinates_boots"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "parent": "zombiekit:zombie_kit"
+}

@@ -1,0 +1,33 @@
+{
+  "name": "Shortwave Radio",
+  "icon": "zombiekit:shortwave_radio",
+  "category": "zombiekit:shelter",
+  "sortnum": 8,
+  "pages": [
+    {
+      "type": "patchouli:spotlight",
+	  "item": "zombiekit:shortwave_radio",
+	  "text": "Now, your shelter has begun to take shape. It may be very hidden, filled with a lot of supplies, and guarded by various traps in the middle! You believe that no zombies or even humans can find it and break through it. You can live here alone and grow old. But history has proven time and time again that even the safest"
+    },
+	{
+      "type": "patchouli:text",
+	  "text": "defense systems will one day face the risk of being broken - Swiss cheese, son. Therefore, in addition to a safe shelter, we also need a group of smart, powerful, and most importantly, loyal teammates. They will be with you to deal with all emergencies.$(br)If you are unfortunate enough to see this book only after the world has completely fallen, it's not too late. All you need is to write a sensational broadcast and a shortwave radio. The ground"
+    },
+	{
+      "type": "patchouli:text",
+	  "text": "waves will transmit your voice tens of kilometers away. If you happen to have an antenna, the transmission distance can be even further! If you're lucky enough, other survivors will hear it. But before you open the door of the shelter to welcome them in, make sure they're friendly."
+    },
+	{
+      "type": "patchouli:text",
+	  "text": "$(o)(There is a manual attached here)$()$(br)$(#6F6F6F)$(l)Unlimited Voice K63S Shortwave Radio$()$(br)$(#6F6F6F)Product parameters$(li)Power supply mode: Redstone power supply$(li)Output power: 50w/40w$(li)Antenna impedance: 50Ω$(li)Working frequency: 0.5~30MHz$(li)Weight: 1437.8g (including microphone)$(br2)Instructions for use$(li)It is recommended to use"
+    },
+	{
+      "type": "patchouli:text",
+	  "text": "$(#6F6F6F)this product in a relatively open outdoor environment and avoid extreme weather such as thunderstorms."
+    },
+	{
+      "type": "patchouli:text",
+	  "text": " "
+    }
+  ]
+}

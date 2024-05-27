@@ -1,0 +1,18 @@
+{
+  "name": "胆汁罐",
+  "icon": "zombiekit:bile_bottle",
+  "category": "zombiekit:projectile",
+  "sortnum": 3,
+  "pages": [
+    {
+      "type": "patchouli:spotlight",
+	  "item": "zombiekit:bile_bottle",
+      "text": "面对尸潮，你能做的只有三件事情：杀死它们，逃离它们或者加入它们——如果你真的想的话。远离它们自然是最安全的选择。只要你足够的快，一切都不是问题！好吧我只是在开玩笑，说真的，如果真的被尸潮盯上，为什么不试试胆汁罐呢？浓烈的气味会使所有的丧尸晕头转向的。"
+    },
+	{
+      "type": "patchouli:crafting",
+      "recipe": "zombiekit:mirror_craft_8",
+	  "text": "当然不要弄到自己身上了，否则晕头转向的就不只是丧尸了！"
+    }
+  ]
+}

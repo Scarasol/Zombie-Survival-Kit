@@ -1,0 +1,26 @@
+{
+  "name": "Ultra Wideband Radar",
+  "icon": "zombiekit:ultra_wideband_radar",
+  "category": "zombiekit:shelter",
+  "sortnum": 6,
+  "pages": [
+    {
+      "type": "patchouli:spotlight",
+	  "item": "zombiekit:ultra_wideband_radar",
+	  "text": "In times of power scarcity, finding zombies close to a shelter in the dark becomes a tricky issue. In movies, radar is often used to precisely locate the enemy's position, so why can't we borrow from that? You might think I'm joking, but ultra-wideband radar can really do it. Now, all you need is to find someone who can"
+    },
+	{
+      "type": "patchouli:crafting",
+      "recipe": "zombiekit:get_ultra_wideband_radar",
+	  "text": "stay awake at night. Moreover, this portable radar can also be used to scavenge for supplies and find out in advance if there are any zombies planning a big surprise!"
+    },
+	{
+      "type": "patchouli:text",
+	  "text": "$(o)(There is a manual attached here)$()$(br)$(#6F6F6F)$(l)Star Science YC-5D28PK Life Detector$()$(br)$(#6F6F6F)Specifications$(li)Continuous working time: 6h$(li)Center frequency: 400MHz$(li)Bandwidth: 2GHz$(li)Detection distance: ≥30m$(li)Detection accuracy: ±10cm$(li)Power source: Large capacity battery$(br2)Advantages$(li)Strong penetration: Using low-frequency ultra-wideband"
+    },
+	{
+      "type": "patchouli:text",
+	  "text": "$(#6F6F6F)radar technology, it can penetrate complex media such as ruins.$(li)High sensitivity: It has the ability to detect human cardiopulmonary motion.$(li)Strong environmental adaptability: It has the ability to work all day in all weathers and adapt to various harsh environments.$(li)High real-time performance: It has the ability to detect moving targets in real time."
+    }
+  ]
+}

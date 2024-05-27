@@ -1,0 +1,38 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "012",
+    "345",
+    "6 8"
+  ],
+  "key": {
+    "0": {
+      "item": "zombiekit:special_steel_sheet"
+    },
+    "1": {
+      "item": "zombiekit:bulletproof_insert"
+    },
+    "2": {
+      "item": "zombiekit:special_steel_sheet"
+    },
+    "3": {
+      "item": "zombiekit:special_steel_sheet"
+    },
+    "4": {
+      "item": "minecraft:redstone"
+    },
+    "5": {
+      "item": "zombiekit:special_steel_sheet"
+    },
+    "6": {
+      "item": "zombiekit:special_steel_sheet"
+    },
+    "8": {
+      "item": "zombiekit:special_steel_sheet"
+    }
+  },
+  "result": {
+    "item": "zombiekit:exo_coordinates_leggings",
+    "count": 1
+  }
+}

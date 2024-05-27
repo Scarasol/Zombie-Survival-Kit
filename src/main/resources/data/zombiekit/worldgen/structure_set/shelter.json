@@ -1,0 +1,15 @@
+{
+    "structures": [
+      {
+        "structure": "zombiekit:shelter",
+        "weight": 1
+      }
+    ],
+    "placement": {
+      "type": "minecraft:random_spread",
+      "spacing": 60,
+      "separation": 30,
+      "salt": 2130398765
+    }
+}
+ 

@@ -1,0 +1,9 @@
+{
+  "parent": "bettercombat:dagger",
+  "attributes" : {
+    "attacks": [
+      {"hitbox": "FORWARD_BOX"},
+      {"hitbox": "FORWARD_BOX"}
+    ]
+  }
+}

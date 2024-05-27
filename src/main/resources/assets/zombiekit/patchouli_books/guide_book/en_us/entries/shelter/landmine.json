@@ -1,0 +1,28 @@
+{
+  "name": "Landmine",
+  "icon": "zombiekit:landmine",
+  "category": "zombiekit:shelter",
+  "sortnum": 5,
+  "pages": [
+    {
+      "type": "patchouli:spotlight",
+	  "item": "zombiekit:landmine",
+	  "text": "Did you hear the latest? Another batch of military supplies got swiped, and this marks the fourth time in the last six months! It's no secret that this ain't no ordinary theft; those supplies will probably pop up on the black market in no time. They're so naïve to think they can cash in during this crisis and then"
+    },
+	{
+      "type": "patchouli:crafting",
+      "recipe": "zombiekit:get_landmine",
+	  "text": "go back to their lavish lifestyles. This ain't no financial crisis we're dealing with. Thanks to them, we've managed to get our hands on some real good stuff. Let's use landmines to teach those zombies the true meaning of the Castle Doctrine."
+    },
+	{
+      "type": "patchouli:text",
+	  "text": "$(o)(This is a piece of note detailing how to modify landmines:)$()$(br)$(#a97b1d)'Traditional landmines aren't particularly effective against zombies. They don't get scared when an individual dies; instead, the explosion noise tends to excite them even more. Dealing with them requires larger-scale, high-lethality weapons. You can reduce some of the landmine explosives and incorporate chemical agents. The explosion can help rapidly disperse the"
+    },
+	{
+      "type": "patchouli:image",
+	  "title": "Chemical Landmine",
+	  "images": ["zombiekit:textures/gui/entries/chemical_landmine.png"],
+	  "text": "$(#a97b1d)agents, achieving a broader range of damage against zombies.'"
+    }
+  ]
+}

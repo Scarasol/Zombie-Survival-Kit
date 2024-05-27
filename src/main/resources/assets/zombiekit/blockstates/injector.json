@@ -1,0 +1,201 @@
+{
+  "multipart": [
+    {
+      "apply": {
+        "model": "zombiekit:block/injector"
+      }
+    },
+    {
+      "when": {
+        "bottle0": "0"
+      },
+      "apply": {
+        "model": "zombiekit:block/bottle0_empty"
+      }
+    },
+    {
+      "when": {
+        "bottle0": "1"
+      },
+      "apply": {
+        "model": "zombiekit:block/bottle0_orange"
+      }
+    },
+    {
+      "when": {
+        "bottle1": "0"
+      },
+      "apply": {
+        "model": "zombiekit:block/bottle1_empty"
+      }
+    },
+    {
+      "when": {
+        "bottle1": "1"
+      },
+      "apply": {
+        "model": "zombiekit:block/bottle1_orange"
+      }
+    },
+    {
+      "when": {
+        "bottle2": "0"
+      },
+      "apply": {
+        "model": "zombiekit:block/bottle2_empty"
+      }
+    },
+    {
+      "when": {
+        "bottle2": "1"
+      },
+      "apply": {
+        "model": "zombiekit:block/bottle2_orange"
+      }
+    },
+    {
+      "when": {
+        "bottle3": "0"
+      },
+      "apply": {
+        "model": "zombiekit:block/bottle3_empty"
+      }
+    },
+    {
+      "when": {
+        "bottle3": "1"
+      },
+      "apply": {
+        "model": "zombiekit:block/bottle3_orange"
+      }
+    },
+    {
+      "when": {
+        "bottle0": "2"
+      },
+      "apply": {
+        "model": "zombiekit:block/bottle0_white"
+      }
+    },
+    {
+      "when": {
+        "bottle1": "2"
+      },
+      "apply": {
+        "model": "zombiekit:block/bottle1_white"
+      }
+    },
+    {
+      "when": {
+        "bottle2": "2"
+      },
+      "apply": {
+        "model": "zombiekit:block/bottle2_white"
+      }
+    },
+    {
+      "when": {
+        "bottle3": "2"
+      },
+      "apply": {
+        "model": "zombiekit:block/bottle3_white"
+      }
+    },
+    {
+      "when": {
+        "bottle0": "3"
+      },
+      "apply": {
+        "model": "zombiekit:block/bottle0_yellow"
+      }
+    },
+    {
+      "when": {
+        "bottle1": "3"
+      },
+      "apply": {
+        "model": "zombiekit:block/bottle1_yellow"
+      }
+    },
+    {
+      "when": {
+        "bottle2": "3"
+      },
+      "apply": {
+        "model": "zombiekit:block/bottle2_yellow"
+      }
+    },
+    {
+      "when": {
+        "bottle3": "3"
+      },
+      "apply": {
+        "model": "zombiekit:block/bottle3_yellow"
+      }
+    },
+    {
+      "when": {
+        "bottle0": "4"
+      },
+      "apply": {
+        "model": "zombiekit:block/bottle0_blue"
+      }
+    },
+    {
+      "when": {
+        "bottle1": "4"
+      },
+      "apply": {
+        "model": "zombiekit:block/bottle1_blue"
+      }
+    },
+    {
+      "when": {
+        "bottle2": "4"
+      },
+      "apply": {
+        "model": "zombiekit:block/bottle2_blue"
+      }
+    },
+    {
+      "when": {
+        "bottle3": "4"
+      },
+      "apply": {
+        "model": "zombiekit:block/bottle3_blue"
+      }
+    },
+    {
+      "when": {
+        "bottle0": "5"
+      },
+      "apply": {
+        "model": "zombiekit:block/bottle0_green"
+      }
+    },
+    {
+      "when": {
+        "bottle1": "5"
+      },
+      "apply": {
+        "model": "zombiekit:block/bottle1_green"
+      }
+    },
+    {
+      "when": {
+        "bottle2": "5"
+      },
+      "apply": {
+        "model": "zombiekit:block/bottle2_green"
+      }
+    },
+    {
+      "when": {
+        "bottle3": "5"
+      },
+      "apply": {
+        "model": "zombiekit:block/bottle3_green"
+      }
+    }
+  ]
+}

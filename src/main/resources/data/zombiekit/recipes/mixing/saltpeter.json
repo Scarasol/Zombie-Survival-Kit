@@ -1,0 +1,20 @@
+{
+  "type": "create:mixing",
+  "ingredients": [
+    {
+      "item": "zombiekit:saltpeter_soil"
+    },
+    {
+      "fluid": "minecraft:water",
+      "nbt": {},
+      "amount": 1000
+    }
+  ],
+  "results": [
+    {
+      "item": "zombiekit:saltpeter",
+      "count": 2
+    }
+  ],
+  "heatRequirement": "heated"
+}

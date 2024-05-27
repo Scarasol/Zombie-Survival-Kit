@@ -1,0 +1,182 @@
+{
+  "pools": [
+    {
+      "name": "zombiekit:ore",
+      "rolls": {
+        "min": 4,
+        "max": 7
+      },
+      "entries": [
+        {
+          "type": "item",
+          "name": "minecraft:iron_ingot",
+          "functions": [
+            {
+              "function": "set_count",
+              "count": {
+				  "min": 5,
+				  "max": 12
+			  }
+            }
+          ],
+          "weight": 10
+        },	
+        {
+          "type": "item",
+          "name": "zombiekit:saltpeter",
+          "functions": [
+            {
+              "function": "set_count",
+              "count": {
+				  "min": 3,
+				  "max": 10
+			  }
+            }
+          ],
+          "weight": 10
+        },
+        {
+          "type": "item",
+          "name": "minecraft:flint",
+          "functions": [
+            {
+              "function": "set_count",
+              "count":{
+				  "min": 5,
+				  "max": 15
+			  }
+            }
+          ],
+          "weight": 10
+        },
+        {
+          "type": "item",
+          "name": "zombiekit:sulfur",
+          "functions": [
+            {
+              "function": "set_count",
+              "count": {
+				  "min": 5,
+				  "max": 12
+			  }
+            }
+          ],
+          "weight": 10
+        },
+        {
+          "type": "item",
+          "name": "minecraft:copper_ingot",
+          "functions": [
+            {
+              "function": "set_count",
+              "count": {
+				  "min": 5,
+				  "max": 12
+			  }
+            }
+          ],
+          "weight": 10
+        },
+        {
+          "type": "item",
+          "name": "minecraft:redstone",
+          "functions": [
+            {
+              "function": "set_count",
+              "count": {
+				  "min": 5,
+				  "max": 12
+			  }
+            }
+          ],
+          "weight": 10
+        },
+        {
+          "type": "item",
+          "name": "minecraft:amethyst_shard",
+          "functions": [
+            {
+              "function": "set_count",
+              "count": {
+				  "min": 3,
+				  "max": 8
+			  }
+            }
+          ],
+          "weight": 10
+        },
+        {
+          "type": "item",
+          "name": "minecraft:glowstone_dust",
+          "functions": [
+            {
+              "function": "set_count",
+              "count": {
+				  "min": 2,
+				  "max": 7
+			  }
+            }
+          ],
+          "weight": 5
+        },
+        {
+          "type": "item",
+          "name": "minecraft:quartz",
+          "functions": [
+            {
+              "function": "set_count",
+              "count": {
+				  "min": 4,
+				  "max": 10
+			  }
+            }
+          ],
+          "weight": 5
+        },
+        {
+          "type": "item",
+          "name": "minecraft:prismarine_shard",
+          "functions": [
+            {
+              "function": "set_count",
+              "count": {
+				  "min": 3,
+				  "max": 5
+			  }
+            }
+          ],
+          "weight": 3
+        },
+		{
+          "type": "item",
+          "name": "minecraft:prismarine_crystals",
+          "functions": [
+            {
+              "function": "set_count",
+              "count": {
+				  "min": 3,
+				  "max": 5
+			  }
+            }
+          ],
+          "weight": 2
+        },
+		{
+          "type": "tag",
+          "name": "minecraft:coals",
+		  "expand": true,
+          "functions": [
+            {
+              "function": "set_count",
+              "count": {
+                "min": 12,
+                "max": 36
+              }
+            }
+          ],
+          "weight": 15
+        }	
+      ]
+    }
+  ]
+}

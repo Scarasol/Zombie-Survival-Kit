@@ -1,0 +1,16 @@
+{
+  "name": "Medical Supplies",
+  "icon": "minecraft:writable_book",
+  "category": "zombiekit:medical",
+  "sortnum": 1,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "When surviving in the wilderness, the injuries we sustain aren't solely from the meandering zombies. Even though we'd like to think we can make it through the zombie apocalypse unscathed, prayers won't cut it – we'll need some medical care. If the team happens to have a doctor on board, along with a couple of nurses, that's just the cherry on top. However, as the "
+    },
+	{
+      "type": "patchouli:text",
+      "text": "saying goes, 'You can't make something out of nothing', we must be prepared and gather ample medical supplies. "
+    }
+  ]
+}

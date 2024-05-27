@@ -1,0 +1,13 @@
+{
+  "replace": false,
+  "values": [
+    "zombiekit:skiing_coordinates_boots",
+    "zombiekit:skiing_coordinates_leggings",
+    "zombiekit:exo_coordinates_boots",
+    "zombiekit:skiing_coordinates_chestplate",
+    "zombiekit:exo_coordinates_leggings",
+    "zombiekit:exo_coordinates_chestplate",
+    "zombiekit:skiing_coordinates_helmet",
+    "zombiekit:exo_coordinates_helmet"
+  ]
+}

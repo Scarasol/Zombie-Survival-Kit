@@ -1,0 +1,29 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " 1 ",
+    "345",
+    " 7 "
+  ],
+  "key": {
+    "1": {
+      "item": "minecraft:glistering_melon_slice"
+    },
+    "3": {
+      "item": "minecraft:glistering_melon_slice"
+    },
+    "4": {
+      "item": "zombiekit:alcohol"
+    },
+    "5": {
+      "item": "minecraft:glistering_melon_slice"
+    },
+    "7": {
+      "item": "minecraft:glistering_melon_slice"
+    }
+  },
+  "result": {
+    "item": "zombiekit:potion_jar",
+    "count": 3
+  }
+}

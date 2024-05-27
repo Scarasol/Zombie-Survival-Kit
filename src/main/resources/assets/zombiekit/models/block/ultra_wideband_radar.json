@@ -1,0 +1,8 @@
+{
+  "parent": "zombiekit:custom/ultra_wideband_radar",
+  "textures": {
+    "all": "zombiekit:blocks/ultra_wideband_radar_close",
+    "particle": "zombiekit:blocks/ultrawidebandradar_break",
+    "0": "zombiekit:blocks/ultra_wideband_radar_close"
+  }
+}

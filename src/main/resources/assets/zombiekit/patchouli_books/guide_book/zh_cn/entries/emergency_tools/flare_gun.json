@@ -1,0 +1,18 @@
+{
+  "name": "信号枪",
+  "icon": "zombiekit:flare_gun",
+  "category": "zombiekit:emergency_tools",
+  "sortnum": 1,
+  "pages": [
+    {
+      "type": "patchouli:spotlight",
+	  "item": "zombiekit:flare_gun",
+	  "text": "我们来科普一些小知识：根据史蒂夫提出的光线传播的基本定律，除了太阳发出的光，任何光线传播距离大于15米时将失去除可见以外的任何物理特性，你可以看到它，但它照不到你这里，很神奇是吧？在和平年代，灯火通明的城市让你不用担心这个问题，然而在末世，15米的照明范围是远远不够的。"
+    },
+	{
+      "type": "patchouli:crafting",
+      "recipe": "zombiekit:flare_gun",
+	  "text": "但好在，工程师们并没有因此而放弃对大规模照明的探索，最终他们的努力获得了回报，发明出了集束照明弹，这种照明弹通过分裂，可以在短时间内照亮一大片区域，要我说，想出这个点子的人可真厉害。"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "name": "医疗包",
+  "icon": "zombiekit:medical_kit",
+  "category": "zombiekit:medical",
+  "sortnum": 4,
+  "pages": [
+    {
+      "type": "patchouli:spotlight",
+	  "item": "zombiekit:medical_kit",
+      "text": "末日求生可不是过家家，你所遭遇的处境比去小树林搞童子军野营要复杂得多。这里可没有金枪鱼三明治或者童子军饼干。能吃口热乎饭，好好睡一觉在这里就已经是幸福了。你受的伤可能远比崴个脚要夸张。面对一些比较严重的伤口，仅仅靠绷带是没有用的，这种时候就需要专业的医疗急救包"
+    },
+	{
+      "type": "patchouli:crafting",
+      "recipe": "zombiekit:mirror_craft_medical_kit",
+	  "text": "了。不要嫌它太占位置，这可是救命的好东西！"
+    }
+  ]
+}

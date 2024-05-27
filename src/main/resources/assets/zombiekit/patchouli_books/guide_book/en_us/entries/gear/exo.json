@@ -1,0 +1,18 @@
+{
+  "name": "EXO-417",
+  "icon": "zombiekit:exo_coordinates_chestplate",
+  "category": "zombiekit:gear",
+  "sortnum": 4,
+  "pages": [
+    {
+      "type": "patchouli:image",
+	  "title": "EXO-417",
+	  "images": ["zombiekit:textures/gui/entries/exo_en.png", "zombiekit:textures/gui/entries/exo_a.png", "zombiekit:textures/gui/entries/exo_b.png", "zombiekit:textures/gui/entries/exo_c.png", "zombiekit:textures/gui/entries/exo_d.png", "zombiekit:textures/gui/entries/exo.png"]
+    },
+	{
+      "type": "patchouli:text",
+	  "title": "EXO-417",
+	  "text": "$(o)(These are a set of photos not belonging to the original book content, seemingly posted here by the previous owner. The content is from a confidential report. The first few photos show some parameters and manufacturing processes. The final photo depicts a fully armored soldier wearing complex machinery. Beside the photo, something is written with a pen, unfortunately covered in bloodstains, making it difficult to discern.)"
+    }
+  ]
+}

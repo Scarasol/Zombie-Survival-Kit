@@ -1,0 +1,8 @@
+{
+  "parent": "zombiekit:custom/charger_with_battery",
+  "textures": {
+    "all": "zombiekit:blocks/charger_with_battery",
+    "particle": "zombiekit:blocks/chargerbreak",
+    "1": "zombiekit:blocks/charger_with_battery"
+  }
+}

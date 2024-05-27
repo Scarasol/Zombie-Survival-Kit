@@ -1,0 +1,18 @@
+{
+  "name": "Baseball Bat",
+  "icon": "zombiekit:baseball_bat",
+  "category": "zombiekit:weapons",
+  "sortnum": 4,
+  "pages": [
+    {
+      "type": "patchouli:spotlight",
+	  "item": "zombiekit:baseball_bat",
+      "text": "Baseball bat may not sound too professional, but it's the easiest weapon to find – who knows, you might have one lying in the corner of your house. Besides, zombies won't be picky about what weapon you wield. And when you give those undead a good swing of the baseball bat, sending them flying, trust me, they'll change "
+    },
+	{
+      "type": "patchouli:crafting",
+      "recipe": "zombiekit:mirror_craft_1",
+	  "text": "their tune! It might lack brute force, but it'll keep those zombies at a safer distance. "
+    }
+  ]
+}

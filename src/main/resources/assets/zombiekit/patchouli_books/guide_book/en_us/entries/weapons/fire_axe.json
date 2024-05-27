@@ -1,0 +1,18 @@
+{
+  "name": "Fire Axe",
+  "icon": "zombiekit:fire_axe",
+  "category": "zombiekit:weapons",
+  "sortnum": 4,
+  "pages": [
+    {
+      "type": "patchouli:spotlight",
+	  "item": "zombiekit:fire_axe",
+      "text": "What if you encounter an infected police officer or soldier? Fully armoured, even wearing a helmet – who knows how they got infected. But that's not the point, the point is, they're charging at you! Grab your trusty axe and show them that hiding behind armour won't save them – your axe can rip through any protection! "
+    },
+	{
+      "type": "patchouli:crafting",
+      "recipe": "zombiekit:mirror_craft_3",
+	  "text": "But if you're faced with a horde, you better run and drop that axe – it might just give you a slight advantage in speed. "
+    }
+  ]
+}

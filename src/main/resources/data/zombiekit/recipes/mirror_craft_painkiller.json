@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "0",
+    "1",
+    "2"
+  ],
+  "key": {
+    "0": {
+      "item": "minecraft:crimson_fungus"
+    },
+    "1": {
+      "item": "minecraft:poppy"
+    },
+    "2": {
+      "item": "zombiekit:alcohol"
+    }
+  },
+  "result": {
+    "item": "zombiekit:painkiller",
+    "count": 1
+  }
+}

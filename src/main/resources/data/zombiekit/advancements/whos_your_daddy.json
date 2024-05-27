@@ -1,0 +1,47 @@
+{
+  "display": {
+    "icon": {
+      "item": "zombiekit:blast_coordinates_helmet"
+    },
+    "title": {
+      "translate": "advancements.whos_your_daddy.title"
+    },
+    "description": {
+      "translate": "advancements.whos_your_daddy.descr"
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "whos_your_daddy": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "zombiekit:blast_coordinates_helmet"
+            ]
+          },
+          {
+            "items": [
+              "zombiekit:blast_coordinates_chestplate"
+            ]
+          },
+          {
+            "items": [
+              "zombiekit:blast_coordinates_leggings"
+            ]
+          },
+          {
+            "items": [
+              "zombiekit:blast_coordinates_boots"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "parent": "zombiekit:zombie_kit"
+}

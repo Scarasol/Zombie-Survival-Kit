@@ -1,0 +1,18 @@
+{
+  "name": "Painkiller",
+  "icon": "zombiekit:painkiller",
+  "category": "zombiekit:medical",
+  "sortnum": 3,
+  "pages": [
+    {
+      "type": "patchouli:spotlight",
+	  "item": "zombiekit:painkiller",
+      "text": "Everyone would love to find a place to sit down and properly tend to their wounds, but unfortunately, zombies might not grant you that luxury. That's why we need some emergency supplies that can quickly restore your mobility and get you out of that cursed place! Adrenaline would be the best choice, of course, but "
+    },
+	{
+      "type": "patchouli:crafting",
+      "recipe": "zombiekit:mirror_craft_painkiller",
+	  "text": "that's not something your average person can get their hands on. For the general population, fast-acting painkillers are the way to go."
+    }
+  ]
+}

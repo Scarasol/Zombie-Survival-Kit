@@ -1,0 +1,11 @@
+{   
+  "config":{
+      "start_pool": "zombiekit:shelter",
+      "size": 3
+    },
+    "biomes": "#zombiekit:has_structure/shelter",
+    "adapt_noise": true,
+    "spawn_overrides": {
+    },
+    "type": "minecraft:village"
+}

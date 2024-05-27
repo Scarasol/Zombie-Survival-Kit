@@ -1,6 +1,7 @@
 package com.scarasol.zombiekit.item.weapon;
 
 import com.scarasol.sona.init.SonaMobEffects;
+import com.scarasol.sona.item.IRustItem;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.TextComponent;
 import net.minecraft.network.chat.TranslatableComponent;
@@ -15,7 +16,7 @@ import org.jetbrains.annotations.NotNull;
 
 import java.util.List;
 
-public class Crowbar extends SwordItem {
+public class Crowbar extends SwordItem implements IRustItem {
 
     public Crowbar(Tier tier, int damage, float speed, Properties properties) {
         super(tier, damage, speed, properties);

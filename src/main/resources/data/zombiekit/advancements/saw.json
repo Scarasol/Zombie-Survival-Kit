@@ -1,0 +1,32 @@
+{
+  "display": {
+    "icon": {
+      "item": "zombiekit:chainsaw"
+    },
+    "title": {
+      "translate": "advancements.saw.title"
+    },
+    "description": {
+      "translate": "advancements.saw.descr"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "saw": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "zombiekit:chainsaw"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "parent": "zombiekit:zombie_kit"
+}

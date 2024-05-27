@@ -1,0 +1,18 @@
+{
+  "name": "棒球棍",
+  "icon": "zombiekit:baseball_bat",
+  "category": "zombiekit:weapons",
+  "sortnum": 4,
+  "pages": [
+    {
+      "type": "patchouli:spotlight",
+	  "item": "zombiekit:baseball_bat",
+      "text": "我承认棒球棍听上去是不怎么专业，但这是你最容易找到的武器了——说不定你家墙角里就有一根。更重要的是，丧尸不会对你手上的武器挑挑拣拣。就算它们真的在乎，当你把棒球棍狠狠的抡在它们身上，把它们扫飞的时候，相信我，它们会改变看法的！虽然威力不够高，但是能把丧尸打的更远。"
+    },
+	{
+      "type": "patchouli:crafting",
+      "recipe": "zombiekit:mirror_craft_1",
+	  "text": "多一份距离，多一份安全！"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "zombiekit:cloth"
+    },
+    {
+      "item": "zombiekit:alcohol"
+    },
+    {
+      "item": "minecraft:gunpowder"
+    }
+  ],
+  "result": {
+    "item": "zombiekit:molotov_cocktail",
+    "count": 1
+  }
+}
