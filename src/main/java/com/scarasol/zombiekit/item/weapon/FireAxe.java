@@ -35,4 +35,9 @@ public class FireAxe extends AxeItem implements IRustItem {
         super.appendHoverText(itemstack, world, list, flag);
         list.add(new TextComponent(new TranslatableComponent("item.zombiekit.fire_axe.description").getString()));
     }
+
+    @Override
+    public boolean canDisableShield(ItemStack stack, ItemStack shield, LivingEntity entity, LivingEntity attacker){
+        return true;
+    }
 }

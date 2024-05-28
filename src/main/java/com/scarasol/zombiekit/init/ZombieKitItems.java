@@ -1,7 +1,10 @@
 package com.scarasol.zombiekit.init;
 
 import com.scarasol.zombiekit.ZombieKitMod;
+import com.scarasol.zombiekit.item.armor.ModArmorMaterial;
+import com.scarasol.zombiekit.item.armor.SkiingSuit;
 import com.scarasol.zombiekit.item.weapon.*;
+import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.item.*;
 import net.minecraft.world.level.block.Block;
 import net.minecraftforge.registries.DeferredRegister;
@@ -11,6 +14,12 @@ import net.minecraftforge.registries.RegistryObject;
 public class ZombieKitItems {
 
     public static final DeferredRegister<Item> REGISTRY = DeferredRegister.create(ForgeRegistries.ITEMS, ZombieKitMod.MODID);
+
+    public static final RegistryObject<Item> SKIING_HELMET = REGISTRY.register("skiing_helmet", () -> new SkiingSuit(ModArmorMaterial.SKIING, EquipmentSlot.HEAD, new Item.Properties().tab(ZombieKitTabs.TAB_ZOMBIEKIT)));
+    public static final RegistryObject<Item> SKIING_CHESTPLATE = REGISTRY.register("skiing_chestplate", () -> new SkiingSuit(ModArmorMaterial.SKIING, EquipmentSlot.CHEST, new Item.Properties().tab(ZombieKitTabs.TAB_ZOMBIEKIT)));
+    public static final RegistryObject<Item> SKIING_LEGGINGS = REGISTRY.register("skiing_leggings", () -> new SkiingSuit(ModArmorMaterial.SKIING, EquipmentSlot.LEGS, new Item.Properties().tab(ZombieKitTabs.TAB_ZOMBIEKIT)));
+    public static final RegistryObject<Item> SKIING_BOOTS = REGISTRY.register("skiing_boots", () -> new SkiingSuit(ModArmorMaterial.SKIING, EquipmentSlot.FEET, new Item.Properties().tab(ZombieKitTabs.TAB_ZOMBIEKIT)));
+
 
     public static final RegistryObject<Item> BASEBALL_BAT = REGISTRY.register("baseball_bat", () -> new BaseballBat(Tiers.WOOD, 8, -2.7f, new Item.Properties().tab(ZombieKitTabs.TAB_ZOMBIEKIT), false));
     public static final RegistryObject<Item> STUDDED_BASEBALL_BAT = REGISTRY.register("studded_baseball_bat", () -> new BaseballBat(Tiers.WOOD, 11, -2.7f, new Item.Properties().tab(ZombieKitTabs.TAB_ZOMBIEKIT), true));
