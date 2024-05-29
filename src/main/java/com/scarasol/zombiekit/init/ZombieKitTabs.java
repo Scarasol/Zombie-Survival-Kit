@@ -8,9 +8,21 @@ import net.minecraftforge.api.distmarker.OnlyIn;
 public class ZombieKitTabs {
 
     public static CreativeModeTab TAB_ZOMBIEKIT;
+    public static CreativeModeTab TAB_ZOMBIEKIT_COMBAT;
 
     public static void load() {
         TAB_ZOMBIEKIT = new CreativeModeTab("tabzombiekit") {
+            @Override
+            public ItemStack makeIcon() {
+                return new ItemStack(ZombieKitItems.FIRE_AXE.get());
+            }
+
+            @OnlyIn(Dist.CLIENT)
+            public boolean hasSearchBar() {
+                return false;
+            }
+        };
+        TAB_ZOMBIEKIT_COMBAT = new CreativeModeTab("zombiekit_combat") {
             @Override
             public ItemStack makeIcon() {
                 return new ItemStack(ZombieKitItems.FIRE_AXE.get());

@@ -1,18 +1,14 @@
 package com.scarasol.zombiekit.item.armor;
 
-import com.scarasol.zombiekit.client.model.SkiingSuitModel;
+import com.scarasol.zombiekit.client.model.TacticalSuitModel;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.model.HumanoidModel;
 import net.minecraft.client.model.geom.ModelPart;
-import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.LivingEntity;
-import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.item.ArmorItem;
 import net.minecraft.world.item.ArmorMaterial;
 import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.level.Level;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
 import net.minecraftforge.client.IItemRenderProperties;
@@ -21,28 +17,28 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 
-public class SkiingSuit extends ArmorItem {
+public class TacticalArmor extends CamouflageArmor {
 
-
-    public SkiingSuit(ArmorMaterial armorMaterial, EquipmentSlot equipmentSlot, Properties properties) {
-        super(armorMaterial, equipmentSlot, properties);
-    }
-
-    @Override
-    public void onArmorTick(ItemStack itemStack, Level level, Player player){
-        if (getSlot() == EquipmentSlot.HEAD){
-            player.removeEffect(MobEffects.BLINDNESS);
-        }
-    }
-
-    @Override
-    public boolean canWalkOnPowderedSnow(ItemStack itemStack, LivingEntity livingEntity) {
-        return getSlot() == EquipmentSlot.FEET;
+    public TacticalArmor(ArmorMaterial armorMaterial, EquipmentSlot equipmentSlot, Properties properties, int camouflage) {
+        super(armorMaterial, equipmentSlot, properties, camouflage);
     }
 
     @Override
     public String getArmorTexture(ItemStack itemStack, Entity entity, EquipmentSlot slot, String type) {
-        return "zombiekit:textures/entities/skiing_suit.png";
+        switch (getCamouflage()){
+            case 1 -> {
+                return "zombiekit:textures/entities/tactical_suit_desert.png";
+            }
+            case 2 -> {
+                return "zombiekit:textures/entities/tactical_suit_forest.png";
+            }
+            case 3 -> {
+                return "zombiekit:textures/entities/tactical_suit_snow.png";
+            }
+            default -> {
+                return "zombiekit:textures/entities/tactical_suit_standard.png";
+            }
+        }
     }
 
     public HumanoidModel getArmorModel(){
@@ -56,22 +52,22 @@ public class SkiingSuit extends ArmorItem {
                 "left_leg", new ModelPart(Collections.emptyList(), Collections.emptyMap())
         ));
         switch (getSlot()){
-            case HEAD -> map.put("head", new SkiingSuitModel(Minecraft.getInstance().getEntityModels().bakeLayer(SkiingSuitModel.LAYER_LOCATION)).Head);
+            case HEAD -> map.put("head", new TacticalSuitModel<>(Minecraft.getInstance().getEntityModels().bakeLayer(TacticalSuitModel.LAYER_LOCATION)).Head);
             case CHEST -> {
-                map.put("body", new SkiingSuitModel(Minecraft.getInstance().getEntityModels().bakeLayer(SkiingSuitModel.LAYER_LOCATION)).Body);
-                map.put("right_arm", new SkiingSuitModel(Minecraft.getInstance().getEntityModels().bakeLayer(SkiingSuitModel.LAYER_LOCATION)).RightArm);
-                map.put("left_arm", new SkiingSuitModel(Minecraft.getInstance().getEntityModels().bakeLayer(SkiingSuitModel.LAYER_LOCATION)).LeftArm);
+                map.put("body", new TacticalSuitModel<>(Minecraft.getInstance().getEntityModels().bakeLayer(TacticalSuitModel.LAYER_LOCATION)).Body);
+                map.put("right_arm", new TacticalSuitModel<>(Minecraft.getInstance().getEntityModels().bakeLayer(TacticalSuitModel.LAYER_LOCATION)).RightArm);
+                map.put("left_arm", new TacticalSuitModel<>(Minecraft.getInstance().getEntityModels().bakeLayer(TacticalSuitModel.LAYER_LOCATION)).LeftArm);
             }
             case LEGS -> {
-                map.put("right_leg", new SkiingSuitModel(Minecraft.getInstance().getEntityModels().bakeLayer(SkiingSuitModel.LAYER_LOCATION)).RightLeg);
-                map.put("left_leg", new SkiingSuitModel(Minecraft.getInstance().getEntityModels().bakeLayer(SkiingSuitModel.LAYER_LOCATION)).LeftLeg);
+                map.put("right_leg", new TacticalSuitModel<>(Minecraft.getInstance().getEntityModels().bakeLayer(TacticalSuitModel.LAYER_LOCATION)).RightLeg);
+                map.put("left_leg", new TacticalSuitModel<>(Minecraft.getInstance().getEntityModels().bakeLayer(TacticalSuitModel.LAYER_LOCATION)).LeftLeg);
             }
             default -> {
-                map.put("right_leg", new SkiingSuitModel(Minecraft.getInstance().getEntityModels().bakeLayer(SkiingSuitModel.LAYER_LOCATION)).RightShoes);
-                map.put("left_leg", new SkiingSuitModel(Minecraft.getInstance().getEntityModels().bakeLayer(SkiingSuitModel.LAYER_LOCATION)).LeftShoes);
+                map.put("right_leg", new TacticalSuitModel<>(Minecraft.getInstance().getEntityModels().bakeLayer(TacticalSuitModel.LAYER_LOCATION)).RightShoes);
+                map.put("left_leg", new TacticalSuitModel<>(Minecraft.getInstance().getEntityModels().bakeLayer(TacticalSuitModel.LAYER_LOCATION)).LeftShoes);
             }
         }
-        return new HumanoidModel(new ModelPart(Collections.emptyList(), map));
+        return new HumanoidModel(new ModelPart(Collections.emptyList(), Map.copyOf(map)));
     }
 
     public void initializeClient(java.util.function.Consumer<net.minecraftforge.client.IItemRenderProperties> consumer) {
@@ -79,7 +75,7 @@ public class SkiingSuit extends ArmorItem {
             @Override
             @OnlyIn(Dist.CLIENT)
             public HumanoidModel getArmorModel(LivingEntity living, ItemStack stack, EquipmentSlot slot, HumanoidModel defaultModel) {
-                HumanoidModel armorModel = SkiingSuit.this.getArmorModel();
+                HumanoidModel armorModel = TacticalArmor.this.getArmorModel();
                 armorModel.crouching = living.isShiftKeyDown();
                 armorModel.riding = defaultModel.riding;
                 armorModel.young = living.isBaby();
@@ -87,6 +83,4 @@ public class SkiingSuit extends ArmorItem {
             }
         });
     }
-
-
 }

@@ -14,7 +14,7 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.biome.Biome;
 
-public abstract class CamouflageSuit extends ArmorItem {
+public abstract class CamouflageArmor extends ArmorItem {
 
     private final int camouflage;
     public static TagKey<Biome> DESERT = TagKey.create(Registry.BIOME_REGISTRY, new ResourceLocation("forge:desert_camouflage"));
@@ -24,9 +24,13 @@ public abstract class CamouflageSuit extends ArmorItem {
     public static TagKey<Biome> FOREST_CAVE = TagKey.create(Registry.BIOME_REGISTRY, new ResourceLocation("forge:forest_camouflage_cave"));
     public static TagKey<Biome> SNOW_CAVE = TagKey.create(Registry.BIOME_REGISTRY, new ResourceLocation("forge:snow_camouflage_cave"));
 
-    public CamouflageSuit(ArmorMaterial armorMaterial, EquipmentSlot equipmentSlot, Properties properties, int camouflage) {
+    public CamouflageArmor(ArmorMaterial armorMaterial, EquipmentSlot equipmentSlot, Properties properties, int camouflage) {
         super(armorMaterial, equipmentSlot, properties);
         this.camouflage = camouflage;
+    }
+
+    public int getCamouflage() {
+        return camouflage;
     }
 
     @Override
@@ -38,7 +42,7 @@ public abstract class CamouflageSuit extends ArmorItem {
             if (!isProperPlace(blockPos, level))
                 return;
             for (ItemStack armor : player.getArmorSlots()){
-                if ((armor.getItem() instanceof CamouflageSuit camouflageSuit && camouflageSuit.camouflage == this.camouflage))
+                if (!(armor.getItem() instanceof CamouflageArmor camouflageSuit && camouflageSuit.camouflage == this.camouflage))
                     return;
             }
             int amplifier = 0;
@@ -53,29 +57,30 @@ public abstract class CamouflageSuit extends ArmorItem {
     public boolean isProperPlace(BlockPos blockPos, Level level){
         switch (camouflage){
             case 1 -> {
-                if (level.canSeeSkyFromBelowWater(blockPos) || blockPos.getY() > 63){
-                    return level.getBiome(blockPos).is(DESERT);
-                }else {
-                    return level.getBiome(blockPos).is(DESERT_CAVE);
+                if (level.getBiome(blockPos).is(DESERT_CAVE)){
+                    return true;
+                }else if (level.getBiome(blockPos).is(DESERT)){
+                    return level.canSeeSkyFromBelowWater(blockPos) || blockPos.getY() > 63;
                 }
             }
             case 2 -> {
-                if (level.canSeeSkyFromBelowWater(blockPos) || blockPos.getY() > 63){
-                    return level.getBiome(blockPos).is(FOREST);
-                }else {
-                    return level.getBiome(blockPos).is(FOREST_CAVE);
+                if (level.getBiome(blockPos).is(FOREST_CAVE)){
+                    return true;
+                }else if (level.getBiome(blockPos).is(FOREST)){
+                    return level.canSeeSkyFromBelowWater(blockPos) || blockPos.getY() > 63;
                 }
             }
             case 3 -> {
-                if (level.canSeeSkyFromBelowWater(blockPos) || blockPos.getY() > 63){
-                    return level.getBiome(blockPos).is(SNOW);
-                }else {
-                    return level.getBiome(blockPos).is(SNOW_CAVE);
+                if (level.getBiome(blockPos).is(SNOW_CAVE)){
+                    return true;
+                }else if (level.getBiome(blockPos).is(SNOW)){
+                    return level.canSeeSkyFromBelowWater(blockPos) || blockPos.getY() > 63;
                 }
             }
             default -> {
                 return false;
             }
         }
+        return false;
     }
 }
