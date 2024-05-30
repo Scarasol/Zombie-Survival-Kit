@@ -2,6 +2,7 @@ package com.scarasol.zombiekit.init;
 
 import com.scarasol.zombiekit.ZombieKitMod;
 import com.scarasol.zombiekit.item.armor.*;
+import com.scarasol.zombiekit.item.projectile.MolotovCocktail;
 import com.scarasol.zombiekit.item.weapon.*;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.item.*;
@@ -89,6 +90,9 @@ public class ZombieKitItems {
 
     public static final RegistryObject<Item> RAKE = REGISTRY.register("rake", () -> new Rake(Tiers.IRON, 7, -3f, new Item.Properties().tab(ZombieKitTabs.TAB_ZOMBIEKIT_COMBAT)));
     public static final RegistryObject<Item> NETHERITE_RAKE = REGISTRY.register("netherite_rake", () -> new Rake(Tiers.NETHERITE, 10, -3f, new Item.Properties().tab(ZombieKitTabs.TAB_ZOMBIEKIT_COMBAT).fireResistant()));
+
+
+    public static final RegistryObject<Item> MOLOTOV_COCKTAIL = REGISTRY.register("molotov_cocktail", () -> new MolotovCocktail(new Item.Properties().tab(ZombieKitTabs.TAB_ZOMBIEKIT_COMBAT).stacksTo(16)));
 
 
     public static final RegistryObject<Item> LATEX = REGISTRY.register("latex", () -> new Item(new Item.Properties().tab(ZombieKitTabs.TAB_ZOMBIEKIT)));

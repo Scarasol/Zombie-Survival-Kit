@@ -1,8 +1,11 @@
 package com.scarasol.zombiekit;
 
 import com.mojang.logging.LogUtils;
+
+import com.scarasol.zombiekit.init.ZombieKitEntities;
 import com.scarasol.zombiekit.init.ZombieKitItems;
 import com.scarasol.zombiekit.init.ZombieKitTabs;
+import com.scarasol.zombiekit.network.NetworkHandler;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraftforge.common.MinecraftForge;
@@ -29,12 +32,13 @@ public class ZombieKitMod
     public static final String MODID = "zombiekit";
 
 
-    public ZombieKitMod()
-    {
+    public ZombieKitMod() {
         ZombieKitTabs.load();
         // Register ourselves for server and other game events we are interested in
         IEventBus bus = FMLJavaModLoadingContext.get().getModEventBus();
         ZombieKitItems.REGISTRY.register(bus);
+        ZombieKitEntities.REGISTRY.register(bus);
         MinecraftForge.EVENT_BUS.register(this);
+        NetworkHandler.addNetworkMessage();
     }
 }
