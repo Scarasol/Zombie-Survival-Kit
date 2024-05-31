@@ -14,7 +14,7 @@ public class ZombieKitTabs {
         TAB_ZOMBIEKIT = new CreativeModeTab("tabzombiekit") {
             @Override
             public ItemStack makeIcon() {
-                return new ItemStack(ZombieKitItems.FIRE_AXE.get());
+                return new ItemStack(ZombieKitItems.PLASTICS.get());
             }
 
             @OnlyIn(Dist.CLIENT)
@@ -25,7 +25,7 @@ public class ZombieKitTabs {
         TAB_ZOMBIEKIT_COMBAT = new CreativeModeTab("zombiekit_combat") {
             @Override
             public ItemStack makeIcon() {
-                return new ItemStack(ZombieKitItems.FIRE_AXE.get());
+                return new ItemStack(ZombieKitItems.MOLOTOV_COCKTAIL.get());
             }
 
             @OnlyIn(Dist.CLIENT)

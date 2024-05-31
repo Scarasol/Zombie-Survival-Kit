@@ -2,7 +2,10 @@ package com.scarasol.zombiekit.init;
 
 import com.scarasol.zombiekit.ZombieKitMod;
 import com.scarasol.zombiekit.item.armor.*;
+import com.scarasol.zombiekit.item.projectile.BileJar;
+import com.scarasol.zombiekit.item.projectile.Firecracker;
 import com.scarasol.zombiekit.item.projectile.MolotovCocktail;
+import com.scarasol.zombiekit.item.projectile.PotionJar;
 import com.scarasol.zombiekit.item.weapon.*;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.item.*;
@@ -91,8 +94,12 @@ public class ZombieKitItems {
     public static final RegistryObject<Item> RAKE = REGISTRY.register("rake", () -> new Rake(Tiers.IRON, 7, -3f, new Item.Properties().tab(ZombieKitTabs.TAB_ZOMBIEKIT_COMBAT)));
     public static final RegistryObject<Item> NETHERITE_RAKE = REGISTRY.register("netherite_rake", () -> new Rake(Tiers.NETHERITE, 10, -3f, new Item.Properties().tab(ZombieKitTabs.TAB_ZOMBIEKIT_COMBAT).fireResistant()));
 
+    public static final RegistryObject<Item> WRENCH = REGISTRY.register("wrench", () -> new Wrench(new Item.Properties().tab(ZombieKitTabs.TAB_ZOMBIEKIT_COMBAT).stacksTo(4)));
 
     public static final RegistryObject<Item> MOLOTOV_COCKTAIL = REGISTRY.register("molotov_cocktail", () -> new MolotovCocktail(new Item.Properties().tab(ZombieKitTabs.TAB_ZOMBIEKIT_COMBAT).stacksTo(16)));
+    public static final RegistryObject<Item> POTION_JAR = REGISTRY.register("potion_jar", () -> new PotionJar(new Item.Properties().tab(ZombieKitTabs.TAB_ZOMBIEKIT_COMBAT).stacksTo(16)));
+    public static final RegistryObject<Item> BILE_JAR = REGISTRY.register("bile_jar", () -> new BileJar(new Item.Properties().tab(ZombieKitTabs.TAB_ZOMBIEKIT_COMBAT).stacksTo(16)));
+    public static final RegistryObject<Item> FIRECRACKER = REGISTRY.register("firecracker", () -> new Firecracker(new Item.Properties().tab(ZombieKitTabs.TAB_ZOMBIEKIT_COMBAT).stacksTo(16)));
 
 
     public static final RegistryObject<Item> LATEX = REGISTRY.register("latex", () -> new Item(new Item.Properties().tab(ZombieKitTabs.TAB_ZOMBIEKIT)));

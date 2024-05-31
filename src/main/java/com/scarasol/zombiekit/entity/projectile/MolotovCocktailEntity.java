@@ -28,7 +28,7 @@ import net.minecraftforge.registries.ForgeRegistries;
 import java.util.Random;
 
 @OnlyIn(value = Dist.CLIENT, _interface = ItemSupplier.class)
-public class MolotovCocktailEntity extends AbstractArrow implements ItemSupplier {
+public class MolotovCocktailEntity extends ModProjectile {
     public MolotovCocktailEntity(EntityType<? extends AbstractArrow> entityType, Level level) {
         super(entityType, level);
     }
@@ -45,12 +45,6 @@ public class MolotovCocktailEntity extends AbstractArrow implements ItemSupplier
         super(ZombieKitEntities.MOLOTOV_COCKTAIL.get(), world);
     }
 
-
-    @Override
-    public Packet<?> getAddEntityPacket() {
-        return NetworkHooks.getEntitySpawningPacket(this);
-    }
-
     @Override
     @OnlyIn(Dist.CLIENT)
     public ItemStack getItem() {
@@ -62,60 +56,16 @@ public class MolotovCocktailEntity extends AbstractArrow implements ItemSupplier
         return new ItemStack(ZombieKitItems.MOLOTOV_COCKTAIL.get());
     }
 
-    @Override
-    protected void doPostHurtEffects(LivingEntity entity) {
-        super.doPostHurtEffects(entity);
-        entity.setArrowCount(entity.getArrowCount() - 1);
-    }
-
-    @Override
-    public void onHitEntity(EntityHitResult entityHitResult) {
-        super.onHitEntity(entityHitResult);
-        burn(level, getX(), getY(), getZ());
-    }
-
-    @Override
-    public void onHitBlock(BlockHitResult blockHitResult) {
-        super.onHitBlock(blockHitResult);
-        burn(level, getX(), getY(), getZ());
-    }
-
-    @Override
-    public void tick() {
-        super.tick();
-        if (this.inGround)
-            this.discard();
-    }
-
     public static MolotovCocktailEntity shoot(Level world, LivingEntity entity, Random random, float power, double damage, int knockback) {
-        MolotovCocktailEntity entityarrow = new MolotovCocktailEntity(ZombieKitEntities.MOLOTOV_COCKTAIL.get(), entity, world);
-        entityarrow.shoot(entity.getViewVector(1).x, entity.getViewVector(1).y, entity.getViewVector(1).z, power * 2, 0);
-        entityarrow.setSilent(true);
-        entityarrow.setCritArrow(false);
-        entityarrow.setBaseDamage(damage);
-        entityarrow.setKnockback(knockback);
-        entityarrow.setSecondsOnFire(100);
-        world.addFreshEntity(entityarrow);
-        world.playSound(null, entity.getX(), entity.getY(), entity.getZ(), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.arrow.shoot")), SoundSource.PLAYERS, 1, 1f / (random.nextFloat() * 0.5f + 1) + (power / 2));
-        return entityarrow;
+        MolotovCocktailEntity entityArrow = new MolotovCocktailEntity(ZombieKitEntities.MOLOTOV_COCKTAIL.get(), entity, world);
+        entityArrow.setSecondsOnFire(100);
+        ModProjectile.initProjectileEntity(entityArrow, world, entity, random, power, damage, knockback);
+        return entityArrow;
     }
 
-    public static MolotovCocktailEntity shoot(LivingEntity entity, LivingEntity target) {
-        MolotovCocktailEntity entityarrow = new MolotovCocktailEntity(ZombieKitEntities.MOLOTOV_COCKTAIL.get(), entity, entity.level);
-        double dx = target.getX() - entity.getX();
-        double dy = target.getY() + target.getEyeHeight() - 1.1;
-        double dz = target.getZ() - entity.getZ();
-        entityarrow.shoot(dx, dy - entityarrow.getY() + Math.hypot(dx, dz) * 0.2F, dz, 0.8f * 2, 12.0F);
-        entityarrow.setSilent(true);
-        entityarrow.setBaseDamage(4);
-        entityarrow.setCritArrow(false);
-        entityarrow.setSecondsOnFire(100);
-        entity.level.addFreshEntity(entityarrow);
-        entity.level.playSound(null, entity.getX(), entity.getY(), entity.getZ(), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.arrow.shoot")), SoundSource.PLAYERS, 1, 1f / (new Random().nextFloat() * 0.5f + 1));
-        return entityarrow;
-    }
 
-    public void burn(Level level, double x, double y, double z) {
+
+    public void doEffects(Level level, double x, double y, double z) {
         double cst_pi = Math.acos(-1);
         double cst_r = 3;
         double cst_tha1 = 2 * cst_pi;

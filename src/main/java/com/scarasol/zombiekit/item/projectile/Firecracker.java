@@ -1,7 +1,7 @@
 package com.scarasol.zombiekit.item.projectile;
 
-import com.scarasol.zombiekit.entity.projectile.MolotovCocktailEntity;
-import com.scarasol.zombiekit.init.ZombieKitItems;
+import com.scarasol.zombiekit.entity.projectile.BileJarEntity;
+import com.scarasol.zombiekit.entity.projectile.FirecrackerEntity;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
@@ -11,13 +11,11 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.projectile.AbstractArrow;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.ProjectileWeaponItem;
 import net.minecraft.world.item.UseAnim;
 import net.minecraft.world.level.Level;
 
-public class MolotovCocktail extends Item {
-
-    public MolotovCocktail(Properties properties) {
+public class Firecracker extends Item {
+    public Firecracker(Properties properties) {
         super(properties);
     }
 
@@ -40,7 +38,7 @@ public class MolotovCocktail extends Item {
     @Override
     public void releaseUsing(ItemStack itemStack, Level world, LivingEntity entityLiving, int timeLeft) {
         if (!world.isClientSide() && entityLiving instanceof ServerPlayer entity) {
-            MolotovCocktailEntity entityArrow = MolotovCocktailEntity.shoot(world, entity, world.getRandom(), 0.8f, 4, 0);
+            AbstractArrow entityArrow = FirecrackerEntity.shoot(world, entity, world.getRandom(), 0.8f, 4, 0);
             if (entity.getAbilities().instabuild) {
                 entityArrow.pickup = AbstractArrow.Pickup.CREATIVE_ONLY;
             } else {
