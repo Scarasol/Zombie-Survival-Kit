@@ -2,9 +2,14 @@ package com.scarasol.zombiekit.event;
 
 
 import com.scarasol.zombiekit.ZombieKitMod;
+import com.scarasol.zombiekit.block.ShortwaveRadioBlock;
 import com.scarasol.zombiekit.item.armor.BombArmor;
 import com.scarasol.zombiekit.item.armor.ExoArmor;
+import com.scarasol.zombiekit.network.MapVariables;
+import com.scarasol.zombiekit.network.NetworkHandler;
+import com.scarasol.zombiekit.network.SavedDataSyncPacket;
 import net.minecraft.server.level.ServerLevel;
+import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.EquipmentSlot;
@@ -16,13 +21,17 @@ import net.minecraft.world.item.ArmorItem;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.SwordItem;
 import net.minecraft.world.item.TieredItem;
+import net.minecraft.world.level.saveddata.SavedData;
 import net.minecraft.world.phys.Vec3;
 import net.minecraftforge.event.ItemAttributeModifierEvent;
 import net.minecraftforge.event.entity.living.LivingAttackEvent;
 import net.minecraftforge.event.entity.living.LivingEquipmentChangeEvent;
+import net.minecraftforge.event.entity.player.PlayerEvent;
 import net.minecraftforge.event.entity.player.PlayerInteractEvent;
+import net.minecraftforge.event.world.WorldEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.network.PacketDistributor;
 
 import java.util.UUID;
 
@@ -50,5 +59,22 @@ public class EventHandler {
             ExoArmor.reactiveArmor(event.getEntityLiving(), entity);
         }
     }
+
+    @SubscribeEvent
+    public static void onWorldLoad(WorldEvent.Load event) {
+        ShortwaveRadioBlock.loadRadioString(event.getWorld());
+//        InjectorBlock.init();
+    }
+
+    @SubscribeEvent
+    public static void onPlayerLoggedIn(PlayerEvent.PlayerLoggedInEvent event) {
+        if (!event.getPlayer().level.isClientSide()) {
+            SavedData mapData = MapVariables.get(event.getPlayer().level);
+            if (mapData != null)
+                NetworkHandler.PACKET_HANDLER.send(PacketDistributor.PLAYER.with(() -> (ServerPlayer) event.getPlayer()), new SavedDataSyncPacket(mapData));
+        }
+    }
+
+
 
 }

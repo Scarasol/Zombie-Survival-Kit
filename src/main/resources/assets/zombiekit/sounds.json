@@ -1,14 +1,4 @@
 {
-  "tinnitus": {
-    "category": "player",
-    "subtitle": "subtitles.tinnitus",
-    "sounds": [
-      {
-        "name": "zombiekit:tinnitus",
-        "stream": false
-      }
-    ]
-  },
   "acid_spray": {
     "category": "block",
     "subtitle": "subtitles.acid_spray",

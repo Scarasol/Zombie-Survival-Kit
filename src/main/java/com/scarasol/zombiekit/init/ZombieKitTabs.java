@@ -9,19 +9,9 @@ public class ZombieKitTabs {
 
     public static CreativeModeTab TAB_ZOMBIEKIT;
     public static CreativeModeTab TAB_ZOMBIEKIT_COMBAT;
+    public static CreativeModeTab TAB_ZOMBIEKIT_TOOL;
 
     public static void load() {
-        TAB_ZOMBIEKIT = new CreativeModeTab("tabzombiekit") {
-            @Override
-            public ItemStack makeIcon() {
-                return new ItemStack(ZombieKitItems.PLASTICS.get());
-            }
-
-            @OnlyIn(Dist.CLIENT)
-            public boolean hasSearchBar() {
-                return false;
-            }
-        };
         TAB_ZOMBIEKIT_COMBAT = new CreativeModeTab("zombiekit_combat") {
             @Override
             public ItemStack makeIcon() {
@@ -33,6 +23,29 @@ public class ZombieKitTabs {
                 return false;
             }
         };
+        TAB_ZOMBIEKIT_TOOL = new CreativeModeTab("zombiekit_tool") {
+            @Override
+            public ItemStack makeIcon() {
+                return new ItemStack(ZombieKitItems.MIRACLE.get());
+            }
+
+            @OnlyIn(Dist.CLIENT)
+            public boolean hasSearchBar() {
+                return false;
+            }
+        };
+        TAB_ZOMBIEKIT = new CreativeModeTab("tabzombiekit") {
+            @Override
+            public ItemStack makeIcon() {
+                return new ItemStack(ZombieKitItems.PLASTICS.get());
+            }
+
+            @OnlyIn(Dist.CLIENT)
+            public boolean hasSearchBar() {
+                return false;
+            }
+        };
+
     }
 
 }

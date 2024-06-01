@@ -12,6 +12,7 @@ import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.projectile.AbstractArrow;
+import net.minecraft.world.entity.projectile.ItemSupplier;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.phys.AABB;
@@ -25,6 +26,7 @@ import java.util.List;
 import java.util.Random;
 import java.util.stream.Collectors;
 
+@OnlyIn(value = Dist.CLIENT, _interface = ItemSupplier.class)
 public class FirecrackerEntity extends ModProjectile {
 
     public FirecrackerEntity(EntityType<? extends AbstractArrow> entityType, Level level) {

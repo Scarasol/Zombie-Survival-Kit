@@ -1,7 +1,10 @@
 package com.scarasol.zombiekit.init;
 
 import com.scarasol.zombiekit.ZombieKitMod;
+import com.scarasol.zombiekit.item.HeavyMachineGunAmmo;
+import com.scarasol.zombiekit.item.PocketRadio;
 import com.scarasol.zombiekit.item.armor.*;
+import com.scarasol.zombiekit.item.medical.*;
 import com.scarasol.zombiekit.item.projectile.BileJar;
 import com.scarasol.zombiekit.item.projectile.Firecracker;
 import com.scarasol.zombiekit.item.projectile.MolotovCocktail;
@@ -68,10 +71,10 @@ public class ZombieKitItems {
     public static final RegistryObject<Item> BOMB_LEGGINGS = REGISTRY.register("bomb_leggings", () -> new BombArmor(ModArmorMaterial.BOMB, EquipmentSlot.LEGS, new Item.Properties().tab(ZombieKitTabs.TAB_ZOMBIEKIT_COMBAT)));
     public static final RegistryObject<Item> BOMB_BOOTS = REGISTRY.register("bomb_boots", () -> new BombArmor(ModArmorMaterial.BOMB, EquipmentSlot.FEET, new Item.Properties().tab(ZombieKitTabs.TAB_ZOMBIEKIT_COMBAT)));
 
-    public static final RegistryObject<Item> EXO_HELMET = REGISTRY.register("exo_helmet", () -> new ExoArmor(ModArmorMaterial.EXO, EquipmentSlot.HEAD, new Item.Properties().tab(ZombieKitTabs.TAB_ZOMBIEKIT_COMBAT)));
-    public static final RegistryObject<Item> EXO_CHESTPLATE = REGISTRY.register("exo_chestplate", () -> new ExoArmor(ModArmorMaterial.EXO, EquipmentSlot.CHEST, new Item.Properties().tab(ZombieKitTabs.TAB_ZOMBIEKIT_COMBAT)));
-    public static final RegistryObject<Item> EXO_LEGGINGS = REGISTRY.register("exo_leggings", () -> new ExoArmor(ModArmorMaterial.EXO, EquipmentSlot.LEGS, new Item.Properties().tab(ZombieKitTabs.TAB_ZOMBIEKIT_COMBAT)));
-    public static final RegistryObject<Item> EXO_BOOTS = REGISTRY.register("exo_boots", () -> new ExoArmor(ModArmorMaterial.EXO, EquipmentSlot.FEET, new Item.Properties().tab(ZombieKitTabs.TAB_ZOMBIEKIT_COMBAT)));
+    public static final RegistryObject<Item> EXO_HELMET = REGISTRY.register("exo_helmet", () -> new ExoArmor(ModArmorMaterial.EXO, EquipmentSlot.HEAD, new Item.Properties().tab(ZombieKitTabs.TAB_ZOMBIEKIT_COMBAT).fireResistant()));
+    public static final RegistryObject<Item> EXO_CHESTPLATE = REGISTRY.register("exo_chestplate", () -> new ExoArmor(ModArmorMaterial.EXO, EquipmentSlot.CHEST, new Item.Properties().tab(ZombieKitTabs.TAB_ZOMBIEKIT_COMBAT).fireResistant()));
+    public static final RegistryObject<Item> EXO_LEGGINGS = REGISTRY.register("exo_leggings", () -> new ExoArmor(ModArmorMaterial.EXO, EquipmentSlot.LEGS, new Item.Properties().tab(ZombieKitTabs.TAB_ZOMBIEKIT_COMBAT).fireResistant()));
+    public static final RegistryObject<Item> EXO_BOOTS = REGISTRY.register("exo_boots", () -> new ExoArmor(ModArmorMaterial.EXO, EquipmentSlot.FEET, new Item.Properties().tab(ZombieKitTabs.TAB_ZOMBIEKIT_COMBAT).fireResistant()));
 
 
     public static final RegistryObject<Item> BASEBALL_BAT = REGISTRY.register("baseball_bat", () -> new BaseballBat(Tiers.WOOD, 8, -2.7f, new Item.Properties().tab(ZombieKitTabs.TAB_ZOMBIEKIT_COMBAT), false));
@@ -96,11 +99,30 @@ public class ZombieKitItems {
 
     public static final RegistryObject<Item> WRENCH = REGISTRY.register("wrench", () -> new Wrench(new Item.Properties().tab(ZombieKitTabs.TAB_ZOMBIEKIT_COMBAT).stacksTo(4)));
 
+
     public static final RegistryObject<Item> MOLOTOV_COCKTAIL = REGISTRY.register("molotov_cocktail", () -> new MolotovCocktail(new Item.Properties().tab(ZombieKitTabs.TAB_ZOMBIEKIT_COMBAT).stacksTo(16)));
     public static final RegistryObject<Item> POTION_JAR = REGISTRY.register("potion_jar", () -> new PotionJar(new Item.Properties().tab(ZombieKitTabs.TAB_ZOMBIEKIT_COMBAT).stacksTo(16)));
     public static final RegistryObject<Item> BILE_JAR = REGISTRY.register("bile_jar", () -> new BileJar(new Item.Properties().tab(ZombieKitTabs.TAB_ZOMBIEKIT_COMBAT).stacksTo(16)));
     public static final RegistryObject<Item> FIRECRACKER = REGISTRY.register("firecracker", () -> new Firecracker(new Item.Properties().tab(ZombieKitTabs.TAB_ZOMBIEKIT_COMBAT).stacksTo(16)));
 
+
+    public static final RegistryObject<Item> BANDAGE = REGISTRY.register("bandage", () -> new Bandage(new Item.Properties().tab(ZombieKitTabs.TAB_ZOMBIEKIT_TOOL).stacksTo(16)));
+    public static final RegistryObject<Item> PAINKILLER = REGISTRY.register("painkiller", () -> new Painkiller(new Item.Properties().tab(ZombieKitTabs.TAB_ZOMBIEKIT_TOOL).stacksTo(16)));
+    public static final RegistryObject<Item> MEDICAL_KIT = REGISTRY.register("medical_kit", () -> new MedicalKit(new Item.Properties().tab(ZombieKitTabs.TAB_ZOMBIEKIT_TOOL)));
+    public static final RegistryObject<Item> SUSPICIOUS_DRUG = REGISTRY.register("suspicious_drug", () -> new SuspiciousDrug(new Item.Properties().tab(ZombieKitTabs.TAB_ZOMBIEKIT_TOOL).stacksTo(16)));
+    public static final RegistryObject<Item> MIRACLE = REGISTRY.register("miracle", () -> new Miracle(new Item.Properties().tab(ZombieKitTabs.TAB_ZOMBIEKIT_TOOL).stacksTo(16).rarity(Rarity.RARE)));
+
+    public static final RegistryObject<Item> HEAVY_MACHINE_GUN_AMMO = REGISTRY.register("heavy_machine_gun_ammo", () -> new HeavyMachineGunAmmo(new Item.Properties().tab(ZombieKitTabs.TAB_ZOMBIEKIT_TOOL)));
+
+    public static final RegistryObject<Item> POCKET_RADIO = REGISTRY.register("pocket_radio", () -> new PocketRadio(new Item.Properties().tab(ZombieKitTabs.TAB_ZOMBIEKIT_TOOL).stacksTo(1)));
+    public static final RegistryObject<Item> SHORTWAVE_RADIO = block(ZombieKitBlocks.SHORTWAVE_RADIO, ZombieKitTabs.TAB_ZOMBIEKIT_TOOL);
+
+    public static final RegistryObject<Item> GAS_TANK = block(ZombieKitBlocks.GAS_TANK, ZombieKitTabs.TAB_ZOMBIEKIT_TOOL);
+
+
+    public static final RegistryObject<Item> DESERT_CAMOUFLAGE_DYE = REGISTRY.register("desert_camouflage_dye", () -> new Item(new Item.Properties().tab(ZombieKitTabs.TAB_ZOMBIEKIT).rarity(Rarity.RARE)));
+    public static final RegistryObject<Item> FOREST_CAMOUFLAGE_DYE = REGISTRY.register("forest_camouflage_dye", () -> new Item(new Item.Properties().tab(ZombieKitTabs.TAB_ZOMBIEKIT).rarity(Rarity.RARE)));
+    public static final RegistryObject<Item> SNOW_CAMOUFLAGE_DYE = REGISTRY.register("snow_camouflage_dye", () -> new Item(new Item.Properties().tab(ZombieKitTabs.TAB_ZOMBIEKIT).rarity(Rarity.RARE)));
 
     public static final RegistryObject<Item> LATEX = REGISTRY.register("latex", () -> new Item(new Item.Properties().tab(ZombieKitTabs.TAB_ZOMBIEKIT)));
     public static final RegistryObject<Item> RUBBER = REGISTRY.register("rubber", () -> new Item(new Item.Properties().tab(ZombieKitTabs.TAB_ZOMBIEKIT)));
@@ -121,6 +143,9 @@ public class ZombieKitItems {
     public static final RegistryObject<Item> IRON_WIRE = REGISTRY.register("iron_wire", () -> new Item(new Item.Properties().tab(ZombieKitTabs.TAB_ZOMBIEKIT)));
     public static final RegistryObject<Item> SMOKELESS_GUNPOWDER = REGISTRY.register("smokeless_gunpowder", () -> new Item(new Item.Properties().tab(ZombieKitTabs.TAB_ZOMBIEKIT)));
     public static final RegistryObject<Item> SULFUR = REGISTRY.register("sulfur", () -> new Item(new Item.Properties().tab(ZombieKitTabs.TAB_ZOMBIEKIT)));
+
+    public static final RegistryObject<Item> DRONE_COMPONENTS = REGISTRY.register("drone_components", () -> new Item(new Item.Properties().tab(ZombieKitTabs.TAB_ZOMBIEKIT)));
+    public static final RegistryObject<Item> MACHINE_GUN_COMPONENTS = REGISTRY.register("machine_gun_components", () -> new Item(new Item.Properties().tab(ZombieKitTabs.TAB_ZOMBIEKIT)));
 
 
     private static RegistryObject<Item> block(RegistryObject<Block> block, CreativeModeTab tab) {

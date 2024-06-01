@@ -2,6 +2,7 @@ package com.scarasol.zombiekit;
 
 import com.mojang.logging.LogUtils;
 
+import com.scarasol.zombiekit.init.ZombieKitBlocks;
 import com.scarasol.zombiekit.init.ZombieKitEntities;
 import com.scarasol.zombiekit.init.ZombieKitItems;
 import com.scarasol.zombiekit.init.ZombieKitTabs;
@@ -36,6 +37,7 @@ public class ZombieKitMod
         ZombieKitTabs.load();
         // Register ourselves for server and other game events we are interested in
         IEventBus bus = FMLJavaModLoadingContext.get().getModEventBus();
+        ZombieKitBlocks.REGISTRY.register(bus);
         ZombieKitItems.REGISTRY.register(bus);
         ZombieKitEntities.REGISTRY.register(bus);
         MinecraftForge.EVENT_BUS.register(this);

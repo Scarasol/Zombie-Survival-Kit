@@ -13,5 +13,7 @@ public class NetworkHandler {
 
     public static <T> void addNetworkMessage() {
         PACKET_HANDLER.registerMessage(messageID++, ExoPacket.class, ExoPacket::encode, ExoPacket::decode, ExoPacket::handler);
+        PACKET_HANDLER.registerMessage(messageID++, SavedDataSyncPacket.class, SavedDataSyncPacket::encode, SavedDataSyncPacket::decode, SavedDataSyncPacket::handler);
+
     }
 }
