@@ -1,18 +1,48 @@
 {
   "variants": {
-    "facing=north": {
+    "facing=north,stage=0": {
       "model": "zombiekit:block/barbed_wire"
     },
-    "facing=east": {
+    "facing=east,stage=0": {
       "model": "zombiekit:block/barbed_wire",
       "y": 90
     },
-    "facing=south": {
+    "facing=south,stage=0": {
       "model": "zombiekit:block/barbed_wire",
       "y": 180
     },
-    "facing=west": {
+    "facing=west,stage=0": {
       "model": "zombiekit:block/barbed_wire",
+      "y": 270
+    },
+    "facing=north,stage=1": {
+      "model": "zombiekit:block/barbed_wire_broken"
+    },
+    "facing=east,stage=1": {
+      "model": "zombiekit:block/barbed_wire_broken",
+      "y": 90
+    },
+    "facing=south,stage=1": {
+      "model": "zombiekit:block/barbed_wire_broken",
+      "y": 180
+    },
+    "facing=west,stage=1": {
+      "model": "zombiekit:block/barbed_wire_broken",
+      "y": 270
+    },
+    "facing=north,stage=2": {
+      "model": "zombiekit:block/barbed_wire_extremely_broken"
+    },
+    "facing=east,stage=2": {
+      "model": "zombiekit:block/barbed_wire_extremely_broken",
+      "y": 90
+    },
+    "facing=south,stage=2": {
+      "model": "zombiekit:block/barbed_wire_extremely_broken",
+      "y": 180
+    },
+    "facing=west,stage=2": {
+      "model": "zombiekit:block/barbed_wire_extremely_broken",
       "y": 270
     }
   }

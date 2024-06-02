@@ -2,10 +2,7 @@ package com.scarasol.zombiekit;
 
 import com.mojang.logging.LogUtils;
 
-import com.scarasol.zombiekit.init.ZombieKitBlocks;
-import com.scarasol.zombiekit.init.ZombieKitEntities;
-import com.scarasol.zombiekit.init.ZombieKitItems;
-import com.scarasol.zombiekit.init.ZombieKitTabs;
+import com.scarasol.zombiekit.init.*;
 import com.scarasol.zombiekit.network.NetworkHandler;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
@@ -40,6 +37,7 @@ public class ZombieKitMod
         ZombieKitBlocks.REGISTRY.register(bus);
         ZombieKitItems.REGISTRY.register(bus);
         ZombieKitEntities.REGISTRY.register(bus);
+        ZombieKitBlockEntities.REGISTRY.register(bus);
         MinecraftForge.EVENT_BUS.register(this);
         NetworkHandler.addNetworkMessage();
     }

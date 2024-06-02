@@ -76,5 +76,15 @@ public class EventHandler {
     }
 
 
+    @SubscribeEvent
+    public static void test(PlayerInteractEvent.RightClickItem event) {
+        if (!event.getPlayer().level.isClientSide()) {
+            ZombieKitMod.LOGGER.info(String.valueOf(event.getPlayer().getDeltaMovement().length()));
+        }
+    }
+
+
+
+
 
 }

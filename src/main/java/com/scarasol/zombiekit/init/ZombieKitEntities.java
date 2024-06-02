@@ -26,6 +26,11 @@ public class ZombieKitEntities {
             .setCustomClientFactory(FirecrackerEntity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
     public static final RegistryObject<EntityType<WrenchEntity>> WRENCH = register("wrench", EntityType.Builder.<WrenchEntity>of(WrenchEntity::new, MobCategory.MISC)
             .setCustomClientFactory(WrenchEntity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
+    public static final RegistryObject<EntityType<FlareGunEntity>> FLARE_GUN = register("flare_gun",
+            EntityType.Builder.<FlareGunEntity>of(FlareGunEntity::new, MobCategory.MISC).setCustomClientFactory(FlareGunEntity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
+    public static final RegistryObject<EntityType<FlaresEntity>> FLARES = register("flares", EntityType.Builder.<FlaresEntity>of(FlaresEntity::new, MobCategory.MISC)
+            .setCustomClientFactory(FlaresEntity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
+
 
 
     private static <T extends Entity> RegistryObject<EntityType<T>> register(String registryName, EntityType.Builder<T> entityTypeBuilder) {

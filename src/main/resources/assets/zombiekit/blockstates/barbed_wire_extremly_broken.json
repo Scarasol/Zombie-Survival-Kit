@@ -1,18 +1,18 @@
 {
   "variants": {
     "facing=north": {
-      "model": "zombiekit:block/barbed_wire_extremly_broken"
+      "model": "zombiekit:block/barbed_wire_extremely_broken"
     },
     "facing=east": {
-      "model": "zombiekit:block/barbed_wire_extremly_broken",
+      "model": "zombiekit:block/barbed_wire_extremely_broken",
       "y": 90
     },
     "facing=south": {
-      "model": "zombiekit:block/barbed_wire_extremly_broken",
+      "model": "zombiekit:block/barbed_wire_extremely_broken",
       "y": 180
     },
     "facing=west": {
-      "model": "zombiekit:block/barbed_wire_extremly_broken",
+      "model": "zombiekit:block/barbed_wire_extremely_broken",
       "y": 270
     }
   }

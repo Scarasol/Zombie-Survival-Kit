@@ -1,6 +1,7 @@
 package com.scarasol.zombiekit.init;
 
 import com.scarasol.zombiekit.ZombieKitMod;
+import com.scarasol.zombiekit.item.FlareGun;
 import com.scarasol.zombiekit.item.HeavyMachineGunAmmo;
 import com.scarasol.zombiekit.item.PocketRadio;
 import com.scarasol.zombiekit.item.armor.*;
@@ -112,7 +113,18 @@ public class ZombieKitItems {
     public static final RegistryObject<Item> SUSPICIOUS_DRUG = REGISTRY.register("suspicious_drug", () -> new SuspiciousDrug(new Item.Properties().tab(ZombieKitTabs.TAB_ZOMBIEKIT_TOOL).stacksTo(16)));
     public static final RegistryObject<Item> MIRACLE = REGISTRY.register("miracle", () -> new Miracle(new Item.Properties().tab(ZombieKitTabs.TAB_ZOMBIEKIT_TOOL).stacksTo(16).rarity(Rarity.RARE)));
 
+
+    public static final RegistryObject<Item> FLARE_GUN = REGISTRY.register("flare_gun", () -> new FlareGun(new Item.Properties().tab(ZombieKitTabs.TAB_ZOMBIEKIT_TOOL).stacksTo(1)));
     public static final RegistryObject<Item> HEAVY_MACHINE_GUN_AMMO = REGISTRY.register("heavy_machine_gun_ammo", () -> new HeavyMachineGunAmmo(new Item.Properties().tab(ZombieKitTabs.TAB_ZOMBIEKIT_TOOL)));
+
+    public static final RegistryObject<Item> TRAP_COVER = block(ZombieKitBlocks.TRAP_COVER, ZombieKitTabs.TAB_ZOMBIEKIT_TOOL);
+
+    public static final RegistryObject<Item> BARBED_WIRE = block(ZombieKitBlocks.BARBED_WIRE, ZombieKitTabs.TAB_ZOMBIEKIT_TOOL);
+    public static final RegistryObject<Item> BARBED_WIRE_BROKEN = block(ZombieKitBlocks.BARBED_WIRE_BROKEN, ZombieKitTabs.TAB_ZOMBIEKIT_TOOL);
+    public static final RegistryObject<Item> BARBED_WIRE_EXTREMELY_BROKEN = block(ZombieKitBlocks.BARBED_WIRE_EXTREMELY_BROKEN, ZombieKitTabs.TAB_ZOMBIEKIT_TOOL);
+
+    public static final RegistryObject<Item> LANDMINE = block(ZombieKitBlocks.LANDMINE, ZombieKitTabs.TAB_ZOMBIEKIT_TOOL);
+    public static final RegistryObject<Item> CHEMICAL_LANDMINE = block(ZombieKitBlocks.CHEMICAL_LANDMINE, ZombieKitTabs.TAB_ZOMBIEKIT_TOOL);
 
     public static final RegistryObject<Item> POCKET_RADIO = REGISTRY.register("pocket_radio", () -> new PocketRadio(new Item.Properties().tab(ZombieKitTabs.TAB_ZOMBIEKIT_TOOL).stacksTo(1)));
     public static final RegistryObject<Item> SHORTWAVE_RADIO = block(ZombieKitBlocks.SHORTWAVE_RADIO, ZombieKitTabs.TAB_ZOMBIEKIT_TOOL);

@@ -61,6 +61,10 @@ public abstract class ModProjectile  extends AbstractArrow implements ItemSuppli
     @Override
     public void tick() {
         super.tick();
+        onGround();
+    }
+
+    public void onGround(){
         if (this.inGround)
             this.discard();
     }
