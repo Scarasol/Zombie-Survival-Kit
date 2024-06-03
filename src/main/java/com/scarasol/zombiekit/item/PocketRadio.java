@@ -1,6 +1,7 @@
 package com.scarasol.zombiekit.item;
 
 import com.scarasol.zombiekit.block.ShortwaveRadioBlock;
+import com.scarasol.zombiekit.init.ZombieKitTags;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Registry;
 import net.minecraft.network.chat.TranslatableComponent;
@@ -18,7 +19,6 @@ import net.minecraft.world.level.levelgen.feature.ConfiguredStructureFeature;
 import net.minecraftforge.registries.ForgeRegistries;
 
 public class PocketRadio extends Item {
-    public static final TagKey<ConfiguredStructureFeature<?, ?>> SHELTER = TagKey.create(Registry.CONFIGURED_STRUCTURE_FEATURE_REGISTRY, new ResourceLocation("zombiekit:shelter"));
 
     public PocketRadio(Properties properties) {
         super(properties);
@@ -39,7 +39,7 @@ public class PocketRadio extends Item {
             ServerLevel level = (ServerLevel) entity.level;
             BlockPos blockpos;
             BlockPos entityPos = new BlockPos(entity.getBlockX(), entity.getBlockY(), entity.getBlockZ());
-            BlockPos structurePos = level.findNearestMapFeature(SHELTER, entityPos, 100, false);
+            BlockPos structurePos = level.findNearestMapFeature(ZombieKitTags.SHELTER, entityPos, 100, false);
             BlockPos shortwaveRadio = ShortwaveRadioBlock.findNearestRadio(entityPos, level);
             double distance1 = Double.MAX_VALUE;
             double distance2 = Double.MAX_VALUE;
@@ -57,7 +57,7 @@ public class PocketRadio extends Item {
                 distance = distance2;
                 blockpos = shortwaveRadio;
             }
-            if (distance <= 250000 && blockpos != null){
+            if (distance <= 250000){
                 entity.sendMessage(new TranslatableComponent("zombiekit.message.response1", blockpos.getX(), blockpos.getZ()), entity.getUUID());
                 level.playSound(null, entityPos, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("zombiekit:radio_response")), SoundSource.PLAYERS, 1.2F, 1);
             } else {

@@ -1,10 +1,13 @@
 package com.scarasol.zombiekit.init;
 
 import com.scarasol.zombiekit.ZombieKitMod;
+import com.scarasol.zombiekit.entity.mechanics.DroneEntity;
+import com.scarasol.zombiekit.entity.mechanics.HeavyMachineGunEntity;
 import com.scarasol.zombiekit.entity.projectile.*;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.MobCategory;
+import net.minecraftforge.event.entity.EntityAttributeCreationEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
@@ -30,6 +33,13 @@ public class ZombieKitEntities {
             EntityType.Builder.<FlareGunEntity>of(FlareGunEntity::new, MobCategory.MISC).setCustomClientFactory(FlareGunEntity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
     public static final RegistryObject<EntityType<FlaresEntity>> FLARES = register("flares", EntityType.Builder.<FlaresEntity>of(FlaresEntity::new, MobCategory.MISC)
             .setCustomClientFactory(FlaresEntity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
+    public static final RegistryObject<EntityType<DroneEntity>> DRONE = register("drone",
+            EntityType.Builder.<DroneEntity>of(DroneEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(25).setUpdateInterval(3).setCustomClientFactory(DroneEntity::new).sized(0.6f, 0.4f));
+    public static final RegistryObject<EntityType<HeavyMachineGunAmmoEntity>> HEAVY_MACHINE_GUN_AMMO = register("heavy_machine_gun_ammo", EntityType.Builder.<HeavyMachineGunAmmoEntity>of(HeavyMachineGunAmmoEntity::new, MobCategory.MISC)
+            .setCustomClientFactory(HeavyMachineGunAmmoEntity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
+    public static final RegistryObject<EntityType<HeavyMachineGunEntity>> HEAVY_MACHINE_GUN = register("heavy_machine_gun",
+            EntityType.Builder.<HeavyMachineGunEntity>of(HeavyMachineGunEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(HeavyMachineGunEntity::new).sized(0.8f, 1f));
+
 
 
 
@@ -48,13 +58,12 @@ public class ZombieKitEntities {
 //        });
 //    }
 
-//    @SubscribeEvent
-//    public static void registerAttributes(EntityAttributeCreationEvent event) {
-//        event.put(FIRECRACKER_TEM_ENTITY.get(), FirecrackerTemEntityEntity.createAttributes().build());
+    @SubscribeEvent
+    public static void registerAttributes(EntityAttributeCreationEvent event) {
 //        event.put(UV_LAMP_ENTITY.get(), UvLampEntityEntity.createAttributes().build());
-//        event.put(DRONE.get(), DroneEntity.createAttributes().build());
-//        event.put(HEAVY_MACHINE_GUN.get(), HeavyMachineGunEntity.createAttributes().build());
-//    }
+        event.put(DRONE.get(), DroneEntity.createAttributes().build());
+        event.put(HEAVY_MACHINE_GUN.get(), HeavyMachineGunEntity.createAttributes().build());
+    }
 
 
 }

@@ -45,7 +45,7 @@ public class ZombieKitBlocks {
         public static void clientSetup(FMLClientSetupEvent event) {
             TrapCoverBlock.registerRenderLayer();
             LandmineBlock.registerRenderLayer();
-//            InjectorBlock.registerRenderLayer();
+            InjectorBlock.registerRenderLayer();
             BarbedWireBlock.registerRenderLayer();
 //            UltraWidebandRadarBlock.registerRenderLayer();
 //            ChargerBlock.registerRenderLayer();

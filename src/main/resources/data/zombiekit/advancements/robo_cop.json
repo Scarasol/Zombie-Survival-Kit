@@ -1,7 +1,7 @@
 {
   "display": {
     "icon": {
-      "item": "zombiekit:exo_coordinates_helmet"
+      "item": "zombiekit:exo_helmet"
     },
     "title": {
       "translate": "advancements.robo_cop.title"
@@ -21,22 +21,22 @@
         "items": [
           {
             "items": [
-              "zombiekit:exo_coordinates_helmet"
+              "zombiekit:exo_helmet"
             ]
           },
           {
             "items": [
-              "zombiekit:exo_coordinates_chestplate"
+              "zombiekit:exo_chestplate"
             ]
           },
           {
             "items": [
-              "zombiekit:exo_coordinates_leggings"
+              "zombiekit:exo_leggings"
             ]
           },
           {
             "items": [
-              "zombiekit:exo_coordinates_boots"
+              "zombiekit:exo_boots"
             ]
           }
         ]

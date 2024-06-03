@@ -1,6 +1,7 @@
 package com.scarasol.zombiekit.block;
 
 import com.scarasol.zombiekit.init.ZombieKitBlocks;
+import com.scarasol.zombiekit.init.ZombieKitTags;
 import com.scarasol.zombiekit.network.MapVariables;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
 import net.minecraft.client.renderer.RenderType;
@@ -52,8 +53,6 @@ public class ShortwaveRadioBlock extends Block {
     public static final DirectionProperty FACING = HorizontalDirectionalBlock.FACING;
     public static final BooleanProperty TURN_ON = BooleanProperty.create("turn_on");
     public static final IntegerProperty TIME = IntegerProperty.create("time", 0, 1200);
-
-    public static final TagKey<EntityType<?>> SURVIVORS = TagKey.create(Registry.ENTITY_TYPE_REGISTRY, new ResourceLocation("forge:survivors"));
 
     private static final Set<BlockPos> workRadios = new HashSet<>();
     private final Map<Mob, BlockPos> survivorsNeedMove = new HashMap<>();
@@ -189,7 +188,7 @@ public class ShortwaveRadioBlock extends Block {
             if (spawnPillagers(world, pos, spawnPos, random)){
                 return true;
             }
-            Entity entity = ForgeRegistries.ENTITIES.tags().getTag(SURVIVORS).getRandomElement(new Random()).get().spawn(world, null, null, spawnPos, MobSpawnType.REINFORCEMENT, false, false);
+            Entity entity = ForgeRegistries.ENTITIES.tags().getTag(ZombieKitTags.SURVIVORS).getRandomElement(new Random()).get().spawn(world, null, null, spawnPos, MobSpawnType.REINFORCEMENT, false, false);
             if (entity instanceof Mob _living){
                 survivorsNeedMove.put(_living, pos);
             }

@@ -1,16 +1,16 @@
 package com.scarasol.zombiekit.init;
 
 import com.scarasol.zombiekit.ZombieKitMod;
-import com.scarasol.zombiekit.item.FlareGun;
-import com.scarasol.zombiekit.item.HeavyMachineGunAmmo;
-import com.scarasol.zombiekit.item.PocketRadio;
+import com.scarasol.zombiekit.item.*;
 import com.scarasol.zombiekit.item.armor.*;
+import com.scarasol.zombiekit.item.bonus.*;
 import com.scarasol.zombiekit.item.medical.*;
 import com.scarasol.zombiekit.item.projectile.BileJar;
 import com.scarasol.zombiekit.item.projectile.Firecracker;
 import com.scarasol.zombiekit.item.projectile.MolotovCocktail;
 import com.scarasol.zombiekit.item.projectile.PotionJar;
 import com.scarasol.zombiekit.item.weapon.*;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.item.*;
 import net.minecraft.world.level.block.Block;
@@ -100,6 +100,8 @@ public class ZombieKitItems {
 
     public static final RegistryObject<Item> WRENCH = REGISTRY.register("wrench", () -> new Wrench(new Item.Properties().tab(ZombieKitTabs.TAB_ZOMBIEKIT_COMBAT).stacksTo(4)));
 
+    public static final RegistryObject<Item> CHAINSAW = REGISTRY.register("chainsaw", () -> new Chainsaw(new Item.Properties().tab(ZombieKitTabs.TAB_ZOMBIEKIT_COMBAT).stacksTo(1).durability(101).rarity(Rarity.UNCOMMON)));
+
 
     public static final RegistryObject<Item> MOLOTOV_COCKTAIL = REGISTRY.register("molotov_cocktail", () -> new MolotovCocktail(new Item.Properties().tab(ZombieKitTabs.TAB_ZOMBIEKIT_COMBAT).stacksTo(16)));
     public static final RegistryObject<Item> POTION_JAR = REGISTRY.register("potion_jar", () -> new PotionJar(new Item.Properties().tab(ZombieKitTabs.TAB_ZOMBIEKIT_COMBAT).stacksTo(16)));
@@ -115,7 +117,8 @@ public class ZombieKitItems {
 
 
     public static final RegistryObject<Item> FLARE_GUN = REGISTRY.register("flare_gun", () -> new FlareGun(new Item.Properties().tab(ZombieKitTabs.TAB_ZOMBIEKIT_TOOL).stacksTo(1)));
-    public static final RegistryObject<Item> HEAVY_MACHINE_GUN_AMMO = REGISTRY.register("heavy_machine_gun_ammo", () -> new HeavyMachineGunAmmo(new Item.Properties().tab(ZombieKitTabs.TAB_ZOMBIEKIT_TOOL)));
+
+    public static final RegistryObject<Item> BATTERY = REGISTRY.register("battery", () -> new Item(new Item.Properties().tab(ZombieKitTabs.TAB_ZOMBIEKIT_TOOL).durability(100)));
 
     public static final RegistryObject<Item> TRAP_COVER = block(ZombieKitBlocks.TRAP_COVER, ZombieKitTabs.TAB_ZOMBIEKIT_TOOL);
 
@@ -126,8 +129,14 @@ public class ZombieKitItems {
     public static final RegistryObject<Item> LANDMINE = block(ZombieKitBlocks.LANDMINE, ZombieKitTabs.TAB_ZOMBIEKIT_TOOL);
     public static final RegistryObject<Item> CHEMICAL_LANDMINE = block(ZombieKitBlocks.CHEMICAL_LANDMINE, ZombieKitTabs.TAB_ZOMBIEKIT_TOOL);
 
+    public static final RegistryObject<Item> INJECTOR = block(ZombieKitBlocks.INJECTOR, ZombieKitTabs.TAB_ZOMBIEKIT_TOOL);
+
     public static final RegistryObject<Item> POCKET_RADIO = REGISTRY.register("pocket_radio", () -> new PocketRadio(new Item.Properties().tab(ZombieKitTabs.TAB_ZOMBIEKIT_TOOL).stacksTo(1)));
     public static final RegistryObject<Item> SHORTWAVE_RADIO = block(ZombieKitBlocks.SHORTWAVE_RADIO, ZombieKitTabs.TAB_ZOMBIEKIT_TOOL);
+
+    public static final RegistryObject<Item> HEAVY_MACHINE_GUN_AMMO = REGISTRY.register("heavy_machine_gun_ammo", () -> new HeavyMachineGunAmmo(new Item.Properties().tab(ZombieKitTabs.TAB_ZOMBIEKIT_TOOL)));
+    public static final RegistryObject<Item> HEAVY_MACHINE_GUN_SUMMON = REGISTRY.register("heavy_machine_gun_summon", () -> new HeavyMachineGun(new Item.Properties().tab(ZombieKitTabs.TAB_ZOMBIEKIT_TOOL).stacksTo(1)));
+    public static final RegistryObject<Item> DRONE_SUMMON = REGISTRY.register("drone_summon", () -> new Drone(new Item.Properties().tab(ZombieKitTabs.TAB_ZOMBIEKIT_TOOL)));
 
     public static final RegistryObject<Item> GAS_TANK = block(ZombieKitBlocks.GAS_TANK, ZombieKitTabs.TAB_ZOMBIEKIT_TOOL);
 
@@ -158,6 +167,17 @@ public class ZombieKitItems {
 
     public static final RegistryObject<Item> DRONE_COMPONENTS = REGISTRY.register("drone_components", () -> new Item(new Item.Properties().tab(ZombieKitTabs.TAB_ZOMBIEKIT)));
     public static final RegistryObject<Item> MACHINE_GUN_COMPONENTS = REGISTRY.register("machine_gun_components", () -> new Item(new Item.Properties().tab(ZombieKitTabs.TAB_ZOMBIEKIT)));
+
+
+    public static final RegistryObject<Item> SCARASOL = REGISTRY.register("scarasol", () -> new Scarasol(new Item.Properties().tab(null).rarity(Rarity.EPIC)));
+    public static final RegistryObject<Item> KYOKO = REGISTRY.register("kyoko", () -> new Kyoko(new Item.Properties().tab(null).rarity(Rarity.EPIC)));
+    public static final RegistryObject<Item> WHITE_FOOD_CHESTPLATE = REGISTRY.register("white_food_chestplate", () -> new WhiteFood(ArmorMaterials.IRON, EquipmentSlot.CHEST, new Item.Properties().tab(null).rarity(Rarity.EPIC)));
+    public static final RegistryObject<Item> KARAZHAN = REGISTRY.register("karazhan", () -> new Karazhan(new Item.Properties().tab(null).rarity(Rarity.EPIC)));
+    public static final RegistryObject<Item> IRON_CURTAIN = REGISTRY.register("iron_curtain", () -> new IronCurtain(new Item.Properties().tab(null).rarity(Rarity.EPIC)));
+    public static final RegistryObject<Item> FLAME = REGISTRY.register("flame", () -> new Flame(new Item.Properties().tab(null).rarity(Rarity.EPIC)));
+    public static final RegistryObject<Item> LHX_QING = REGISTRY.register("lhx_qing", () -> new LHXQing(Tiers.WOOD, 5, -2.4f, new Item.Properties().tab(null).rarity(Rarity.EPIC)));
+    public static final RegistryObject<Item> SONA_BAKEMONO = REGISTRY.register("sona_bakemono", () -> new SonaBakemono(new Item.Properties().tab(null).rarity(Rarity.EPIC)));
+    public static final RegistryObject<Item> KONN_GARA = REGISTRY.register("konn_gara", () -> new KonnGara(0, () -> ZombieKitSounds.REGISTRY.get(new ResourceLocation("zombiekit:konn_gara")), new Item.Properties().tab(null).rarity(Rarity.EPIC)));
 
 
     private static RegistryObject<Item> block(RegistryObject<Block> block, CreativeModeTab tab) {

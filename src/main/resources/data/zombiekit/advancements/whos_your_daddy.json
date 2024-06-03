@@ -1,7 +1,7 @@
 {
   "display": {
     "icon": {
-      "item": "zombiekit:blast_coordinates_helmet"
+      "item": "zombiekit:bomb_helmet"
     },
     "title": {
       "translate": "advancements.whos_your_daddy.title"
@@ -21,22 +21,22 @@
         "items": [
           {
             "items": [
-              "zombiekit:blast_coordinates_helmet"
+              "zombiekit:bomb_helmet"
             ]
           },
           {
             "items": [
-              "zombiekit:blast_coordinates_chestplate"
+              "zombiekit:bomb_chestplate"
             ]
           },
           {
             "items": [
-              "zombiekit:blast_coordinates_leggings"
+              "zombiekit:bomb_leggings"
             ]
           },
           {
             "items": [
-              "zombiekit:blast_coordinates_boots"
+              "zombiekit:bomb_boots"
             ]
           }
         ]

@@ -1,7 +1,7 @@
 {
   "display": {
     "icon": {
-      "item": "zombiekit:standard_coordinates_chestplate"
+      "item": "zombiekit:standard_tactical_chestplate"
     },
     "title": {
       "translate": "advancements.leon.title"
@@ -21,10 +21,10 @@
         "items": [
           {
             "items": [
-              "zombiekit:standard_coordinates_helmet",
-              "zombiekit:standard_coordinates_chestplate",
-              "zombiekit:standard_coordinates_leggings",
-              "zombiekit:standard_coordinates_boots"
+              "zombiekit:standard_tactical_helmet",
+              "zombiekit:standard_tactical_chestplate",
+              "zombiekit:standard_tactical_leggings",
+              "zombiekit:standard_tactical_boots"
             ]
           }
         ]
