@@ -129,6 +129,9 @@ public class ZombieKitItems {
     public static final RegistryObject<Item> LANDMINE = block(ZombieKitBlocks.LANDMINE, ZombieKitTabs.TAB_ZOMBIEKIT_TOOL);
     public static final RegistryObject<Item> CHEMICAL_LANDMINE = block(ZombieKitBlocks.CHEMICAL_LANDMINE, ZombieKitTabs.TAB_ZOMBIEKIT_TOOL);
 
+    public static final RegistryObject<Item> CHARGER = block(ZombieKitBlocks.CHARGER, ZombieKitTabs.TAB_ZOMBIEKIT_TOOL);
+    public static final RegistryObject<Item> ULTRA_WIDEBAND_RADAR = block(ZombieKitBlocks.ULTRA_WIDEBAND_RADAR, ZombieKitTabs.TAB_ZOMBIEKIT_TOOL);
+
     public static final RegistryObject<Item> INJECTOR = block(ZombieKitBlocks.INJECTOR, ZombieKitTabs.TAB_ZOMBIEKIT_TOOL);
 
     public static final RegistryObject<Item> POCKET_RADIO = REGISTRY.register("pocket_radio", () -> new PocketRadio(new Item.Properties().tab(ZombieKitTabs.TAB_ZOMBIEKIT_TOOL).stacksTo(1)));
@@ -164,6 +167,9 @@ public class ZombieKitItems {
     public static final RegistryObject<Item> IRON_WIRE = REGISTRY.register("iron_wire", () -> new Item(new Item.Properties().tab(ZombieKitTabs.TAB_ZOMBIEKIT)));
     public static final RegistryObject<Item> SMOKELESS_GUNPOWDER = REGISTRY.register("smokeless_gunpowder", () -> new Item(new Item.Properties().tab(ZombieKitTabs.TAB_ZOMBIEKIT)));
     public static final RegistryObject<Item> SULFUR = REGISTRY.register("sulfur", () -> new Item(new Item.Properties().tab(ZombieKitTabs.TAB_ZOMBIEKIT)));
+    public static final RegistryObject<Item> SALTPETER_BUCKET = REGISTRY.register("saltpeter_bucket", () -> new SaltpeterBucket(new Item.Properties().tab(ZombieKitTabs.TAB_ZOMBIEKIT).stacksTo(1)));
+    public static final RegistryObject<Item> SALTPETER_SOIL = REGISTRY.register("saltpeter_soil", () -> new SaltpeterSoil(new Item.Properties().tab(ZombieKitTabs.TAB_ZOMBIEKIT)));
+
 
     public static final RegistryObject<Item> DRONE_COMPONENTS = REGISTRY.register("drone_components", () -> new Item(new Item.Properties().tab(ZombieKitTabs.TAB_ZOMBIEKIT)));
     public static final RegistryObject<Item> MACHINE_GUN_COMPONENTS = REGISTRY.register("machine_gun_components", () -> new Item(new Item.Properties().tab(ZombieKitTabs.TAB_ZOMBIEKIT)));

@@ -3,6 +3,7 @@ package com.scarasol.zombiekit.init;
 import com.scarasol.sona.init.SonaMobEffects;
 import com.scarasol.zombiekit.ZombieKitMod;
 import com.scarasol.zombiekit.block.*;
+import net.minecraft.core.cauldron.CauldronInteraction;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.level.block.Block;
@@ -33,10 +34,13 @@ public class ZombieKitBlocks {
     public static final RegistryObject<Block> CHEMICAL_LANDMINE = REGISTRY.register("chemical_landmine", () -> new LandmineBlock(BlockBehaviour.Properties.of(Material.METAL).sound(SoundType.METAL).strength(1f, 10f).requiresCorrectToolForDrops().noCollission().noOcclusion().isRedstoneConductor((bs, br, bp) -> false).dynamicShape(),
             Arrays.asList(new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN, 140, 1, false, false),
                     new MobEffectInstance(MobEffects.WITHER, 100, 3, false, false))));
+    public static final RegistryObject<Block> CHARGER = REGISTRY.register("charger", () -> new ChargerBlock(BlockBehaviour.Properties.of(Material.STONE).sound(SoundType.STONE).lightLevel(ChargerBlock.getLightLevel(8)).strength(1f, 10f).noOcclusion().isRedstoneConductor((bs, br, bp) -> false)));
+    public static final RegistryObject<Block> ULTRA_WIDEBAND_RADAR = REGISTRY.register("ultra_wideband_radar", () -> new UltraWidebandRadarBlock(BlockBehaviour.Properties.of(Material.METAL).sound(SoundType.METAL).strength(1f, 10f).noOcclusion().isRedstoneConductor((bs, br, bp) -> false)));
     public static final RegistryObject<Block> INJECTOR = REGISTRY.register("injector", () -> new InjectorBlock(BlockBehaviour.Properties.of(Material.STONE, MaterialColor.STONE).sound(SoundType.STONE).strength(1f, 3.5f).requiresCorrectToolForDrops().noOcclusion().isRedstoneConductor((bs, br, bp) -> false)));
     public static final RegistryObject<Block> SHORTWAVE_RADIO = REGISTRY.register("shortwave_radio", () -> new ShortwaveRadioBlock(BlockBehaviour.Properties.of(Material.METAL).sound(SoundType.METAL).strength(1f, 3.6f).requiresCorrectToolForDrops().noOcclusion().isRedstoneConductor((bs, br, bp) -> false)));
     public static final RegistryObject<Block> GAS_TANK = REGISTRY.register("gas_tank", () -> new GasTankBlock(BlockBehaviour.Properties.of(Material.METAL).sound(SoundType.METAL).strength(1f, 3.6f).noOcclusion().isRedstoneConductor((bs, br, bp) -> false)));
     public static final RegistryObject<Block> FLARES_LIGHT = REGISTRY.register("flares_light", () -> new FlaresLightBlock(BlockBehaviour.Properties.of(Material.AIR, MaterialColor.NONE).sound(SoundType.STONE).strength(-1, 3600000).lightLevel(s -> 15).noCollission().noOcclusion().isRedstoneConductor((bs, br, bp) -> false)));
+    public static final RegistryObject<Block> SALTPETER_CAULDRON = REGISTRY.register("saltpeter_cauldron", () -> new SaltpeterCauldronBlock(BlockBehaviour.Properties.of(Material.STONE).sound(SoundType.STONE).randomTicks().strength(2f, 2f).requiresCorrectToolForDrops(), CauldronInteraction.WATER));
 
 
     @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
@@ -48,7 +52,7 @@ public class ZombieKitBlocks {
             InjectorBlock.registerRenderLayer();
             BarbedWireBlock.registerRenderLayer();
 //            UltraWidebandRadarBlock.registerRenderLayer();
-//            ChargerBlock.registerRenderLayer();
+            ChargerBlock.registerRenderLayer();
             ShortwaveRadioBlock.registerRenderLayer();
             GasTankBlock.registerRenderLayer();
 //            ChargerWithBatteryBlock.registerRenderLayer();

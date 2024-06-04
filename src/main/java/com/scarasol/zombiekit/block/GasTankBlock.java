@@ -46,26 +46,6 @@ public class GasTankBlock extends FallingBlock implements BombBlock{
         return true;
     }
 
-    @Override
-    public int getLightBlock(BlockState state, BlockGetter worldIn, BlockPos pos) {
-        return 0;
-    }
-
-    @Override
-    public VoxelShape getVisualShape(BlockState state, BlockGetter world, BlockPos pos, CollisionContext context) {
-        return Shapes.empty();
-    }
-
-    @Override
-    public VoxelShape getShape(BlockState state, BlockGetter world, BlockPos pos, CollisionContext context) {
-        return switch (state.getValue(FACING)) {
-            default -> box(2, 0, 2, 14, 16, 14);
-            case NORTH -> box(2, 0, 2, 14, 16, 14);
-            case EAST -> box(2, 0, 2, 14, 16, 14);
-            case WEST -> box(2, 0, 2, 14, 16, 14);
-        };
-    }
-
 
     @Override
     protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> builder) {
@@ -76,14 +56,6 @@ public class GasTankBlock extends FallingBlock implements BombBlock{
     @Override
     public BlockState getStateForPlacement(BlockPlaceContext context) {
         return this.defaultBlockState().setValue(FACING, context.getHorizontalDirection().getOpposite()).setValue(BESIDE_FIRE, checkNeighbor(context.getLevel(), context.getClickedPos()));
-    }
-
-    public BlockState rotate(BlockState state, Rotation rot) {
-        return state.setValue(FACING, rot.rotate(state.getValue(FACING)));
-    }
-
-    public BlockState mirror(BlockState state, Mirror mirrorIn) {
-        return state.rotate(mirrorIn.getRotation(state.getValue(FACING)));
     }
 
     @Override
@@ -108,11 +80,6 @@ public class GasTankBlock extends FallingBlock implements BombBlock{
     public void wasExploded(Level level, BlockPos blockPos, Explosion e) {
         exploded(level, blockPos.getX(), blockPos.getY(), blockPos.getZ(), getExplodeLevel());
     }
-
-//	@Override
-//	public void attack(BlockState blockstate, Level level, BlockPos blockPos, Player entity) {
-//		exploded(level, blockPos.getX(), blockPos.getY(), blockPos.getZ());
-//	}
 
     @Override
     public void onProjectileHit(Level level, BlockState blockstate, BlockHitResult hit, Projectile entity) {

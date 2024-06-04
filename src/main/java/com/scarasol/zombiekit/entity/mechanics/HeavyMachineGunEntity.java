@@ -62,7 +62,7 @@ public class HeavyMachineGunEntity extends Mechanics implements IAnimatable {
     public static final EntityDataAccessor<String> ANIMATION = SynchedEntityData.defineId(HeavyMachineGunEntity.class, EntityDataSerializers.STRING);
     public static final EntityDataAccessor<String> TEXTURE = SynchedEntityData.defineId(HeavyMachineGunEntity.class, EntityDataSerializers.STRING);
     public static final EntityDataAccessor<String> DIRECTION = SynchedEntityData.defineId(HeavyMachineGunEntity.class, EntityDataSerializers.STRING);
-    public static final AttributeModifier ATTRIBUTE_MODIFIER = new AttributeModifier(UUID.fromString("1CCA8D2D-9A0B-3FF2-E505-EF4A439570C3"), "machine_gun", 14, AttributeModifier.Operation.ADDITION);
+    public static final AttributeModifier ATTRIBUTE_MODIFIER = new AttributeModifier(UUID.fromString("1CCA8D2D-9A0B-3FF2-E505-EF4A439570C3"), "machine_gun", 20, AttributeModifier.Operation.ADDITION);
     private AnimationFactory factory = GeckoLibUtil.createFactory(this);
     private boolean swinging;
     private boolean lastloop;
@@ -443,8 +443,6 @@ public class HeavyMachineGunEntity extends Mechanics implements IAnimatable {
         return super.getDimensions(p_33597_).scale((float) 1);
     }
 
-    public static void init() {
-    }
 
     protected void dropCustomDeathLoot(DamageSource source, int looting, boolean recentlyHitIn) {
         super.dropCustomDeathLoot(source, looting, recentlyHitIn);

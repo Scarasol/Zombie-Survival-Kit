@@ -63,6 +63,12 @@ public class ShortwaveRadioBlock extends Block {
     }
 
     @Override
+    public VoxelShape getShape(BlockState state, BlockGetter world, BlockPos pos, CollisionContext context) {
+        return box(0, 0, 0, 16, 12, 16);
+    }
+
+
+    @Override
     public void appendHoverText(ItemStack itemstack, BlockGetter world, List<Component> list, TooltipFlag flag) {
         super.appendHoverText(itemstack, world, list, flag);
         list.add(new TextComponent(new TranslatableComponent("block.zombiekit.shortwave_radio.description_1").getString()));
@@ -293,26 +299,6 @@ public class ShortwaveRadioBlock extends Block {
     }
 
     @Override
-    public int getLightBlock(BlockState state, BlockGetter worldIn, BlockPos pos) {
-        return 0;
-    }
-
-    @Override
-    public VoxelShape getVisualShape(BlockState state, BlockGetter world, BlockPos pos, CollisionContext context) {
-        return Shapes.empty();
-    }
-
-    @Override
-    public VoxelShape getShape(BlockState state, BlockGetter world, BlockPos pos, CollisionContext context) {
-        return switch (state.getValue(FACING)) {
-            default -> box(0, 0, 0, 16, 12, 16);
-            case NORTH -> box(0, 0, 0, 16, 12, 16);
-            case EAST -> box(0, 0, 0, 16, 12, 16);
-            case WEST -> box(0, 0, 0, 16, 12, 16);
-        };
-    }
-
-    @Override
     protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> builder) {
         builder.add(FACING);
         builder.add(TIME);
@@ -326,14 +312,6 @@ public class ShortwaveRadioBlock extends Block {
             return this.defaultBlockState().setValue(FACING, context.getHorizontalDirection().getOpposite()).setValue(TURN_ON, true);
         }
         return this.defaultBlockState().setValue(FACING, context.getHorizontalDirection().getOpposite()).setValue(TURN_ON, false);
-    }
-
-    public BlockState rotate(BlockState state, Rotation rot) {
-        return state.setValue(FACING, rot.rotate(state.getValue(FACING)));
-    }
-
-    public BlockState mirror(BlockState state, Mirror mirrorIn) {
-        return state.rotate(mirrorIn.getRotation(state.getValue(FACING)));
     }
 
     @Override

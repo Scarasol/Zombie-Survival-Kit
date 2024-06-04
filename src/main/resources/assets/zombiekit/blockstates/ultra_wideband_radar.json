@@ -1,262 +1,262 @@
 {
   "variants": {
-    "facing=north,radaropen=true,radarele=1": {
+    "facing=north,radar_open=true,radar_ele=1": {
       "model": "zombiekit:block/uwr_open_1",
       "x":90
     },
-    "facing=north,radaropen=true,radarele=2": {
+    "facing=north,radar_open=true,radar_ele=2": {
       "model": "zombiekit:block/uwr_open_2",
       "x":90
     },
-    "facing=north,radaropen=true,radarele=3": {
+    "facing=north,radar_open=true,radar_ele=3": {
       "model": "zombiekit:block/uwr_open_3",
       "x":90
     },
-    "facing=north,radaropen=true,radarele=4": {
+    "facing=north,radar_open=true,radar_ele=4": {
       "model": "zombiekit:block/uwr_open_4",
       "x":90
     },
-    "facing=north,radaropen=true,radarele=5": {
+    "facing=north,radar_open=true,radar_ele=5": {
       "model": "zombiekit:block/uwr_close_5",
       "x":90
     },
-    "facing=north,radaropen=false,radarele=1": {
+    "facing=north,radar_open=false,radar_ele=1": {
       "model": "zombiekit:block/uwr_close_1",
       "x":90
     },
-    "facing=north,radaropen=false,radarele=2": {
+    "facing=north,radar_open=false,radar_ele=2": {
       "model": "zombiekit:block/uwr_close_2",
       "x":90
     },
-    "facing=north,radaropen=false,radarele=3": {
+    "facing=north,radar_open=false,radar_ele=3": {
       "model": "zombiekit:block/uwr_close_3",
       "x":90
     },
-    "facing=north,radaropen=false,radarele=4": {
+    "facing=north,radar_open=false,radar_ele=4": {
       "model": "zombiekit:block/uwr_close_4",
       "x":90
     },
-    "facing=north,radaropen=false,radarele=5": {
+    "facing=north,radar_open=false,radar_ele=5": {
       "model": "zombiekit:block/uwr_close_5",
       "x":90
     },
-    "facing=east,radaropen=true,radarele=1": {
+    "facing=east,radar_open=true,radar_ele=1": {
       "model": "zombiekit:block/uwr_open_1",
       "y":90,
       "x":90
     },
-    "facing=east,radaropen=true,radarele=2": {
+    "facing=east,radar_open=true,radar_ele=2": {
       "model": "zombiekit:block/uwr_open_2",
       "y":90,
       "x":90
     },
-    "facing=east,radaropen=true,radarele=3": {
+    "facing=east,radar_open=true,radar_ele=3": {
       "model": "zombiekit:block/uwr_open_3",
       "y":90,
       "x":90
     },
-    "facing=east,radaropen=true,radarele=4": {
+    "facing=east,radar_open=true,radar_ele=4": {
       "model": "zombiekit:block/uwr_open_4",
       "y":90,
       "x":90
     },
-    "facing=east,radaropen=true,radarele=5": {
+    "facing=east,radar_open=true,radar_ele=5": {
       "model": "zombiekit:block/uwr_close_5",
       "y":90,
       "x":90
     },
-    "facing=east,radaropen=false,radarele=1": {
+    "facing=east,radar_open=false,radar_ele=1": {
       "model": "zombiekit:block/uwr_close_1",
       "y":90,
       "x":90
     },
-    "facing=east,radaropen=false,radarele=2": {
+    "facing=east,radar_open=false,radar_ele=2": {
       "model": "zombiekit:block/uwr_close_2",
       "y":90,
       "x":90
     },
-    "facing=east,radaropen=false,radarele=3": {
+    "facing=east,radar_open=false,radar_ele=3": {
       "model": "zombiekit:block/uwr_close_3",
       "y":90,
       "x":90
     },
-    "facing=east,radaropen=false,radarele=4": {
+    "facing=east,radar_open=false,radar_ele=4": {
       "model": "zombiekit:block/uwr_close_4",
       "y":90,
       "x":90
     },
-    "facing=east,radaropen=false,radarele=5": {
+    "facing=east,radar_open=false,radar_ele=5": {
       "model": "zombiekit:block/uwr_close_5",
       "y":90,
       "x":90
     },
-    "facing=south,radaropen=true,radarele=1": {
+    "facing=south,radar_open=true,radar_ele=1": {
       "model": "zombiekit:block/uwr_open_1",
       "y":180,
       "x":90
     },
-    "facing=south,radaropen=true,radarele=2": {
+    "facing=south,radar_open=true,radar_ele=2": {
       "model": "zombiekit:block/uwr_open_2",
       "y":180,
       "x":90
     },
-    "facing=south,radaropen=true,radarele=3": {
+    "facing=south,radar_open=true,radar_ele=3": {
       "model": "zombiekit:block/uwr_open_3",
       "y":180,
       "x":90
     },
-    "facing=south,radaropen=true,radarele=4": {
+    "facing=south,radar_open=true,radar_ele=4": {
       "model": "zombiekit:block/uwr_open_4",
       "y":180,
       "x":90
     },
-    "facing=south,radaropen=true,radarele=5": {
+    "facing=south,radar_open=true,radar_ele=5": {
       "model": "zombiekit:block/uwr_close_5",
       "y":180,
       "x":90
     },
-    "facing=south,radaropen=false,radarele=1": {
+    "facing=south,radar_open=false,radar_ele=1": {
       "model": "zombiekit:block/uwr_close_1",
       "y":180,
       "x":90
     },
-    "facing=south,radaropen=false,radarele=2": {
+    "facing=south,radar_open=false,radar_ele=2": {
       "model": "zombiekit:block/uwr_close_2",
       "y":180,
       "x":90
     },
-    "facing=south,radaropen=false,radarele=3": {
+    "facing=south,radar_open=false,radar_ele=3": {
       "model": "zombiekit:block/uwr_close_3",
       "y":180,
       "x":90
     },
-    "facing=south,radaropen=false,radarele=4": {
+    "facing=south,radar_open=false,radar_ele=4": {
       "model": "zombiekit:block/uwr_close_4",
       "y":180,
       "x":90
     },
-    "facing=south,radaropen=false,radarele=5": {
+    "facing=south,radar_open=false,radar_ele=5": {
       "model": "zombiekit:block/uwr_close_5",
       "y":180,
       "x":90
     },
-    "facing=west,radaropen=true,radarele=1": {
+    "facing=west,radar_open=true,radar_ele=1": {
       "model": "zombiekit:block/uwr_open_1",
       "y":270,
       "x":90
     },
-    "facing=west,radaropen=true,radarele=2": {
+    "facing=west,radar_open=true,radar_ele=2": {
       "model": "zombiekit:block/uwr_open_2",
       "y":270,
       "x":90
     },
-    "facing=west,radaropen=true,radarele=3": {
+    "facing=west,radar_open=true,radar_ele=3": {
       "model": "zombiekit:block/uwr_open_3",
       "y":270,
       "x":90
     },
-    "facing=west,radaropen=true,radarele=4": {
+    "facing=west,radar_open=true,radar_ele=4": {
       "model": "zombiekit:block/uwr_open_4",
       "y":270,
       "x":90
     },
-    "facing=west,radaropen=true,radarele=5": {
+    "facing=west,radar_open=true,radar_ele=5": {
       "model": "zombiekit:block/uwr_close_5",
       "y":270,
       "x":90
     },
-    "facing=west,radaropen=false,radarele=1": {
+    "facing=west,radar_open=false,radar_ele=1": {
       "model": "zombiekit:block/uwr_close_1",
       "y":270,
       "x":90
     },
-    "facing=west,radaropen=false,radarele=2": {
+    "facing=west,radar_open=false,radar_ele=2": {
       "model": "zombiekit:block/uwr_close_2",
       "y":270,
       "x":90
     },
-    "facing=west,radaropen=false,radarele=3": {
+    "facing=west,radar_open=false,radar_ele=3": {
       "model": "zombiekit:block/uwr_close_3",
       "y":270,
       "x":90
     },
-    "facing=west,radaropen=false,radarele=4": {
+    "facing=west,radar_open=false,radar_ele=4": {
       "model": "zombiekit:block/uwr_close_4",
       "y":270,
       "x":90
     },
-    "facing=west,radaropen=false,radarele=5": {
+    "facing=west,radar_open=false,radar_ele=5": {
       "model": "zombiekit:block/uwr_close_5",
       "y":270,
       "x":90
     },
-    "facing=up,radaropen=true,radarele=1": {
+    "facing=up,radar_open=true,radar_ele=1": {
       "model": "zombiekit:block/uwr_open_1"
     },
-    "facing=up,radaropen=true,radarele=2": {
+    "facing=up,radar_open=true,radar_ele=2": {
       "model": "zombiekit:block/uwr_open_2"
     },
-    "facing=up,radaropen=true,radarele=3": {
+    "facing=up,radar_open=true,radar_ele=3": {
       "model": "zombiekit:block/uwr_open_3"
     },
-    "facing=up,radaropen=true,radarele=4": {
+    "facing=up,radar_open=true,radar_ele=4": {
       "model": "zombiekit:block/uwr_open_4"
     },
-    "facing=up,radaropen=true,radarele=5": {
+    "facing=up,radar_open=true,radar_ele=5": {
       "model": "zombiekit:block/uwr_close_5"
     },
-    "facing=up,radaropen=false,radarele=1": {
+    "facing=up,radar_open=false,radar_ele=1": {
       "model": "zombiekit:block/uwr_close_1"
     },
-    "facing=up,radaropen=false,radarele=2": {
+    "facing=up,radar_open=false,radar_ele=2": {
       "model": "zombiekit:block/uwr_close_2"
     },
-    "facing=up,radaropen=false,radarele=3": {
+    "facing=up,radar_open=false,radar_ele=3": {
       "model": "zombiekit:block/uwr_close_3"
     },
-    "facing=up,radaropen=false,radarele=4": {
+    "facing=up,radar_open=false,radar_ele=4": {
       "model": "zombiekit:block/uwr_close_4"
     },
-    "facing=up,radaropen=false,radarele=5": {
+    "facing=up,radar_open=false,radar_ele=5": {
       "model": "zombiekit:block/uwr_close_5"
     },
-	"facing=down,radaropen=true,radarele=1": {
+	"facing=down,radar_open=true,radar_ele=1": {
       "model": "zombiekit:block/uwr_open_1",
       "x": 180
     },
-    "facing=down,radaropen=true,radarele=2": {
+    "facing=down,radar_open=true,radar_ele=2": {
       "model": "zombiekit:block/uwr_open_2",
       "x": 180
     },
-    "facing=down,radaropen=true,radarele=3": {
+    "facing=down,radar_open=true,radar_ele=3": {
       "model": "zombiekit:block/uwr_open_3",
       "x": 180
     },
-    "facing=down,radaropen=true,radarele=4": {
+    "facing=down,radar_open=true,radar_ele=4": {
       "model": "zombiekit:block/uwr_open_4",
       "x": 180
     },
-    "facing=down,radaropen=true,radarele=5": {
+    "facing=down,radar_open=true,radar_ele=5": {
       "model": "zombiekit:block/uwr_close_5",
       "x": 180
     },
-    "facing=down,radaropen=false,radarele=1": {
+    "facing=down,radar_open=false,radar_ele=1": {
       "model": "zombiekit:block/uwr_close_1",
       "x": 180
     },
-    "facing=down,radaropen=false,radarele=2": {
+    "facing=down,radar_open=false,radar_ele=2": {
       "model": "zombiekit:block/uwr_close_2",
       "x": 180
     },
-    "facing=down,radaropen=false,radarele=3": {
+    "facing=down,radar_open=false,radar_ele=3": {
       "model": "zombiekit:block/uwr_close_3",
       "x": 180
     },
-    "facing=down,radaropen=false,radarele=4": {
+    "facing=down,radar_open=false,radar_ele=4": {
       "model": "zombiekit:block/uwr_close_4",
       "x": 180
     },
-    "facing=down,radaropen=false,radarele=5": {
+    "facing=down,radar_open=false,radar_ele=5": {
       "model": "zombiekit:block/uwr_close_5",
       "x": 180
     }
