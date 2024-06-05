@@ -1,9 +1,6 @@
 package com.scarasol.zombiekit.init;
 
-import com.scarasol.zombiekit.client.renderer.DroneRenderer;
-import com.scarasol.zombiekit.client.renderer.FlareGunRenderer;
-import com.scarasol.zombiekit.client.renderer.HeavyMachineGunRenderer;
-import com.scarasol.zombiekit.client.renderer.WrenchRenderer;
+import com.scarasol.zombiekit.client.renderer.*;
 import net.minecraft.client.renderer.entity.ThrownItemRenderer;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.client.event.EntityRenderersEvent;
@@ -24,6 +21,8 @@ public class ZombieKitEntityRenderers {
         event.registerEntityRenderer(ZombieKitEntities.DRONE.get(), DroneRenderer::new);
         event.registerEntityRenderer(ZombieKitEntities.HEAVY_MACHINE_GUN_AMMO.get(), ThrownItemRenderer::new);
         event.registerEntityRenderer(ZombieKitEntities.HEAVY_MACHINE_GUN.get(), HeavyMachineGunRenderer::new);
+        event.registerEntityRenderer(ZombieKitEntities.UV_LAMP.get(), UvLampRenderer::new);
+
 
 
     }

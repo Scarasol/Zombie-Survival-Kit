@@ -31,6 +31,7 @@ import net.minecraft.world.entity.ai.targeting.TargetingConditions;
 import net.minecraft.world.entity.item.ItemEntity;
 import net.minecraft.world.entity.monster.Vindicator;
 import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.entity.projectile.ThrownPotion;
 import net.minecraft.world.entity.vehicle.Minecart;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
@@ -368,11 +369,6 @@ public class HeavyMachineGunEntity extends Mechanics implements IAnimatable {
     }
 
     @Override
-    public MobType getMobType() {
-        return MobType.UNDEFINED;
-    }
-
-    @Override
     public boolean removeWhenFarAway(double distanceToClosestPlayer) {
         return false;
     }
@@ -436,6 +432,13 @@ public class HeavyMachineGunEntity extends Mechanics implements IAnimatable {
     public void baseTick() {
         super.baseTick();
         this.refreshDimensions();
+    }
+
+    @Override
+    public boolean hurt(DamageSource source, float amount) {
+        if (source == DamageSource.DROWN)
+            return false;
+        return super.hurt(source, amount);
     }
 
     @Override

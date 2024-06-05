@@ -127,7 +127,7 @@ public class DroneEntity extends Mechanics{
             hover = false;
         }
         if (this.isInWaterOrBubble()){
-            hurt(DamageSource.OUT_OF_WORLD, 1);
+            hurt(DamageSource.DROWN, 1);
         }
         if (this.hasEffect(SonaMobEffects.SLIMINESS.get())){
             this.setNoGravity(false);
@@ -183,11 +183,6 @@ public class DroneEntity extends Mechanics{
 
     public UUID getOwnerUUID(){
         return owner;
-    }
-
-    @Override
-    public MobType getMobType() {
-        return MobType.UNDEFINED;
     }
 
     @Override

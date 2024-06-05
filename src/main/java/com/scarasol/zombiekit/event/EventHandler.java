@@ -215,7 +215,7 @@ public class EventHandler {
                     }
                     entity.getPersistentData().putBoolean("spawn_have_changed", true);
                 }
-            }else if (newSpawn.getType().is(TagKey.create(Registry.ENTITY_TYPE_REGISTRY, new ResourceLocation("forge:force_villager")))){
+            }else if (newSpawn.getType().is(ZombieKitTags.FORCE_VILLAGER)){
                 newSpawn.goalSelector.addGoal(1, new HeavyMachineGunUsingGoal<>(newSpawn, 25f, livingEntity -> livingEntity instanceof Enemy && !(livingEntity instanceof Creeper || livingEntity instanceof NeutralMob), false));
             }
 

@@ -131,6 +131,7 @@ public class ZombieKitItems {
 
     public static final RegistryObject<Item> CHARGER = block(ZombieKitBlocks.CHARGER, ZombieKitTabs.TAB_ZOMBIEKIT_TOOL);
     public static final RegistryObject<Item> ULTRA_WIDEBAND_RADAR = block(ZombieKitBlocks.ULTRA_WIDEBAND_RADAR, ZombieKitTabs.TAB_ZOMBIEKIT_TOOL);
+    public static final RegistryObject<Item> UV_LAMP = REGISTRY.register("uv_lamp", () -> new UvLamp(new Item.Properties().tab(ZombieKitTabs.TAB_ZOMBIEKIT_TOOL).durability(20)));
 
     public static final RegistryObject<Item> INJECTOR = block(ZombieKitBlocks.INJECTOR, ZombieKitTabs.TAB_ZOMBIEKIT_TOOL);
 

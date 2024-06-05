@@ -7,6 +7,7 @@ import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.entity.AreaEffectCloud;
 import net.minecraft.world.entity.EntityType;
+import net.minecraft.world.entity.MobType;
 import net.minecraft.world.entity.PathfinderMob;
 import net.minecraft.world.entity.projectile.ThrownPotion;
 import net.minecraft.world.level.Level;
@@ -33,7 +34,7 @@ public abstract class Mechanics extends PathfinderMob {
     public boolean hurt(DamageSource source, float amount) {
         if (source.getDirectEntity() instanceof ThrownPotion || source.getDirectEntity() instanceof AreaEffectCloud)
             return false;
-        if (source == DamageSource.DROWN || source == DamageSource.MAGIC)
+        if (source == DamageSource.MAGIC)
             return false;
         if (source == DamageSource.WITHER || source == DamageSource.FREEZE || source == DamageSource.IN_WALL)
             return false;
@@ -44,6 +45,11 @@ public abstract class Mechanics extends PathfinderMob {
         if (source == Corrosion.CORRODED || source == DamageSource.FALL || source == DamageSource.OUT_OF_WORLD)
             return super.hurt(source, amount);
         return super.hurt(source, 1f);
+    }
+
+    @Override
+    public MobType getMobType() {
+        return MobType.UNDEFINED;
     }
 
     @Override

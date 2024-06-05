@@ -3,6 +3,7 @@ package com.scarasol.zombiekit.init;
 import com.scarasol.zombiekit.ZombieKitMod;
 import com.scarasol.zombiekit.entity.mechanics.DroneEntity;
 import com.scarasol.zombiekit.entity.mechanics.HeavyMachineGunEntity;
+import com.scarasol.zombiekit.entity.mechanics.UvLampEntity;
 import com.scarasol.zombiekit.entity.projectile.*;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.EntityType;
@@ -39,6 +40,9 @@ public class ZombieKitEntities {
             .setCustomClientFactory(HeavyMachineGunAmmoEntity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
     public static final RegistryObject<EntityType<HeavyMachineGunEntity>> HEAVY_MACHINE_GUN = register("heavy_machine_gun",
             EntityType.Builder.<HeavyMachineGunEntity>of(HeavyMachineGunEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(HeavyMachineGunEntity::new).sized(0.8f, 1f));
+    public static final RegistryObject<EntityType<UvLampEntity>> UV_LAMP = register("uv_lamp",
+            EntityType.Builder.<UvLampEntity>of(UvLampEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(UvLampEntity::new));
+
 
 
 
@@ -52,7 +56,7 @@ public class ZombieKitEntities {
 //    public static void init(FMLCommonSetupEvent event) {
 //        event.enqueueWork(() -> {
 //            FirecrackerTemEntityEntity.init();
-//            UvLampEntityEntity.init();
+//            UvLampEntity.init();
 //            DroneEntity.init();
 //            HeavyMachineGunEntity.init();
 //        });
@@ -60,7 +64,7 @@ public class ZombieKitEntities {
 
     @SubscribeEvent
     public static void registerAttributes(EntityAttributeCreationEvent event) {
-//        event.put(UV_LAMP_ENTITY.get(), UvLampEntityEntity.createAttributes().build());
+        event.put(UV_LAMP.get(), UvLampEntity.createAttributes().build());
         event.put(DRONE.get(), DroneEntity.createAttributes().build());
         event.put(HEAVY_MACHINE_GUN.get(), HeavyMachineGunEntity.createAttributes().build());
     }
