@@ -11,7 +11,7 @@
     },
 	{
       "type": "patchouli:crafting",
-      "recipe": "zombiekit:mirror_craft_medical_kit",
+      "recipe": "zombiekit:medical_kit",
 	  "text": "dramatic than just twisting an ankle. When dealing with more severe wounds, mere bandages won't cut it – that's when you need a proper medical first aid kit. Don't complain about it taking up space; it could be a lifesaver!"
     }
   ]

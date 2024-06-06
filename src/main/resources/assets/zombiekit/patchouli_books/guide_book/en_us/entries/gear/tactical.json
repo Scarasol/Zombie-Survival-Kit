@@ -1,20 +1,20 @@
 {
   "name": "Tactical and Riot Gear",
-  "icon": "zombiekit:standard_coordinates_chestplate",
+  "icon": "zombiekit:standard_tactical_chestplate",
   "category": "zombiekit:gear",
   "sortnum": 3,
   "pages": [
     {
       "type": "patchouli:spotlight",
-	  "item": "zombiekit:standard_coordinates_chestplate",
+	  "item": "zombiekit:standard_tactical_chestplate",
 	  "title": "Tactical and Riot Gear",
       "text": "If you have a friend who works in the security or military forces, congratulations, you've hit the jackpot! Military and police gear is not only lightweight and durable, but the various protective equipment are designed for combat – nothing could be better in the apocalypse. If you can manage to acquire riot "
     },
 	{
       "type": "patchouli:crafting",
 	  "title": "Tactical and Riot Gear",
-      "recipe": "zombiekit:mirror_craft_36",
-	  "recipe2": "zombiekit:mirror_craft_37"
+      "recipe": "zombiekit:standard_tactical_helmet",
+	  "recipe2": "zombiekit:standard_tactical_chestplate"
     },
 	{
       "type": "patchouli:text",
@@ -24,8 +24,8 @@
 	{
       "type": "patchouli:crafting",
 	  "title": "Tactical and Riot Gear",
-      "recipe": "zombiekit:mirror_craft_38",
-	  "recipe2": "zombiekit:mirror_craft_39"
+      "recipe": "zombiekit:standard_tactical_leggings",
+	  "recipe2": "zombiekit:standard_tactical_boots"
     },
 	{
       "type": "patchouli:text",

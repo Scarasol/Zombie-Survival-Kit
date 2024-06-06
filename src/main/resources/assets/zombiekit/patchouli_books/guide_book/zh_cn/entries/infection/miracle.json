@@ -19,7 +19,7 @@
     },
 	{
       "type": "patchouli:crafting",
-      "recipe": "zombiekit:mirror_craft_7"
+      "recipe": "zombiekit:miracle"
     }
   ]
 }

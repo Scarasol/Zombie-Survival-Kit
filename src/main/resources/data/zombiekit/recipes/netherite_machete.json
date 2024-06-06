@@ -1,12 +1,12 @@
 {
   "type": "minecraft:smithing",
   "base": {
-    "item": "zombiekit:baseball_bat"
+    "item": "zombiekit:machete"
   },
   "addition": {
     "item": "minecraft:netherite_ingot"
   },
   "result": {
-    "item": "zombiekit:baseball_bat_nether"
+    "item": "zombiekit:netherite_machete"
   }
 }

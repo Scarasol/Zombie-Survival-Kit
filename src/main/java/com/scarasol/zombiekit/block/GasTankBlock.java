@@ -122,7 +122,7 @@ public class GasTankBlock extends FallingBlock implements BombBlock{
         if (blockstate.getValue(BESIDE_FIRE) && random.nextDouble() < 0.01){
             exploded(level, blockPos.getX(), blockPos.getY(), blockPos.getZ(), getExplodeLevel());
         }
-        level.scheduleTick(blockPos, this, 2);
+        level.scheduleTick(blockPos, this, 3);
     }
 
     @Override
@@ -131,6 +131,11 @@ public class GasTankBlock extends FallingBlock implements BombBlock{
         if (!dropsOriginal.isEmpty())
             return dropsOriginal;
         return Collections.singletonList(new ItemStack(this, 1));
+    }
+
+    @Override
+    public int getLightBlock(BlockState state, BlockGetter worldIn, BlockPos pos) {
+        return 0;
     }
 
     @OnlyIn(Dist.CLIENT)

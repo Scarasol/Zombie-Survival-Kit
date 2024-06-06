@@ -72,22 +72,6 @@ public class MolotovCocktailEntity extends ModProjectile {
         double kx = Mth.floor(x);
         double ky = Mth.floor(y);
         double kz = Mth.floor(z);
-        double cst_tem = 1;
-        if (kx < this.getX()) {
-            kx = kx + cst_tem;
-        } else if (kx > this.getX()) {
-            kx = kx - cst_tem;
-        }
-        if (ky < this.getY()) {
-            ky = ky + cst_tem;
-        } else if (ky > this.getY()) {
-            ky = ky - cst_tem;
-        }
-        if (kz < this.getZ()) {
-            kz = kz + cst_tem;
-        } else if (kz > this.getZ()) {
-            kz = kz - cst_tem;
-        }
         double tha1 = 0;
         while (tha1 <= cst_tha1) {
             double tha2 = 0;

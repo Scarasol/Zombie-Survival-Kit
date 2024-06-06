@@ -11,7 +11,7 @@
     },
 	{
       "type": "patchouli:crafting",
-      "recipe": "zombiekit:get_uv_lamp",
+      "recipe": "zombiekit:uv_lamp",
 	  "text": "晒霜的家伙可不能参加。"
     },
 	{

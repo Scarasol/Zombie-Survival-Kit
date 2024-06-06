@@ -10,7 +10,7 @@
 		{
           "type": "tag",
           "name": "minecraft:logs",
-		  "expand": false,
+		  "expand": true,
           "functions": [
             {
               "function": "set_count",
@@ -25,7 +25,7 @@
 		{
           "type": "tag",
           "name": "forge:stone",
-		  "expand": false,
+		  "expand": true,
           "functions": [
             {
               "function": "set_count",
@@ -40,7 +40,7 @@
 		{
           "type": "tag",
           "name": "minecraft:sand",
-		  "expand": false,
+		  "expand": true,
           "functions": [
             {
               "function": "set_count",

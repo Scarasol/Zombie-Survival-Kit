@@ -11,7 +11,7 @@
     },
 	{
       "type": "patchouli:crafting",
-      "recipe": "zombiekit:mirror_craft_1",
+      "recipe": "zombiekit:baseball_bat",
 	  "text": "their tune! It might lack brute force, but it'll keep those zombies at a safer distance. "
     }
   ]

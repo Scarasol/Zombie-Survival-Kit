@@ -1,20 +1,20 @@
 {
   "name": "战术服",
-  "icon": "zombiekit:standard_coordinates_chestplate",
+  "icon": "zombiekit:standard_tactical_chestplate",
   "category": "zombiekit:gear",
   "sortnum": 3,
   "pages": [
     {
       "type": "patchouli:spotlight",
-	  "item": "zombiekit:standard_coordinates_chestplate",
+	  "item": "zombiekit:standard_tactical_chestplate",
 	  "title": "战术服",
       "text": "如果你的朋友有谁是在警卫队或军队工作，恭喜你中大奖了！军警用品，轻便耐磨不说，而且各种护具就是为了战斗设计的，在末世里再好不过了。如果能搞到镇暴护具，那自然是更好，这种专门用来提防冷兵器和格斗的装备简直是丧尸克星。不过即使没有这样的朋友也不用担心，说不定用不了多久"
     },
 	{
       "type": "patchouli:crafting",
 	  "title": "战术服",
-      "recipe": "zombiekit:mirror_craft_36",
-	  "recipe2": "zombiekit:mirror_craft_37"
+      "recipe": "zombiekit:standard_tactical_helmet",
+	  "recipe2": "zombiekit:standard_tactical_chestplate"
     },
 	{
       "type": "patchouli:text",
@@ -24,8 +24,8 @@
 	{
       "type": "patchouli:crafting",
 	  "title": "战术服",
-      "recipe": "zombiekit:mirror_craft_38",
-	  "recipe2": "zombiekit:mirror_craft_39"
+      "recipe": "zombiekit:standard_tactical_leggings",
+	  "recipe2": "zombiekit:standard_tactical_boots"
     },
 	{
       "type": "patchouli:text",

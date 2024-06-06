@@ -1,9 +1,9 @@
 {
   "replace": false,
   "values": [
-    "zombiekit:standard_coordinates_helmet",
-    "zombiekit:desert_coordinates_helmet",
-    "zombiekit:forest_coordinates_helmet",
-    "zombiekit:snow_coordinates_helmet"
+    "zombiekit:standard_tactical_helmet",
+    "zombiekit:desert_tactical_helmet",
+    "zombiekit:forest_tactical_helmet",
+    "zombiekit:snow_tactical_helmet"
   ]
 }

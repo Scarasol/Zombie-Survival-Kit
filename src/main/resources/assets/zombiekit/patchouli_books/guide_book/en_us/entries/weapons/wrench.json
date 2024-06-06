@@ -11,7 +11,7 @@
     },
 	{
       "type": "patchouli:crafting",
-      "recipe": "zombiekit:get_wrench",
+      "recipe": "zombiekit:wrench",
 	  "text": "excellent Native American tomahawk. It's time to embark on a primal hunt against the zombies, hoping they won't feel it, because it really hurts!"
     }
   ]

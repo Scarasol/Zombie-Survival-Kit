@@ -8,6 +8,7 @@ import com.scarasol.zombiekit.block.InjectorBlock;
 import com.scarasol.zombiekit.block.ShortwaveRadioBlock;
 import com.scarasol.zombiekit.entity.goal.HeavyMachineGunUsingGoal;
 import com.scarasol.zombiekit.entity.mechanics.HeavyMachineGunEntity;
+import com.scarasol.zombiekit.entity.mechanics.UvLampEntity;
 import com.scarasol.zombiekit.init.ZombieKitItems;
 import com.scarasol.zombiekit.init.ZombieKitTags;
 import com.scarasol.zombiekit.item.armor.BombArmor;
@@ -167,13 +168,13 @@ public class EventHandler {
             Mob newSpawn = _entity;
             if (newSpawn instanceof Raider || newSpawn instanceof Vex) {
                 newSpawn.targetSelector.addGoal(2, new NearestAttackableTargetGoal<>(newSpawn, Mob.class, 5, false, false, livingEntity -> livingEntity instanceof Enemy && !(livingEntity instanceof Raider || livingEntity instanceof Creeper || livingEntity instanceof NeutralMob || livingEntity instanceof Vex)));
-
                 if (newSpawn instanceof Vindicator vindicator){
                     vindicator.goalSelector.addGoal(1, new HeavyMachineGunUsingGoal<>(vindicator, 25f, livingEntity -> (livingEntity instanceof Mob mob && mob.getType().is(TagKey.create(Registry.ENTITY_TYPE_REGISTRY, new ResourceLocation("forge:force_villager"))))|| livingEntity instanceof IronGolem || livingEntity instanceof AbstractVillager || (livingEntity instanceof Enemy && !(livingEntity instanceof Creeper || livingEntity instanceof NeutralMob || livingEntity instanceof Vex)), true));
                 }
             }else if (newSpawn instanceof Enemy && !(newSpawn instanceof Creeper || newSpawn instanceof NeutralMob)){
+                if (newSpawn.getType().is(ZombieKitTags.UV_RESISTANCE))
+                    newSpawn.targetSelector.addGoal(3, new NearestAttackableTargetGoal<>(newSpawn, Mob.class, 5, false, false, livingEntity -> livingEntity instanceof UvLampEntity));
                 newSpawn.targetSelector.addGoal(2, new NearestAttackableTargetGoal<>(newSpawn, Mob.class, 5, false, false, livingEntity -> livingEntity instanceof Raider || livingEntity instanceof Vex));
-
                 if (newSpawn instanceof Zombie && !(newSpawn instanceof ZombieVillager && !entity.getPersistentData().getBoolean("spawn_have_changed"))){
                     if (Mth.nextInt(new Random(), 1, 100) <= 5) {
                         i = Mth.nextInt(new Random(), 1, 4);

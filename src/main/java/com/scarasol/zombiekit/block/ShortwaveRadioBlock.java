@@ -329,6 +329,11 @@ public class ShortwaveRadioBlock extends Block {
         return Collections.singletonList(new ItemStack(this, 1));
     }
 
+    @Override
+    public int getLightBlock(BlockState state, BlockGetter worldIn, BlockPos pos) {
+        return 0;
+    }
+
     @OnlyIn(Dist.CLIENT)
     public static void registerRenderLayer() {
         ItemBlockRenderTypes.setRenderLayer(ZombieKitBlocks.SHORTWAVE_RADIO.get(), renderType -> renderType == RenderType.cutout());

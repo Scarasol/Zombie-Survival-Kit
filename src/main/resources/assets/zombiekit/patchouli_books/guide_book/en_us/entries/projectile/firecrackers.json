@@ -11,7 +11,7 @@
     },
 	{
       "type": "patchouli:crafting",
-      "recipe": "zombiekit:get_firecracker",
+      "recipe": "zombiekit:firecracker",
 	  "text": "undoubtedly be drawn to this festive spectacle. And when the gathering is in full swing, don't forget to host a bonfire party – that's just how things are done!"
     }
   ]

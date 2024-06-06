@@ -9,7 +9,7 @@
       "entries": [
         {
           "type": "item",
-          "name": "zombiekit:bile_bottle",
+          "name": "zombiekit:bile_jar",
           "functions": [
             {
               "function": "set_count",

@@ -9,7 +9,7 @@
       "entries": [
         {
           "type": "item",
-          "name": "zombiekit:skiing_coordinates_helmet",
+          "name": "zombiekit:skiing_helmet",
           "functions": [
             {
               "function": "set_count",
@@ -20,7 +20,7 @@
         },
 		{
           "type": "item",
-          "name": "zombiekit:skiing_coordinates_boots",
+          "name": "zombiekit:skiing_boots",
           "functions": [
             {
               "function": "set_count",
@@ -31,7 +31,7 @@
         },
         {
           "type": "item",
-          "name": "zombiekit:skiing_coordinates_chestplate",
+          "name": "zombiekit:skiing_chestplate",
           "functions": [
             {
               "function": "set_count",
@@ -42,7 +42,7 @@
         },	
 		{
           "type": "item",
-          "name": "zombiekit:skiing_coordinates_leggings",
+          "name": "zombiekit:skiing_leggings",
           "functions": [
             {
               "function": "set_count",
@@ -53,7 +53,7 @@
         },	
         {
           "type": "item",
-          "name": "zombiekit:standard_coordinates_helmet",
+          "name": "zombiekit:standard_tactical_helmet",
           "functions": [
             {
               "function": "set_count",
@@ -64,7 +64,7 @@
         },
 		{
           "type": "item",
-          "name": "zombiekit:standard_coordinates_boots",
+          "name": "zombiekit:standard_tactical_boots",
           "functions": [
             {
               "function": "set_count",
@@ -75,7 +75,7 @@
         },
         {
           "type": "item",
-          "name": "zombiekit:standard_coordinates_chestplate",
+          "name": "zombiekit:standard_tactical_chestplate",
           "functions": [
             {
               "function": "set_count",
@@ -86,7 +86,7 @@
         },
 		{
           "type": "item",
-          "name": "zombiekit:standard_coordinates_leggings",
+          "name": "zombiekit:standard_tactical_leggings",
           "functions": [
             {
               "function": "set_count",

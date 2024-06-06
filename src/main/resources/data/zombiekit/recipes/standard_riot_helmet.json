@@ -1,12 +1,12 @@
 {
   "type": "minecraft:smithing",
   "base": {
-    "item": "zombiekit:standard_coordinates_leggings"
+    "item": "zombiekit:standard_tactical_helmet"
   },
   "addition": {
     "item": "zombiekit:bulletproof_insert"
   },
   "result": {
-    "item": "zombiekit:riot_coordinates_leggings"
+    "item": "zombiekit:standard_riot_helmet"
   }
 }

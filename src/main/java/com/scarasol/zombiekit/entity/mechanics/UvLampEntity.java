@@ -2,6 +2,7 @@ package com.scarasol.zombiekit.entity.mechanics;
 
 import com.scarasol.sona.configuration.CommonConfig;
 import com.scarasol.sona.init.SonaMobEffects;
+import com.scarasol.zombiekit.init.ZombieKitBlocks;
 import com.scarasol.zombiekit.init.ZombieKitEntities;
 import com.scarasol.zombiekit.init.ZombieKitItems;
 import com.scarasol.zombiekit.init.ZombieKitTags;
@@ -11,6 +12,7 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
+import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.entity.*;
@@ -98,6 +100,22 @@ public class UvLampEntity extends Mechanics{
     }
 
     @Override
+    public void die(DamageSource source) {
+        super.die(source);
+        if (lightswitch){
+            level.destroyBlock(getOnPos().above(), false);
+            level.destroyBlock(getOnPos().above().above(), false);
+        }
+        if (hasBattery){
+            ItemStack itemStack = new ItemStack(ZombieKitItems.BATTERY.get(), 1);
+            itemStack.setDamageValue(100 - power);
+            ItemEntity itemEntity = new ItemEntity(level, getX(), getY(), getZ(), itemStack);
+            itemEntity.setPickUpDelay(10);
+            level.addFreshEntity(itemEntity);
+        }
+    }
+
+    @Override
     public void readAdditionalSaveData(CompoundTag compoundTag) {
         super.readAdditionalSaveData(compoundTag);
         if (compoundTag.contains("HasBattery"))
@@ -124,6 +142,8 @@ public class UvLampEntity extends Mechanics{
         if (hasBattery){
             if (level.getBestNeighborSignal(this.getOnPos()) > 0){
                 if (lightswitch){
+                    level.destroyBlock(getOnPos().above(), false);
+                    level.destroyBlock(getOnPos().above().above(), false);
                     lightswitch = false;
                     level.playSound(null, getOnPos(), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("zombiekit:turn_on")), SoundSource.NEUTRAL, 1, 1);
                 }
@@ -132,14 +152,25 @@ public class UvLampEntity extends Mechanics{
             }else if (power > 0){
                 if (!lightswitch){
                     lightswitch = true;
+                    level.setBlock(getOnPos().above(), ZombieKitBlocks.SPREAD_LIGHT_FATHER.get().defaultBlockState(), 3);
+                    level.setBlock(getOnPos().above().above(), ZombieKitBlocks.SPREAD_LIGHT_FATHER.get().defaultBlockState(), 3);
                     level.playSound(null, getOnPos(), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("zombiekit:turn_on")), SoundSource.NEUTRAL, 1, 1);
                 }
                 searchUndead();
                 if (level.getGameTime() % 120 == 0)
                     power = Math.max(power - 1, 0);
+            }else {
+                if (lightswitch){
+                    level.destroyBlock(getOnPos().above(), false);
+                    level.destroyBlock(getOnPos().above().above(), false);
+                    lightswitch = false;
+                    level.playSound(null, getOnPos(), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("zombiekit:turn_on")), SoundSource.NEUTRAL, 1, 1);
+                }
             }
         }else {
             if (lightswitch){
+                level.destroyBlock(getOnPos().above(), false);
+                level.destroyBlock(getOnPos().above().above(), false);
                 lightswitch = false;
                 level.playSound(null, getOnPos(), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("zombiekit:turn_on")), SoundSource.NEUTRAL, 1, 1);
             }

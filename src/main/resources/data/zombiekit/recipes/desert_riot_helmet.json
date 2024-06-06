@@ -1,12 +1,12 @@
 {
   "type": "minecraft:smithing",
   "base": {
-    "item": "zombiekit:desert_coordinates_helmet"
+    "item": "zombiekit:desert_tactical_helmet"
   },
   "addition": {
     "item": "zombiekit:bulletproof_insert"
   },
   "result": {
-    "item": "zombiekit:desert_riot_coordinates_helmet"
+    "item": "zombiekit:desert_riot_helmet"
   }
 }

@@ -11,7 +11,7 @@
     },
 	{
       "type": "patchouli:crafting",
-      "recipe": "zombiekit:mirror_craft_21",
+      "recipe": "zombiekit:molotov_cocktail",
 	  "text": "以喝两口再上路！"
     }
   ]

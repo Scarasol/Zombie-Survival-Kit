@@ -41,7 +41,8 @@ public class ZombieKitBlocks {
     public static final RegistryObject<Block> GAS_TANK = REGISTRY.register("gas_tank", () -> new GasTankBlock(BlockBehaviour.Properties.of(Material.METAL).sound(SoundType.METAL).strength(1f, 3.6f).noOcclusion().isRedstoneConductor((bs, br, bp) -> false)));
     public static final RegistryObject<Block> FLARES_LIGHT = REGISTRY.register("flares_light", () -> new FlaresLightBlock(BlockBehaviour.Properties.of(Material.AIR, MaterialColor.NONE).sound(SoundType.STONE).strength(-1, 3600000).lightLevel(s -> 15).noCollission().noOcclusion().isRedstoneConductor((bs, br, bp) -> false)));
     public static final RegistryObject<Block> SALTPETER_CAULDRON = REGISTRY.register("saltpeter_cauldron", () -> new SaltpeterCauldronBlock(BlockBehaviour.Properties.of(Material.STONE).sound(SoundType.STONE).randomTicks().strength(2f, 2f).requiresCorrectToolForDrops(), CauldronInteraction.WATER));
-
+    public static final RegistryObject<Block> SPREAD_LIGHT = REGISTRY.register("spread_light", () -> new SpreadLight(BlockBehaviour.Properties.of(Material.AIR, MaterialColor.NONE).sound(SoundType.STONE).strength(-1, 3600000).lightLevel(s -> 15).noCollission().noOcclusion().isRedstoneConductor((bs, br, bp) -> false)));
+    public static final RegistryObject<Block> SPREAD_LIGHT_FATHER = REGISTRY.register("spread_light_father", () -> new SpreadLightFather(BlockBehaviour.Properties.of(Material.AIR, MaterialColor.NONE).sound(SoundType.STONE).strength(-1, 3600000).lightLevel(s -> 15).noCollission().noOcclusion().isRedstoneConductor((bs, br, bp) -> false)));
 
     @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
     public static class ClientSideHandler {
@@ -51,14 +52,12 @@ public class ZombieKitBlocks {
             LandmineBlock.registerRenderLayer();
             InjectorBlock.registerRenderLayer();
             BarbedWireBlock.registerRenderLayer();
-//            UltraWidebandRadarBlock.registerRenderLayer();
+            UltraWidebandRadarBlock.registerRenderLayer();
             ChargerBlock.registerRenderLayer();
             ShortwaveRadioBlock.registerRenderLayer();
             GasTankBlock.registerRenderLayer();
-//            ChargerWithBatteryBlock.registerRenderLayer();
-//            ChargerWithBatteryWithRedstoneBlock.registerRenderLayer();
-//            UvLampLightBlock.registerRenderLayer();
-//            UvLampLightAirBlock.registerRenderLayer();
+            SpreadLight.registerRenderLayer();
+            SpreadLightFather.registerRenderLayer();
             FlaresLightBlock.registerRenderLayer();
         }
 

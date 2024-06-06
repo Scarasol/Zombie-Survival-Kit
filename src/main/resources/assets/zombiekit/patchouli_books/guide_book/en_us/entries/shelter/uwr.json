@@ -11,7 +11,7 @@
     },
 	{
       "type": "patchouli:crafting",
-      "recipe": "zombiekit:get_ultra_wideband_radar",
+      "recipe": "zombiekit:ultra_wideband_radar",
 	  "text": "stay awake at night. Moreover, this portable radar can also be used to scavenge for supplies and find out in advance if there are any zombies planning a big surprise!"
     },
 	{

@@ -16,7 +16,7 @@
       "item": "zombiekit:cloth"
     },
     "4": {
-      "item": "zombiekit:special_steel_sheet"
+      "item": "minecraft:sponge"
     },
     "5": {
       "item": "zombiekit:cloth"
@@ -32,7 +32,7 @@
     }
   },
   "result": {
-    "item": "zombiekit:standard_coordinates_chestplate",
+    "item": "zombiekit:skiing_chestplate",
     "count": 1
   }
 }

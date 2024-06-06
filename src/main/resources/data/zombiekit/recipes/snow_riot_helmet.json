@@ -1,12 +1,12 @@
 {
   "type": "minecraft:smithing",
   "base": {
-    "item": "zombiekit:snow_coordinates_helmet"
+    "item": "zombiekit:snow_tactical_helmet"
   },
   "addition": {
     "item": "zombiekit:bulletproof_insert"
   },
   "result": {
-    "item": "zombiekit:snow_riot_coordinates_helmet"
+    "item": "zombiekit:snow_riot_helmet"
   }
 }

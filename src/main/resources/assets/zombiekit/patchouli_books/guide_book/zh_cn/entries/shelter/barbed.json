@@ -11,7 +11,7 @@
     },
 	{
       "type": "patchouli:crafting",
-      "recipe": "zombiekit:get_barbed_wire",
+      "recipe": "zombiekit:barbed_wire",
 	  "text": "速度。此外一些带刺的灌木，比如甜浆果也可以是一种选择。"
     }
   ]

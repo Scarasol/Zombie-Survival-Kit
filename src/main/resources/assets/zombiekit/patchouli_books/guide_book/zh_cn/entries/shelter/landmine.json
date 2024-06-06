@@ -11,7 +11,7 @@
     },
 	{
       "type": "patchouli:crafting",
-      "recipe": "zombiekit:get_landmine",
+      "recipe": "zombiekit:landmine",
 	  "text": "雷教教丧尸城堡法吧，希望它们的脑子还没有彻底烂掉。"
     },
 	{

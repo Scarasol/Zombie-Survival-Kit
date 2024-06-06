@@ -1,9 +1,9 @@
 {
   "replace": false,
   "values": [
-    "zombiekit:standard_coordinates_leggings",
-    "zombiekit:desert_coordinates_leggings",
-    "zombiekit:forest_coordinates_leggings",
-    "zombiekit:snow_coordinates_leggings"
+    "zombiekit:standard_tactical_leggings",
+    "zombiekit:desert_tactical_leggings",
+    "zombiekit:forest_tactical_leggings",
+    "zombiekit:snow_tactical_leggings"
   ]
 }

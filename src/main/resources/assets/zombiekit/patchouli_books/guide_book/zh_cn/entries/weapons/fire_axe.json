@@ -11,7 +11,7 @@
     },
 	{
       "type": "patchouli:crafting",
-      "recipe": "zombiekit:mirror_craft_3",
+      "recipe": "zombiekit:fire_axe",
 	  "text": "你跑的再快一点。"
     }
   ]

@@ -1,12 +1,12 @@
 {
   "type": "minecraft:smithing",
   "base": {
-    "item": "zombiekit:dagger"
+    "item": "zombiekit:fire_axe"
   },
   "addition": {
     "item": "minecraft:netherite_ingot"
   },
   "result": {
-    "item": "zombiekit:dagger_nether"
+    "item": "zombiekit:netherite_fire_axe"
   }
 }

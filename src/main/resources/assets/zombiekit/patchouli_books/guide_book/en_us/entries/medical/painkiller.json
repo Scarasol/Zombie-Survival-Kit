@@ -11,7 +11,7 @@
     },
 	{
       "type": "patchouli:crafting",
-      "recipe": "zombiekit:mirror_craft_painkiller",
+      "recipe": "zombiekit:painkiller",
 	  "text": "that's not something your average person can get their hands on. For the general population, fast-acting painkillers are the way to go."
     }
   ]

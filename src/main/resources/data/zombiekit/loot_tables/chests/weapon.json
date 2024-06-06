@@ -9,7 +9,7 @@
       "entries": [
         {
           "type": "item",
-          "name": "zombiekit:dagger",
+          "name": "zombiekit:knife",
           "functions": [
             {
               "function": "set_count",
@@ -53,7 +53,7 @@
         },
         {
           "type": "item",
-          "name": "zombiekit:dagger_trigeminal_thorn",
+          "name": "zombiekit:triangular_thorn",
           "functions": [
             {
               "function": "set_count",
@@ -86,7 +86,7 @@
         },
         {
           "type": "item",
-          "name": "zombiekit:iron_rake",
+          "name": "zombiekit:rake",
           "functions": [
             {
               "function": "set_count",

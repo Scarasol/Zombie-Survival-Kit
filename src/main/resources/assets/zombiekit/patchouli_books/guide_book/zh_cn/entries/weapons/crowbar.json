@@ -11,7 +11,7 @@
     },
 	{
       "type": "patchouli:crafting",
-      "recipe": "zombiekit:mirror_craft_5",
+      "recipe": "zombiekit:crowbar",
 	  "text": "但对于落单的丧尸，物理学圣剑的威力也能让它昏沉很久。"
     }
   ]

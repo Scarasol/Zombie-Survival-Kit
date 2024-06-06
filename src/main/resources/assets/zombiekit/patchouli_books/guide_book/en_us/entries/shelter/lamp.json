@@ -11,7 +11,7 @@
     },
 	{
       "type": "patchouli:crafting",
-      "recipe": "zombiekit:get_uv_lamp",
+      "recipe": "zombiekit:uv_lamp",
 	  "text": "while also safely repelling them. "
     },
 	{

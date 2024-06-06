@@ -1,6 +1,6 @@
 {
   "name": "胆汁罐",
-  "icon": "zombiekit:bile_bottle",
+  "icon": "zombiekit:bile_jar",
   "category": "zombiekit:projectile",
   "sortnum": 3,
   "pages": [
@@ -11,7 +11,7 @@
     },
 	{
       "type": "patchouli:crafting",
-      "recipe": "zombiekit:mirror_craft_8",
+      "recipe": "zombiekit:bile_jar",
 	  "text": "当然不要弄到自己身上了，否则晕头转向的就不只是丧尸了！"
     }
   ]

@@ -19,7 +19,7 @@
     },
 	{
       "type": "patchouli:crafting",
-      "recipe": "zombiekit:mirror_craft_7",
+      "recipe": "zombiekit:miracle",
 	  "text": "$(#a97b1d)a small quantity of prototypes remains.'"
     }
   ]

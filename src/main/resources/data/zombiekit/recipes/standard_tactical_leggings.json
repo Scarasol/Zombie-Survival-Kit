@@ -2,30 +2,34 @@
   "type": "minecraft:crafting_shaped",
   "pattern": [
     "012",
-    "345"
+    "3 5",
+    "6 8"
   ],
   "key": {
     "0": {
-      "item": "zombiekit:special_steel_sheet"
+      "item": "zombiekit:cloth"
     },
     "1": {
-      "item": "zombiekit:special_steel_sheet"
+      "item": "zombiekit:cloth"
     },
     "2": {
-      "item": "zombiekit:special_steel_sheet"
+      "item": "zombiekit:cloth"
     },
     "3": {
       "item": "zombiekit:special_steel_sheet"
     },
-    "4": {
-      "item": "minecraft:redstone"
-    },
     "5": {
       "item": "zombiekit:special_steel_sheet"
+    },
+    "6": {
+      "item": "zombiekit:cloth"
+    },
+    "8": {
+      "item": "zombiekit:cloth"
     }
   },
   "result": {
-    "item": "zombiekit:exo_coordinates_helmet",
+    "item": "zombiekit:standard_tactical_leggings",
     "count": 1
   }
 }

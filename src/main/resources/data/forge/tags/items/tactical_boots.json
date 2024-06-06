@@ -1,9 +1,9 @@
 {
   "replace": false,
   "values": [
-    "zombiekit:snow_coordinates_boots",
-    "zombiekit:forest_coordinates_boots",
-    "zombiekit:standard_coordinates_boots",
-    "zombiekit:desert_coordinates_boots"
+    "zombiekit:snow_tactical_boots",
+    "zombiekit:forest_tactical_boots",
+    "zombiekit:standard_tactical_boots",
+    "zombiekit:desert_tactical_boots"
   ]
 }

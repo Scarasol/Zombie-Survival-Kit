@@ -11,7 +11,7 @@
     },
 	{
       "type": "patchouli:crafting",
-      "recipe": "zombiekit:mirror_craft_1",
+      "recipe": "zombiekit:baseball_bat",
 	  "text": "多一份距离，多一份安全！"
     }
   ]

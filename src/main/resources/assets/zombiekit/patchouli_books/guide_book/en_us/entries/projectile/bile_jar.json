@@ -1,17 +1,17 @@
 {
   "name": "Bile Jar",
-  "icon": "zombiekit:bile_bottle",
+  "icon": "zombiekit:bile_jar",
   "category": "zombiekit:projectile",
   "sortnum": 3,
   "pages": [
     {
       "type": "patchouli:spotlight",
-	  "item": "zombiekit:bile_bottle",
+	  "item": "zombiekit:bile_jar",
       "text": "When facing the zombie horde, you've only got three choices: kill them, flee from them, or, if you're really up for it, join them. Staying far away from them is naturally the safest bet. As long as you're quick on your feet, nothing's insurmountable! Okay, I'm just kidding. But seriously, if you find yourself in the "
     },
 	{
       "type": "patchouli:crafting",
-      "recipe": "zombiekit:mirror_craft_8",
+      "recipe": "zombiekit:bile_jar",
 	  "text": "crosshairs of a zombie swarm, why not give a bile jar a shot? That pungent scent will have all the zombies doing the dizzy dance. Of course, don't get any on yourself, unless you want more than just zombies spinning around! "
     }
   ]

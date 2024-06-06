@@ -1,12 +1,12 @@
 {
   "type": "minecraft:smithing",
   "base": {
-    "item": "zombiekit:iron_rake"
+    "item": "zombiekit:rake"
   },
   "addition": {
     "item": "minecraft:netherite_ingot"
   },
   "result": {
-    "item": "zombiekit:nether_rake"
+    "item": "zombiekit:netherite_rake"
   }
 }

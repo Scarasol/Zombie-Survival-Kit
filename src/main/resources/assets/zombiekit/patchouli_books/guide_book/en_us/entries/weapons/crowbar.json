@@ -11,7 +11,7 @@
     },
 	{
       "type": "patchouli:crafting",
-      "recipe": "zombiekit:mirror_craft_5",
+      "recipe": "zombiekit:crowbar",
 	  "text": "Besides its practical use as a tool, the crowbar is also highly suitable for combat. The power of this physical Holy Sword can leave unfortunate foes dazed and confused for a good while. "
     }
   ]

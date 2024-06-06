@@ -1,12 +1,12 @@
 {
   "type": "minecraft:smithing",
   "base": {
-    "item": "zombiekit:desert_coordinates_boots"
+    "item": "zombiekit:desert_tactical_boots"
   },
   "addition": {
     "item": "zombiekit:bulletproof_insert"
   },
   "result": {
-    "item": "zombiekit:desert_riot_coordinates_boots"
+    "item": "zombiekit:desert_riot_boots"
   }
 }

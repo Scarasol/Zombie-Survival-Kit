@@ -6,12 +6,12 @@
   "pages": [
     {
       "type": "patchouli:spotlight",
-	  "item": "zombiekit:iron_rake",
+	  "item": "zombiekit:rake",
       "text": "As the saying goes, an inch of length means an inch of strength! This holds even truer for zombies – the farther away you are, the lower the chance of getting bitten. Just step outside, grab that gardening rake from your yard – it's the perfect long-handled weapon! The advantage of distance lets you torment those wretched"
     },
 	{
       "type": "patchouli:crafting",
-      "recipe": "zombiekit:get_iron_rake",
+      "recipe": "zombiekit:rake",
 	  "text": "creatures without them laying a hand on you. Time to play gardener and rake those undead twigs and leaves out of your garden!"
     }
   ]

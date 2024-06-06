@@ -11,7 +11,7 @@
     },
 	{
       "type": "patchouli:crafting",
-      "recipe": "zombiekit:get_firecracker",
+      "recipe": "zombiekit:firecracker",
 	  "text": "满堂的时候，也别忘了举办一场篝火晚会——这是规矩！"
     }
   ]

@@ -127,7 +127,10 @@ public class UltraWidebandRadarBlock extends Block {
         };
     }
 
-
+    @Override
+    public int getLightBlock(BlockState state, BlockGetter worldIn, BlockPos pos) {
+        return 0;
+    }
 
     public void highLightEntity(BlockState blockState, ServerLevel world, BlockPos pos) {
         BlockPos blockPos;
