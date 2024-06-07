@@ -10,6 +10,7 @@ import net.minecraft.core.BlockPos;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.sounds.SoundSource;
+import net.minecraft.util.Mth;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.damagesource.DamageSource;
@@ -76,6 +77,16 @@ public class UvLampEntity extends Mechanics{
         this.lightswitch = lightswitch;
     }
 
+    public void popBattery(){
+        ItemStack itemStack = new ItemStack(ZombieKitItems.BATTERY.get(), 1);
+        itemStack.setDamageValue(100 - power);
+        ItemEntity itemEntity = new ItemEntity(level, getX(), getY(), getZ(), itemStack);
+        itemEntity.setPickUpDelay(10);
+        level.addFreshEntity(itemEntity);
+        hasBattery = false;
+        power = 0;
+    }
+
     @Override
     public InteractionResult mobInteract(Player player, InteractionHand hand) {
         Level level = this.level;
@@ -87,13 +98,17 @@ public class UvLampEntity extends Mechanics{
             }
             return InteractionResult.SUCCESS;
         }else if (hasBattery && player.getOffhandItem().getItem() == ZombieKitItems.WRENCH.get()){
-            ItemStack itemStack = new ItemStack(ZombieKitItems.BATTERY.get(), 1);
-            itemStack.setDamageValue(100 - power);
+            popBattery();
+            return InteractionResult.SUCCESS;
+        }else if (player.getMainHandItem().getItem() == ZombieKitItems.WRENCH.get()){
+            if (hasBattery)
+                popBattery();
+            ItemStack itemStack = new ItemStack(ZombieKitItems.UV_LAMP.get(), 1);
+            itemStack.setDamageValue(20 - Mth.floor(getHealth()));
             ItemEntity itemEntity = new ItemEntity(level, getX(), getY(), getZ(), itemStack);
             itemEntity.setPickUpDelay(10);
             level.addFreshEntity(itemEntity);
-            hasBattery = false;
-            power = 0;
+            this.discard();
             return InteractionResult.SUCCESS;
         }
         return InteractionResult.PASS;
@@ -107,11 +122,7 @@ public class UvLampEntity extends Mechanics{
             level.destroyBlock(getOnPos().above().above(), false);
         }
         if (hasBattery){
-            ItemStack itemStack = new ItemStack(ZombieKitItems.BATTERY.get(), 1);
-            itemStack.setDamageValue(100 - power);
-            ItemEntity itemEntity = new ItemEntity(level, getX(), getY(), getZ(), itemStack);
-            itemEntity.setPickUpDelay(10);
-            level.addFreshEntity(itemEntity);
+            popBattery();
         }
     }
 

@@ -18,6 +18,7 @@ import com.scarasol.zombiekit.network.NetworkHandler;
 import com.scarasol.zombiekit.network.SavedDataSyncPacket;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Registry;
+import net.minecraft.core.particles.DustParticleOptions;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.server.level.ServerPlayer;
@@ -31,15 +32,13 @@ import net.minecraft.world.entity.ai.attributes.AttributeModifier;
 import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.ai.goal.target.NearestAttackableTargetGoal;
 import net.minecraft.world.entity.animal.IronGolem;
+import net.minecraft.world.entity.decoration.ArmorStand;
 import net.minecraft.world.entity.monster.*;
 import net.minecraft.world.entity.npc.AbstractVillager;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.projectile.FireworkRocketEntity;
 import net.minecraft.world.entity.raid.Raider;
-import net.minecraft.world.item.ArmorItem;
-import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.SwordItem;
-import net.minecraft.world.item.TieredItem;
+import net.minecraft.world.item.*;
 import net.minecraft.world.level.StructureFeatureManager;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.state.BlockState;
@@ -132,6 +131,20 @@ public class EventHandler {
             boolean flag2 = !player.getItemInHand(InteractionHand.OFF_HAND).is(ZombieKitItems.HEAVY_MACHINE_GUN_AMMO.get());
             if (flag1 && flag2 && event.getHand() == InteractionHand.MAIN_HAND){
                 heavyMachineGunEntity.getLevel().playSound(player, heavyMachineGunEntity.getX(), heavyMachineGunEntity.getY(), heavyMachineGunEntity.getZ(), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("zombiekit:heavy_machine_gun_trigger")), SoundSource.BLOCKS, 1, 1);
+            }
+        }
+    }
+
+    @SubscribeEvent
+    public static void rightClickEntity(PlayerInteractEvent.EntityInteractSpecific event) {
+        Player player = event.getPlayer();
+        if (event.getTarget() instanceof ArmorStand armorStand){
+            ItemStack armor = armorStand.getItemBySlot(EquipmentSlot.CHEST);
+            if (armor.is(ZombieKitItems.EXO_CHESTPLATE.get()) && player.getMainHandItem().is(Items.REDSTONE)){
+                ExoArmor.addPower(armor, 5);
+                if (!player.isCreative())
+                    player.getMainHandItem().shrink(1);
+                armorStand.getLevel().addParticle(DustParticleOptions.REDSTONE, armorStand.getX(), armorStand.getY(), armorStand.getZ(), 0.0D, 0.0D, 0.0D);
             }
         }
     }

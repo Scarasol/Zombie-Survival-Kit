@@ -37,6 +37,7 @@ public class UvLamp extends Item {
     public InteractionResult useOn(UseOnContext context) {
         super.useOn(context);
         Player entity = context.getPlayer();
+        ItemStack itemStack = context.getItemInHand();
         if (context.getLevel() instanceof ServerLevel server) {
             BlockPos clickPos = context.getClickedPos();
             Direction direction = context.getClickedFace();
@@ -50,9 +51,9 @@ public class UvLamp extends Item {
                 case NORTH -> uvLamp.setPos(clickPos.getX() + 0.5, clickPos.getY() + 0.5, clickPos.getZ() - 0.5);
             }
             uvLamp.finalizeSpawn(server, server.getCurrentDifficultyAt(clickPos), MobSpawnType.SPAWN_EGG, null, null);
+            uvLamp.setHealth(20 - itemStack.getDamageValue());
             server.addFreshEntityWithPassengers(uvLamp);
             if (!entity.getAbilities().instabuild){
-                ItemStack itemStack = context.getItemInHand();
                 itemStack.setCount(itemStack.getCount() - 1);
             }
         }
