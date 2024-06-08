@@ -8,7 +8,9 @@ import net.minecraft.client.model.geom.ModelPart;
 import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.network.chat.TextComponent;
 import net.minecraft.network.chat.TranslatableComponent;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.level.ServerLevel;
+import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
@@ -19,6 +21,7 @@ import net.minecraft.world.entity.ai.attributes.AttributeModifier;
 import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.projectile.FireworkRocketEntity;
+import net.minecraft.world.entity.projectile.Projectile;
 import net.minecraft.world.item.ArmorItem;
 import net.minecraft.world.item.ArmorMaterial;
 import net.minecraft.world.item.ItemStack;
@@ -27,6 +30,7 @@ import net.minecraft.world.phys.Vec3;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
 import net.minecraftforge.client.IItemRenderProperties;
+import net.minecraftforge.registries.ForgeRegistries;
 
 import java.util.Collections;
 import java.util.HashMap;
@@ -87,6 +91,8 @@ public class ExoArmor extends ArmorItem {
         if (reactiveArmor >= 0){
             addReactiveArmor(itemStack, 1);
             if (reactiveArmor >= 200){
+                if (serverLevel.getGameTime() % 20 == 0)
+                    serverLevel.playSound(null, player, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("zombiekit:reactive_armor_ready")), SoundSource.PLAYERS, 1, 1);
                 serverLevel.sendParticles(ParticleTypes.ELECTRIC_SPARK, player.getX(), player.getY() + 0.5, player.getZ(), 1, 0.2, 0.5, 0.2, 0.05);
             }
             if (serverLevel.getGameTime() % 60 == 0)
@@ -99,18 +105,21 @@ public class ExoArmor extends ArmorItem {
 
     @Override
     public boolean canElytraFly(ItemStack stack, LivingEntity entity) {
-        return numberOfSuit(entity) == 4 && getMode(stack) != 1;
+        return numberOfSuit(entity) == 4 && getMode(stack) != 1 && getPower(stack) > 5;
     }
 
     @Override
     public boolean elytraFlightTick(ItemStack stack, LivingEntity entity, int flightTicks) {
         if (numberOfSuit(entity) < 4)
             return false;
-        if (entity.getLevel() instanceof ServerLevel serverLevel){
-            if (entity.isSprinting() && flightTicks % 10 == 0){
-                FireworkRocketEntity rocketEntity = new FireworkRocketEntity(serverLevel, stack, entity);
-                rocketEntity.setSilent(true);
-                serverLevel.addFreshEntity(rocketEntity);
+        if (entity.getLevel() instanceof ServerLevel serverLevel) {
+            if (flightTicks % 60 == 0)
+                addPower(stack, -1);
+            if (flightTicks % 10 == 0)
+                serverLevel.playSound(null, entity, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("zombiekit:exo_fly")), SoundSource.PLAYERS, 1, 1);
+            if (entity.isSprinting()){
+                if (flightTicks % 2 == 0)
+                    serverLevel.sendParticles(ParticleTypes.FIREWORK, entity.getX(), entity.getY(), entity.getZ(), 1, entity.getRandom().nextGaussian() * 0.05D, -entity.getDeltaMovement().y * 0.5D, entity.getRandom().nextGaussian() * 0.05D, 0.01);
             }else return !entity.isShiftKeyDown();
         }
         return true;
@@ -182,60 +191,71 @@ public class ExoArmor extends ArmorItem {
             return;
         ItemStack chest = livingEntity.getItemBySlot(EquipmentSlot.CHEST);
         if (getPower(chest) <= 0){
-            livingEntity.displayClientMessage(new TextComponent("电量不足！"), true);
+            livingEntity.displayClientMessage(new TranslatableComponent("item.zombiekit.exo.no_power"), true);
             return;
         }
         int currentMode = getMode(chest);
         if (mode == 3){
             if (currentMode == 1){
-                livingEntity.displayClientMessage(new TextComponent("该模式无法启用反应装甲！"), true);
+                livingEntity.displayClientMessage(new TranslatableComponent("item.zombiekit.exo.no_reactive_armor"), true);
             }else {
                 if (getReactiveArmor(chest) >= 0){
-                    livingEntity.displayClientMessage(new TextComponent("反应装甲已关闭！"), true);
+                    livingEntity.displayClientMessage(new TranslatableComponent("item.zombiekit.exo.reactive_armor_off"), true);
                     setReactiveArmor(chest, -1);
                 }else {
-                    livingEntity.displayClientMessage(new TextComponent("反应装甲已启动！"), true);
+                    livingEntity.displayClientMessage(new TranslatableComponent("item.zombiekit.exo.reactive_armor_on"), true);
                     setReactiveArmor(chest, 0);
                 }
 
             }
         }else if (mode == 4){
             if (getRadar(chest)){
-                livingEntity.displayClientMessage(new TextComponent("生物雷达已关闭！"), true);
+                livingEntity.displayClientMessage(new TranslatableComponent("item.zombiekit.exo.radar_off"), true);
                 switchRadar(chest, false);
             }else {
-                livingEntity.displayClientMessage(new TextComponent("生物雷达已启动！"), true);
+                livingEntity.displayClientMessage(new TranslatableComponent("item.zombiekit.exo.radar_on"), true);
                 switchRadar(chest, true);
             }
         }else {
             if (currentMode == mode){
                 switchMode(chest, 0);
+                livingEntity.getLevel().playSound(null, livingEntity, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("zombiekit:mode_off")), SoundSource.PLAYERS, 1, 1);
                 livingEntity.getAttribute(Attributes.MOVEMENT_SPEED).removeModifier(COMBAT_MOVEMENT);
-                livingEntity.displayClientMessage(new TextComponent("已退出当前模式！"), true);
+                livingEntity.displayClientMessage(new TranslatableComponent("item.zombiekit.exo.exit_mode"), true);
             }else {
                 switchMode(chest, mode);
+                livingEntity.getLevel().playSound(null, livingEntity, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("zombiekit:mode_on")), SoundSource.PLAYERS, 1, 1);
                 if (mode == 1){
                     setReactiveArmor(chest, -1);
                     livingEntity.getAttribute(Attributes.MOVEMENT_SPEED).removeModifier(COMBAT_MOVEMENT);
-                    livingEntity.displayClientMessage(new TextComponent("已进入潜行模式！"), true);
+                    livingEntity.displayClientMessage(new TranslatableComponent("item.zombiekit.exo.sneak_mode"), true);
                 }else if (mode == 2){
                     livingEntity.getAttribute(Attributes.MOVEMENT_SPEED).removeModifier(COMBAT_MOVEMENT);
                     livingEntity.getAttribute(Attributes.MOVEMENT_SPEED).addPermanentModifier(COMBAT_MOVEMENT);
-                    livingEntity.displayClientMessage(new TextComponent("已进入战斗模式！"), true);
+                    livingEntity.displayClientMessage(new TranslatableComponent("item.zombiekit.exo.combat_mode"), true);
                 }
             }
         }
     }
 
-    public static void reactiveArmor(LivingEntity target, Entity attacker) {
+    public static boolean reactiveArmor(LivingEntity target, Entity attacker) {
         int count = numberOfSuit(target);
         if (count == 4 && getReactiveArmor(target.getItemBySlot(EquipmentSlot.CHEST)) >= 200){
-            Vec3 vec3 = new Vec3(attacker.getX() - target.getX(), attacker.getY() - target.getY(), attacker.getZ() - target.getZ());
+            Vec3 vec3;
+            if (attacker instanceof Projectile projectile && projectile.getOwner() != null){
+                vec3 = new Vec3(projectile.getOwner().getX() - target.getX(), projectile.getOwner().getY() - target.getY(), projectile.getOwner().getZ() - target.getZ());
+            }else {
+                vec3 = new Vec3(attacker.getX() - target.getX(), attacker.getY() - target.getY(), attacker.getZ() - target.getZ()).scale(1 / attacker.distanceTo(target));
+            }
+
             attacker.setDeltaMovement(vec3.scale(1.5));
             setReactiveArmor(target.getItemBySlot(EquipmentSlot.CHEST), 0);
+            target.getLevel().playSound(null, target, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("zombiekit:reactive_armor_release")), SoundSource.PLAYERS, 1, 1);
             if (attacker instanceof LivingEntity livingEntity)
                 livingEntity.addEffect(new MobEffectInstance(SonaMobEffects.STUN.get(), 100, 0, false, false));
+            return true;
         }
+        return false;
     }
 
     public static void updateModifier(LivingEntity livingEntity) {

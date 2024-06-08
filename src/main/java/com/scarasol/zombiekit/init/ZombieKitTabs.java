@@ -7,7 +7,7 @@ import net.minecraftforge.api.distmarker.OnlyIn;
 
 public class ZombieKitTabs {
 
-    public static CreativeModeTab TAB_ZOMBIEKIT;
+    public static CreativeModeTab ZOMBIEKIT_MISC;
     public static CreativeModeTab TAB_ZOMBIEKIT_COMBAT;
     public static CreativeModeTab TAB_ZOMBIEKIT_TOOL;
 
@@ -34,7 +34,7 @@ public class ZombieKitTabs {
                 return false;
             }
         };
-        TAB_ZOMBIEKIT = new CreativeModeTab("tabzombiekit") {
+        ZOMBIEKIT_MISC = new CreativeModeTab("zombiekit_misc") {
             @Override
             public ItemStack makeIcon() {
                 return new ItemStack(ZombieKitItems.PLASTICS.get());

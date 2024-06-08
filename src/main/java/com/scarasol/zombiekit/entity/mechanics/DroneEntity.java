@@ -252,7 +252,7 @@ public class DroneEntity extends Mechanics{
                     return Double.compare(a, b);
                 });
                 for (LivingEntity entity : list) {
-                    if (DroneEntity.this.canAttack(entity, TargetingConditions.DEFAULT)) {
+                    if (DroneEntity.this.canAttack(entity, TargetingConditions.forCombat())) {
                         if (DroneEntity.this.getOwnerUUID() == null){
                             if (entity.getY() < DroneEntity.this.getY() && entity instanceof Enemy && !(entity instanceof Raider || entity instanceof NeutralMob || entity instanceof Vex)){
                                 DroneEntity.this.setTarget(entity);
@@ -279,7 +279,7 @@ public class DroneEntity extends Mechanics{
                     return Double.compare(a, b);
                 });
                 for (Player entity : list) {
-                    if (entity.getY() < DroneEntity.this.getY() && DroneEntity.this.canAttack(entity, TargetingConditions.DEFAULT) && !entity.getUUID().equals(DroneEntity.this.getOwnerUUID())) {
+                    if (entity.getY() < DroneEntity.this.getY() && DroneEntity.this.canAttack(entity, TargetingConditions.forCombat()) && !entity.getUUID().equals(DroneEntity.this.getOwnerUUID())) {
                         DroneEntity.this.setTarget(entity);
                         return true;
                     }

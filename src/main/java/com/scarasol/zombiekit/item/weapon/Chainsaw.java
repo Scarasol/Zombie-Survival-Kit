@@ -42,7 +42,7 @@ public class Chainsaw extends Item {
     public InteractionResultHolder<ItemStack> use(Level world, Player player, InteractionHand hand) {
         ItemStack itemStack = player.getItemInHand(hand);
         if (!world.isClientSide()) {
-            if (!itemStack.getOrCreateTag().getBoolean("power")){
+            if (!itemStack.getOrCreateTag().getBoolean("Power")){
                 if (player.isShiftKeyDown()){
                     ItemStack itemOther;
                     if (hand == InteractionHand.MAIN_HAND){
@@ -61,11 +61,11 @@ public class Chainsaw extends Item {
                     world.playSound(null, player.getX(), player.getY(), player.getZ(), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("zombiekit:chainsaw_start_failed")), SoundSource.PLAYERS, 1, 1);
                     return new InteractionResultHolder(InteractionResult.PASS, itemStack);
                 }else {
-                    itemStack.getOrCreateTag().putBoolean("power", true);
+                    itemStack.getOrCreateTag().putBoolean("Power", true);
                     itemStack.getOrCreateTag().putInt("CustomModelData", 1);
                 }
             }else if (player.isShiftKeyDown()){
-                itemStack.getOrCreateTag().putBoolean("power", false);
+                itemStack.getOrCreateTag().putBoolean("Power", false);
                 itemStack.getOrCreateTag().putInt("CustomModelData", 0);
             }else {
                 player.startUsingItem(hand);
@@ -79,11 +79,13 @@ public class Chainsaw extends Item {
         super.inventoryTick(itemstack, world, entity, slot, selected);
         if (entity instanceof LivingEntity livingEntity){
             ItemStack offHandItem = livingEntity.getOffhandItem();
-            if ((selected || offHandItem == itemstack) && itemstack.getOrCreateTag().getBoolean("power")){
-                if (livingEntity.isUsingItem() && livingEntity.getUseItem().is(ZombieKitItems.CHAINSAW.get())){
-                    world.playSound(null, entity.getX(), entity.getY(), entity.getZ(), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("zombiekit:chainsaw_attack")), SoundSource.PLAYERS, 0.6f, 1);
-                }else {
-                    world.playSound(null, entity.getX(), entity.getY(), entity.getZ(), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("zombiekit:chainsaw_idle")), SoundSource.PLAYERS, 0.3f, 1);
+            if ((selected || offHandItem == itemstack) && itemstack.getOrCreateTag().getBoolean("Power")){
+                if (world.getGameTime() % 10 == 0){
+                    if (livingEntity.isUsingItem() && livingEntity.getUseItem().is(ZombieKitItems.CHAINSAW.get())){
+                        world.playSound(null, entity.getX(), entity.getY(), entity.getZ(), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("zombiekit:chainsaw_attack")), SoundSource.PLAYERS, 0.6f, 1);
+                    }else {
+                        world.playSound(null, entity.getX(), entity.getY(), entity.getZ(), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("zombiekit:chainsaw_idle")), SoundSource.PLAYERS, 0.3f, 1);
+                    }
                 }
                 if (!world.isClientSide() && livingEntity instanceof Player player && !player.getAbilities().instabuild){
                     if (world.getGameTime() % 480 == 0) {
@@ -92,7 +94,7 @@ public class Chainsaw extends Item {
                         }
 
                         if (itemstack.getDamageValue() >= 100){
-                            itemstack.getOrCreateTag().putBoolean("power", false);
+                            itemstack.getOrCreateTag().putBoolean("Power", false);
                             itemstack.getOrCreateTag().putInt("CustomModelData", 0);
                         }
                     }
@@ -117,7 +119,7 @@ public class Chainsaw extends Item {
         for (Entity entityiterator : _entfound) {
             if (!livingEntity.equals(entityiterator)){
                 entityiterator.invulnerableTime = 0;
-                entityiterator.getPersistentData().putBoolean("cancelKnockback", true);
+                entityiterator.getPersistentData().putBoolean("CancelKnockback", true);
                 entityiterator.hurt(DamageSource.mobAttack(livingEntity), 1.2f);
             }
         }

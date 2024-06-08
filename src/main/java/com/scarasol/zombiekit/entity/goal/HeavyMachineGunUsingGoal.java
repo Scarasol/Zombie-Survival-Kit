@@ -173,7 +173,7 @@ public class HeavyMachineGunUsingGoal<T extends Mob> extends Goal {
                 }
             });
             for (Player entity : list) {
-                if (isInMachineGunSight(entity) && this.mob.canAttack(entity, TargetingConditions.DEFAULT)) {
+                if (isInMachineGunSight(entity) && this.mob.canAttack(entity, TargetingConditions.forCombat())) {
                     this.mob.setTarget(entity);
                     return true;
                 }

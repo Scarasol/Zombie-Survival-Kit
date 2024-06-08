@@ -1,6 +1,7 @@
 package com.scarasol.zombiekit.event;
 
 
+import com.mojang.datafixers.kinds.IdF;
 import com.scarasol.sona.init.SonaMobEffects;
 import com.scarasol.sona.manager.RustManager;
 import com.scarasol.zombiekit.ZombieKitMod;
@@ -44,14 +45,18 @@ import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.levelgen.feature.ConfiguredStructureFeature;
 import net.minecraft.world.level.saveddata.SavedData;
+import net.minecraft.world.phys.EntityHitResult;
 import net.minecraft.world.phys.Vec3;
 import net.minecraftforge.event.ItemAttributeModifierEvent;
+import net.minecraftforge.event.TickEvent;
 import net.minecraftforge.event.entity.EntityJoinWorldEvent;
+import net.minecraftforge.event.entity.ProjectileImpactEvent;
 import net.minecraftforge.event.entity.living.*;
 import net.minecraftforge.event.entity.player.PlayerEvent;
 import net.minecraftforge.event.entity.player.PlayerInteractEvent;
 import net.minecraftforge.event.world.WorldEvent;
 import net.minecraftforge.eventbus.api.Event;
+import net.minecraftforge.eventbus.api.EventPriority;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.network.PacketDistributor;
@@ -152,8 +157,8 @@ public class EventHandler {
     @SubscribeEvent
     public static void KnockbackEvent(LivingKnockBackEvent event) {
         LivingEntity livingEntity = event.getEntityLiving();
-        if (livingEntity.getPersistentData().getBoolean("cancelKnockback")){
-            livingEntity.getPersistentData().putBoolean("cancelKnockback", false);
+        if (livingEntity.getPersistentData().getBoolean("CancelKnockback")){
+            livingEntity.getPersistentData().putBoolean("CancelKnockback", false);
             event.setStrength(event.getStrength() * 0.1f);
         }
     }
@@ -266,6 +271,27 @@ public class EventHandler {
                 }
             }
         }
+    }
+
+    @SubscribeEvent(priority = EventPriority.LOW)
+    public static void onPlayerTick(TickEvent.PlayerTickEvent event) {
+        Player player = event.player;
+        if (ExoArmor.numberOfSuit(player) == 4 && player.isFallFlying() && player.isSprinting()){
+            Vec3 vec31 = player.getLookAngle();
+            Vec3 vec32 = player.getDeltaMovement();
+            player.setDeltaMovement(vec32.add(vec31.x * 0.1D + (vec31.x * 1.5D - vec32.x) * 0.5D, vec31.y * 0.1D + (vec31.y * 1.5D - vec32.y) * 0.5D, vec31.z * 0.1D + (vec31.z * 1.5D - vec32.z) * 0.5D));
+        }
+    }
+
+    @SubscribeEvent
+    public static void projectileHit(ProjectileImpactEvent event){
+        if (event.getRayTraceResult() instanceof EntityHitResult entityHitResult){
+            Entity target = entityHitResult.getEntity();
+            if (target instanceof LivingEntity livingEntity){
+                event.setCanceled(ExoArmor.reactiveArmor(livingEntity, event.getProjectile()));
+            }
+        }
+
     }
 
 }

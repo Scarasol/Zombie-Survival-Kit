@@ -243,5 +243,79 @@
         "stream": false
       }
     ]
+  },
+  "exo_fly": {
+    "category": "player",
+    "subtitle": "subtitles.exo_fly",
+    "sounds": [
+      {
+        "name": "zombiekit:exo_fly_1",
+        "stream": false
+      },
+      {
+        "name": "zombiekit:exo_fly_2",
+        "stream": false
+      },
+      {
+        "name": "zombiekit:exo_fly_3",
+        "stream": false
+      },
+      {
+        "name": "zombiekit:exo_fly_4",
+        "stream": false
+      },
+      {
+        "name": "zombiekit:exo_fly_5",
+        "stream": false
+      }
+    ]
+  },
+  "reactive_armor_ready": {
+    "category": "player",
+    "subtitle": "subtitles.reactive_armor_ready",
+    "sounds": [
+      {
+        "name": "zombiekit:reactive_armor_ready",
+        "stream": false
+      }
+    ]
+  },
+  "reactive_armor_release": {
+    "category": "player",
+    "subtitle": "subtitles.reactive_armor_release",
+    "sounds": [
+      {
+        "name": "zombiekit:reactive_armor_release_1",
+        "stream": false
+      },
+      {
+        "name": "zombiekit:reactive_armor_release_2",
+        "stream": false
+      },
+      {
+        "name": "zombiekit:reactive_armor_release_3",
+        "stream": false
+      }
+    ]
+  },
+  "mode_on": {
+    "category": "player",
+    "subtitle": "subtitles.mode_on",
+    "sounds": [
+      {
+        "name": "zombiekit:mode_on",
+        "stream": false
+      }
+    ]
+  },
+  "mode_off": {
+    "category": "player",
+    "subtitle": "subtitles.mode_off",
+    "sounds": [
+      {
+        "name": "zombiekit:mode_off",
+        "stream": false
+      }
+    ]
   }
 }

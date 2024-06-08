@@ -145,35 +145,35 @@ public class ZombieKitItems {
     public static final RegistryObject<Item> GAS_TANK = block(ZombieKitBlocks.GAS_TANK, ZombieKitTabs.TAB_ZOMBIEKIT_TOOL);
 
 
-    public static final RegistryObject<Item> DESERT_CAMOUFLAGE_DYE = REGISTRY.register("desert_camouflage_dye", () -> new Item(new Item.Properties().tab(ZombieKitTabs.TAB_ZOMBIEKIT).rarity(Rarity.RARE)));
-    public static final RegistryObject<Item> FOREST_CAMOUFLAGE_DYE = REGISTRY.register("forest_camouflage_dye", () -> new Item(new Item.Properties().tab(ZombieKitTabs.TAB_ZOMBIEKIT).rarity(Rarity.RARE)));
-    public static final RegistryObject<Item> SNOW_CAMOUFLAGE_DYE = REGISTRY.register("snow_camouflage_dye", () -> new Item(new Item.Properties().tab(ZombieKitTabs.TAB_ZOMBIEKIT).rarity(Rarity.RARE)));
+    public static final RegistryObject<Item> DESERT_CAMOUFLAGE_DYE = REGISTRY.register("desert_camouflage_dye", () -> new Item(new Item.Properties().tab(ZombieKitTabs.ZOMBIEKIT_MISC).rarity(Rarity.RARE)));
+    public static final RegistryObject<Item> FOREST_CAMOUFLAGE_DYE = REGISTRY.register("forest_camouflage_dye", () -> new Item(new Item.Properties().tab(ZombieKitTabs.ZOMBIEKIT_MISC).rarity(Rarity.RARE)));
+    public static final RegistryObject<Item> SNOW_CAMOUFLAGE_DYE = REGISTRY.register("snow_camouflage_dye", () -> new Item(new Item.Properties().tab(ZombieKitTabs.ZOMBIEKIT_MISC).rarity(Rarity.RARE)));
 
-    public static final RegistryObject<Item> LATEX = REGISTRY.register("latex", () -> new Item(new Item.Properties().tab(ZombieKitTabs.TAB_ZOMBIEKIT)));
-    public static final RegistryObject<Item> RUBBER = REGISTRY.register("rubber", () -> new Item(new Item.Properties().tab(ZombieKitTabs.TAB_ZOMBIEKIT)));
-    public static final RegistryObject<Item> FIBRE = REGISTRY.register("fibre", () -> new Item(new Item.Properties().tab(ZombieKitTabs.TAB_ZOMBIEKIT)));
-    public static final RegistryObject<Item> CLOTH = REGISTRY.register("cloth", () -> new Item(new Item.Properties().tab(ZombieKitTabs.TAB_ZOMBIEKIT)));
-    public static final RegistryObject<Item> QUARTZ_SAND = REGISTRY.register("quartz_sand", () -> new Item(new Item.Properties().tab(ZombieKitTabs.TAB_ZOMBIEKIT)));
-    public static final RegistryObject<Item> SPECIAL_CERAMICS = REGISTRY.register("special_ceramics", () -> new Item(new Item.Properties().tab(ZombieKitTabs.TAB_ZOMBIEKIT)));
-    public static final RegistryObject<Item> BULLETPROOF_INSERT = REGISTRY.register("bulletproof_insert", () -> new Item(new Item.Properties().tab(ZombieKitTabs.TAB_ZOMBIEKIT)));
-    public static final RegistryObject<Item> SPECIAL_STEEL_SHEET = REGISTRY.register("special_steel_sheet", () -> new Item(new Item.Properties().tab(ZombieKitTabs.TAB_ZOMBIEKIT)));
-    public static final RegistryObject<Item> CAMPHOR = REGISTRY.register("camphor", () -> new Item(new Item.Properties().tab(ZombieKitTabs.TAB_ZOMBIEKIT)));
-    public static final RegistryObject<Item> DEATH_BAT = REGISTRY.register("death_bat", () -> new Item(new Item.Properties().tab(ZombieKitTabs.TAB_ZOMBIEKIT)));
-    public static final RegistryObject<Item> SALTPETER = REGISTRY.register("saltpeter", () -> new Item(new Item.Properties().tab(ZombieKitTabs.TAB_ZOMBIEKIT)));
-    public static final RegistryObject<Item> CRUDE_NITRATE = REGISTRY.register("crude_nitrate", () -> new Item(new Item.Properties().tab(ZombieKitTabs.TAB_ZOMBIEKIT)));
-    public static final RegistryObject<Item> HYDROGEN_NITRATE = REGISTRY.register("hydrogen_nitrate", () -> new Item(new Item.Properties().tab(ZombieKitTabs.TAB_ZOMBIEKIT)));
-    public static final RegistryObject<Item> NITROCELLULOSE = REGISTRY.register("nitrocellulose", () -> new Item(new Item.Properties().tab(ZombieKitTabs.TAB_ZOMBIEKIT)));
-    public static final RegistryObject<Item> PLASTICS = REGISTRY.register("plastics", () -> new Item(new Item.Properties().tab(ZombieKitTabs.TAB_ZOMBIEKIT)));
-    public static final RegistryObject<Item> ALCOHOL = REGISTRY.register("alcohol", () -> new Item(new Item.Properties().tab(ZombieKitTabs.TAB_ZOMBIEKIT)));
-    public static final RegistryObject<Item> IRON_WIRE = REGISTRY.register("iron_wire", () -> new Item(new Item.Properties().tab(ZombieKitTabs.TAB_ZOMBIEKIT)));
-    public static final RegistryObject<Item> SMOKELESS_GUNPOWDER = REGISTRY.register("smokeless_gunpowder", () -> new Item(new Item.Properties().tab(ZombieKitTabs.TAB_ZOMBIEKIT)));
-    public static final RegistryObject<Item> SULFUR = REGISTRY.register("sulfur", () -> new Item(new Item.Properties().tab(ZombieKitTabs.TAB_ZOMBIEKIT)));
-    public static final RegistryObject<Item> SALTPETER_BUCKET = REGISTRY.register("saltpeter_bucket", () -> new SaltpeterBucket(new Item.Properties().tab(ZombieKitTabs.TAB_ZOMBIEKIT).stacksTo(1)));
-    public static final RegistryObject<Item> SALTPETER_SOIL = REGISTRY.register("saltpeter_soil", () -> new SaltpeterSoil(new Item.Properties().tab(ZombieKitTabs.TAB_ZOMBIEKIT)));
+    public static final RegistryObject<Item> LATEX = REGISTRY.register("latex", () -> new Item(new Item.Properties().tab(ZombieKitTabs.ZOMBIEKIT_MISC)));
+    public static final RegistryObject<Item> RUBBER = REGISTRY.register("rubber", () -> new Item(new Item.Properties().tab(ZombieKitTabs.ZOMBIEKIT_MISC)));
+    public static final RegistryObject<Item> FIBRE = REGISTRY.register("fibre", () -> new Item(new Item.Properties().tab(ZombieKitTabs.ZOMBIEKIT_MISC)));
+    public static final RegistryObject<Item> CLOTH = REGISTRY.register("cloth", () -> new Item(new Item.Properties().tab(ZombieKitTabs.ZOMBIEKIT_MISC)));
+    public static final RegistryObject<Item> QUARTZ_SAND = REGISTRY.register("quartz_sand", () -> new Item(new Item.Properties().tab(ZombieKitTabs.ZOMBIEKIT_MISC)));
+    public static final RegistryObject<Item> SPECIAL_CERAMICS = REGISTRY.register("special_ceramics", () -> new Item(new Item.Properties().tab(ZombieKitTabs.ZOMBIEKIT_MISC)));
+    public static final RegistryObject<Item> BULLETPROOF_INSERT = REGISTRY.register("bulletproof_insert", () -> new Item(new Item.Properties().tab(ZombieKitTabs.ZOMBIEKIT_MISC)));
+    public static final RegistryObject<Item> SPECIAL_STEEL_SHEET = REGISTRY.register("special_steel_sheet", () -> new Item(new Item.Properties().tab(ZombieKitTabs.ZOMBIEKIT_MISC)));
+    public static final RegistryObject<Item> CAMPHOR = REGISTRY.register("camphor", () -> new Item(new Item.Properties().tab(ZombieKitTabs.ZOMBIEKIT_MISC)));
+    public static final RegistryObject<Item> DEATH_BAT = REGISTRY.register("death_bat", () -> new Item(new Item.Properties().tab(ZombieKitTabs.ZOMBIEKIT_MISC)));
+    public static final RegistryObject<Item> SALTPETER = REGISTRY.register("saltpeter", () -> new Item(new Item.Properties().tab(ZombieKitTabs.ZOMBIEKIT_MISC)));
+    public static final RegistryObject<Item> CRUDE_NITRATE = REGISTRY.register("crude_nitrate", () -> new Item(new Item.Properties().tab(ZombieKitTabs.ZOMBIEKIT_MISC)));
+    public static final RegistryObject<Item> HYDROGEN_NITRATE = REGISTRY.register("hydrogen_nitrate", () -> new Item(new Item.Properties().tab(ZombieKitTabs.ZOMBIEKIT_MISC)));
+    public static final RegistryObject<Item> NITROCELLULOSE = REGISTRY.register("nitrocellulose", () -> new Item(new Item.Properties().tab(ZombieKitTabs.ZOMBIEKIT_MISC)));
+    public static final RegistryObject<Item> PLASTICS = REGISTRY.register("plastics", () -> new Item(new Item.Properties().tab(ZombieKitTabs.ZOMBIEKIT_MISC)));
+    public static final RegistryObject<Item> ALCOHOL = REGISTRY.register("alcohol", () -> new Item(new Item.Properties().tab(ZombieKitTabs.ZOMBIEKIT_MISC)));
+    public static final RegistryObject<Item> IRON_WIRE = REGISTRY.register("iron_wire", () -> new Item(new Item.Properties().tab(ZombieKitTabs.ZOMBIEKIT_MISC)));
+    public static final RegistryObject<Item> SMOKELESS_GUNPOWDER = REGISTRY.register("smokeless_gunpowder", () -> new Item(new Item.Properties().tab(ZombieKitTabs.ZOMBIEKIT_MISC)));
+    public static final RegistryObject<Item> SULFUR = REGISTRY.register("sulfur", () -> new Item(new Item.Properties().tab(ZombieKitTabs.ZOMBIEKIT_MISC)));
+    public static final RegistryObject<Item> SALTPETER_BUCKET = REGISTRY.register("saltpeter_bucket", () -> new SaltpeterBucket(new Item.Properties().tab(ZombieKitTabs.ZOMBIEKIT_MISC).stacksTo(1)));
+    public static final RegistryObject<Item> SALTPETER_SOIL = REGISTRY.register("saltpeter_soil", () -> new SaltpeterSoil(new Item.Properties().tab(ZombieKitTabs.ZOMBIEKIT_MISC)));
 
 
-    public static final RegistryObject<Item> DRONE_COMPONENTS = REGISTRY.register("drone_components", () -> new Item(new Item.Properties().tab(ZombieKitTabs.TAB_ZOMBIEKIT)));
-    public static final RegistryObject<Item> MACHINE_GUN_COMPONENTS = REGISTRY.register("machine_gun_components", () -> new Item(new Item.Properties().tab(ZombieKitTabs.TAB_ZOMBIEKIT)));
+    public static final RegistryObject<Item> DRONE_COMPONENTS = REGISTRY.register("drone_components", () -> new Item(new Item.Properties().tab(ZombieKitTabs.ZOMBIEKIT_MISC)));
+    public static final RegistryObject<Item> MACHINE_GUN_COMPONENTS = REGISTRY.register("machine_gun_components", () -> new Item(new Item.Properties().tab(ZombieKitTabs.ZOMBIEKIT_MISC)));
 
 
     public static final RegistryObject<Item> SCARASOL = REGISTRY.register("scarasol", () -> new Scarasol(new Item.Properties().tab(null).rarity(Rarity.EPIC)));
