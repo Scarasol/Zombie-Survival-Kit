@@ -65,7 +65,7 @@ public class ExoArmor extends ArmorItem {
         if (!player.isInWaterOrBubble() && !player.isFallFlying() && player.fallDistance > 5 && !player.hasEffect(MobEffects.SLOW_FALLING)){
             serverLevel.sendParticles(ParticleTypes.CLOUD, player.getX(), player.getY(), player.getZ(), 100, 0.5, 0.2, 0.5, 0.1);
             player.addEffect(new MobEffectInstance(MobEffects.SLOW_FALLING, 200, 0, false, false));
-            addPower(itemStack, -2);
+            addPower(itemStack, -1);
         }
         if (!player.isOnGround() && player.hasEffect(MobEffects.SLOW_FALLING) && serverLevel.getGameTime() % 10 == 0){
             serverLevel.sendParticles(ParticleTypes.CLOUD, player.getX(), player.getY(), player.getZ(), 5, 0, 0.2, 0, 0.05);
@@ -77,29 +77,29 @@ public class ExoArmor extends ArmorItem {
             case 1 -> {
                 player.addEffect(new MobEffectInstance(MobEffects.INVISIBILITY, 20, 0, false, false));
                 player.addEffect(new MobEffectInstance(SonaMobEffects.CAMOUFLAGE.get(), 20, 4, false, false));
-                if (serverLevel.getGameTime() % 120 == 0)
+                if (serverLevel.getGameTime() % 240 == 0)
                     addPower(itemStack, -1);
             }
             case 2 -> {
                 player.addEffect(new MobEffectInstance(MobEffects.DIG_SPEED, 20, 1, false, false));
                 player.addEffect(new MobEffectInstance(MobEffects.JUMP, 20, 0, false, false));
-                if (serverLevel.getGameTime() % 60 == 0)
+                if (serverLevel.getGameTime() % 120 == 0)
                     addPower(itemStack, -1);
             }
         }
         int reactiveArmor = getReactiveArmor(itemStack);
         if (reactiveArmor >= 0){
             addReactiveArmor(itemStack, 1);
-            if (reactiveArmor >= 200){
+            if (reactiveArmor >= 160){
                 if (serverLevel.getGameTime() % 20 == 0)
                     serverLevel.playSound(null, player, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("zombiekit:reactive_armor_ready")), SoundSource.PLAYERS, 1, 1);
                 serverLevel.sendParticles(ParticleTypes.ELECTRIC_SPARK, player.getX(), player.getY() + 0.5, player.getZ(), 1, 0.2, 0.5, 0.2, 0.05);
             }
-            if (serverLevel.getGameTime() % 60 == 0)
+            if (serverLevel.getGameTime() % 120 == 0)
                 addPower(itemStack, -1);
         }
         if (getRadar(itemStack))
-            if (serverLevel.getGameTime() % 120 == 0)
+            if (serverLevel.getGameTime() % 240 == 0)
                 addPower(itemStack, -1);
     }
 
@@ -113,7 +113,7 @@ public class ExoArmor extends ArmorItem {
         if (numberOfSuit(entity) < 4)
             return false;
         if (entity.getLevel() instanceof ServerLevel serverLevel) {
-            if (flightTicks % 60 == 0)
+            if (flightTicks % 120 == 0)
                 addPower(stack, -1);
             if (flightTicks % 10 == 0)
                 serverLevel.playSound(null, entity, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("zombiekit:exo_fly")), SoundSource.PLAYERS, 1, 1);
@@ -240,15 +240,14 @@ public class ExoArmor extends ArmorItem {
 
     public static boolean reactiveArmor(LivingEntity target, Entity attacker) {
         int count = numberOfSuit(target);
-        if (count == 4 && getReactiveArmor(target.getItemBySlot(EquipmentSlot.CHEST)) >= 200){
+        if (count == 4 && getReactiveArmor(target.getItemBySlot(EquipmentSlot.CHEST)) >= 160){
             Vec3 vec3;
             if (attacker instanceof Projectile projectile && projectile.getOwner() != null){
-                vec3 = new Vec3(projectile.getOwner().getX() - target.getX(), projectile.getOwner().getY() - target.getY(), projectile.getOwner().getZ() - target.getZ());
+                vec3 = new Vec3(projectile.getOwner().getX() - target.getX(), projectile.getOwner().getY() - target.getY(), projectile.getOwner().getZ() - target.getZ()).scale(1 / attacker.distanceTo(target));
             }else {
-                vec3 = new Vec3(attacker.getX() - target.getX(), attacker.getY() - target.getY(), attacker.getZ() - target.getZ()).scale(1 / attacker.distanceTo(target));
+                vec3 = new Vec3(attacker.getX() - target.getX(), 0, attacker.getZ() - target.getZ()).scale(1.5);
             }
-
-            attacker.setDeltaMovement(vec3.scale(1.5));
+            attacker.setDeltaMovement(vec3);
             setReactiveArmor(target.getItemBySlot(EquipmentSlot.CHEST), 0);
             target.getLevel().playSound(null, target, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("zombiekit:reactive_armor_release")), SoundSource.PLAYERS, 1, 1);
             if (attacker instanceof LivingEntity livingEntity)
@@ -310,7 +309,7 @@ public class ExoArmor extends ArmorItem {
     public static void addReactiveArmor(ItemStack itemStack, int reactiveArmor){
         int coolDown = itemStack.getOrCreateTag().getInt("ReactiveArmor");
         if (reactiveArmor > 0){
-            reactiveArmor = Math.min(coolDown + reactiveArmor, 200);
+            reactiveArmor = Math.min(coolDown + reactiveArmor, 160);
         }else {
             reactiveArmor = Math.max(coolDown + reactiveArmor, 0);
         }

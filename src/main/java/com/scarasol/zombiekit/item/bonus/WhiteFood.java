@@ -10,10 +10,12 @@ import net.minecraft.world.item.ArmorMaterial;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.level.Level;
+import net.minecraftforge.api.distmarker.Dist;
+import net.minecraftforge.api.distmarker.OnlyIn;
 
 import java.util.List;
 
-public class WhiteFood extends ArmorItem implements Bonus{
+public class WhiteFood extends ArmorItem {
     public WhiteFood(ArmorMaterial armorMaterial, EquipmentSlot equipmentSlot, Properties properties) {
         super(armorMaterial, equipmentSlot, properties);
     }
@@ -28,6 +30,12 @@ public class WhiteFood extends ArmorItem implements Bonus{
     @Override
     public String getArmorTexture(ItemStack stack, Entity entity, EquipmentSlot slot, String type) {
         return "zombiekit:textures/models/armor/sun_chestplate__layer_1.png";
+    }
+
+    @OnlyIn(Dist.CLIENT)
+    @Override
+    public boolean isFoil(ItemStack itemstack) {
+        return true;
     }
 
 }

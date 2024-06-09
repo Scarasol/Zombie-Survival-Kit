@@ -86,7 +86,7 @@ public class EventHandler {
     public static void getAttack(LivingAttackEvent event){
         Entity entity = event.getSource().getDirectEntity();
         if (entity != null){
-            ExoArmor.reactiveArmor(event.getEntityLiving(), entity);
+            event.setCanceled(ExoArmor.reactiveArmor(event.getEntityLiving(), entity));
         }
     }
 
@@ -181,7 +181,6 @@ public class EventHandler {
         Entity entity = event.getEntity();
         if (entity == null)
             return;
-        double i = 0;
         if (entity instanceof Mob _entity) {
             Mob newSpawn = _entity;
             if (newSpawn instanceof Raider || newSpawn instanceof Vex) {
@@ -195,7 +194,7 @@ public class EventHandler {
                 newSpawn.targetSelector.addGoal(2, new NearestAttackableTargetGoal<>(newSpawn, Mob.class, 5, false, false, livingEntity -> livingEntity instanceof Raider || livingEntity instanceof Vex));
                 if (newSpawn instanceof Zombie && !(newSpawn instanceof ZombieVillager && !entity.getPersistentData().getBoolean("spawn_have_changed"))){
                     if (Mth.nextInt(new Random(), 1, 100) <= 5) {
-                        i = Mth.nextInt(new Random(), 1, 4);
+                        double i = Mth.nextInt(new Random(), 1, 4);
                         if (1 == i) {
                             ItemStack setStack = new ItemStack(ZombieKitItems.MACHETE.get());
                             setStack.setCount(1);

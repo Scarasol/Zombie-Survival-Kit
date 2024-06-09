@@ -14,10 +14,12 @@ import net.minecraft.world.item.SwordItem;
 import net.minecraft.world.item.Tier;
 import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.level.Level;
+import net.minecraftforge.api.distmarker.Dist;
+import net.minecraftforge.api.distmarker.OnlyIn;
 
 import java.util.List;
 
-public class LHXQing extends SwordItem implements Bonus {
+public class LHXQing extends SwordItem {
     public LHXQing(Tier tier, int damage, float speed, Properties properties) {
         super(tier, damage, speed, properties);
     }
@@ -36,6 +38,12 @@ public class LHXQing extends SwordItem implements Bonus {
     public void appendHoverText(ItemStack itemstack, Level world, List<Component> list, TooltipFlag flag) {
         super.appendHoverText(itemstack, world, list, flag);
         list.add(new TextComponent(new TranslatableComponent("item.zombiekit.lhx_qing.description").getString()));
+    }
+
+    @OnlyIn(Dist.CLIENT)
+    @Override
+    public boolean isFoil(ItemStack itemstack) {
+        return true;
     }
 
 }

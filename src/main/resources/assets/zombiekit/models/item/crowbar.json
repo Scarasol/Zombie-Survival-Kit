@@ -2,5 +2,9 @@
   "parent": "item/handheld",
   "textures": {
     "layer0": "zombiekit:items/crowbar"
-  }
+  },
+  "overrides": [
+    { "predicate": { "custom_model_data": 0 }, "model": "zombiekit:item/crowbar" },
+    { "predicate": { "custom_model_data": 1 }, "model": "zombiekit:item/crowbar_broken" }
+  ]
 }

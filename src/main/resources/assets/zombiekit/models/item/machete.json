@@ -2,5 +2,9 @@
   "parent": "item/handheld",
   "textures": {
     "layer0": "zombiekit:items/iron_machete"
-  }
+  },
+  "overrides": [
+    { "predicate": { "custom_model_data": 0 }, "model": "zombiekit:item/machete" },
+    { "predicate": { "custom_model_data": 1 }, "model": "zombiekit:item/machete_broken" }
+  ]
 }

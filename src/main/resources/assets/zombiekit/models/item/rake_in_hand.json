@@ -1,7 +1,0 @@
-{
-  "parent": "zombiekit:custom/rake",
-  "textures": {
-    "1": "zombiekit:blocks/iron_rake",
-    "particle": "zombiekit:items/gardenrake"
-  }
-}

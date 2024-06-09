@@ -2,5 +2,9 @@
   "parent": "item/handheld",
   "textures": {
     "layer0": "zombiekit:items/fire_axe"
-  }
+  },
+  "overrides": [
+    { "predicate": { "custom_model_data": 0 }, "model": "zombiekit:item/fire_axe" },
+    { "predicate": { "custom_model_data": 1 }, "model": "zombiekit:item/fire_axe_broken" }
+  ]
 }
