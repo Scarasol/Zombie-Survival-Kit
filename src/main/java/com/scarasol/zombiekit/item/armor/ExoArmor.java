@@ -91,7 +91,7 @@ public class ExoArmor extends ArmorItem {
         if (reactiveArmor >= 0){
             addReactiveArmor(itemStack, 1);
             if (reactiveArmor >= 160){
-                if (serverLevel.getGameTime() % 20 == 0)
+                if (serverLevel.getGameTime() % 60 == 0)
                     serverLevel.playSound(null, player, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("zombiekit:reactive_armor_ready")), SoundSource.PLAYERS, 1, 1);
                 serverLevel.sendParticles(ParticleTypes.ELECTRIC_SPARK, player.getX(), player.getY() + 0.5, player.getZ(), 1, 0.2, 0.5, 0.2, 0.05);
             }
@@ -214,17 +214,17 @@ public class ExoArmor extends ArmorItem {
                 switchRadar(chest, false);
             }else {
                 livingEntity.displayClientMessage(new TranslatableComponent("item.zombiekit.exo.radar_on"), true);
+                livingEntity.getLevel().playSound(null, livingEntity, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("zombiekit:radar_activated")), SoundSource.PLAYERS, 1, 1);
                 switchRadar(chest, true);
             }
         }else {
             if (currentMode == mode){
                 switchMode(chest, 0);
-                livingEntity.getLevel().playSound(null, livingEntity, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("zombiekit:mode_off")), SoundSource.PLAYERS, 1, 1);
                 livingEntity.getAttribute(Attributes.MOVEMENT_SPEED).removeModifier(COMBAT_MOVEMENT);
                 livingEntity.displayClientMessage(new TranslatableComponent("item.zombiekit.exo.exit_mode"), true);
             }else {
                 switchMode(chest, mode);
-                livingEntity.getLevel().playSound(null, livingEntity, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("zombiekit:mode_on")), SoundSource.PLAYERS, 1, 1);
+
                 if (mode == 1){
                     setReactiveArmor(chest, -1);
                     livingEntity.getAttribute(Attributes.MOVEMENT_SPEED).removeModifier(COMBAT_MOVEMENT);
@@ -235,6 +235,7 @@ public class ExoArmor extends ArmorItem {
                     livingEntity.displayClientMessage(new TranslatableComponent("item.zombiekit.exo.combat_mode"), true);
                 }
             }
+            livingEntity.getLevel().playSound(null, livingEntity, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("zombiekit:mode_switch")), SoundSource.PLAYERS, 1, 1);
         }
     }
 

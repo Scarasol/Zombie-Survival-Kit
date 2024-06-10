@@ -388,12 +388,6 @@ public class HeavyMachineGunEntity extends Mechanics implements IAnimatable {
         return ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation(""));
     }
 
-
-//	@Override
-//	public boolean addEffect(MobEffectInstance p_182394_, @Nullable Entity p_182395_) {
-//		return false;
-//	}
-
     @Override
     public void heal(float p_21116_) {
     }

@@ -72,10 +72,10 @@ public class ZombieKitItems {
     public static final RegistryObject<Item> BOMB_LEGGINGS = REGISTRY.register("bomb_leggings", () -> new BombArmor(ModArmorMaterial.BOMB, EquipmentSlot.LEGS, new Item.Properties().tab(ZombieKitTabs.TAB_ZOMBIEKIT_COMBAT)));
     public static final RegistryObject<Item> BOMB_BOOTS = REGISTRY.register("bomb_boots", () -> new BombArmor(ModArmorMaterial.BOMB, EquipmentSlot.FEET, new Item.Properties().tab(ZombieKitTabs.TAB_ZOMBIEKIT_COMBAT)));
 
-    public static final RegistryObject<Item> EXO_HELMET = REGISTRY.register("exo_helmet", () -> new ExoArmor(ModArmorMaterial.EXO, EquipmentSlot.HEAD, new Item.Properties().tab(ZombieKitTabs.TAB_ZOMBIEKIT_COMBAT).fireResistant()));
-    public static final RegistryObject<Item> EXO_CHESTPLATE = REGISTRY.register("exo_chestplate", () -> new ExoArmor(ModArmorMaterial.EXO, EquipmentSlot.CHEST, new Item.Properties().tab(ZombieKitTabs.TAB_ZOMBIEKIT_COMBAT).fireResistant()));
-    public static final RegistryObject<Item> EXO_LEGGINGS = REGISTRY.register("exo_leggings", () -> new ExoArmor(ModArmorMaterial.EXO, EquipmentSlot.LEGS, new Item.Properties().tab(ZombieKitTabs.TAB_ZOMBIEKIT_COMBAT).fireResistant()));
-    public static final RegistryObject<Item> EXO_BOOTS = REGISTRY.register("exo_boots", () -> new ExoArmor(ModArmorMaterial.EXO, EquipmentSlot.FEET, new Item.Properties().tab(ZombieKitTabs.TAB_ZOMBIEKIT_COMBAT).fireResistant()));
+    public static final RegistryObject<Item> EXO_HELMET = REGISTRY.register("exo_helmet", () -> new ExoArmor(ModArmorMaterial.EXO, EquipmentSlot.HEAD, new Item.Properties().tab(ZombieKitTabs.TAB_ZOMBIEKIT_COMBAT).fireResistant().rarity(Rarity.UNCOMMON)));
+    public static final RegistryObject<Item> EXO_CHESTPLATE = REGISTRY.register("exo_chestplate", () -> new ExoArmor(ModArmorMaterial.EXO, EquipmentSlot.CHEST, new Item.Properties().tab(ZombieKitTabs.TAB_ZOMBIEKIT_COMBAT).fireResistant().rarity(Rarity.UNCOMMON)));
+    public static final RegistryObject<Item> EXO_LEGGINGS = REGISTRY.register("exo_leggings", () -> new ExoArmor(ModArmorMaterial.EXO, EquipmentSlot.LEGS, new Item.Properties().tab(ZombieKitTabs.TAB_ZOMBIEKIT_COMBAT).fireResistant().rarity(Rarity.UNCOMMON)));
+    public static final RegistryObject<Item> EXO_BOOTS = REGISTRY.register("exo_boots", () -> new ExoArmor(ModArmorMaterial.EXO, EquipmentSlot.FEET, new Item.Properties().tab(ZombieKitTabs.TAB_ZOMBIEKIT_COMBAT).fireResistant().rarity(Rarity.UNCOMMON)));
 
 
     public static final RegistryObject<Item> BASEBALL_BAT = REGISTRY.register("baseball_bat", () -> new BaseballBat(Tiers.WOOD, 8, -2.7f, new Item.Properties().tab(ZombieKitTabs.TAB_ZOMBIEKIT_COMBAT), false));
@@ -116,9 +116,13 @@ public class ZombieKitItems {
     public static final RegistryObject<Item> MIRACLE = REGISTRY.register("miracle", () -> new Miracle(new Item.Properties().tab(ZombieKitTabs.TAB_ZOMBIEKIT_TOOL).stacksTo(16).rarity(Rarity.RARE)));
 
 
-    public static final RegistryObject<Item> FLARE_GUN = REGISTRY.register("flare_gun", () -> new FlareGun(new Item.Properties().tab(ZombieKitTabs.TAB_ZOMBIEKIT_TOOL).stacksTo(1)));
+    public static final RegistryObject<Item> FLARE_GUN = REGISTRY.register("flare_gun", () -> new FlareGun(new Item.Properties().tab(ZombieKitTabs.TAB_ZOMBIEKIT_TOOL).stacksTo(4)));
 
     public static final RegistryObject<Item> BATTERY = REGISTRY.register("battery", () -> new Item(new Item.Properties().tab(ZombieKitTabs.TAB_ZOMBIEKIT_TOOL).durability(100)));
+
+    public static final RegistryObject<Item> SANDPAPER = REGISTRY.register("sandpaper", () -> new Item(new Item.Properties().tab(ZombieKitTabs.TAB_ZOMBIEKIT_TOOL).durability(5)));
+
+    public static final RegistryObject<Item> ENERGY_ROD = REGISTRY.register("energy_rod", () -> new EnergyRod(new Item.Properties().tab(ZombieKitTabs.TAB_ZOMBIEKIT_TOOL).rarity(Rarity.UNCOMMON)));
 
     public static final RegistryObject<Item> TRAP_COVER = block(ZombieKitBlocks.TRAP_COVER, ZombieKitTabs.TAB_ZOMBIEKIT_TOOL);
 

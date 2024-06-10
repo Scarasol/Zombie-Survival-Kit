@@ -33,8 +33,8 @@ public class ZombieKitSounds {
         REGISTRY.put(new ResourceLocation("zombiekit", "exo_fly"), new SoundEvent(new ResourceLocation("zombiekit", "exo_fly")));
         REGISTRY.put(new ResourceLocation("zombiekit", "reactive_armor_ready"), new SoundEvent(new ResourceLocation("zombiekit", "reactive_armor_ready")));
         REGISTRY.put(new ResourceLocation("zombiekit", "reactive_armor_release"), new SoundEvent(new ResourceLocation("zombiekit", "reactive_armor_release")));
-        REGISTRY.put(new ResourceLocation("zombiekit", "mode_on"), new SoundEvent(new ResourceLocation("zombiekit", "mode_on")));
-        REGISTRY.put(new ResourceLocation("zombiekit", "mode_off"), new SoundEvent(new ResourceLocation("zombiekit", "mode_off")));
+        REGISTRY.put(new ResourceLocation("zombiekit", "mode_switch"), new SoundEvent(new ResourceLocation("zombiekit", "mode_switch")));
+        REGISTRY.put(new ResourceLocation("zombiekit", "radar_activated"), new SoundEvent(new ResourceLocation("zombiekit", "radar_activated")));
     }
 
     @SubscribeEvent

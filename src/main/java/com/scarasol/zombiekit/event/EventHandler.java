@@ -141,20 +141,6 @@ public class EventHandler {
     }
 
     @SubscribeEvent
-    public static void rightClickEntity(PlayerInteractEvent.EntityInteractSpecific event) {
-        Player player = event.getPlayer();
-        if (event.getTarget() instanceof ArmorStand armorStand){
-            ItemStack armor = armorStand.getItemBySlot(EquipmentSlot.CHEST);
-            if (armor.is(ZombieKitItems.EXO_CHESTPLATE.get()) && player.getMainHandItem().is(Items.REDSTONE)){
-                ExoArmor.addPower(armor, 5);
-                if (!player.isCreative())
-                    player.getMainHandItem().shrink(1);
-                armorStand.getLevel().addParticle(DustParticleOptions.REDSTONE, armorStand.getX(), armorStand.getY(), armorStand.getZ(), 0.0D, 0.0D, 0.0D);
-            }
-        }
-    }
-
-    @SubscribeEvent
     public static void KnockbackEvent(LivingKnockBackEvent event) {
         LivingEntity livingEntity = event.getEntityLiving();
         if (livingEntity.getPersistentData().getBoolean("CancelKnockback")){
