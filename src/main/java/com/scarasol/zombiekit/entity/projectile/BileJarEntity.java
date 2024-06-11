@@ -68,6 +68,7 @@ public class BileJarEntity extends ModProjectile{
     public static AbstractArrow shoot(Level world, LivingEntity entity, Random random, float power, double damage, int knockback) {
         AbstractArrow entityArrow = new BileJarEntity(ZombieKitEntities.BILE_JAR.get(), entity, world);
         ModProjectile.initProjectileEntity(entityArrow, world, entity, random, power, damage, knockback);
+        world.playSound(null, entity.getX(), entity.getY(), entity.getZ(), SoundEvents.ARROW_SHOOT, SoundSource.PLAYERS, 1, 1f / (random.nextFloat() * 0.5f + 1) + (power / 2));
         return entityArrow;
     }
 

@@ -60,6 +60,7 @@ public class MolotovCocktailEntity extends ModProjectile {
         MolotovCocktailEntity entityArrow = new MolotovCocktailEntity(ZombieKitEntities.MOLOTOV_COCKTAIL.get(), entity, world);
         entityArrow.setSecondsOnFire(100);
         ModProjectile.initProjectileEntity(entityArrow, world, entity, random, power, damage, knockback);
+        world.playSound(null, entity.getX(), entity.getY(), entity.getZ(), SoundEvents.ARROW_SHOOT, SoundSource.PLAYERS, 1, 1f / (random.nextFloat() * 0.5f + 1) + (power / 2));
         return entityArrow;
     }
 

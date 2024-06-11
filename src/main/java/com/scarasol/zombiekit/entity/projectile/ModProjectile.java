@@ -76,7 +76,6 @@ public abstract class ModProjectile  extends AbstractArrow implements ItemSuppli
         entityArrow.setBaseDamage(damage);
         entityArrow.setKnockback(knockback);
         world.addFreshEntity(entityArrow);
-        world.playSound(null, entity.getX(), entity.getY(), entity.getZ(), SoundEvents.ARROW_SHOOT, SoundSource.PLAYERS, 1, 1f / (random.nextFloat() * 0.5f + 1) + (power / 2));
     }
 
 }

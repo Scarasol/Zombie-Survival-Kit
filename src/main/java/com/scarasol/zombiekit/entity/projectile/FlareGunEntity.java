@@ -5,7 +5,10 @@ import net.minecraft.commands.CommandSource;
 import net.minecraft.commands.CommandSourceStack;
 import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.network.chat.TextComponent;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.level.ServerLevel;
+import net.minecraft.sounds.SoundEvents;
+import net.minecraft.sounds.SoundSource;
 import net.minecraft.util.Mth;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.LivingEntity;
@@ -100,6 +103,7 @@ public class FlareGunEntity extends ModProjectile {
     public static FlareGunEntity shoot(Level world, LivingEntity entity, Random random, float power, double damage, int knockback) {
         FlareGunEntity entityArrow = new FlareGunEntity(ZombieKitEntities.FLARE_GUN.get(), entity, world);
         ModProjectile.initProjectileEntity(entityArrow, world, entity, random, power, damage, knockback);
+        world.playSound(null, entity.getX(), entity.getY(), entity.getZ(), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("zombiekit:flare_gun_fire")), SoundSource.PLAYERS, 1, 1f / (random.nextFloat() * 0.5f + 1) + (power / 2));
         return entityArrow;
     }
 

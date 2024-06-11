@@ -82,21 +82,8 @@ public class PotionJarEntity extends ModProjectile {
     public static AbstractArrow shoot(Level world, LivingEntity entity, Random random, float power, double damage, int knockback) {
         AbstractArrow entityArrow = new PotionJarEntity(ZombieKitEntities.POTION_JAR.get(), entity, world);
         ModProjectile.initProjectileEntity(entityArrow, world, entity, random, power, damage, knockback);
+        world.playSound(null, entity.getX(), entity.getY(), entity.getZ(), SoundEvents.ARROW_SHOOT, SoundSource.PLAYERS, 1, 1f / (random.nextFloat() * 0.5f + 1) + (power / 2));
         return entityArrow;
-    }
-
-    public static AbstractArrow shoot(LivingEntity entity, LivingEntity target) {
-        AbstractArrow entityarrow = new PotionJarEntity(ZombieKitEntities.POTION_JAR.get(), entity, entity.level);
-        double dx = target.getX() - entity.getX();
-        double dy = target.getY() + target.getEyeHeight() - 1.1;
-        double dz = target.getZ() - entity.getZ();
-        entityarrow.shoot(dx, dy - entityarrow.getY() + Math.hypot(dx, dz) * 0.2F, dz, 0.8f * 2, 12.0F);
-        entityarrow.setSilent(true);
-        entityarrow.setBaseDamage(4);
-        entityarrow.setCritArrow(false);
-        entity.level.addFreshEntity(entityarrow);
-        entity.level.playSound(null, entity.getX(), entity.getY(), entity.getZ(), SoundEvents.ARROW_SHOOT, SoundSource.PLAYERS, 1, 1f / (new Random().nextFloat() * 0.5f + 1));
-        return entityarrow;
     }
 
     public void doEffects(Level level, double x, double y, double z) {

@@ -66,13 +66,14 @@ public class FirecrackerEntity extends ModProjectile {
     public static AbstractArrow shoot(Level world, LivingEntity entity, Random random, float power, double damage, int knockback) {
         AbstractArrow entityArrow = new FirecrackerEntity(ZombieKitEntities.FIRECRACKER.get(), entity, world);
         ModProjectile.initProjectileEntity(entityArrow, world, entity, random, power, damage, knockback);
+        world.playSound(null, entity.getX(), entity.getY(), entity.getZ(), SoundEvents.ARROW_SHOOT, SoundSource.PLAYERS, 1, 1f / (random.nextFloat() * 0.5f + 1) + (power / 2));
         return entityArrow;
     }
 
 
     public void doEffects(Level level, double x, double y, double z) {
         if (level instanceof ServerLevel serverLevel) {
-            level.playSound(null, new BlockPos(x, y, z), SoundEvents.GENERIC_EXPLODE, SoundSource.NEUTRAL, 1, 1);
+            level.playSound(null, new BlockPos(x, y, z), SoundEvents.GENERIC_EXPLODE, SoundSource.NEUTRAL, 3, 1);
             serverLevel.sendParticles(ParticleTypes.FLAME, x, y, z, 500, 1, 1, 1, 0.05);
         }
     }
