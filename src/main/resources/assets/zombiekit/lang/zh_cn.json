@@ -89,7 +89,7 @@
   "item.zombiekit.drone_components": "无人机零件",
   "item.zombiekit.drone_summon": "自杀式无人机",
   "item.zombiekit.energy_rod": "燃料棒",
-  "item.zombiekit.energy_rod.description": "外骨骼的燃料。",
+  "item.zombiekit.energy_rod.description": "§7§o外骨骼的燃料。",
   "item.zombiekit.exo.combat_mode": "已进入战斗模式",
   "item.zombiekit.exo.exit_mode": "已退出当前模式",
   "item.zombiekit.exo.no_power": "电量不足！",

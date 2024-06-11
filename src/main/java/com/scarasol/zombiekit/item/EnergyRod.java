@@ -39,7 +39,6 @@ public class EnergyRod extends Item {
                 entity.getCooldowns().addCooldown(ZombieKitItems.ENERGY_ROD.get(), 20);
                 itemStack.shrink(1);
             }
-
             return InteractionResultHolder.consume(itemStack);
         }
         return InteractionResultHolder.fail(itemStack);

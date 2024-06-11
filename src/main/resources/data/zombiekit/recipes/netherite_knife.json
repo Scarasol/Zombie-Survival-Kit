@@ -1,7 +1,7 @@
 {
   "type": "minecraft:smithing",
   "base": {
-    "item": "zombiekit:dagger"
+    "item": "zombiekit:knife"
   },
   "addition": {
     "item": "minecraft:netherite_ingot"
