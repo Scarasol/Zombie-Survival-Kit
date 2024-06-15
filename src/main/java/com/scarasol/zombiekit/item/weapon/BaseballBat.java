@@ -13,7 +13,7 @@ import org.jetbrains.annotations.NotNull;
 
 import java.util.List;
 
-public class BaseballBat extends SwordItem {
+public class BaseballBat extends SwordItem implements SweepWeapon{
 
     private final boolean studded;
 
@@ -22,12 +22,13 @@ public class BaseballBat extends SwordItem {
         this.studded = studded;
     }
 
+    public boolean isStudded() {
+        return studded;
+    }
+
     @Override
     public boolean hurtEnemy(@NotNull ItemStack itemstack, @NotNull LivingEntity entity, @NotNull LivingEntity sourceEntity) {
-        double multiplier = getTier() == Tiers.NETHERITE ? 1.8 : 1.2;
-        entity.setDeltaMovement(new Vec3((multiplier * sourceEntity.getLookAngle().x), (multiplier * sourceEntity.getLookAngle().y), (multiplier * sourceEntity.getLookAngle().z)));
-        if (studded)
-            entity.addEffect(new MobEffectInstance(MobEffects.WITHER, 60, 1, false, true));
+        sweepEffect(entity, sourceEntity);
         return super.hurtEnemy(itemstack, entity, sourceEntity);
     }
 
@@ -37,4 +38,11 @@ public class BaseballBat extends SwordItem {
         list.add(new TextComponent(new TranslatableComponent("item.zombiekit.baseball_bat.description").getString()));
     }
 
+    @Override
+    public void sweepEffect(LivingEntity target, LivingEntity attacker) {
+        double multiplier = getTier() == Tiers.NETHERITE ? 1.8 : 1.2;
+        target.setDeltaMovement(new Vec3((multiplier * attacker.getLookAngle().x), (multiplier * attacker.getLookAngle().y), (multiplier * attacker.getLookAngle().z)));
+        if (studded)
+            target.addEffect(new MobEffectInstance(MobEffects.WITHER, 60, 1, false, true));
+    }
 }

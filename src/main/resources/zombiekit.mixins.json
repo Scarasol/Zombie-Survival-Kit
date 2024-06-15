@@ -4,6 +4,7 @@
   "compatibilityLevel": "JAVA_17",
   "refmap": "zombiekit.refmap.json",
   "mixins": [
+    "PlayerMixin"
   ],
   "injectors": {
     "defaultRequire": 1
