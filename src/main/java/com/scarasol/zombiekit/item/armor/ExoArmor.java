@@ -81,7 +81,7 @@ public class ExoArmor extends ArmorItem {
                     if (serverLevel.getGameTime() % 240 == 0)
                         addPower(itemStack, -1);
                 }else {
-                    switchMode(itemStack, 1);
+                    switchMode(player, 1);
                 }
             }
             case 2 -> {
