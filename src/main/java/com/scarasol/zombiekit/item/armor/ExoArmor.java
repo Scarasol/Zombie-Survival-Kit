@@ -75,10 +75,14 @@ public class ExoArmor extends ArmorItem {
     public void modeFunction(ItemStack itemStack, Player player, ServerLevel serverLevel){
         switch (getMode(itemStack)){
             case 1 -> {
-                player.addEffect(new MobEffectInstance(MobEffects.INVISIBILITY, 20, 0, false, false));
-                player.addEffect(new MobEffectInstance(SonaMobEffects.CAMOUFLAGE.get(), 20, 4, false, false));
-                if (serverLevel.getGameTime() % 240 == 0)
-                    addPower(itemStack, -1);
+                if (!player.hasEffect(SonaMobEffects.EXPOSURE.get())){
+                    player.addEffect(new MobEffectInstance(MobEffects.INVISIBILITY, 20, 0, false, false));
+                    player.addEffect(new MobEffectInstance(SonaMobEffects.CAMOUFLAGE.get(), 20, 4, false, false));
+                    if (serverLevel.getGameTime() % 240 == 0)
+                        addPower(itemStack, -1);
+                }else {
+                    switchMode(itemStack, 1);
+                }
             }
             case 2 -> {
                 player.addEffect(new MobEffectInstance(MobEffects.DIG_SPEED, 20, 1, false, false));

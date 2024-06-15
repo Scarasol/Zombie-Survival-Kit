@@ -1,6 +1,7 @@
 package com.scarasol.zombiekit.item.armor;
 
 import com.scarasol.sona.init.SonaMobEffects;
+import com.scarasol.zombiekit.init.ZombieKitTags;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Registry;
 import net.minecraft.resources.ResourceLocation;
@@ -17,12 +18,7 @@ import net.minecraft.world.level.biome.Biome;
 public abstract class CamouflageArmor extends ArmorItem {
 
     private final int camouflage;
-    public static TagKey<Biome> DESERT = TagKey.create(Registry.BIOME_REGISTRY, new ResourceLocation("forge:desert_camouflage"));
-    public static TagKey<Biome> FOREST = TagKey.create(Registry.BIOME_REGISTRY, new ResourceLocation("forge:forest_camouflage"));
-    public static TagKey<Biome> SNOW = TagKey.create(Registry.BIOME_REGISTRY, new ResourceLocation("forge:snow_camouflage"));
-    public static TagKey<Biome> DESERT_CAVE = TagKey.create(Registry.BIOME_REGISTRY, new ResourceLocation("forge:desert_camouflage_cave"));
-    public static TagKey<Biome> FOREST_CAVE = TagKey.create(Registry.BIOME_REGISTRY, new ResourceLocation("forge:forest_camouflage_cave"));
-    public static TagKey<Biome> SNOW_CAVE = TagKey.create(Registry.BIOME_REGISTRY, new ResourceLocation("forge:snow_camouflage_cave"));
+
 
     public CamouflageArmor(ArmorMaterial armorMaterial, EquipmentSlot equipmentSlot, Properties properties, int camouflage) {
         super(armorMaterial, equipmentSlot, properties);
@@ -36,7 +32,7 @@ public abstract class CamouflageArmor extends ArmorItem {
     @Override
     public void onArmorTick(ItemStack itemStack, Level level, Player player){
         if (getSlot() == EquipmentSlot.CHEST){
-            if (camouflage == 0 || player.isSprinting())
+            if (camouflage == 0 || player.isSprinting() || player.hasEffect(SonaMobEffects.EXPOSURE.get()))
                 return;
             BlockPos blockPos = player.blockPosition();
             if (!isProperPlace(blockPos, level))
@@ -57,23 +53,23 @@ public abstract class CamouflageArmor extends ArmorItem {
     public boolean isProperPlace(BlockPos blockPos, Level level){
         switch (camouflage){
             case 1 -> {
-                if (level.getBiome(blockPos).is(DESERT_CAVE)){
+                if (level.getBiome(blockPos).is(ZombieKitTags.DESERT_CAVE)){
                     return true;
-                }else if (level.getBiome(blockPos).is(DESERT)){
+                }else if (level.getBiome(blockPos).is(ZombieKitTags.DESERT)){
                     return level.canSeeSkyFromBelowWater(blockPos) || blockPos.getY() > 63;
                 }
             }
             case 2 -> {
-                if (level.getBiome(blockPos).is(FOREST_CAVE)){
+                if (level.getBiome(blockPos).is(ZombieKitTags.FOREST_CAVE)){
                     return true;
-                }else if (level.getBiome(blockPos).is(FOREST)){
+                }else if (level.getBiome(blockPos).is(ZombieKitTags.FOREST)){
                     return level.canSeeSkyFromBelowWater(blockPos) || blockPos.getY() > 63;
                 }
             }
             case 3 -> {
-                if (level.getBiome(blockPos).is(SNOW_CAVE)){
+                if (level.getBiome(blockPos).is(ZombieKitTags.SNOW_CAVE)){
                     return true;
-                }else if (level.getBiome(blockPos).is(SNOW)){
+                }else if (level.getBiome(blockPos).is(ZombieKitTags.SNOW)){
                     return level.canSeeSkyFromBelowWater(blockPos) || blockPos.getY() > 63;
                 }
             }
