@@ -53,7 +53,7 @@ public class SpreadLight extends Block {
             int z = Integer.parseInt(blockState.getValue(Z).toString()) - 3;
             spreadLight(level, blockPos, x, y, z, blockState.getValue(LIGHT_LEVEL));
         }
-        level.scheduleTick(blockPos, this, 50);
+        level.scheduleTick(blockPos, this, 4);
     }
 
     @Override
@@ -64,7 +64,7 @@ public class SpreadLight extends Block {
         int z = Integer.parseInt(blockState.getValue(Z).toString()) - 3;
         checkFather(level, blockPos, x, y, z);
         spreadLight(level, blockPos, x, y, z, blockState.getValue(LIGHT_LEVEL));
-        level.scheduleTick(blockPos, this, 50);
+        level.scheduleTick(blockPos, this, 4);
     }
 
     @Override
@@ -132,7 +132,7 @@ public class SpreadLight extends Block {
 
         private final String coordinate;
 
-        private Coordinate(String coordinate) {
+        Coordinate(String coordinate) {
             this.coordinate = coordinate;
         }
 

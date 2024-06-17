@@ -13,7 +13,7 @@ import net.minecraft.world.entity.projectile.ThrownPotion;
 import net.minecraft.world.level.Level;
 import net.minecraftforge.network.NetworkHooks;
 
-public abstract class Mechanics extends PathfinderMob {
+public abstract class Mechanics extends PathfinderMob{
 
 
     public Mechanics(EntityType<? extends Mechanics> type, Level world) {

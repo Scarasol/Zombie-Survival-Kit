@@ -31,14 +31,14 @@ public class SpreadLightFather extends Block {
     @Override
     public void onPlace(BlockState blockState, Level level, BlockPos blockPos, BlockState oldState, boolean moving) {
         super.onPlace(blockState, level, blockPos, oldState, moving);
-        level.scheduleTick(blockPos, this, 100);
+        level.scheduleTick(blockPos, this, 4);
     }
 
     @Override
     public void tick(BlockState blockState, ServerLevel level, BlockPos blockPos, Random random) {
         super.tick(blockState, level, blockPos, random);
         spreadLight(level, blockPos);
-        level.scheduleTick(blockPos, this, 100);
+        level.scheduleTick(blockPos, this, 4);
     }
 
     public int prime(int a, int b){
