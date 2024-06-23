@@ -1,6 +1,7 @@
 package com.scarasol.zombiekit.entity.projectile;
 
 import com.scarasol.sona.init.SonaMobEffects;
+import com.scarasol.zombiekit.config.CommonConfig;
 import com.scarasol.zombiekit.init.ZombieKitEntities;
 import com.scarasol.zombiekit.init.ZombieKitItems;
 import net.minecraft.nbt.CompoundTag;
@@ -96,14 +97,13 @@ public class WrenchEntity extends AbstractArrow implements ItemSupplier {
     @Override
     protected void onHitEntity(EntityHitResult p_37573_) {
         Entity entity = p_37573_.getEntity();
-        float f = 9.0F;
+        float f = CommonConfig.WRENCH_DAMAGE.get().floatValue();
         if (entity instanceof LivingEntity) {
             LivingEntity livingentity = (LivingEntity)entity;
             f += EnchantmentHelper.getDamageBonus(this.wrenchItem, livingentity.getMobType());
         }
-
         Entity entity1 = this.getOwner();
-        DamageSource damageSource = (new IndirectEntityDamageSource("wrench", this, (Entity)(entity1 == null ? this : entity1))).setProjectile();
+        DamageSource damageSource = (new IndirectEntityDamageSource("wrench", this, entity1 == null ? this : entity1)).setProjectile();
         this.dealtDamage = true;
         SoundEvent soundevent = SoundEvents.TRIDENT_HIT;
         if (entity.hurt(damageSource, f)) {

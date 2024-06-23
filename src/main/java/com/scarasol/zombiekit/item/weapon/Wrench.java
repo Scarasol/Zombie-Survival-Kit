@@ -1,5 +1,6 @@
 package com.scarasol.zombiekit.item.weapon;
 
+import com.scarasol.zombiekit.config.CommonConfig;
 import com.scarasol.zombiekit.entity.projectile.FirecrackerEntity;
 import com.scarasol.zombiekit.entity.projectile.WrenchEntity;
 import net.minecraft.network.chat.Component;
@@ -54,7 +55,7 @@ public class Wrench extends Item {
             WrenchEntity entityArrow;
             if (this.getUseDuration(itemStack) - timeLeft >= 10) {
                 entityArrow = WrenchEntity.shoot(world, entity, world.getRandom(), 1f, 9, 0, true);
-                ((ServerPlayer) entityLiving).getCooldowns().addCooldown(itemStack.getItem(), 140);
+                ((ServerPlayer) entityLiving).getCooldowns().addCooldown(itemStack.getItem(), CommonConfig.WRENCH_COOLDOWN.get() * 20);
             } else {
                 entityArrow = WrenchEntity.shoot(world, entity, world.getRandom(), 1f, 9, 0, false);
             }

@@ -1,5 +1,6 @@
 package com.scarasol.zombiekit.item.weapon;
 
+import com.scarasol.zombiekit.config.CommonConfig;
 import com.scarasol.zombiekit.init.ZombieKitItems;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.TextComponent;
@@ -88,7 +89,7 @@ public class Chainsaw extends Item {
                     }
                 }
                 if (!world.isClientSide() && livingEntity instanceof Player player && !player.getAbilities().instabuild){
-                    if (world.getGameTime() % 480 == 0) {
+                    if (world.getGameTime() % CommonConfig.CHAINSAW_POWER.get() == 0) {
                         if (itemstack.hurt(4, world.getRandom(), null)) {
                             itemstack.shrink(1);
                         }
@@ -120,7 +121,7 @@ public class Chainsaw extends Item {
             if (!livingEntity.equals(entityiterator)){
                 entityiterator.invulnerableTime = 0;
                 entityiterator.getPersistentData().putBoolean("CancelKnockback", true);
-                entityiterator.hurt(DamageSource.mobAttack(livingEntity), 1.2f);
+                entityiterator.hurt(DamageSource.mobAttack(livingEntity), CommonConfig.CHAINSAW_DAMAGE.get().floatValue());
             }
         }
     }
