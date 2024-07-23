@@ -1,5 +1,6 @@
 package com.scarasol.zombiekit.block;
 
+import com.scarasol.zombiekit.config.CommonConfig;
 import com.scarasol.zombiekit.entity.mechanics.Mechanics;
 import com.scarasol.zombiekit.init.ZombieKitBlocks;
 import com.scarasol.zombiekit.init.ZombieKitItems;
@@ -95,7 +96,7 @@ public class UltraWidebandRadarBlock extends Block {
     @Override
     public void onPlace(BlockState blockstate, Level world, BlockPos pos, BlockState oldState, boolean moving) {
         super.onPlace(blockstate, world, pos, oldState, moving);
-        world.scheduleTick(pos, this, 60);
+        world.scheduleTick(pos, this, CommonConfig.RADAR_POWER.get());
 
     }
 
@@ -112,7 +113,7 @@ public class UltraWidebandRadarBlock extends Block {
             world.setBlock(pos, blockState.setValue(RADAR_POWER, Math.max(1, power - 1)).setValue(RADAR_ELE, updateEle(Math.max(1, power - 1))), 3);
         }
 
-        world.scheduleTick(pos, this, 60);
+        world.scheduleTick(pos, this, CommonConfig.RADAR_POWER.get());
     }
 
     @Override
@@ -134,16 +135,17 @@ public class UltraWidebandRadarBlock extends Block {
 
     public void highLightEntity(BlockState blockState, ServerLevel world, BlockPos pos) {
         BlockPos blockPos;
+        int range = CommonConfig.RADAR_RANGE.get();
         switch (blockState.getValue(FACING)) {
-            case UP -> blockPos = pos.below(24);
-            case WEST -> blockPos = pos.east(24);
-            case EAST -> blockPos = pos.west(24);
-            case NORTH -> blockPos = pos.south(24);
-            case SOUTH -> blockPos = pos.north(24);
-            default -> blockPos = pos.above(24);
+            case UP -> blockPos = pos.below(range / 2);
+            case WEST -> blockPos = pos.east(range / 2);
+            case EAST -> blockPos = pos.west(range / 2);
+            case NORTH -> blockPos = pos.south(range / 2);
+            case SOUTH -> blockPos = pos.north(range / 2);
+            default -> blockPos = pos.above(range / 2);
         }
         Vec3 _center = new Vec3(blockPos.getX(), blockPos.getY(), blockPos.getZ());
-        List<LivingEntity> entFound = world.getEntitiesOfClass(LivingEntity.class, new AABB(_center, _center).inflate(24), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center))).collect(Collectors.toList());
+        List<LivingEntity> entFound = world.getEntitiesOfClass(LivingEntity.class, new AABB(_center, _center).inflate(range), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center))).collect(Collectors.toList());
         for (LivingEntity entityIterator : entFound) {
             if (entityIterator instanceof ArmorStand || entityIterator instanceof Mechanics)
                 continue;
@@ -161,7 +163,7 @@ public class UltraWidebandRadarBlock extends Block {
                         continue;
                 }
             }
-            entityIterator.addEffect(new MobEffectInstance(MobEffects.GLOWING, 70, 0, false, false));
+            entityIterator.addEffect(new MobEffectInstance(MobEffects.GLOWING, CommonConfig.RADAR_POWER.get() + 10, 0, false, false));
         }
     }
 

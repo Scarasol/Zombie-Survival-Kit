@@ -1,5 +1,6 @@
 package com.scarasol.zombiekit.block;
 
+import com.scarasol.zombiekit.config.CommonConfig;
 import com.scarasol.zombiekit.init.ZombieKitBlocks;
 import com.scarasol.zombiekit.init.ZombieKitTags;
 import com.scarasol.zombiekit.network.MapVariables;
@@ -16,6 +17,7 @@ import net.minecraft.server.level.ServerLevel;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.tags.TagKey;
 import net.minecraft.util.Mth;
+import net.minecraft.world.Difficulty;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.Mob;
@@ -204,44 +206,25 @@ public class ShortwaveRadioBlock extends Block {
     }
 
     public boolean spawnPillagers(ServerLevel world, BlockPos radioPos, BlockPos spawnPos, Random random){
-        switch (world.getDifficulty()){
-            case PEACEFUL:
-                return false;
-            case EASY, NORMAL:
-                if (random.nextDouble() < 0.02){
-                    for (int i = 0; i < 5; i++){
-                        PatrollingMonster patrollingMonster = EntityType.PILLAGER.create(world);
-                        if (i == 0){
-                            patrollingMonster.setPatrolLeader(true);
-                            patrollingMonster.setPatrolTarget(radioPos);
-                        }
-                        patrollingMonster.setPos(spawnPos.getX(), spawnPos.getY(), spawnPos.getZ());
-                        patrollingMonster.finalizeSpawn(world, world.getCurrentDifficultyAt(radioPos), MobSpawnType.PATROL, null, null);
-                        world.addFreshEntityWithPassengers(patrollingMonster);
+        if (world.getDifficulty() != Difficulty.PEACEFUL){
+            if (random.nextDouble() < CommonConfig.ILLAGER_CHANCE.get()){
+                for (int i = 0; i < CommonConfig.ILLAGER_NUMBER.get(); i++){
+                    PatrollingMonster patrollingMonster;
+                    if (random.nextDouble() < CommonConfig.VINDICATOR_CHANCE.get()){
+                        patrollingMonster = EntityType.VINDICATOR.create(world);
+                    }else {
+                        patrollingMonster = EntityType.PILLAGER.create(world);
                     }
-                    return true;
-                }
-                break;
-            case HARD:
-                if (random.nextDouble() < 0.05){
-                    for (int i = 0; i < 8; i++){
-                        PatrollingMonster patrollingMonster;
-                        if (random.nextDouble() < 0.3){
-                            patrollingMonster = EntityType.VINDICATOR.create(world);
-                        }else {
-                            patrollingMonster = EntityType.PILLAGER.create(world);
-                        }
-                        if (i == 0){
-                            patrollingMonster.setPatrolLeader(true);
-                            patrollingMonster.setPatrolTarget(radioPos);
-                        }
-                        patrollingMonster.setPos(spawnPos.getX(), spawnPos.getY(), spawnPos.getZ());
-                        patrollingMonster.finalizeSpawn(world, world.getCurrentDifficultyAt(radioPos), MobSpawnType.PATROL, null, null);
-                        world.addFreshEntityWithPassengers(patrollingMonster);
+                    if (i == 0){
+                        patrollingMonster.setPatrolLeader(true);
+                        patrollingMonster.setPatrolTarget(radioPos);
                     }
-                    return true;
+                    patrollingMonster.setPos(spawnPos.getX(), spawnPos.getY(), spawnPos.getZ());
+                    patrollingMonster.finalizeSpawn(world, world.getCurrentDifficultyAt(radioPos), MobSpawnType.PATROL, null, null);
+                    world.addFreshEntityWithPassengers(patrollingMonster);
                 }
-                break;
+                return true;
+            }
         }
         return false;
     }

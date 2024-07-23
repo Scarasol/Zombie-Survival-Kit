@@ -2,6 +2,11 @@ package com.scarasol.zombiekit.config;
 
 import net.minecraftforge.common.ForgeConfigSpec;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+import java.util.Objects;
+
 public class CommonConfig {
     public static final ForgeConfigSpec.Builder BUILDER = new ForgeConfigSpec.Builder();
     public static final ForgeConfigSpec SPEC;
@@ -46,6 +51,25 @@ public class CommonConfig {
     public static final ForgeConfigSpec.ConfigValue<Boolean> SWEEP;
     public static final ForgeConfigSpec.ConfigValue<Double> SWEEP_MULTIPLIER;
 
+    public static final ForgeConfigSpec.ConfigValue<Boolean> LANDMINE_CHAIN;
+    public static final ForgeConfigSpec.ConfigValue<Integer> CHAIN_RANGE;
+
+    public static final ForgeConfigSpec.ConfigValue<Integer> RADAR_RANGE;
+    public static final ForgeConfigSpec.ConfigValue<Integer> RADAR_POWER;
+
+    public static final ForgeConfigSpec.ConfigValue<Double> BROKEN_CHANCE;
+
+    public static final ForgeConfigSpec.ConfigValue<Integer> CHARGING_RATE;
+
+    public static final ForgeConfigSpec.ConfigValue<Double> ILLAGER_CHANCE;
+    public static final ForgeConfigSpec.ConfigValue<Integer> ILLAGER_NUMBER;
+    public static final ForgeConfigSpec.ConfigValue<Double> VINDICATOR_CHANCE;
+
+    public static final ForgeConfigSpec.ConfigValue<Integer> HEAVY_MACHINE_GUN_DAMAGE;
+    public static final ForgeConfigSpec.ConfigValue<Double> ARMOR_PIERCING_RATE;
+    public static final ForgeConfigSpec.ConfigValue<Boolean> IGNORING_INVULNERABILITY;
+    public static final ForgeConfigSpec.ConfigValue<List<String>> MACHINE_GUNNER;
+
     static {
         BUILDER.push("Weapon");
 
@@ -61,7 +85,7 @@ public class CommonConfig {
                 .defineInRange("Chainsaw Damage", 1.2, 0, 5000);
         CHAINSAW_POWER = BUILDER.comment("Ticks required to reduce the power of a chainsaw by 4%" +
                 "\n1 sec = 20 ticks")
-                .defineInRange("Chainsaw Power", 480, 1, 5000);
+                .defineInRange("Chainsaw Power", 480, 1, Integer.MAX_VALUE);
         BUILDER.pop();
 
         BUILDER.push("Crowbar");
@@ -104,14 +128,73 @@ public class CommonConfig {
         BUILDER.push("Wrench");
         WRENCH_DAMAGE = BUILDER.defineInRange("Wrench Damage", 9.0, 1, 5000);
         WRENCH_COOLDOWN = BUILDER.comment("Cooldown on wrench power-up throws.")
-                .defineInRange("Wrench Cooldown (Second)", 7, 1, 5000);
+                .defineInRange("Wrench Cooldown (Second)", 7, 1, Integer.MAX_VALUE);
         BUILDER.pop();
 
         BUILDER.push("Misc");
         SWEEP = BUILDER.comment("Whether or not the sweeping attacks of baseball bats and machetes deal damage based on their attack damage despite not having the Sweeping Edge enchantment.")
                 .define("Sweep Improvement", true);
-        SWEEP_MULTIPLIER = BUILDER.comment("Sweeping attacks deal a percentage of the weapon's attack damage.")
+        SWEEP_MULTIPLIER = BUILDER.comment("Sweeping attacks without enchantment deal a percentage of the weapon's attack damage.")
                 .defineInRange("Sweep Multiplier", 0.5, 0.0, 1.0);
+        BUILDER.pop();
+
+        BUILDER.pop();
+
+        BUILDER.push("Blocks");
+
+        BUILDER.push("Landmine & GasTank");
+        LANDMINE_CHAIN = BUILDER.comment("Whether landmines and gas tanks explode in a chain.")
+                .define("Landmine Chain", true);
+        CHAIN_RANGE = BUILDER.comment("Range of chain explosions.")
+                .defineInRange("Chain Range", 2, 1, 5);
+        BUILDER.pop();
+
+        BUILDER.push("Ultra Wide Band Radar");
+        RADAR_RANGE = BUILDER.defineInRange("Radar Detection Range", 48, 2, 128);
+        RADAR_POWER = BUILDER.comment("When the radar is running after how many ticks the power consumption is 1%." +
+                "\n1 sec = 20 ticks")
+                .defineInRange("Radar Power", 60, 1, 5000);
+        BUILDER.pop();
+
+        BUILDER.push("Barbed Wire");
+        BROKEN_CHANCE = BUILDER.comment("The probability that a barbed wire fence would be broken every tick when entities is trapped in it." +
+                "\n1 sec = 20 ticks")
+                .defineInRange("Broken Probability", 0.0005, 0.0, 1.0);
+        BUILDER.pop();
+
+        BUILDER.push("Charger");
+        CHARGING_RATE = BUILDER.comment("The charger will charge the battery by 1% after how many ticks." +
+                "\n1 sec = 20 ticks")
+                .defineInRange("Charging Rate", 120, 1, 5000);
+        BUILDER.pop();
+
+        BUILDER.push("Shortwave Radio");
+        ILLAGER_CHANCE = BUILDER.comment("Probability of spawning illagers when shortwave radio spawns survivors.")
+                .defineInRange("Spawning Illager Probability", 0.05, 0.0, 1.0);
+        ILLAGER_NUMBER = BUILDER.comment("The charger will charge the battery by 1% after how many ticks.")
+                .defineInRange("Number of illagers", 8, 1, 20);
+        VINDICATOR_CHANCE = BUILDER.comment("Probability of spawning vindicator.")
+                .defineInRange("Spawning Vindicator Probability", 0.3, 0.0, 1.0);
+        MACHINE_GUNNER = BUILDER.comment("""
+                The Entities can use the heavy machine gun.
+                Tag supported.
+                """)
+                .define("Machine Gunner", Arrays.asList("#forge:force_villager", "minecraft:vindicator"), Objects::nonNull);
+        BUILDER.pop();
+
+        BUILDER.pop();
+
+
+        BUILDER.push("Entities");
+
+        BUILDER.push("Heavy Machine Gun");
+        HEAVY_MACHINE_GUN_DAMAGE = BUILDER.comment("Heavy machine gun bullet damage.")
+                .defineInRange("Damage", 18, 1, 5000);
+        ARMOR_PIERCING_RATE = BUILDER.comment("How much bullet damage ignores armor.")
+                .defineInRange("Armor Piercing Rate", 0.5, 0.0, 1.0);
+        IGNORING_INVULNERABILITY = BUILDER.comment("Whether bullet damage ignores damage invulnerability time.")
+                .define("Ignoring Invulnerability", true);
+
         BUILDER.pop();
 
         BUILDER.pop();

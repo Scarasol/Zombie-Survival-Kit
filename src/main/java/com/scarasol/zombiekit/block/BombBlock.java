@@ -1,5 +1,6 @@
 package com.scarasol.zombiekit.block;
 
+import com.scarasol.zombiekit.config.CommonConfig;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.level.Explosion;
 import net.minecraft.world.level.Level;
@@ -9,14 +10,18 @@ public interface BombBlock {
     default void exploded(Level level, int x, int y, int z, int amplifier){
         level.explode(null, x, y, z, amplifier, Explosion.BlockInteraction.NONE);
         level.destroyBlock(new BlockPos(x, y, z), false);
-        for (int i = x - 2; i <= x + 2; i++){
-            for (int j = y - 2; j <= y + 2; j++){
-                for (int k = z - 2; k <= z + 2; k++){
-                    if (level.getBlockState(new BlockPos(i, j, k)).getBlock() instanceof BombBlock block)
-                        exploded(level, i, j, k, block.getExplodeLevel());
+        if (CommonConfig.LANDMINE_CHAIN.get()){
+            int range = CommonConfig.CHAIN_RANGE.get();
+            for (int i = x - range; i <= x + range; i++){
+                for (int j = y - range; j <= y + range; j++){
+                    for (int k = z - range; k <= z + range; k++){
+                        if (level.getBlockState(new BlockPos(i, j, k)).getBlock() instanceof BombBlock block)
+                            exploded(level, i, j, k, block.getExplodeLevel());
+                    }
                 }
             }
         }
+
     }
 
     int getExplodeLevel();

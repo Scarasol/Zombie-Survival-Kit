@@ -1,5 +1,6 @@
 package com.scarasol.zombiekit.block;
 
+import com.scarasol.zombiekit.config.CommonConfig;
 import com.scarasol.zombiekit.init.ZombieKitBlocks;
 import com.scarasol.zombiekit.init.ZombieKitItems;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
@@ -108,7 +109,7 @@ public class BarbedWireBlock extends Block {
         if (x >= 0.003 || y >= 0.003 || z >= 0.003){
             if ((!(entity instanceof Player player) || !player.isCreative()) && entity.isAlive()){
                 entity.hurt(new DamageSource("barbedWire").bypassArmor(), 1);
-                if (world.getRandom().nextDouble() < 0.0005){
+                if (world.getRandom().nextDouble() < CommonConfig.BROKEN_CHANCE.get()){
                     breakBarbedWire(world, blockstate, pos);
                 }
             }

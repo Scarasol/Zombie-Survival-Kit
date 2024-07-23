@@ -1,5 +1,6 @@
 package com.scarasol.zombiekit.block;
 
+import com.scarasol.zombiekit.config.CommonConfig;
 import com.scarasol.zombiekit.init.ZombieKitBlocks;
 import com.scarasol.zombiekit.init.ZombieKitItems;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
@@ -132,7 +133,7 @@ public class ChargerBlock extends Block {
     @Override
     public void onPlace(BlockState blockstate, Level world, BlockPos pos, BlockState oldState, boolean moving) {
         super.onPlace(blockstate, world, pos, oldState, moving);
-        world.scheduleTick(pos, this, 120);
+        world.scheduleTick(pos, this, CommonConfig.CHARGING_RATE.get());
     }
 
     @Override
@@ -142,7 +143,7 @@ public class ChargerBlock extends Block {
             int power = blockState.getValue(BATTERY_POWER);
             level.setBlock(blockPos, blockState.setValue(BATTERY_POWER, Math.min(power + 1, 100)), 3);
         }
-        level.scheduleTick(blockPos, this, 120);
+        level.scheduleTick(blockPos, this, CommonConfig.CHARGING_RATE.get());
     }
 
 
