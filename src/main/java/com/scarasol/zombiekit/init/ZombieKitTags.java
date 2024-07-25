@@ -14,7 +14,7 @@ public class ZombieKitTags {
     public static final TagKey<EntityType<?>> UV_RESISTANCE = TagKey.create(Registry.ENTITY_TYPE_REGISTRY, new ResourceLocation("forge:uv_resistance"));
     public static final TagKey<EntityType<?>> UV_NONRESISTANCE = TagKey.create(Registry.ENTITY_TYPE_REGISTRY, new ResourceLocation("forge:uv_nonresistance"));
     public static final TagKey<EntityType<?>> SURVIVORS = TagKey.create(Registry.ENTITY_TYPE_REGISTRY, new ResourceLocation("forge:survivors"));
-    public static final TagKey<EntityType<?>> FORCE_VILLAGER = TagKey.create(Registry.ENTITY_TYPE_REGISTRY, new ResourceLocation("forge:force_villager"));
+    public static final TagKey<EntityType<?>> MACHINE_GUNNER = TagKey.create(Registry.ENTITY_TYPE_REGISTRY, new ResourceLocation("forge:machine_gunner"));
 
     public static TagKey<Biome> DESERT = TagKey.create(Registry.BIOME_REGISTRY, new ResourceLocation("forge:desert_camouflage"));
     public static TagKey<Biome> FOREST = TagKey.create(Registry.BIOME_REGISTRY, new ResourceLocation("forge:forest_camouflage"));

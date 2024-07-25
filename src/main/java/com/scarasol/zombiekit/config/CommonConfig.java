@@ -51,6 +51,9 @@ public class CommonConfig {
     public static final ForgeConfigSpec.ConfigValue<Boolean> SWEEP;
     public static final ForgeConfigSpec.ConfigValue<Double> SWEEP_MULTIPLIER;
 
+    public static final ForgeConfigSpec.ConfigValue<Integer> BANDAGE_INJURY;
+    public static final ForgeConfigSpec.ConfigValue<Integer> BANDAGE;
+
     public static final ForgeConfigSpec.ConfigValue<Boolean> LANDMINE_CHAIN;
     public static final ForgeConfigSpec.ConfigValue<Integer> CHAIN_RANGE;
 
@@ -68,7 +71,12 @@ public class CommonConfig {
     public static final ForgeConfigSpec.ConfigValue<Integer> HEAVY_MACHINE_GUN_DAMAGE;
     public static final ForgeConfigSpec.ConfigValue<Double> ARMOR_PIERCING_RATE;
     public static final ForgeConfigSpec.ConfigValue<Boolean> IGNORING_INVULNERABILITY;
-    public static final ForgeConfigSpec.ConfigValue<List<String>> MACHINE_GUNNER;
+
+    public static final ForgeConfigSpec.ConfigValue<Boolean> HIGH_PERFORMANCE_MODE;
+
+    public static final ForgeConfigSpec.ConfigValue<Boolean> RAIDER_INDEPENDENCE;
+    public static final ForgeConfigSpec.ConfigValue<Double> EQUIPMENT_INITIALIZATION;
+    public static final ForgeConfigSpec.ConfigValue<Double> BOMB_ARMOR_INITIALIZATION;
 
     static {
         BUILDER.push("Weapon");
@@ -140,6 +148,15 @@ public class CommonConfig {
 
         BUILDER.pop();
 
+
+        BUILDER.push("Items");
+        BANDAGE_INJURY = BUILDER.comment("Injury value a bandage will recover.")
+                .defineInRange("Bandage Heal", 10, 1, 100);
+        BANDAGE = BUILDER.comment("Bandage value a bandage will recover.")
+                .defineInRange("Dress Wound Value", 30, 1, 50);
+        BUILDER.pop();
+
+
         BUILDER.push("Blocks");
 
         BUILDER.push("Landmine & GasTank");
@@ -169,17 +186,13 @@ public class CommonConfig {
         BUILDER.pop();
 
         BUILDER.push("Shortwave Radio");
+        BUILDER.comment("Survivors recruited by shortwave radio are randomly selected in the forge:survivors tag.");
         ILLAGER_CHANCE = BUILDER.comment("Probability of spawning illagers when shortwave radio spawns survivors.")
                 .defineInRange("Spawning Illager Probability", 0.05, 0.0, 1.0);
         ILLAGER_NUMBER = BUILDER.comment("The charger will charge the battery by 1% after how many ticks.")
                 .defineInRange("Number of illagers", 8, 1, 20);
         VINDICATOR_CHANCE = BUILDER.comment("Probability of spawning vindicator.")
                 .defineInRange("Spawning Vindicator Probability", 0.3, 0.0, 1.0);
-        MACHINE_GUNNER = BUILDER.comment("""
-                The Entities can use the heavy machine gun.
-                Tag supported.
-                """)
-                .define("Machine Gunner", Arrays.asList("#forge:force_villager", "minecraft:vindicator"), Objects::nonNull);
         BUILDER.pop();
 
         BUILDER.pop();
@@ -188,13 +201,27 @@ public class CommonConfig {
         BUILDER.push("Entities");
 
         BUILDER.push("Heavy Machine Gun");
+        BUILDER.comment("Entities tagged with forge:machine_gunner will use heavy machine guns.");
         HEAVY_MACHINE_GUN_DAMAGE = BUILDER.comment("Heavy machine gun bullet damage.")
                 .defineInRange("Damage", 18, 1, 5000);
         ARMOR_PIERCING_RATE = BUILDER.comment("How much bullet damage ignores armor.")
                 .defineInRange("Armor Piercing Rate", 0.5, 0.0, 1.0);
         IGNORING_INVULNERABILITY = BUILDER.comment("Whether bullet damage ignores damage invulnerability time.")
                 .define("Ignoring Invulnerability", true);
+        BUILDER.pop();
 
+        BUILDER.push("UV Lamp");
+        HIGH_PERFORMANCE_MODE = BUILDER.comment("UV lamps in this mode will ignite undead within range that are not resistant to UV light.")
+                .define("High Performance Mode", false);
+        BUILDER.pop();
+
+        BUILDER.push("Misc");
+        RAIDER_INDEPENDENCE = BUILDER.comment("Whether Illagers will be enemy to other monsters.")
+                .define("Illager Independence", true);
+        EQUIPMENT_INITIALIZATION = BUILDER.comment("Probability that a zombie is equipped with weapons from this module at spawn.")
+                .defineInRange("Weapon Chance", 0.05, 0.0, 1.0);
+        BOMB_ARMOR_INITIALIZATION = BUILDER.comment("Probability that a zombie is equipped with bomb suit from this module at spawn.")
+                .defineInRange("Bomb Chance", 0.02, 0.0, 1.0);
         BUILDER.pop();
 
         BUILDER.pop();

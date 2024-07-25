@@ -65,9 +65,8 @@ public class HeavyMachineGunEntity extends Mechanics implements IAnimatable {
     public static final EntityDataAccessor<String> DIRECTION = SynchedEntityData.defineId(HeavyMachineGunEntity.class, EntityDataSerializers.STRING);
     public static final AttributeModifier ATTRIBUTE_MODIFIER = new AttributeModifier(UUID.fromString("1CCA8D2D-9A0B-3FF2-E505-EF4A439570C3"), "machine_gun", 20, AttributeModifier.Operation.ADDITION);
     private AnimationFactory factory = GeckoLibUtil.createFactory(this);
-    private boolean swinging;
     private boolean lastloop;
-    private long lastSwing;
+    private boolean init;
     public String animationprocedure = "empty";
     private double temperature = 0;
     private int cloudTime;
@@ -95,6 +94,19 @@ public class HeavyMachineGunEntity extends Mechanics implements IAnimatable {
         if (passengers.size() != 0 && passengers.get(0) instanceof LivingEntity passenger){
             turnGunpoint(passenger);
         }else {
+            if (this.level instanceof ServerLevel serverLevel){
+                if (!this.init){
+                    StructureFeatureManager structureFeatureManager = serverLevel.structureFeatureManager();
+                    ConfiguredStructureFeature<?, ?> configuredStructureFeature = structureFeatureManager.registryAccess().registryOrThrow(Registry.CONFIGURED_STRUCTURE_FEATURE_REGISTRY).get(ZombieKitTags.STRUCTURE);
+                    if (configuredStructureFeature != null && structureFeatureManager.getStructureAt(new BlockPos(this.getX(), this.getY(), this.getZ()), configuredStructureFeature).isValid()){
+                        BlockState state = serverLevel.getBlockState(new BlockPos(this.getX(), this.getY(), this.getZ()).below());
+                        if (state.getBlock().getStateDefinition().getProperty("facing") instanceof EnumProperty facing){
+                            setDirection(state.getValue(facing).toString());
+                        }
+                    }
+                    init = true;
+                }
+            }
             tryMakeMobRide();
         }
     }
@@ -245,28 +257,7 @@ public class HeavyMachineGunEntity extends Mechanics implements IAnimatable {
                 return Double.compare(a, b);
             });
             for (LivingEntity entity : list) {
-
-                if (entity instanceof Vindicator vindicator){
-                    if (!vindicator.isNoAi() && vindicator.getVehicle() == null){
-                        vindicator.startRiding(this);
-                        AttributeInstance attributeInstance = vindicator.getAttributes().getInstance(Attributes.FOLLOW_RANGE);
-                        if (attributeInstance == null) continue;
-                        attributeInstance.removeModifier(ATTRIBUTE_MODIFIER);
-                        attributeInstance.addPermanentModifier(ATTRIBUTE_MODIFIER);
-                        vindicator.setPersistenceRequired();
-                        if (this.level instanceof ServerLevel serverLevel){
-                            StructureFeatureManager structureFeatureManager = serverLevel.structureFeatureManager();
-                            ConfiguredStructureFeature<?, ?> configuredStructureFeature = structureFeatureManager.registryAccess().registryOrThrow(Registry.CONFIGURED_STRUCTURE_FEATURE_REGISTRY).get(ZombieKitTags.STRUCTURE);
-                            if (configuredStructureFeature != null && structureFeatureManager.getStructureAt(new BlockPos(this.getX(), this.getY(), this.getZ()), configuredStructureFeature).isValid()){
-                                BlockState state = serverLevel.getBlockState(new BlockPos(this.getX(), this.getY(), this.getZ()).below());
-                                if (state.getBlock().getStateDefinition().getProperty("facing") instanceof EnumProperty facing){
-                                    setDirection(state.getValue(facing).toString());
-                                }
-                            }
-                        }
-                        break;
-                    }
-                }else if (entity instanceof Mob mob && entity.getType().is(TagKey.create(Registry.ENTITY_TYPE_REGISTRY, new ResourceLocation("forge:force_villager")))){
+                if (entity instanceof Mob mob && entity.getType().is(ZombieKitTags.MACHINE_GUNNER)){
                     if (!mob.isNoAi() && mob.getVehicle() == null){
                         mob.startRiding(this);
                         AttributeInstance attributeInstance = mob.getAttributes().getInstance(Attributes.FOLLOW_RANGE);

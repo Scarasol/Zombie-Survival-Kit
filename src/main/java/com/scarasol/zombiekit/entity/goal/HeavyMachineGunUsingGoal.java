@@ -9,6 +9,7 @@ import net.minecraft.world.entity.ai.goal.Goal;
 import net.minecraft.world.entity.ai.targeting.TargetingConditions;
 import net.minecraft.world.entity.player.Player;
 
+import javax.annotation.Nullable;
 import java.util.Comparator;
 import java.util.EnumSet;
 import java.util.List;
@@ -22,7 +23,8 @@ public class HeavyMachineGunUsingGoal<T extends Mob> extends Goal {
     private int attackCooldown;
     private MachineGunState machineGunState = MachineGunState.UNCHARGED;
     private final float attackRadiusSqr;
-    private Predicate predicate;
+    @Nullable
+    private Predicate<LivingEntity> predicate;
     private boolean enemy = false;
 
     public HeavyMachineGunUsingGoal(T mob, float attackRadiusSqr) {
@@ -31,7 +33,7 @@ public class HeavyMachineGunUsingGoal<T extends Mob> extends Goal {
         this.setFlags(EnumSet.of(Goal.Flag.LOOK));
     }
 
-    public HeavyMachineGunUsingGoal(T mob, float attackRadiusSqr, Predicate predicate, boolean enemy) {
+    public HeavyMachineGunUsingGoal(T mob, float attackRadiusSqr, @Nullable Predicate<LivingEntity> predicate, boolean enemy) {
         this.mob = mob;
         this.attackRadiusSqr = attackRadiusSqr * attackRadiusSqr;
         this.setFlags(EnumSet.of(Goal.Flag.LOOK));
@@ -143,8 +145,8 @@ public class HeavyMachineGunUsingGoal<T extends Mob> extends Goal {
     public boolean searchEntities(){
         List<LivingEntity> list = this.mob.level.getNearbyEntities(LivingEntity.class, TargetingConditions.forCombat().range(25.0), this.mob, this.mob.getBoundingBox().inflate(30.0, 15.0, 30.0));
         if (!list.isEmpty()) {
-            list.sort(new Comparator<LivingEntity>(){
-                public int compare(LivingEntity l1, LivingEntity l2){
+            list.sort(new Comparator<>() {
+                public int compare(LivingEntity l1, LivingEntity l2) {
                     double a = Math.pow(l1.getX() - HeavyMachineGunUsingGoal.this.mob.getX(), 2) + Math.pow(l1.getZ() - HeavyMachineGunUsingGoal.this.mob.getZ(), 2);
                     double b = Math.pow(l2.getX() - HeavyMachineGunUsingGoal.this.mob.getX(), 2) + Math.pow(l2.getZ() - HeavyMachineGunUsingGoal.this.mob.getZ(), 2);
                     return Double.compare(a, b);

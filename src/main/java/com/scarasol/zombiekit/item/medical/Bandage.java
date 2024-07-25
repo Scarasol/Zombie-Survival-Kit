@@ -42,8 +42,8 @@ public class Bandage extends Item {
             return super.finishUsingItem(itemstack, world, entity);
         entity.addEffect(new MobEffectInstance(MobEffects.HEAL, 1, 0));
         if (CommonConfig.INJURY_OPEN.get() && entity instanceof ILivingEntityAccessor livingEntityAccessor){
-            InjuryManager.addInjury(livingEntityAccessor, 10);
-            InjuryManager.addBandage(livingEntityAccessor, 30);
+            InjuryManager.addInjury(livingEntityAccessor, com.scarasol.zombiekit.config.CommonConfig.BANDAGE_INJURY.get());
+            InjuryManager.addBandage(livingEntityAccessor, com.scarasol.zombiekit.config.CommonConfig.BANDAGE.get());
         }
         if (!(entity instanceof Player player) || !player.isCreative()){
             itemstack.shrink(1);

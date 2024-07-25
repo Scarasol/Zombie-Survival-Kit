@@ -7,6 +7,7 @@ import com.scarasol.sona.manager.RustManager;
 import com.scarasol.zombiekit.ZombieKitMod;
 import com.scarasol.zombiekit.block.InjectorBlock;
 import com.scarasol.zombiekit.block.ShortwaveRadioBlock;
+import com.scarasol.zombiekit.config.CommonConfig;
 import com.scarasol.zombiekit.entity.goal.HeavyMachineGunUsingGoal;
 import com.scarasol.zombiekit.entity.mechanics.HeavyMachineGunEntity;
 import com.scarasol.zombiekit.entity.mechanics.UvLampEntity;
@@ -70,22 +71,22 @@ import java.util.UUID;
 public class EventHandler {
 
     @SubscribeEvent
-    public static void livingEquipmentChangeEvent(LivingEquipmentChangeEvent event){
+    public static void livingEquipmentChangeEvent(LivingEquipmentChangeEvent event) {
         if (event.getSlot() == EquipmentSlot.MAINHAND || event.getSlot() == EquipmentSlot.OFFHAND)
             return;
-        if (event.getFrom().getItem() instanceof BombArmor || event.getTo().getItem() instanceof BombArmor){
+        if (event.getFrom().getItem() instanceof BombArmor || event.getTo().getItem() instanceof BombArmor) {
             BombArmor.updateModifier(event.getEntityLiving());
         }
-        if (event.getFrom().getItem() instanceof ExoArmor || event.getTo().getItem() instanceof ExoArmor){
+        if (event.getFrom().getItem() instanceof ExoArmor || event.getTo().getItem() instanceof ExoArmor) {
             ExoArmor.updateModifier(event.getEntityLiving());
         }
     }
 
 
     @SubscribeEvent
-    public static void getAttack(LivingAttackEvent event){
+    public static void getAttack(LivingAttackEvent event) {
         Entity entity = event.getSource().getDirectEntity();
-        if (entity != null){
+        if (entity != null) {
             event.setCanceled(ExoArmor.reactiveArmor(event.getEntityLiving(), entity));
         }
     }
@@ -110,17 +111,17 @@ public class EventHandler {
     public static void rightClickItem(PlayerInteractEvent.RightClickItem event) {
         Player player = event.getPlayer();
         Entity entity = player.getVehicle();
-        if (entity instanceof HeavyMachineGunEntity heavyMachineGunEntity && !(player.hasEffect(SonaMobEffects.STUN.get()) || (player.hasEffect(SonaMobEffects.SLIMINESS.get()) && player.hasEffect(SonaMobEffects.FROST.get())))){
+        if (entity instanceof HeavyMachineGunEntity heavyMachineGunEntity && !(player.hasEffect(SonaMobEffects.STUN.get()) || (player.hasEffect(SonaMobEffects.SLIMINESS.get()) && player.hasEffect(SonaMobEffects.FROST.get())))) {
             boolean flag1 = !player.getItemInHand(InteractionHand.MAIN_HAND).is(ZombieKitItems.HEAVY_MACHINE_GUN_AMMO.get());
             boolean flag2 = !player.getItemInHand(InteractionHand.OFF_HAND).is(ZombieKitItems.HEAVY_MACHINE_GUN_AMMO.get());
             ItemStack itemStack = player.getItemInHand(event.getHand());
-            if (itemStack.is(ZombieKitItems.HEAVY_MACHINE_GUN_AMMO.get()) && (event.getHand() == InteractionHand.MAIN_HAND || flag1)){
+            if (itemStack.is(ZombieKitItems.HEAVY_MACHINE_GUN_AMMO.get()) && (event.getHand() == InteractionHand.MAIN_HAND || flag1)) {
                 heavyMachineGunEntity.fire();
                 player.addEffect(new MobEffectInstance(SonaMobEffects.EXPOSURE.get(), 20, 3, false, false));
-                if (!player.getAbilities().instabuild && !heavyMachineGunEntity.getOverload()){
+                if (!player.getAbilities().instabuild && !heavyMachineGunEntity.getOverload()) {
                     itemStack.setCount(itemStack.getCount() - 1);
                 }
-            }else if (flag1 && flag2 && event.getHand() == InteractionHand.MAIN_HAND) {
+            } else if (flag1 && flag2 && event.getHand() == InteractionHand.MAIN_HAND) {
                 heavyMachineGunEntity.getLevel().playSound(null, heavyMachineGunEntity.getX(), heavyMachineGunEntity.getY(), heavyMachineGunEntity.getZ(), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("zombiekit:heavy_machine_gun_trigger")), SoundSource.BLOCKS, 1, 1);
             }
 
@@ -131,10 +132,10 @@ public class EventHandler {
     public static void rightClickEmpty(PlayerInteractEvent.RightClickEmpty event) {
         Player player = event.getPlayer();
         Entity entity = player.getVehicle();
-        if (entity instanceof HeavyMachineGunEntity heavyMachineGunEntity && !(player.hasEffect(SonaMobEffects.STUN.get()) || (player.hasEffect(SonaMobEffects.SLIMINESS.get()) && player.hasEffect(SonaMobEffects.FROST.get())))){
+        if (entity instanceof HeavyMachineGunEntity heavyMachineGunEntity && !(player.hasEffect(SonaMobEffects.STUN.get()) || (player.hasEffect(SonaMobEffects.SLIMINESS.get()) && player.hasEffect(SonaMobEffects.FROST.get())))) {
             boolean flag1 = !player.getItemInHand(InteractionHand.MAIN_HAND).is(ZombieKitItems.HEAVY_MACHINE_GUN_AMMO.get());
             boolean flag2 = !player.getItemInHand(InteractionHand.OFF_HAND).is(ZombieKitItems.HEAVY_MACHINE_GUN_AMMO.get());
-            if (flag1 && flag2 && event.getHand() == InteractionHand.MAIN_HAND){
+            if (flag1 && flag2 && event.getHand() == InteractionHand.MAIN_HAND) {
                 heavyMachineGunEntity.getLevel().playSound(player, heavyMachineGunEntity.getX(), heavyMachineGunEntity.getY(), heavyMachineGunEntity.getZ(), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("zombiekit:heavy_machine_gun_trigger")), SoundSource.BLOCKS, 1, 1);
             }
         }
@@ -143,7 +144,7 @@ public class EventHandler {
     @SubscribeEvent
     public static void KnockbackEvent(LivingKnockBackEvent event) {
         LivingEntity livingEntity = event.getEntityLiving();
-        if (livingEntity.getPersistentData().getBoolean("CancelKnockback")){
+        if (livingEntity.getPersistentData().getBoolean("CancelKnockback")) {
             livingEntity.getPersistentData().putBoolean("CancelKnockback", false);
             event.setStrength(event.getStrength() * 0.1f);
         }
@@ -167,19 +168,25 @@ public class EventHandler {
         Entity entity = event.getEntity();
         if (entity == null)
             return;
-        if (entity instanceof Mob _entity) {
-            Mob newSpawn = _entity;
-            if (newSpawn instanceof Raider || newSpawn instanceof Vex) {
-                newSpawn.targetSelector.addGoal(2, new NearestAttackableTargetGoal<>(newSpawn, Mob.class, 5, false, false, livingEntity -> livingEntity instanceof Enemy && !(livingEntity instanceof Raider || livingEntity instanceof Creeper || livingEntity instanceof NeutralMob || livingEntity instanceof Vex)));
-                if (newSpawn instanceof Vindicator vindicator){
-                    vindicator.goalSelector.addGoal(1, new HeavyMachineGunUsingGoal<>(vindicator, 25f, livingEntity -> (livingEntity instanceof Mob mob && mob.getType().is(TagKey.create(Registry.ENTITY_TYPE_REGISTRY, new ResourceLocation("forge:force_villager"))))|| livingEntity instanceof IronGolem || livingEntity instanceof AbstractVillager || (livingEntity instanceof Enemy && !(livingEntity instanceof Creeper || livingEntity instanceof NeutralMob || livingEntity instanceof Vex)), true));
+        if (entity instanceof Mob newSpawn) {
+            if (newSpawn.getType().is(ZombieKitTags.MACHINE_GUNNER)){
+                if ((newSpawn instanceof Raider || newSpawn instanceof Vex) && CommonConfig.RAIDER_INDEPENDENCE.get()) {
+                    newSpawn.goalSelector.addGoal(1, new HeavyMachineGunUsingGoal<>(newSpawn, 25f, livingEntity -> (livingEntity instanceof Mob mob && mob.getType().is(ZombieKitTags.SURVIVORS)) || livingEntity instanceof IronGolem || livingEntity instanceof AbstractVillager || (livingEntity instanceof Enemy && !(livingEntity instanceof Creeper || livingEntity instanceof NeutralMob || livingEntity instanceof Vex)), true));
+                }else if (newSpawn instanceof Enemy){
+                    newSpawn.goalSelector.addGoal(1, new HeavyMachineGunUsingGoal<>(newSpawn, 25f, null, true));
+                }else {
+                    newSpawn.goalSelector.addGoal(1, new HeavyMachineGunUsingGoal<>(newSpawn, 25f, livingEntity -> livingEntity instanceof Enemy && !(livingEntity instanceof Creeper || livingEntity instanceof NeutralMob), false));
                 }
-            }else if (newSpawn instanceof Enemy && !(newSpawn instanceof Creeper || newSpawn instanceof NeutralMob)){
+            }
+            if ((newSpawn instanceof Raider || newSpawn instanceof Vex) && CommonConfig.RAIDER_INDEPENDENCE.get()) {
+                newSpawn.targetSelector.addGoal(2, new NearestAttackableTargetGoal<>(newSpawn, Mob.class, 5, false, false, livingEntity -> livingEntity instanceof Enemy && !(livingEntity instanceof Raider || livingEntity instanceof Creeper || livingEntity instanceof NeutralMob || livingEntity instanceof Vex)));
+            } else if (newSpawn instanceof Enemy && !(newSpawn instanceof Creeper || newSpawn instanceof NeutralMob)) {
                 if (newSpawn.getType().is(ZombieKitTags.UV_RESISTANCE))
                     newSpawn.targetSelector.addGoal(3, new NearestAttackableTargetGoal<>(newSpawn, Mob.class, 5, false, false, livingEntity -> livingEntity instanceof UvLampEntity));
-                newSpawn.targetSelector.addGoal(2, new NearestAttackableTargetGoal<>(newSpawn, Mob.class, 5, false, false, livingEntity -> livingEntity instanceof Raider || livingEntity instanceof Vex));
-                if (newSpawn instanceof Zombie && !(newSpawn instanceof ZombieVillager && !entity.getPersistentData().getBoolean("spawn_have_changed"))){
-                    if (Mth.nextInt(new Random(), 1, 100) <= 5) {
+                if (CommonConfig.RAIDER_INDEPENDENCE.get())
+                    newSpawn.targetSelector.addGoal(2, new NearestAttackableTargetGoal<>(newSpawn, Mob.class, 5, false, false, livingEntity -> livingEntity instanceof Raider || livingEntity instanceof Vex));
+                if (newSpawn instanceof Zombie && !(newSpawn instanceof ZombieVillager && !entity.getPersistentData().getBoolean("spawn_have_changed"))) {
+                    if (Mth.nextInt(new Random(), 1, 100) <= CommonConfig.EQUIPMENT_INITIALIZATION.get() * 100) {
                         double i = Mth.nextInt(new Random(), 1, 4);
                         if (1 == i) {
                             ItemStack setStack = new ItemStack(ZombieKitItems.MACHETE.get());
@@ -203,7 +210,7 @@ public class EventHandler {
                             newSpawn.setItemInHand(InteractionHand.MAIN_HAND, setStack);
                         }
                     }
-                    if (Mth.nextInt(new Random(), 1, 100) <= 2) {
+                    if (Mth.nextInt(new Random(), 1, 100) <= CommonConfig.BOMB_ARMOR_INITIALIZATION.get() * 100) {
                         if (Mth.nextInt(new Random(), 1, 100) <= 40) {
                             newSpawn.setItemSlot(EquipmentSlot.FEET, new ItemStack(ZombieKitItems.BOMB_BOOTS.get()));
                         }
@@ -219,32 +226,29 @@ public class EventHandler {
                     }
                     entity.getPersistentData().putBoolean("spawn_have_changed", true);
                 }
-            }else if (newSpawn.getType().is(ZombieKitTags.FORCE_VILLAGER)){
-                newSpawn.goalSelector.addGoal(1, new HeavyMachineGunUsingGoal<>(newSpawn, 25f, livingEntity -> livingEntity instanceof Enemy && !(livingEntity instanceof Creeper || livingEntity instanceof NeutralMob), false));
             }
-
         }
     }
 
     @SubscribeEvent
     public static void onEntitySpawned(LivingSpawnEvent.CheckSpawn event) {
         LivingEntity newSpawn = event.getEntityLiving();
-        if (newSpawn instanceof Enemy && !(newSpawn instanceof Vex) && event.getWorld() instanceof ServerLevel serverLevel){
+        if (newSpawn instanceof Enemy && !(newSpawn instanceof Vex) && event.getWorld() instanceof ServerLevel serverLevel) {
             StructureFeatureManager structureFeatureManager = serverLevel.structureFeatureManager();
             ConfiguredStructureFeature<?, ?> configuredStructureFeature = structureFeatureManager.registryAccess().registryOrThrow(Registry.CONFIGURED_STRUCTURE_FEATURE_REGISTRY).get(ZombieKitTags.STRUCTURE);
-            if (configuredStructureFeature != null){
-                if ((event.getSpawnReason() == MobSpawnType.NATURAL || event.getSpawnReason() == MobSpawnType.STRUCTURE || event.getSpawnReason() == MobSpawnType.REINFORCEMENT) && structureFeatureManager.getStructureAt(new BlockPos(event.getX(), event.getY(), event.getZ()), configuredStructureFeature).isValid()){
-                    if (!(newSpawn instanceof Raider || newSpawn instanceof HeavyMachineGunEntity)){
+            if (configuredStructureFeature != null) {
+                if ((event.getSpawnReason() == MobSpawnType.NATURAL || event.getSpawnReason() == MobSpawnType.STRUCTURE || event.getSpawnReason() == MobSpawnType.REINFORCEMENT) && structureFeatureManager.getStructureAt(new BlockPos(event.getX(), event.getY(), event.getZ()), configuredStructureFeature).isValid()) {
+                    if (!(newSpawn instanceof Raider || newSpawn instanceof HeavyMachineGunEntity)) {
                         event.setResult(Event.Result.DENY);
                         event.getEntityLiving().discard();
                     }
                     BlockState state = serverLevel.getBlockState(new BlockPos(event.getX(), event.getY(), event.getZ()).below());
-                    if (state.getBlock() == Blocks.SMOOTH_STONE || state.getBlock() == Blocks.STONE){
+                    if (state.getBlock() == Blocks.SMOOTH_STONE || state.getBlock() == Blocks.STONE) {
                         PatrollingMonster patrollingMonster;
-                        for (int i = 0; i < new Random().nextInt(3) + 1; i++){
-                            if (serverLevel.getRandom().nextDouble() < 0.5){
+                        for (int i = 0; i < new Random().nextInt(3) + 1; i++) {
+                            if (serverLevel.getRandom().nextDouble() < 0.5) {
                                 patrollingMonster = EntityType.PILLAGER.create(serverLevel);
-                            }else {
+                            } else {
                                 patrollingMonster = EntityType.VINDICATOR.create(serverLevel);
                             }
                             patrollingMonster.setPos(event.getX(), event.getY(), event.getZ());
@@ -261,7 +265,7 @@ public class EventHandler {
     @SubscribeEvent(priority = EventPriority.LOW)
     public static void onPlayerTick(TickEvent.PlayerTickEvent event) {
         Player player = event.player;
-        if (ExoArmor.numberOfSuit(player) == 4 && player.isFallFlying() && player.isSprinting()){
+        if (ExoArmor.numberOfSuit(player) == 4 && player.isFallFlying() && player.isSprinting()) {
             Vec3 vec31 = player.getLookAngle();
             Vec3 vec32 = player.getDeltaMovement();
             player.setDeltaMovement(vec32.add(vec31.x * 0.1D + (vec31.x * 1.5D - vec32.x) * 0.5D, vec31.y * 0.1D + (vec31.y * 1.5D - vec32.y) * 0.5D, vec31.z * 0.1D + (vec31.z * 1.5D - vec32.z) * 0.5D));
@@ -269,10 +273,10 @@ public class EventHandler {
     }
 
     @SubscribeEvent
-    public static void projectileHit(ProjectileImpactEvent event){
-        if (event.getRayTraceResult() instanceof EntityHitResult entityHitResult){
+    public static void projectileHit(ProjectileImpactEvent event) {
+        if (event.getRayTraceResult() instanceof EntityHitResult entityHitResult) {
             Entity target = entityHitResult.getEntity();
-            if (target instanceof LivingEntity livingEntity){
+            if (target instanceof LivingEntity livingEntity) {
                 event.setCanceled(ExoArmor.reactiveArmor(livingEntity, event.getProjectile()));
             }
         }

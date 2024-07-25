@@ -1,9 +1,11 @@
 package com.scarasol.zombiekit.entity.projectile;
 
+import com.scarasol.zombiekit.config.CommonConfig;
 import com.scarasol.zombiekit.init.ZombieKitEntities;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.tags.BlockTags;
+import net.minecraft.util.Mth;
 import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.EntityType;
@@ -75,10 +77,16 @@ public class HeavyMachineGunAmmoEntity extends ModProjectile {
             ammo1 = DamageSource.arrow(this, this);
             ammo2 = DamageSource.arrow(this, this).bypassArmor();
         }
-        entity.invulnerableTime = 0;
-        entity.hurt(ammo1, 9f);
-        entity.invulnerableTime = 0;
-        entity.hurt(ammo2, 9f);
+        float armorIgnored = (float) (CommonConfig.HEAVY_MACHINE_GUN_DAMAGE.get() * CommonConfig.ARMOR_PIERCING_RATE.get());
+        float hurt = CommonConfig.HEAVY_MACHINE_GUN_DAMAGE.get() - armorIgnored;
+
+        int invulnerableTime = entity.invulnerableTime;
+        if (CommonConfig.IGNORING_INVULNERABILITY.get())
+            entity.invulnerableTime = 0;
+        entity.hurt(ammo1, hurt);
+        if (invulnerableTime <= 10 || CommonConfig.IGNORING_INVULNERABILITY.get())
+            entity.invulnerableTime = 0;
+        entity.hurt(ammo2, armorIgnored);
         discard();
     }
 

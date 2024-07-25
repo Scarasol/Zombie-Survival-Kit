@@ -195,9 +195,12 @@ public class UvLampEntity extends Mechanics{
             if (entityIterator.getMobType() == MobType.UNDEAD || CommonConfig.findIndex(entityIterator.getType().toString(), CommonConfig.INFECTION_SOURCE_MOB.get()) != -1){
                 if (entityIterator.getType().is(ZombieKitTags.UV_RESISTANCE) || !entityIterator.hasLineOfSight(this))
                     continue;
-                entityIterator.addEffect(new MobEffectInstance(MobEffects.WEAKNESS, 20, 0, false, false));
-                entityIterator.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN, 20, 0, false, false));
-                entityIterator.addEffect(new MobEffectInstance(SonaMobEffects.FRAGILITY.get(), 20, 1, false, false));
+                if (com.scarasol.zombiekit.config.CommonConfig.HIGH_PERFORMANCE_MODE.get()){
+                    entityIterator.addEffect(new MobEffectInstance(SonaMobEffects.IGNITION.get(), 20, 2, false, false));
+                }
+                entityIterator.addEffect(new MobEffectInstance(MobEffects.WEAKNESS, 20, 1, false, false));
+                entityIterator.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN, 20, 1, false, false));
+                entityIterator.addEffect(new MobEffectInstance(SonaMobEffects.FRAGILITY.get(), 20, 2, false, false));
                 if (entityIterator.getTarget() == null || !entityIterator.getTarget().isAlive() || entityIterator.getType().is(ZombieKitTags.UV_NONRESISTANCE)){
                     entityIterator.setTarget(null);
                     BlockPos blockPos = entityIterator.getOnPos();
