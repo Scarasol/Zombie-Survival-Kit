@@ -131,24 +131,15 @@ public class HeavyMachineGunEntity extends Mechanics implements IAnimatable {
                 this.level.playSound(null, getX(), getY(), getZ(), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("zombiekit:heavy_machine_gun_overload")), SoundSource.BLOCKS, 1, 1);
                 this.setOverload(true);
             }
-            return;
         }
     }
 
     public void steam(ServerLevel server){
-        switch (getGunDirection()){
-            case NORTH:
-                server.sendParticles(ParticleTypes.CLOUD, getX(), getY() + 1.5, getZ() - 1, 0, 0, 2, 0, 0.1);
-                break;
-            case SOUTH:
-                server.sendParticles(ParticleTypes.CLOUD, getX(), getY() + 1.5, getZ() + 1, 0, 0, 2, 0, 0.1);
-                break;
-            case EAST:
-                server.sendParticles(ParticleTypes.CLOUD, getX() + 1, getY() + 1.5, getZ(), 0, 0, 2, 0, 0.1);
-                break;
-            case WEST:
-                server.sendParticles(ParticleTypes.CLOUD, getX() - 1, getY() + 1.5, getZ(), 0, 0, 2, 0, 0.1);
-                break;
+        switch (getGunDirection()) {
+            case NORTH -> server.sendParticles(ParticleTypes.CLOUD, getX(), getY() + 1.5, getZ() - 1, 0, 0, 2, 0, 0.1);
+            case SOUTH -> server.sendParticles(ParticleTypes.CLOUD, getX(), getY() + 1.5, getZ() + 1, 0, 0, 2, 0, 0.1);
+            case EAST -> server.sendParticles(ParticleTypes.CLOUD, getX() + 1, getY() + 1.5, getZ(), 0, 0, 2, 0, 0.1);
+            case WEST -> server.sendParticles(ParticleTypes.CLOUD, getX() - 1, getY() + 1.5, getZ(), 0, 0, 2, 0, 0.1);
         }
     }
 
@@ -312,23 +303,23 @@ public class HeavyMachineGunEntity extends Mechanics implements IAnimatable {
         double x = livingEntity.getX();
         double y = livingEntity.getY();
         double z = livingEntity.getZ();
-        switch (getGunDirection()){
-            case NORTH:
+        switch (getGunDirection()) {
+            case NORTH -> {
                 XRange = (z - this.getZ() < Math.pow(1d / 3d, 0.5) * (x - this.getX()) && z - this.getZ() < -1.0d * Math.pow(1d / 3d, 0.5) * (x - this.getX()));
                 YRange = ((this.getZ() - z) > y - this.getY() && -1.0d * Math.pow(1d / 3d, 0.5) * (this.getZ() - z) < y - this.getY());
-                break;
-            case SOUTH:
+            }
+            case SOUTH -> {
                 XRange = (z - this.getZ() > Math.pow(1d / 3d, 0.5) * (x - this.getX()) && z - this.getZ() > -1.0d * Math.pow(1d / 3d, 0.5) * (x - this.getX()));
                 YRange = ((z - this.getZ()) > y - this.getY() && -1.0d * Math.pow(1d / 3d, 0.5) * (z - this.getZ()) < y - this.getY());
-                break;
-            case EAST:
+            }
+            case EAST -> {
                 XRange = (x - this.getX() > Math.pow(1d / 3d, 0.5) * (z - this.getZ()) && x - this.getX() > -1.0d * Math.pow(1d / 3d, 0.5) * (z - this.getZ()));
                 YRange = ((x - this.getX()) > y - this.getY() && -1.0d * Math.pow(1d / 3d, 0.5) * (x - this.getX()) < y - this.getY());
-                break;
-            case WEST:
+            }
+            case WEST -> {
                 XRange = (x - this.getX() < Math.pow(1d / 3d, 0.5) * (z - this.getZ()) && x - this.getX() < -1.0d * Math.pow(1d / 3d, 0.5) * (z - this.getZ()));
                 YRange = ((this.getX() - x) > y - this.getY() && -1.0d * Math.pow(1d / 3d, 0.5) * (this.getX() - x) < y - this.getY());
-                break;
+            }
         }
         return XRange && YRange;
     }

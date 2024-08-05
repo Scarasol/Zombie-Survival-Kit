@@ -8,6 +8,9 @@ import com.scarasol.zombiekit.init.ZombieKitItems;
 import com.scarasol.zombiekit.init.ZombieKitTags;
 import net.minecraft.core.BlockPos;
 import net.minecraft.nbt.CompoundTag;
+import net.minecraft.network.syncher.EntityDataAccessor;
+import net.minecraft.network.syncher.EntityDataSerializers;
+import net.minecraft.network.syncher.SynchedEntityData;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.util.Mth;
@@ -40,9 +43,9 @@ import java.util.stream.Collectors;
 
 public class UvLampEntity extends Mechanics{
 
-    private boolean hasBattery;
-    private int power;
-    private boolean lightswitch;
+    public static final EntityDataAccessor<Boolean> hasBattery = SynchedEntityData.defineId(UvLampEntity.class, EntityDataSerializers.BOOLEAN);
+    public static final EntityDataAccessor<Integer> power =SynchedEntityData.defineId(UvLampEntity.class, EntityDataSerializers.INT);
+    public static final EntityDataAccessor<Boolean> lightswitch =SynchedEntityData.defineId(UvLampEntity.class, EntityDataSerializers.BOOLEAN);
 
 
     public UvLampEntity(EntityType<? extends Mechanics> type, Level world) {
@@ -53,55 +56,64 @@ public class UvLampEntity extends Mechanics{
         this(ZombieKitEntities.UV_LAMP.get(), world);
     }
 
+    @Override
+    protected void defineSynchedData() {
+        super.defineSynchedData();
+        this.entityData.define(hasBattery, false);
+        this.entityData.define(power, 0);
+        this.entityData.define(lightswitch, false);
+
+    }
+
     public boolean isHasBattery() {
-        return hasBattery;
+        return entityData.get(hasBattery);
     }
 
     public void setHasBattery(boolean hasBattery) {
-        this.hasBattery = hasBattery;
+        entityData.set(UvLampEntity.hasBattery, hasBattery);
     }
 
     public int getPower() {
-        return power;
+        return entityData.get(power);
     }
 
     public void setPower(int power) {
-        this.power = power;
+        entityData.set(UvLampEntity.power, power);
     }
 
     public boolean isLightswitch() {
-        return lightswitch;
+        return entityData.get(lightswitch);
     }
 
     public void setLightswitch(boolean lightswitch) {
-        this.lightswitch = lightswitch;
+        entityData.set(UvLampEntity.lightswitch, lightswitch);
     }
 
     public void popBattery(){
         ItemStack itemStack = new ItemStack(ZombieKitItems.BATTERY.get(), 1);
-        itemStack.setDamageValue(100 - power);
+        itemStack.setDamageValue(100 - getPower());
         ItemEntity itemEntity = new ItemEntity(level, getX(), getY(), getZ(), itemStack);
         itemEntity.setPickUpDelay(10);
         level.addFreshEntity(itemEntity);
-        hasBattery = false;
-        power = 0;
+        setHasBattery(false);
+        setPower(0);
     }
 
     @Override
     public InteractionResult mobInteract(Player player, InteractionHand hand) {
         Level level = this.level;
-        if (!hasBattery && player.getOffhandItem().getItem() == ZombieKitItems.WRENCH.get() && player.getMainHandItem().getItem() == ZombieKitItems.BATTERY.get()){
-            hasBattery = true;
-            power = 100 - player.getMainHandItem().getDamageValue();
+        if (!isHasBattery() && player.getOffhandItem().getItem() == ZombieKitItems.WRENCH.get() && player.getMainHandItem().getItem() == ZombieKitItems.BATTERY.get()){
+            setHasBattery(true);
+            setPower(100 - player.getMainHandItem().getDamageValue());
             if (!player.isCreative()){
                 player.getMainHandItem().shrink(1);
             }
             return InteractionResult.SUCCESS;
-        }else if (hasBattery && player.getOffhandItem().getItem() == ZombieKitItems.WRENCH.get()){
+        }else if (isHasBattery() && player.getOffhandItem().getItem() == ZombieKitItems.WRENCH.get()){
             popBattery();
             return InteractionResult.SUCCESS;
         }else if (player.getMainHandItem().getItem() == ZombieKitItems.WRENCH.get()){
-            if (hasBattery)
+            if (isHasBattery())
                 popBattery();
             ItemStack itemStack = new ItemStack(ZombieKitItems.UV_LAMP.get(), 1);
             itemStack.setDamageValue(20 - Mth.floor(getHealth()));
@@ -117,11 +129,11 @@ public class UvLampEntity extends Mechanics{
     @Override
     public void die(DamageSource source) {
         super.die(source);
-        if (lightswitch){
+        if (isLightswitch()){
             level.destroyBlock(getOnPos().above(), false);
             level.destroyBlock(getOnPos().above().above(), false);
         }
-        if (hasBattery){
+        if (isHasBattery()){
             popBattery();
         }
     }
@@ -130,19 +142,19 @@ public class UvLampEntity extends Mechanics{
     public void readAdditionalSaveData(CompoundTag compoundTag) {
         super.readAdditionalSaveData(compoundTag);
         if (compoundTag.contains("HasBattery"))
-            hasBattery = compoundTag.getBoolean("HasBattery");
+            setHasBattery(compoundTag.getBoolean("HasBattery"));
         if (compoundTag.contains("Power"))
-            power = compoundTag.getInt("Power");
+            setPower(compoundTag.getInt("Power"));
         if (compoundTag.contains("Lightswitch"))
-            lightswitch = compoundTag.getBoolean("Lightswitch");
+            setLightswitch(compoundTag.getBoolean("Lightswitch"));
     }
 
     @Override
     public void addAdditionalSaveData(CompoundTag compoundTag) {
         super.addAdditionalSaveData(compoundTag);
-        compoundTag.putInt("Power", power);
-        compoundTag.putBoolean("HasBattery", hasBattery);
-        compoundTag.putBoolean("Lightswitch", lightswitch);
+        compoundTag.putInt("Power", getPower());
+        compoundTag.putBoolean("HasBattery", isHasBattery());
+        compoundTag.putBoolean("Lightswitch", isLightswitch());
     }
 
     @Override
@@ -150,39 +162,39 @@ public class UvLampEntity extends Mechanics{
         super.tick();
         if (this.isOnGround())
             setNoAi(true);
-        if (hasBattery){
+        if (isHasBattery()){
             if (level.getBestNeighborSignal(this.getOnPos()) > 0){
-                if (lightswitch){
+                if (isLightswitch()){
                     level.destroyBlock(getOnPos().above(), false);
                     level.destroyBlock(getOnPos().above().above(), false);
-                    lightswitch = false;
+                    setLightswitch(false);
                     level.playSound(null, getOnPos(), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("zombiekit:turn_on")), SoundSource.NEUTRAL, 1, 1);
                 }
-                if (level.getGameTime() % 120 == 0)
-                    power = Math.min(power + 1, 100);
-            }else if (power > 0){
-                if (!lightswitch){
-                    lightswitch = true;
+                if (level.getGameTime() % com.scarasol.zombiekit.config.CommonConfig.LAMP_POWER.get() == 0)
+                    setPower(Math.min(getPower() + 1, 100));
+            }else if (getPower() > 0){
+                if (!isLightswitch()){
+                    setLightswitch(true);
                     level.setBlock(getOnPos().above(), ZombieKitBlocks.SPREAD_LIGHT_FATHER.get().defaultBlockState(), 3);
                     level.setBlock(getOnPos().above().above(), ZombieKitBlocks.SPREAD_LIGHT_FATHER.get().defaultBlockState(), 3);
                     level.playSound(null, getOnPos(), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("zombiekit:turn_on")), SoundSource.NEUTRAL, 1, 1);
                 }
                 searchUndead();
-                if (level.getGameTime() % 120 == 0)
-                    power = Math.max(power - 1, 0);
+                if (level.getGameTime() % com.scarasol.zombiekit.config.CommonConfig.LAMP_POWER.get() == 0)
+                    setPower(Math.max(getPower() - 1, 0));
             }else {
-                if (lightswitch){
+                if (isLightswitch()){
                     level.destroyBlock(getOnPos().above(), false);
                     level.destroyBlock(getOnPos().above().above(), false);
-                    lightswitch = false;
+                    setLightswitch(false);
                     level.playSound(null, getOnPos(), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("zombiekit:turn_on")), SoundSource.NEUTRAL, 1, 1);
                 }
             }
         }else {
-            if (lightswitch){
+            if (isLightswitch()){
                 level.destroyBlock(getOnPos().above(), false);
                 level.destroyBlock(getOnPos().above().above(), false);
-                lightswitch = false;
+                setLightswitch(false);
                 level.playSound(null, getOnPos(), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("zombiekit:turn_on")), SoundSource.NEUTRAL, 1, 1);
             }
         }

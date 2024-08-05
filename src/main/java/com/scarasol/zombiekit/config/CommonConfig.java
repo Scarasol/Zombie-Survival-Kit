@@ -73,6 +73,7 @@ public class CommonConfig {
     public static final ForgeConfigSpec.ConfigValue<Boolean> IGNORING_INVULNERABILITY;
 
     public static final ForgeConfigSpec.ConfigValue<Boolean> HIGH_PERFORMANCE_MODE;
+    public static final ForgeConfigSpec.ConfigValue<Integer> LAMP_POWER;
 
     public static final ForgeConfigSpec.ConfigValue<Boolean> RAIDER_INDEPENDENCE;
     public static final ForgeConfigSpec.ConfigValue<Double> EQUIPMENT_INITIALIZATION;
@@ -213,6 +214,9 @@ public class CommonConfig {
         BUILDER.push("UV Lamp");
         HIGH_PERFORMANCE_MODE = BUILDER.comment("UV lamps in this mode will ignite undead within range that are not resistant to UV light.")
                 .define("High Performance Mode", false);
+        LAMP_POWER = BUILDER.comment("When the lamp is running after how many ticks the power consumption is 1%." +
+                "\n1 sec = 20 ticks")
+                .defineInRange("Lamp Power", 120, 1, 5000);
         BUILDER.pop();
 
         BUILDER.push("Misc");
