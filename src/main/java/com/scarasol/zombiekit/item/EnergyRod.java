@@ -1,5 +1,6 @@
 package com.scarasol.zombiekit.item;
 
+import com.scarasol.zombiekit.config.CommonConfig;
 import com.scarasol.zombiekit.init.ZombieKitItems;
 import com.scarasol.zombiekit.item.armor.ExoArmor;
 import net.minecraft.core.particles.DustParticleOptions;
@@ -33,7 +34,7 @@ public class EnergyRod extends Item {
         ItemStack itemStack = entity.getItemInHand(hand);
         ItemStack armor = entity.getItemBySlot(EquipmentSlot.CHEST);
         if (armor.is(ZombieKitItems.EXO_CHESTPLATE.get()) && ExoArmor.getPower(armor) < 100){
-            ExoArmor.addPower(armor, 20);
+            ExoArmor.addPower(armor, CommonConfig.ENERGY_ROD_CHARGE.get());
             world.addParticle(DustParticleOptions.REDSTONE, entity.getX(), entity.getY() + 1, entity.getZ(), 0.0D, 0.0D, 0.0D);
             if (!entity.isCreative()){
                 entity.getCooldowns().addCooldown(ZombieKitItems.ENERGY_ROD.get(), 20);

@@ -48,11 +48,25 @@ public class CommonConfig {
     public static final ForgeConfigSpec.ConfigValue<Double> WRENCH_DAMAGE;
     public static final ForgeConfigSpec.ConfigValue<Integer> WRENCH_COOLDOWN;
 
+    public static final ForgeConfigSpec.ConfigValue<Boolean> FLY_FUNCTION;
+
     public static final ForgeConfigSpec.ConfigValue<Boolean> SWEEP;
     public static final ForgeConfigSpec.ConfigValue<Double> SWEEP_MULTIPLIER;
 
     public static final ForgeConfigSpec.ConfigValue<Integer> BANDAGE_INJURY;
     public static final ForgeConfigSpec.ConfigValue<Integer> BANDAGE;
+
+    public static final ForgeConfigSpec.ConfigValue<Integer> MEDICAL_INJURY;
+    public static final ForgeConfigSpec.ConfigValue<Integer> MEDICAL_BANDAGE;
+
+    public static final ForgeConfigSpec.ConfigValue<Integer> SUSPICIOUS_HEAL;
+    public static final ForgeConfigSpec.ConfigValue<Double> SUSPICIOUS_SIDE_EFFECTS;
+
+    public static final ForgeConfigSpec.ConfigValue<Integer> ENERGY_ROD_CHARGE;
+
+    public static final ForgeConfigSpec.ConfigValue<Integer> WARHEAD_NUMBER;
+
+    public static final ForgeConfigSpec.ConfigValue<Integer> SIGNAL_RANGE;
 
     public static final ForgeConfigSpec.ConfigValue<Boolean> LANDMINE_CHAIN;
     public static final ForgeConfigSpec.ConfigValue<Integer> CHAIN_RANGE;
@@ -76,11 +90,12 @@ public class CommonConfig {
     public static final ForgeConfigSpec.ConfigValue<Integer> LAMP_POWER;
 
     public static final ForgeConfigSpec.ConfigValue<Boolean> RAIDER_INDEPENDENCE;
+    public static final ForgeConfigSpec.ConfigValue<List<String>> ILLAGER_WHITELIST;
     public static final ForgeConfigSpec.ConfigValue<Double> EQUIPMENT_INITIALIZATION;
     public static final ForgeConfigSpec.ConfigValue<Double> BOMB_ARMOR_INITIALIZATION;
 
     static {
-        BUILDER.push("Weapon");
+        BUILDER.push("Weapon & Armor");
 
         BUILDER.push("BaseballBat");
         BASEBALL_BAT_DAMAGE = BUILDER.defineInRange("Baseball Bat Damage", 9.0, 1, 5000);
@@ -140,6 +155,11 @@ public class CommonConfig {
                 .defineInRange("Wrench Cooldown (Second)", 7, 1, Integer.MAX_VALUE);
         BUILDER.pop();
 
+        BUILDER.push("EXO suit");
+        FLY_FUNCTION = BUILDER.comment("Whether the exoskeleton suit can fly.")
+                .define("Fly Function", true);
+        BUILDER.pop();
+
         BUILDER.push("Misc");
         SWEEP = BUILDER.comment("Whether or not the sweeping attacks of baseball bats and machetes deal damage based on their attack damage despite not having the Sweeping Edge enchantment.")
                 .define("Sweep Improvement", true);
@@ -151,10 +171,44 @@ public class CommonConfig {
 
 
         BUILDER.push("Items");
+
+        BUILDER.push("Bandage");
         BANDAGE_INJURY = BUILDER.comment("Injury value a bandage will recover.")
                 .defineInRange("Bandage Heal", 10, 1, 100);
         BANDAGE = BUILDER.comment("Bandage value a bandage will recover.")
                 .defineInRange("Dress Wound Value", 30, 1, 50);
+        BUILDER.pop();
+
+        BUILDER.push("Medical Kit");
+        MEDICAL_INJURY = BUILDER.comment("Injury value a medical kit will recover.")
+                .defineInRange("Medical Kit Heal", 25, 1, 100);
+        MEDICAL_BANDAGE = BUILDER.comment("Bandage value a medical kit will recover.")
+                .defineInRange("Medical Kit Bandage", 50, 1, 50);
+        BUILDER.pop();
+
+        BUILDER.push("Suspicious Drug");
+        SUSPICIOUS_HEAL = BUILDER.comment("Infection values reduced by suspicious drugs. Halves the effect when it causes side effects.")
+                .defineInRange("Infection Heal", 30, 1, 100);
+        SUSPICIOUS_SIDE_EFFECTS = BUILDER.comment("Suspicious drug's chance of producing side effects.")
+                .defineInRange("Side Effects Chance", 0.2, 0.0, 1.0);
+        BUILDER.pop();
+
+        BUILDER.push("Energy Rod");
+        ENERGY_ROD_CHARGE = BUILDER.comment("How much each energy rod can energize the exo suit.")
+                .defineInRange("Energy Charge", 20, 1, 100);
+        BUILDER.pop();
+
+        BUILDER.push("Flare Gun");
+        WARHEAD_NUMBER = BUILDER.comment("How many warheads can a flare split into." +
+                "\nWARNING: Excessive number of warheads can cause the game to lag.")
+                .defineInRange("Warhead Number", 200, 1, 1000);
+        BUILDER.pop();
+
+        BUILDER.push("Pocket Radio");
+        SIGNAL_RANGE = BUILDER.comment("How far away can a pocket radio search a structure.")
+                .defineInRange("Signal Range", 500, 1, 10000);
+        BUILDER.pop();
+
         BUILDER.pop();
 
 
@@ -222,6 +276,8 @@ public class CommonConfig {
         BUILDER.push("Misc");
         RAIDER_INDEPENDENCE = BUILDER.comment("Whether Illagers will be enemy to other monsters.")
                 .define("Illager Independence", true);
+        ILLAGER_WHITELIST = BUILDER.comment("Monsters that don't hostile to illagers.")
+                .define("Illager Whitelist", Arrays.asList("savageandravage:creepie", "minecraft:vex"), Objects::nonNull);
         EQUIPMENT_INITIALIZATION = BUILDER.comment("Probability that a zombie is equipped with weapons from this module at spawn.")
                 .defineInRange("Weapon Chance", 0.05, 0.0, 1.0);
         BOMB_ARMOR_INITIALIZATION = BUILDER.comment("Probability that a zombie is equipped with bomb suit from this module at spawn.")

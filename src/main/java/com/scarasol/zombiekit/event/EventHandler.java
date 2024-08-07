@@ -163,6 +163,10 @@ public class EventHandler {
         }
     }
 
+    public static boolean illagerWhiteList(Mob mob){
+        return com.scarasol.sona.configuration.CommonConfig.findIndex(mob.getType().getRegistryName().toString(), CommonConfig.ILLAGER_WHITELIST.get()) != -1;
+    }
+
     @SubscribeEvent
     public static void onEntityJoined(EntityJoinWorldEvent event) {
         Entity entity = event.getEntity();
@@ -170,21 +174,21 @@ public class EventHandler {
             return;
         if (entity instanceof Mob newSpawn) {
             if (newSpawn.getType().is(ZombieKitTags.MACHINE_GUNNER)){
-                if ((newSpawn instanceof Raider || newSpawn instanceof Vex) && CommonConfig.RAIDER_INDEPENDENCE.get()) {
-                    newSpawn.goalSelector.addGoal(1, new HeavyMachineGunUsingGoal<>(newSpawn, 25f, livingEntity -> (livingEntity instanceof Mob mob && mob.getType().is(ZombieKitTags.SURVIVORS)) || livingEntity instanceof IronGolem || livingEntity instanceof AbstractVillager || (livingEntity instanceof Enemy && !(livingEntity instanceof Creeper || livingEntity instanceof NeutralMob || livingEntity instanceof Vex)), true));
+                if ((newSpawn instanceof Raider || illagerWhiteList(newSpawn)) && CommonConfig.RAIDER_INDEPENDENCE.get()) {
+                    newSpawn.goalSelector.addGoal(1, new HeavyMachineGunUsingGoal<>(newSpawn, 25f, livingEntity -> livingEntity instanceof Mob mob && (mob.getType().is(ZombieKitTags.SURVIVORS) || livingEntity instanceof IronGolem || livingEntity instanceof AbstractVillager || (livingEntity instanceof Enemy && !(livingEntity instanceof Creeper || livingEntity instanceof NeutralMob || illagerWhiteList(mob)))), true));
                 }else if (newSpawn instanceof Enemy){
                     newSpawn.goalSelector.addGoal(1, new HeavyMachineGunUsingGoal<>(newSpawn, 25f, null, true));
                 }else {
                     newSpawn.goalSelector.addGoal(1, new HeavyMachineGunUsingGoal<>(newSpawn, 25f, livingEntity -> livingEntity instanceof Enemy && !(livingEntity instanceof Creeper || livingEntity instanceof NeutralMob), false));
                 }
             }
-            if ((newSpawn instanceof Raider || newSpawn instanceof Vex) && CommonConfig.RAIDER_INDEPENDENCE.get()) {
-                newSpawn.targetSelector.addGoal(2, new NearestAttackableTargetGoal<>(newSpawn, Mob.class, 5, false, false, livingEntity -> livingEntity instanceof Enemy && !(livingEntity instanceof Raider || livingEntity instanceof Creeper || livingEntity instanceof NeutralMob || livingEntity instanceof Vex)));
+            if ((newSpawn instanceof Raider || illagerWhiteList(newSpawn)) && CommonConfig.RAIDER_INDEPENDENCE.get()) {
+                newSpawn.targetSelector.addGoal(2, new NearestAttackableTargetGoal<>(newSpawn, Mob.class, 5, false, false, livingEntity -> livingEntity instanceof Enemy && !(livingEntity instanceof Raider || livingEntity instanceof Creeper || livingEntity instanceof NeutralMob || (livingEntity instanceof Mob mob && illagerWhiteList(mob)))));
             } else if (newSpawn instanceof Enemy && !(newSpawn instanceof Creeper || newSpawn instanceof NeutralMob)) {
                 if (newSpawn.getType().is(ZombieKitTags.UV_RESISTANCE))
                     newSpawn.targetSelector.addGoal(3, new NearestAttackableTargetGoal<>(newSpawn, Mob.class, 5, false, false, livingEntity -> livingEntity instanceof UvLampEntity));
                 if (CommonConfig.RAIDER_INDEPENDENCE.get())
-                    newSpawn.targetSelector.addGoal(2, new NearestAttackableTargetGoal<>(newSpawn, Mob.class, 5, false, false, livingEntity -> livingEntity instanceof Raider || livingEntity instanceof Vex));
+                    newSpawn.targetSelector.addGoal(2, new NearestAttackableTargetGoal<>(newSpawn, Mob.class, 5, false, false, livingEntity -> livingEntity instanceof Raider || (livingEntity instanceof Mob mob && illagerWhiteList(mob))));
                 if (newSpawn instanceof Zombie && !(newSpawn instanceof ZombieVillager && !entity.getPersistentData().getBoolean("spawn_have_changed"))) {
                     if (Mth.nextInt(new Random(), 1, 100) <= CommonConfig.EQUIPMENT_INITIALIZATION.get() * 100) {
                         double i = Mth.nextInt(new Random(), 1, 4);

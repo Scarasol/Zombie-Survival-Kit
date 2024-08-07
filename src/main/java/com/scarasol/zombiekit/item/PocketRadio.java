@@ -1,6 +1,7 @@
 package com.scarasol.zombiekit.item;
 
 import com.scarasol.zombiekit.block.ShortwaveRadioBlock;
+import com.scarasol.zombiekit.config.CommonConfig;
 import com.scarasol.zombiekit.init.ZombieKitTags;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Registry;
@@ -57,7 +58,7 @@ public class PocketRadio extends Item {
                 distance = distance2;
                 blockpos = shortwaveRadio;
             }
-            if (distance <= 250000){
+            if (distance <= Math.pow(CommonConfig.SIGNAL_RANGE.get(), 2)){
                 entity.sendMessage(new TranslatableComponent("zombiekit.message.response1", blockpos.getX(), blockpos.getZ()), entity.getUUID());
                 level.playSound(null, entityPos, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("zombiekit:radio_response")), SoundSource.PLAYERS, 1.2F, 1);
             } else {

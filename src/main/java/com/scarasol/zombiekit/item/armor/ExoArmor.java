@@ -2,6 +2,7 @@ package com.scarasol.zombiekit.item.armor;
 
 import com.scarasol.sona.init.SonaMobEffects;
 import com.scarasol.zombiekit.client.model.ExoSuitModel;
+import com.scarasol.zombiekit.config.CommonConfig;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.model.HumanoidModel;
 import net.minecraft.client.model.geom.ModelPart;
@@ -109,12 +110,12 @@ public class ExoArmor extends ArmorItem {
 
     @Override
     public boolean canElytraFly(ItemStack stack, LivingEntity entity) {
-        return numberOfSuit(entity) == 4 && getMode(stack) != 1 && getPower(stack) > 5;
+        return numberOfSuit(entity) == 4 && getMode(stack) != 1 && getPower(stack) > 5 && CommonConfig.FLY_FUNCTION.get();
     }
 
     @Override
     public boolean elytraFlightTick(ItemStack stack, LivingEntity entity, int flightTicks) {
-        if (numberOfSuit(entity) < 4)
+        if (numberOfSuit(entity) < 4 || !CommonConfig.FLY_FUNCTION.get())
             return false;
         if (entity.getLevel() instanceof ServerLevel serverLevel) {
             if (flightTicks % 120 == 0)

@@ -1,5 +1,6 @@
 package com.scarasol.zombiekit.entity.projectile;
 
+import com.scarasol.zombiekit.config.CommonConfig;
 import com.scarasol.zombiekit.init.ZombieKitEntities;
 import net.minecraft.commands.CommandSource;
 import net.minecraft.commands.CommandSourceStack;
@@ -81,7 +82,7 @@ public class FlareGunEntity extends ModProjectile {
 
     @Override
     public void doEffects(Level level, double x, double y, double z) {
-        for (int i = 0; i < 200; i++){
+        for (int i = 0; i < CommonConfig.WARHEAD_NUMBER.get(); i++){
             FlaresEntity flaresEntity = new FlaresEntity(ZombieKitEntities.FLARES.get(), level);
             flaresEntity.setBaseDamage(0);
             flaresEntity.setKnockback(0);

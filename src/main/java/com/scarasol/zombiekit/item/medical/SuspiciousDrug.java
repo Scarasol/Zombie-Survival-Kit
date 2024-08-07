@@ -43,18 +43,19 @@ public class SuspiciousDrug extends Item {
     public ItemStack finishUsingItem(ItemStack itemstack, Level world, LivingEntity entity) {
         if (world.isClientSide())
             return super.finishUsingItem(itemstack, world, entity);
-        if (entity.getRandom().nextDouble() < 0.2){
+        float heal = com.scarasol.zombiekit.config.CommonConfig.SUSPICIOUS_HEAL.get();
+        if (entity.getRandom().nextDouble() < com.scarasol.zombiekit.config.CommonConfig.SUSPICIOUS_SIDE_EFFECTS.get()){
             entity.addEffect(new MobEffectInstance(MobEffects.WEAKNESS, 1200, 0));
             entity.addEffect(new MobEffectInstance(MobEffects.POISON, 600, 2));
             entity.addEffect(new MobEffectInstance(MobEffects.DIG_SLOWDOWN, 1200, 0));
             entity.addEffect(new MobEffectInstance(MobEffects.CONFUSION, 400, 0));
             if (CommonConfig.INFECTION_OPEN.get() && entity instanceof ILivingEntityAccessor livingEntityAccessor){
-                InfectionManager.addInfection(livingEntityAccessor, -15);
+                InfectionManager.addInfection(livingEntityAccessor, -heal / 2);
             }
         }else {
             entity.addEffect(new MobEffectInstance(SonaMobEffects.IMMUNITY.get(), 3600, 0));
             if (CommonConfig.INFECTION_OPEN.get() && entity instanceof ILivingEntityAccessor livingEntityAccessor){
-                InfectionManager.addInfection(livingEntityAccessor, -30);
+                InfectionManager.addInfection(livingEntityAccessor, -heal);
             }
         }
         if (!(entity instanceof Player player) || !player.isCreative()){
