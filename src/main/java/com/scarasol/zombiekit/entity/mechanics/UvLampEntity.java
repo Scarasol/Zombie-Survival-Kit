@@ -204,7 +204,7 @@ public class UvLampEntity extends Mechanics{
         Vec3 _center = new Vec3(getX(), getY(), getZ());
         List<Mob> entFound = level.getEntitiesOfClass(Mob.class, new AABB(_center, _center).inflate(8, 4, 8), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center))).collect(Collectors.toList());
         for (Mob entityIterator : entFound) {
-            if (entityIterator.getMobType() == MobType.UNDEAD || CommonConfig.findIndex(entityIterator.getType().toString(), CommonConfig.INFECTION_SOURCE_MOB.get()) != -1){
+            if (entityIterator.getMobType() == MobType.UNDEAD || CommonConfig.findIndex(ForgeRegistries.ENTITIES.getKey(entityIterator.getType()).toString(), CommonConfig.INFECTION_SOURCE_MOB.get()) != -1){
                 if (entityIterator.getType().is(ZombieKitTags.UV_RESISTANCE) || !entityIterator.hasLineOfSight(this))
                     continue;
                 if (com.scarasol.zombiekit.config.CommonConfig.HIGH_PERFORMANCE_MODE.get()){
