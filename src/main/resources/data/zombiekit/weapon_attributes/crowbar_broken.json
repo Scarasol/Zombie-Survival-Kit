@@ -1,0 +1,9 @@
+{
+  "parent": "bettercombat:cutlass",
+  "attributes" : {
+    "attacks": [
+      {"hitbox": "FORWARD_BOX"},
+      {"hitbox": "FORWARD_BOX"}
+    ]
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "0 2",
+    "3 5"
+  ],
+  "key": {
+    "0": {
+      "item": "minecraft:leather"
+    },
+    "2": {
+      "item": "minecraft:leather"
+    },
+    "3": {
+      "item": "zombiekit:rubber"
+    },
+    "5": {
+      "item": "zombiekit:rubber"
+    }
+  },
+  "result": {
+    "item": "zombiekit:standard_tactical_boots",
+    "count": 1
+  }
+}

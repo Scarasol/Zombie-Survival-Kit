@@ -1,0 +1,10 @@
+{
+  "replace": false,
+  "values": [
+    "wither",
+    "husk",
+    "zombified_piglin",
+    "zoglin",
+    "wither_skeleton"
+  ]
+}

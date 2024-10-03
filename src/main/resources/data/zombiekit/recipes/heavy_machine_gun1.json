@@ -1,0 +1,35 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " 1 ",
+    "345",
+    "678"
+  ],
+  "key": {
+    "1": {
+      "item": "minecraft:iron_bars"
+    },
+    "3": {
+      "item": "zombiekit:special_steel_sheet"
+    },
+    "4": {
+      "item": "minecraft:nether_star"
+    },
+    "5": {
+      "item": "zombiekit:special_steel_sheet"
+    },
+    "6": {
+      "item": "zombiekit:special_steel_sheet"
+    },
+    "7": {
+      "tag": "minecraft:planks"
+    },
+    "8": {
+      "item": "zombiekit:special_steel_sheet"
+    }
+  },
+  "result": {
+    "item": "zombiekit:heavy_machine_gun_summon",
+    "count": 1
+  }
+}

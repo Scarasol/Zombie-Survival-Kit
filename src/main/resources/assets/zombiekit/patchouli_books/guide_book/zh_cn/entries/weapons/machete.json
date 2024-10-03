@@ -1,0 +1,17 @@
+{
+  "name": "砍刀",
+  "icon": "zombiekit:machete",
+  "category": "zombiekit:weapons",
+  "sortnum": 2,
+  "pages": [
+    {
+      "type": "patchouli:spotlight",
+	  "item": "zombiekit:machete",
+      "text": "砍刀，这是最经典的武器了，伙计。在日常生活中也依然算得上是很实用的工具，出色的设计强化了劈砍能力，拒绝花里胡哨，横扫砍翻一切僵尸，让你在白刃战中多一份生存的机会。"
+    },
+	{
+      "type": "patchouli:crafting",
+      "recipe": "zombiekit:machete"
+    }
+  ]
+}

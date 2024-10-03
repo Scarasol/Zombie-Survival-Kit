@@ -1,0 +1,26 @@
+{
+  "name": "链锯",
+  "icon": "zombiekit:chainsaw",
+  "category": "zombiekit:weapons",
+  "sortnum": 9,
+  "pages": [
+    {
+      "type": "patchouli:spotlight",
+	  "item": "zombiekit:chainsaw",
+	  "text": "《德州电锯杀人狂》，《电锯惊魂》…… 我们关于链锯的遐想从来没有停止过，你或许对这些电影很害怕，也可能觉得很兴奋，无论如何你都将拥有一个把遐想变成现实的机会，毕竟丧尸不会指控你犯了谋杀罪！丧尸的数量无穷无尽，而这种杀戮机器不仅可以锯断木头，更能高效的切碎每一颗僵尸的头"
+    },
+	{
+      "type": "patchouli:crafting",
+      "recipe": "zombiekit:chainsaw",
+	  "text": "颅，将他们在几秒内转化为一堆碎肉，不过如果你是个素食主义者，那请自备呕吐袋。另外请注意先生们，它的链条很脆弱，所以遇到一些难啃的家伙还是多想想其他的办法吧。"
+    },
+	{
+      "type": "patchouli:text",
+	  "text": "$(o)（这里有一张说明书）$()$(br)$(#6F6F6F)$(l)金德工业 P65C 烈焰棒电链锯$()$(br)$(#6F6F6F)产品参数$(li)电源类型：蓄电池组$(li)电池参数：2500mAh * 15$(li)锯链材质：硬质合金$(li)空载续航：720min$(li)重量：2.5kg"
+    },
+	{
+      "type": "patchouli:text",
+	  "text": " "
+    }
+  ]
+}

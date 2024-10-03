@@ -1,0 +1,41 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "012",
+    "345",
+    "678"
+  ],
+  "key": {
+    "0": {
+      "item": "minecraft:ghast_tear"
+    },
+    "1": {
+      "item": "minecraft:rotten_flesh"
+    },
+    "2": {
+      "item": "minecraft:glistering_melon_slice"
+    },
+    "3": {
+      "item": "minecraft:slime_ball"
+    },
+    "4": {
+      "item": "minecraft:dragon_breath"
+    },
+    "5": {
+      "item": "minecraft:slime_ball"
+    },
+    "6": {
+      "item": "minecraft:blaze_powder"
+    },
+    "7": {
+      "item": "minecraft:slime_ball"
+    },
+    "8": {
+      "item": "minecraft:blaze_powder"
+    }
+  },
+  "result": {
+    "item": "zombiekit:miracle",
+    "count": 4
+  }
+}

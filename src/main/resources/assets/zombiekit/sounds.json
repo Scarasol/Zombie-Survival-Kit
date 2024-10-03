@@ -1,0 +1,321 @@
+{
+  "acid_spray": {
+    "category": "block",
+    "subtitle": "subtitles.acid_spray",
+    "sounds": [
+      {
+        "name": "zombiekit:acid_spray",
+        "stream": false
+      }
+    ]
+  },
+  "turn_on": {
+    "category": "block",
+    "subtitle": "subtitles.turn_on",
+    "sounds": [
+      {
+        "name": "zombiekit:turn_on",
+        "stream": false
+      }
+    ]
+  },
+  "radio_static": {
+    "category": "block",
+    "subtitle": "subtitles.radio_static",
+    "sounds": [
+      {
+        "name": "zombiekit:radio_static_1",
+        "stream": false
+      },
+      {
+        "name": "zombiekit:radio_static_2",
+        "stream": false
+      },
+      {
+        "name": "zombiekit:radio_static_3",
+        "stream": false
+      },
+      {
+        "name": "zombiekit:radio_static_4",
+        "stream": false
+      },
+      {
+        "name": "zombiekit:radio_static_5",
+        "stream": false
+      }
+    ]
+  },
+  "radio_response": {
+    "category": "player",
+    "subtitle": "subtitles.radio_response",
+    "sounds": [
+      {
+        "name": "zombiekit:redio_response_1",
+        "stream": false
+      },
+      {
+        "name": "zombiekit:redio_response_2",
+        "stream": false
+      },
+      {
+        "name": "zombiekit:redio_response_3",
+        "stream": false
+      },
+      {
+        "name": "zombiekit:redio_response_5",
+        "stream": false
+      }
+    ]
+  },
+  "radio_static_long": {
+    "category": "player",
+    "subtitle": "subtitles.radio_static_long",
+    "sounds": [
+      {
+        "name": "zombiekit:radio_static_long",
+        "stream": false
+      }
+    ]
+  },
+  "flare_gun_fire": {
+    "category": "player",
+    "subtitle": "subtitles.flare_gun_fire",
+    "sounds": [
+      {
+        "name": "zombiekit:flare_gun_fire",
+        "stream": false
+      }
+    ]
+  },
+  "konn_gara": {
+    "category": "music",
+    "sounds": [
+      {
+        "name": "zombiekit:konn_gara",
+        "stream": true
+      }
+    ]
+  },
+  "drone_idle": {
+    "category": "hostile",
+    "subtitle": "subtitles.drone_idle",
+    "sounds": [
+      {
+        "name": "zombiekit:drone_idle_1",
+        "stream": false
+      },
+      {
+        "name": "zombiekit:drone_idle_2",
+        "stream": false
+      },
+      {
+        "name": "zombiekit:drone_idle_3",
+        "stream": false
+      },
+      {
+        "name": "zombiekit:drone_idle_4",
+        "stream": false
+      },
+      {
+        "name": "zombiekit:drone_idle_5",
+        "stream": false
+      }
+    ]
+  },
+  "drone_switch": {
+    "category": "hostile",
+    "subtitle": "subtitles.drone_switch",
+    "sounds": [
+      {
+        "name": "zombiekit:drone_switch",
+        "stream": false
+      }
+    ]
+  },
+  "drone_crush": {
+    "category": "hostile",
+    "subtitle": "subtitles.drone_crush",
+    "sounds": [
+      {
+        "name": "zombiekit:drone_crush",
+        "stream": false
+      }
+    ]
+  },
+  "heavy_machine_gun_fire": {
+    "category": "block",
+    "subtitle": "subtitles.heavy_machine_gun_fire",
+    "sounds": [
+      {
+        "name": "zombiekit:m2_heavy_machine_gun_fire",
+        "stream": false
+      }
+    ]
+  },
+  "heavy_machine_gun_overload": {
+    "category": "block",
+    "subtitle": "subtitles.heavy_machine_gun_overload",
+    "sounds": [
+      {
+        "name": "zombiekit:m2_heavy_machine_gun_overload",
+        "stream": false
+      }
+    ]
+  },
+  "heavy_machine_gun_trigger": {
+    "category": "block",
+    "subtitle": "subtitles.heavy_machine_gun_trigger",
+    "sounds": [
+      {
+        "name": "zombiekit:m2_heavy_machine_gun_trigger",
+        "stream": false
+      }
+    ]
+  },
+  "heavy_machine_gun_deploy": {
+    "category": "block",
+    "subtitle": "subtitles.heavy_machine_gun_deploy",
+    "sounds": [
+      {
+        "name": "zombiekit:m2_heavy_machine_gun_deploy",
+        "stream": false
+      }
+    ]
+  },
+  "chainsaw_idle": {
+    "category": "player",
+    "subtitle": "subtitles.chainsaw_idle",
+    "sounds": [
+      {
+        "name": "zombiekit:chainsaw_idle_1",
+        "stream": false
+      },
+      {
+        "name": "zombiekit:chainsaw_idle_2",
+        "stream": false
+      },
+      {
+        "name": "zombiekit:chainsaw_idle_3",
+        "stream": false
+      },
+      {
+        "name": "zombiekit:chainsaw_idle_4",
+        "stream": false
+      },
+      {
+        "name": "zombiekit:chainsaw_idle_5",
+        "stream": false
+      }
+    ]
+  },
+  "chainsaw_start_failed": {
+    "category": "player",
+    "subtitle": "subtitles.chainsaw_start_failed",
+    "sounds": [
+      {
+        "name": "zombiekit:chainsaw_start_failed",
+        "stream": false
+      }
+    ]
+  },
+  "chainsaw_attack": {
+    "category": "player",
+    "subtitle": "subtitles.chainsaw_attack",
+    "sounds": [
+      {
+        "name": "zombiekit:chainsaw_attack_1",
+        "stream": false
+      },
+      {
+        "name": "zombiekit:chainsaw_attack_2",
+        "stream": false
+      },
+      {
+        "name": "zombiekit:chainsaw_attack_3",
+        "stream": false
+      },
+      {
+        "name": "zombiekit:chainsaw_attack_4",
+        "stream": false
+      },
+      {
+        "name": "zombiekit:chainsaw_attack_5",
+        "stream": false
+      }
+    ]
+  },
+  "exo_fly": {
+    "category": "player",
+    "subtitle": "subtitles.exo_fly",
+    "sounds": [
+      {
+        "name": "zombiekit:exo_fly_1",
+        "stream": false
+      },
+      {
+        "name": "zombiekit:exo_fly_2",
+        "stream": false
+      },
+      {
+        "name": "zombiekit:exo_fly_3",
+        "stream": false
+      },
+      {
+        "name": "zombiekit:exo_fly_4",
+        "stream": false
+      },
+      {
+        "name": "zombiekit:exo_fly_5",
+        "stream": false
+      }
+    ]
+  },
+  "reactive_armor_ready": {
+    "category": "player",
+    "subtitle": "subtitles.reactive_armor_ready",
+    "sounds": [
+      {
+        "name": "zombiekit:reactive_armor_ready",
+        "stream": false
+      }
+    ]
+  },
+  "reactive_armor_release": {
+    "category": "player",
+    "subtitle": "subtitles.reactive_armor_release",
+    "sounds": [
+      {
+        "name": "zombiekit:reactive_armor_release",
+        "stream": false
+      }
+    ]
+  },
+  "mode_switch": {
+    "category": "player",
+    "subtitle": "subtitles.mode_switch",
+    "sounds": [
+      {
+        "name": "zombiekit:mode_switch_1",
+        "stream": false
+      },
+      {
+        "name": "zombiekit:mode_switch_2",
+        "stream": false
+      }
+    ]
+  },
+  "radar_activated": {
+    "category": "player",
+    "subtitle": "subtitles.radar_activated",
+    "sounds": [
+      {
+        "name": "zombiekit:radar_activated",
+        "stream": false
+      },
+      {
+        "name": "zombiekit:radar_activated",
+        "stream": false
+      }
+    ]
+  }
+}

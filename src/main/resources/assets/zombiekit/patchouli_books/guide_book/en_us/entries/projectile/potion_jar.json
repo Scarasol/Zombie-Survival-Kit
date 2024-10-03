@@ -1,0 +1,35 @@
+{
+  "name": "Potion Jar",
+  "icon": "zombiekit:potion_jar",
+  "category": "zombiekit:projectile",
+  "sortnum": 4,
+  "pages": [
+    {
+      "type": "patchouli:spotlight",
+	  "item": "zombiekit:potion_jar",
+      "text": "We all know that zombies are transformed by infection. So, if we throw out some special medicines, such as disinfectants or antibiotics, can we kill zombies? Unfortunately, I don't know. Maybe those people from pharmaceutical companies know, after all, they are always conducting various"
+    },
+	{
+      "type": "patchouli:text",
+	  "text": "experiments, and who knows if these zombies are their 'latest research results'? But don't be discouraged, the fact that you thought of this shows that you are really thinking about how to survive! Sometimes in the apocalypse, we need such creative ideas. Maybe you are the next Robert Neville! Even if we can't kill zombies, I think we can still contain these insatiable creatures."
+    },
+	{
+      "type": "patchouli:text",
+	  "text": "$(o)(This is a piece of note:)$()$(br)$(#a97b1d)'The judgment here may not be scientific, but it does have some reference value. PAX-12, after controlling the host, releases a chemical that acts like a pheromone, allowing the host to recognize its own kind after its advanced personality is destroyed. This is the real reason why the bile jar works - a large amount of pheromone in the air will temporarily lose the ability of zombies to distinguish enemies. Using this feature in reverse is also"
+    },
+	{
+      "type": "patchouli:image",
+	  "title": "Potion Jar",
+	  "images": ["zombiekit:textures/gui/entries/potion_jar.png"],
+	  "text": "$(#a97b1d) "
+    },
+	{
+      "type": "patchouli:text",
+	  "text": "$(#a97b1d)effective. According to experiments, using certain drugs can cause the signal transmission of fungi to become disordered and block the reception of this pheromone, causing the host to start attacking indiscriminately. But it's worth noting that this confused state will have a serious impact on the behavior of zombies, and their speed and strength will significantly increase, so be sure to stay away from the subject after using this drug.'"
+    },
+	{
+      "type": "patchouli:text",
+	  "text": " "
+    }
+  ]
+}

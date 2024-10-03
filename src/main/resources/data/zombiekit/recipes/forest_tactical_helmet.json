@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:smithing",
+  "base": {
+    "tag": "forge:tactical_helmet"
+  },
+  "addition": {
+    "item": "zombiekit:forest_camouflage_dye"
+  },
+  "result": {
+    "item": "zombiekit:forest_tactical_helmet"
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "name": "Tactical and Riot Gear",
+  "icon": "zombiekit:standard_tactical_chestplate",
+  "category": "zombiekit:gear",
+  "sortnum": 3,
+  "pages": [
+    {
+      "type": "patchouli:spotlight",
+	  "item": "zombiekit:standard_tactical_chestplate",
+	  "title": "Tactical and Riot Gear",
+      "text": "If you have a friend who works in the security or military forces, congratulations, you've hit the jackpot! Military and police gear is not only lightweight and durable, but the various protective equipment are designed for combat – nothing could be better in the apocalypse. If you can manage to acquire riot "
+    },
+	{
+      "type": "patchouli:crafting",
+	  "title": "Tactical and Riot Gear",
+      "recipe": "zombiekit:standard_tactical_helmet",
+	  "recipe2": "zombiekit:standard_tactical_chestplate"
+    },
+	{
+      "type": "patchouli:text",
+	  "title": "Tactical and Riot Gear",
+	  "text": "gear, that would be even better - it's practically a zombie-slaying weapon, designed specifically to defend against melee weapons and combat. But don't worry if you don't have friends like that. In due time, you might stumble upon a set on one of your scavenging runs from a corpse. Of course, before you strip their clothes off, make sure to determine whether they are 'still alive'."
+    },
+	{
+      "type": "patchouli:crafting",
+	  "title": "Tactical and Riot Gear",
+      "recipe": "zombiekit:standard_tactical_leggings",
+	  "recipe2": "zombiekit:standard_tactical_boots"
+    },
+	{
+      "type": "patchouli:text",
+	  "title": "Tactical and Riot Gear",
+	  "text": "$(o)(This is a piece of note:)$()$(br)$(#a97b1d)'After infection, zombies undergo heightened olfactory sensitivity, though not through a conventional evolutionary process. Given their limited cognitive abilities, visual perception becomes crucial. So, employing military camouflage in low visibility or darkness proves effective in deceiving zombies visually. However, their dynamic vision seems to be heightened, thus diminishing"
+    },
+	{
+      "type": "patchouli:text",
+	  "title": "Tactical and Riot Gear",
+	  "text": "$(#a97b1d)the effectiveness of this disguise during rapid movement. Furthermore, the scent of blood and loud noises can override their visual focus, making them relentless.'"
+    }
+  ]
+}

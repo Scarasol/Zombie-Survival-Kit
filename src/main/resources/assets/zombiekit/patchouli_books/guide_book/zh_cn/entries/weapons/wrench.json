@@ -1,0 +1,18 @@
+{
+  "name": "扳手",
+  "icon": "zombiekit:wrench",
+  "category": "zombiekit:weapons",
+  "sortnum": 8,
+  "pages": [
+    {
+      "type": "patchouli:spotlight",
+	  "item": "zombiekit:wrench",
+      "text": "即使是没有枪，我们也可以想办法在更远的地方击中丧尸。毕竟人类的文明里一半都是研究如何将石头扔的又远又准不是吗？扳手是个好东西，除了可以帮你拆卸维护很多设备外，合适的长度，优秀的重心，只要你稍加训练，它也可以成为一把优秀的印第安战斧。可以对丧尸进行一场原始的狩猎"
+    },
+	{
+      "type": "patchouli:crafting",
+      "recipe": "zombiekit:wrench",
+	  "text": "了，但愿它们已经没有感觉了，因为这真的很痛！"
+    }
+  ]
+}

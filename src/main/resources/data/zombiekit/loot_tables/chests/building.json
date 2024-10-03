@@ -1,0 +1,72 @@
+{
+  "pools": [
+    {
+      "name": "zombiekit:building",
+      "rolls": {
+        "min": 2,
+        "max": 3
+      },
+      "entries": [
+		{
+          "type": "tag",
+          "name": "minecraft:logs",
+		  "expand": true,
+          "functions": [
+            {
+              "function": "set_count",
+              "count": {
+                "min": 24,
+                "max": 48
+              }
+            }
+          ],
+          "weight": 25
+        },
+		{
+          "type": "tag",
+          "name": "forge:stone",
+		  "expand": true,
+          "functions": [
+            {
+              "function": "set_count",
+              "count": {
+                "min": 24,
+                "max": 48
+              }
+            }
+          ],
+          "weight": 25
+        },
+		{
+          "type": "tag",
+          "name": "minecraft:sand",
+		  "expand": true,
+          "functions": [
+            {
+              "function": "set_count",
+              "count": {
+                "min": 24,
+                "max": 48
+              }
+            }
+          ],
+          "weight": 25
+        },			
+        {
+          "type": "item",
+          "name": "minecraft:clay",
+          "functions": [
+            {
+              "function": "set_count",
+              "count": {
+				  "min": 16,
+				  "max": 32
+			  }
+            }
+          ],
+          "weight": 25
+        }
+      ]
+    }
+  ]
+}

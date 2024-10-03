@@ -1,0 +1,9 @@
+{
+  "parent": "zombiekit:custom/shortwave_radio",
+  "textures": {
+    "all": "zombiekit:blocks/shortwave_radio",
+    "particle": "zombiekit:blocks/shortwave_radio",
+    "0": "zombiekit:blocks/shortwave_radio"
+  },
+  "render_type": "cutout"
+}

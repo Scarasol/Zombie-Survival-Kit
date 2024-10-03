@@ -1,0 +1,18 @@
+{
+  "name": "撬棍",
+  "icon": "zombiekit:crowbar",
+  "category": "zombiekit:weapons",
+  "sortnum": 3,
+  "pages": [
+    {
+      "type": "patchouli:spotlight",
+	  "item": "zombiekit:crowbar",
+      "text": "城市求生最实用的工具，那一定包括了撬棍。这是什么，撬一下。在末日中，保证宝贵的资源和安全的避风港，就可以增加你生存的机会，多撬开一个箱子，可能就是多一份物资，多撬开一扇门，可能就门后就是一间庇护所，或者多一次逃生的机会！而且即使用来战斗，虽然不适合对付成群丧尸，"
+    },
+	{
+      "type": "patchouli:crafting",
+      "recipe": "zombiekit:crowbar",
+	  "text": "但对于落单的丧尸，物理学圣剑的威力也能让它昏沉很久。"
+    }
+  ]
+}

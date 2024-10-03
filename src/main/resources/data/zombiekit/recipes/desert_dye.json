@@ -1,0 +1,29 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " 1 ",
+    "345",
+    " 7 "
+  ],
+  "key": {
+    "1": {
+      "item": "minecraft:orange_dye"
+    },
+    "3": {
+      "item": "minecraft:yellow_dye"
+    },
+    "4": {
+      "item": "minecraft:glass_bottle"
+    },
+    "5": {
+      "item": "minecraft:cocoa_beans"
+    },
+    "7": {
+      "item": "minecraft:slime_ball"
+    }
+  },
+  "result": {
+    "item": "zombiekit:desert_camouflage_dye",
+    "count": 1
+  }
+}

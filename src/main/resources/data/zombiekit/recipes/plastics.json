@@ -1,0 +1,29 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " 1 ",
+    "345",
+    " 7 "
+  ],
+  "key": {
+    "1": {
+      "item": "zombiekit:nitrocellulose"
+    },
+    "3": {
+      "item": "zombiekit:camphor"
+    },
+    "4": {
+      "item": "zombiekit:alcohol"
+    },
+    "5": {
+      "item": "zombiekit:camphor"
+    },
+    "7": {
+      "item": "zombiekit:nitrocellulose"
+    }
+  },
+  "result": {
+    "item": "zombiekit:plastics",
+    "count": 1
+  }
+}

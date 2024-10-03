@@ -1,0 +1,9 @@
+{
+	"parent": "zombiekit:custom/bottle1_green",
+  "textures": {
+    "all": "zombiekit:blocks/bottle_green",
+    "particle": "zombiekit:blocks/injector",
+    "missing": "zombiekit:blocks/bottle_green"
+  },
+  "render_type": "cutout"
+}

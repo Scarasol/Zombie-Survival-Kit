@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "zombiekit:block/uv_lamp_light_air"
+    }
+  }
+}

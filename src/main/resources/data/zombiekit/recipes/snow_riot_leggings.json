@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:smithing",
+  "base": {
+    "item": "zombiekit:snow_tactical_leggings"
+  },
+  "addition": {
+    "item": "zombiekit:bulletproof_insert"
+  },
+  "result": {
+    "item": "zombiekit:snow_riot_leggings"
+  }
+}

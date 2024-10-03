@@ -1,0 +1,16 @@
+{
+  "name": "Shelter Defence",
+  "icon": "minecraft:writable_book",
+  "category": "zombiekit:shelter",
+  "sortnum": 1,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "A good shelter can ensure basic survival needs and keep survivors alive in the apocalypse. A better shelter can provide evacuation time when the zombie horde approaches. The best shelter boasts robust defenses, allowing survivors to weather this catastrophe. Although venturing outside may lead to unexpected encounters, the shelter is the fundamental"
+    },
+	{
+      "type": "patchouli:text",
+      "text": "factor determining whether you can survive the apocalypse. "
+    }
+  ]
+}

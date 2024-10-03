@@ -1,0 +1,31 @@
+{
+  "name": "Skiing Suit",
+  "icon": "zombiekit:skiing_chestplate",
+  "category": "zombiekit:gear",
+  "sortnum": 2,
+  "pages": [
+    {
+      "type": "patchouli:spotlight",
+	  "item": "zombiekit:skiing_chestplate",
+	  "title": "Skiing Suit",
+      "text": "What clothing is both sturdy and flexible, and available for purchase online? It must be the protective gear used in extreme sports. Thanks to these sports enthusiasts, they've kept themselves well-protected. I know these aren't cheap, but think about it, the apocalypse is upon us, and your money will soon be worth "
+    },
+	{
+      "type": "patchouli:crafting",
+	  "title": "Skiing Suit",
+      "recipe": "zombiekit:skiing_helmet",
+	  "recipe2": "zombiekit:skiing_chestplate"
+    },
+	{
+      "type": "patchouli:text",
+	  "title": "Skiing Suit",
+	  "text": "less than bread. Why not invest in gear that could save your life when it still has value? Trust me, this deal is definitely worth it. "
+    },
+	{
+      "type": "patchouli:crafting",
+	  "title": "Skiing Suit",
+      "recipe": "zombiekit:skiing_leggings",
+	  "recipe2": "zombiekit:skiing_boots"
+    }
+  ]
+}

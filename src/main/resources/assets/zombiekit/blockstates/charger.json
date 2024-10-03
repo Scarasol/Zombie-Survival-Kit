@@ -1,0 +1,34 @@
+{
+  "variants": {
+    "facing=north,has_battery=false": {
+      "model": "zombiekit:block/charger"
+    },
+    "facing=east,has_battery=false": {
+      "model": "zombiekit:block/charger",
+      "y": 90
+    },
+    "facing=south,has_battery=false": {
+      "model": "zombiekit:block/charger",
+      "y": 180
+    },
+    "facing=west,has_battery=false": {
+      "model": "zombiekit:block/charger",
+      "y": 270
+    },
+    "facing=north,has_battery=true": {
+      "model": "zombiekit:block/charger_with_battery"
+    },
+    "facing=east,has_battery=true": {
+      "model": "zombiekit:block/charger_with_battery",
+      "y": 90
+    },
+    "facing=south,has_battery=true": {
+      "model": "zombiekit:block/charger_with_battery",
+      "y": 180
+    },
+    "facing=west,has_battery=true": {
+      "model": "zombiekit:block/charger_with_battery",
+      "y": 270
+    }
+  }
+}

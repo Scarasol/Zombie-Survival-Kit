@@ -1,0 +1,29 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " 1 ",
+    "345",
+    " 7 "
+  ],
+  "key": {
+    "1": {
+      "item": "zombiekit:iron_wire"
+    },
+    "3": {
+      "tag": "minecraft:planks"
+    },
+    "4": {
+      "item": "minecraft:stick"
+    },
+    "5": {
+      "tag": "minecraft:planks"
+    },
+    "7": {
+      "item": "zombiekit:iron_wire"
+    }
+  },
+  "result": {
+    "item": "zombiekit:barbed_wire",
+    "count": 1
+  }
+}

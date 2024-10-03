@@ -1,0 +1,15 @@
+{
+    "structures": [
+      {
+        "structure": "zombiekit:prison",
+        "weight": 1
+      }
+    ],
+    "placement": {
+      "type": "minecraft:random_spread",
+      "spacing": 90,
+      "separation": 60,
+      "salt": 1695388521
+    }
+}
+ 

@@ -1,0 +1,7 @@
+{
+  "parent": "zombiekit:custom/nether_rake",
+  "textures": {
+    "1": "zombiekit:blocks/netherite_rake",
+    "particle": "zombiekit:items/gardenrake"
+  }
+}

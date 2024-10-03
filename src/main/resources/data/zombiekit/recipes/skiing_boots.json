@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "0 2",
+    "3 5"
+  ],
+  "key": {
+    "0": {
+      "item": "zombiekit:cloth"
+    },
+    "2": {
+      "item": "zombiekit:cloth"
+    },
+    "3": {
+      "item": "zombiekit:rubber"
+    },
+    "5": {
+      "item": "zombiekit:rubber"
+    }
+  },
+  "result": {
+    "item": "zombiekit:skiing_boots",
+    "count": 1
+  }
+}

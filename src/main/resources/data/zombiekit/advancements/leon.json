@@ -1,0 +1,35 @@
+{
+  "display": {
+    "icon": {
+      "item": "zombiekit:standard_tactical_chestplate"
+    },
+    "title": {
+      "translate": "advancements.leon.title"
+    },
+    "description": {
+      "translate": "advancements.leon.descr"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "leon": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "zombiekit:standard_tactical_helmet",
+              "zombiekit:standard_tactical_chestplate",
+              "zombiekit:standard_tactical_leggings",
+              "zombiekit:standard_tactical_boots"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "parent": "zombiekit:zombie_kit"
+}

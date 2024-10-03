@@ -1,0 +1,31 @@
+{
+  "name": "滑雪护具",
+  "icon": "zombiekit:skiing_chestplate",
+  "category": "zombiekit:gear",
+  "sortnum": 2,
+  "pages": [
+    {
+      "type": "patchouli:spotlight",
+	  "item": "zombiekit:skiing_chestplate",
+	  "title": "滑雪护具",
+      "text": "什么衣服既结实又灵活，还可以在网上直接买到，那一定是各种极限体育运动的护具了。感谢这些运动爱好者们，他们一直把自己保护的很好。我知道这些并不便宜，但是想想吧，马上末世就要到了，你手里的那些钞票很快就会变得比面包还不值钱，为什么不趁着它们还有用的时候，为自己买一套"
+    },
+	{
+      "type": "patchouli:crafting",
+	  "title": "滑雪护具",
+      "recipe": "zombiekit:skiing_helmet",
+	  "recipe2": "zombiekit:skiing_chestplate"
+    },
+	{
+      "type": "patchouli:text",
+	  "title": "滑雪护具",
+	  "text": "日后能保命的行头呢？相信我，这笔交易绝对不亏。"
+    },
+	{
+      "type": "patchouli:crafting",
+	  "title": "滑雪护具",
+      "recipe": "zombiekit:skiing_leggings",
+	  "recipe2": "zombiekit:skiing_boots"
+    }
+  ]
+}

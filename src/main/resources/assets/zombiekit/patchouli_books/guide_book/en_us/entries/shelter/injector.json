@@ -1,0 +1,50 @@
+{
+  "name": "Injector",
+  "icon": "zombiekit:injector",
+  "category": "zombiekit:shelter",
+  "sortnum": 9,
+  "pages": [
+    {
+      "type": "patchouli:spotlight",
+	  "item": "zombiekit:injector",
+	  "text": "In the end of the world, some people always want to make a fortune. But there are also people who really hope that everyone can survive, like my good friend, the sponsor of this book, Bryan J. Schwab, the president of Tactical Fox. Tactical Fox is a company dedicated to outdoor and disaster survival tools, with"
+    },
+	{
+      "type": "patchouli:text",
+	  "text": "over 50 years of product experience, and many survival experts as its product consultants. Each product must undergo rigorous feasibility and durability tests to ensure that all products are durable, practical, and easy to use. This time, in response to the zombie crisis, Tactical Fox has also launched a series of products targeting zombies. For example, this sprayer is a trap specifically designed to defend the safety of shelters, inheriting the simple operation"
+    },
+	{
+      "type": "patchouli:text",
+	  "text": "design concept of Tactical Fox products. Its biggest advantage over traditional traps is that it can be triggered multiple times, and it can be filled with a variety of liquids such as incendiary agents, which can be switched at any time according to your actual needs. What's more, this sprayer does not require any external power supply, as long as there is a living being, or a zombie, stepping on it will trigger it. Are you already tempted? But Tactical Fox"
+    },
+	{
+      "type": "patchouli:crafting",
+      "recipe": "zombiekit:injector",
+	  "text": "didn't stop there, they even combined this product with a hopper to achieve automatic filling! With it, you no longer have to check and reset traps every day, your shelter will get the most reliable security. Now open Amazon and search"
+    },
+	{
+      "type": "patchouli:text",
+	  "text": "for 81663 to purchase and deliver to your home, and you can enjoy a 30% discount with the verification code of this book."
+    },
+	{
+      "type": "patchouli:text",
+	  "text": "$(o)(There is a manual attached here)$()$(br)$(#6F6F6F)$(l)Tactical Fox PFK-R6 Injector$()$(br)$(#6F6F6F)User Instructions$(li)This product is a pressure-sensitive sprayer, which can be used without external power. When it detects a heavy object, it will automatically spray the liquid stored inside, so please do not place heavy objects on it.$(li)This product has an 'automatic filling' function. When connected to a hopper,"
+    },
+	{
+      "type": "patchouli:text",
+	  "text": "$(#6F6F6F)if the product detects that the internal capacity is not full, it will automatically replenish the contents from the hopper."
+    },
+	{
+      "type": "patchouli:text",
+	  "text": "$(o)(This is a piece of note:)$()$(br)$(#a97b1d)$(li)Alcohol - Burning$(li)Powder Snow - Freezing$(li)Nitric Acid - Corrosion$(li)Glowing Ink Sac - Glowing$(li)Slime Ball - Slimy$(br2)The slime of a Slime not only restricts the movement of creatures that are smeared with slime, but also has some very special properties. Slime exhibits oxidizing properties at high temperatures and can act as an accelerant while"
+    },
+	{
+      "type": "patchouli:text",
+	  "text": "$(#a97b1d)adhering fuel, which can be used to allow fuel to burn continuously in the rain or even underwater; at low temperatures, slime quickly turns from a viscous liquid state to a hard solid state. This solid will immobilize creatures in a short time. In addition, when reacting with nitric acid, the slime will quickly release a large amount of heat and produce a certain flammable gas. This reaction is very fast and is therefore prone to explosions."
+    },
+	{
+      "type": "patchouli:text",
+	  "text": " "
+    }
+  ]
+}

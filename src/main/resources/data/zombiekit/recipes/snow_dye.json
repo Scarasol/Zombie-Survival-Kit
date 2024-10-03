@@ -1,0 +1,29 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " 1 ",
+    "345",
+    " 7 "
+  ],
+  "key": {
+    "1": {
+      "item": "minecraft:gray_dye"
+    },
+    "3": {
+      "item": "minecraft:light_gray_dye"
+    },
+    "4": {
+      "item": "minecraft:glass_bottle"
+    },
+    "5": {
+      "item": "minecraft:white_dye"
+    },
+    "7": {
+      "item": "minecraft:slime_ball"
+    }
+  },
+  "result": {
+    "item": "zombiekit:snow_camouflage_dye",
+    "count": 1
+  }
+}

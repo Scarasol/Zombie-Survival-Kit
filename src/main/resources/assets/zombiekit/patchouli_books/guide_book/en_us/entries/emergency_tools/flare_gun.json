@@ -1,0 +1,26 @@
+{
+  "name": "Flare Gun",
+  "icon": "zombiekit:flare_gun",
+  "category": "zombiekit:emergency_tools",
+  "sortnum": 1,
+  "pages": [
+    {
+      "type": "patchouli:spotlight",
+	  "item": "zombiekit:flare_gun",
+	  "text": "Let's popularize some knowledge: According to the basic law of light propagation proposed by Steve, except for the light emitted by the sun, any light that propagates more than 15 meters will lose any physical characteristics other than visibility. You can see it, but it can't shine here, it's amazing, isn't it? In peacetime,"
+    },
+	{
+      "type": "patchouli:crafting",
+      "recipe": "zombiekit:flare_gun",
+	  "text": "the brightly lit city doesn't make you worry about this problem, but in the apocalypse, a 15-meter lighting range is far from enough. But fortunately, engineers did not give up the exploration of large-scale lighting because"
+    },
+	{
+      "type": "patchouli:text",
+	  "text": "of this, and their efforts finally paid off. They invented cluster flares, which can illuminate a large area in a short time by splitting. I have to say, the person who came up with this idea is really amazing."
+    },
+	{
+      "type": "patchouli:text",
+	  "text": " "
+    }
+  ]
+}

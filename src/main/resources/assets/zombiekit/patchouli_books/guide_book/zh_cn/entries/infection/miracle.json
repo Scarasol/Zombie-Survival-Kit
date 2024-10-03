@@ -1,0 +1,25 @@
+{
+  "name": "特效药",
+  "icon": "zombiekit:miracle",
+  "category": "zombiekit:infection",
+  "sortnum": 3,
+  "pages": [
+    {
+      "type": "patchouli:spotlight",
+	  "item": "zombiekit:miracle",
+	  "text": "特效药？醒醒吧，半年了，每次提到特效药的时候，除了那个残次品外，发言人都只会说正在加紧研发中，一点阶段性成果都没有。就算他们真的在研发，如果你去谷歌一下，就会知道一种药物的研发要花多久！而且如果这种药物真的出现了，也是那些有钱人先拿到。所以比起期待特效药的出现，还"
+    },
+	{
+      "type": "patchouli:text",
+      "text": "不如趁这点时间把自己武装起来。"
+    },
+	{
+      "type": "patchouli:text",
+      "text": "$(o)(这是一段笔记：)$()$(br)$(#a97b1d)“关于特效药的研制其实已经取得了初步的成果，临床测试也只是表现出了很少的副作用。然而过高的成本注定了该种药物无法实现量产，研究所只能转而去寻找其中关键成分的替代品，然而在军队失守之后，研究便被迫停滞，再也没有重启的可能，只有少量的原型品留存下来。”"
+    },
+	{
+      "type": "patchouli:crafting",
+      "recipe": "zombiekit:miracle"
+    }
+  ]
+}

@@ -1,0 +1,7 @@
+{
+  "parent": "zombiekit:custom/chainsaw_on",
+  "textures": {
+    "0": "zombiekit:blocks/chainsaw_1",
+    "2": "zombiekit:blocks/chainsaw_2"
+  }
+}

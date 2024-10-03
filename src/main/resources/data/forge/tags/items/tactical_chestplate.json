@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "zombiekit:desert_tactical_chestplate",
+    "zombiekit:snow_tactical_chestplate",
+    "zombiekit:standard_tactical_chestplate",
+    "zombiekit:forest_tactical_chestplate"
+  ]
+}

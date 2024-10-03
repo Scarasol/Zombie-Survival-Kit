@@ -1,0 +1,18 @@
+{
+  "name": "消防斧",
+  "icon": "zombiekit:fire_axe",
+  "category": "zombiekit:weapons",
+  "sortnum": 4,
+  "pages": [
+    {
+      "type": "patchouli:spotlight",
+	  "item": "zombiekit:fire_axe",
+      "text": "如果遇上了被感染的警察或者军队怎么办呢，它全副武装，甚至戴着头盔，鬼知道它是怎么被感染的。但这不是重点，重点是它已经扑向你了！现在，抄起你的斧子，告诉它即使是躲在盔甲后面也没有用，你的斧子可以劈烂一切护甲！但是如果遇上尸潮，那还是赶紧跑吧，丢掉斧子说不定还能让"
+    },
+	{
+      "type": "patchouli:crafting",
+      "recipe": "zombiekit:fire_axe",
+	  "text": "你跑的再快一点。"
+    }
+  ]
+}

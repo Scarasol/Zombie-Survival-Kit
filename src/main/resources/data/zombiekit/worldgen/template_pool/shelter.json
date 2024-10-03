@@ -1,0 +1,24 @@
+{
+  "name": "zombiekit:shelter",
+  "fallback": "minecraft:empty",
+  "elements": [
+	{	
+      "weight": 3,
+      "element": {
+        "location": "zombiekit:shelter/shelter",
+        "processors": "minecraft:empty",
+		"projection": "rigid",
+        "element_type": "single_pool_element"
+      }
+    },
+	{	
+      "weight": 7,
+      "element": {
+        "location": "zombiekit:shelter/broken",
+        "processors": "minecraft:empty",
+		"projection": "rigid",
+        "element_type": "single_pool_element"
+      }
+    }
+  ]
+}

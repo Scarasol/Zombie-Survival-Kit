@@ -1,0 +1,15 @@
+{
+  "name": "zombiekit:prison",
+  "fallback": "minecraft:empty",
+  "elements": [
+	{	
+      "weight": 1,
+      "element": {
+        "location": "zombiekit:shelter/prison",
+        "processors": "minecraft:empty",
+		"projection": "rigid",
+        "element_type": "single_pool_element"
+      }
+    }
+  ]
+}

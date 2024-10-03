@@ -1,0 +1,15 @@
+{
+  "name": "zombiekit:jungle_shelter",
+  "fallback": "minecraft:empty",
+  "elements": [
+	{	
+      "weight": 1,
+      "element": {
+        "location": "zombiekit:shelter/jungle_shelter",
+        "processors": "minecraft:empty",
+		"projection": "rigid",
+        "element_type": "legacy_single_pool_element"
+      }
+    }
+  ]
+}

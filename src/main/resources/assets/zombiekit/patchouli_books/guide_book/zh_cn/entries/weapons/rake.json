@@ -1,0 +1,18 @@
+{
+  "name": "园艺耙",
+  "icon": "zombiekit:rake",
+  "category": "zombiekit:weapons",
+  "sortnum": 7,
+  "pages": [
+    {
+      "type": "patchouli:spotlight",
+	  "item": "zombiekit:rake",
+      "text": "俗话说得好，一寸长，一寸强！对丧尸而言就更是如此了，离它们越远，你被咬到的概率就越低。只需要走出家门，拿起花园里的园艺耙，这就是一把完美的长柄武器！无论是推开还是刺穿丧尸，耙子都是一把好手，距离优势可以让你站在丧尸触碰不到的地方蹂躏这些凡事只会咬两下的可怜虫。是"
+    },
+	{
+      "type": "patchouli:crafting",
+      "recipe": "zombiekit:rake",
+	  "text": "时候化身园丁，把这些枯枝败叶从你的花园里叉出去了！"
+    }
+  ]
+}

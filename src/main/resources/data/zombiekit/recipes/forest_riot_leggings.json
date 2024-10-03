@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:smithing",
+  "base": {
+    "item": "zombiekit:forest_tactical_leggings"
+  },
+  "addition": {
+    "item": "zombiekit:bulletproof_insert"
+  },
+  "result": {
+    "item": "zombiekit:forest_riot_leggings"
+  }
+}

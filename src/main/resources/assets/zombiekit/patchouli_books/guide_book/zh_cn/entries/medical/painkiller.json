@@ -1,0 +1,18 @@
+{
+  "name": "止痛药",
+  "icon": "zombiekit:painkiller",
+  "category": "zombiekit:medical",
+  "sortnum": 3,
+  "pages": [
+    {
+      "type": "patchouli:spotlight",
+	  "item": "zombiekit:painkiller",
+      "text": "谁都想可以找个地方坐下来，好好处理一下自己的伤口，但遗憾的是，丧尸不一定会给你这个机会。所以我们需要一些应急药品，能让自己先快速的恢复行动能力，离开这个鬼地方！肾上腺素当然是最好的选择，但是这种东西显然不是一般人能够获得的，对于一般人而言，速效止疼药是最好的选"
+    },
+	{
+      "type": "patchouli:crafting",
+      "recipe": "zombiekit:painkiller",
+	  "text": "择。"
+    }
+  ]
+}

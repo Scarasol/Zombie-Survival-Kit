@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "zombiekit:injector",
+    "zombiekit:ultra_wideband_radar",
+    "zombiekit:shortwave_radio",
+    "zombiekit:saltpeter_cauldron"
+  ]
+}

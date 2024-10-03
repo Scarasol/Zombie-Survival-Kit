@@ -1,0 +1,18 @@
+{
+  "name": "Tarp Cover",
+  "icon": "zombiekit:trap_cover",
+  "category": "zombiekit:shelter",
+  "sortnum": 3,
+  "pages": [
+    {
+      "type": "patchouli:spotlight",
+	  "item": "zombiekit:trap_cover",
+	  "text": "The art of trapping is ancient, dating back to the Stone Age. It is a crystallization of human wisdom against wild beasts. Now, we are no longer terrifying upright apes hunting in groups on the East African savannah. Therefore, trapping is a compulsory course for our outdoor survival. Whether it's defending the shelter or"
+    },
+	{
+      "type": "patchouli:crafting",
+      "recipe": "zombiekit:trap_cover",
+	  "text": "catching animals, traps are our best choice. We just need to cover them with a layer of leaves, and the rest is waiting for them to jump in. Maybe that's why zombies always want to eat brains, because they're really stupid!"
+    }
+  ]
+}

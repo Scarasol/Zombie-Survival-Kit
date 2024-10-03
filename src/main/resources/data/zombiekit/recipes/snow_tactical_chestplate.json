@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:smithing",
+  "base": {
+    "tag": "forge:tactical_chestplate"
+  },
+  "addition": {
+    "item": "zombiekit:snow_camouflage_dye"
+  },
+  "result": {
+    "item": "zombiekit:snow_tactical_chestplate"
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "name": "Suicide Drone",
+  "icon": "zombiekit:drone_summon",
+  "category": "zombiekit:shelter",
+  "sortnum": 10,
+  "pages": [
+    {
+      "type": "patchouli:spotlight",
+	  "item": "zombiekit:drone_summon",
+	  "text": "Modern warfare tells us that drones are invincible new weapons. Reliable reconnaissance capabilities, ultra-long hovering time, and intelligent tracking and enemy-seeking functions. Just imagine, what can be more reassuring than a swarm of drones hovering in the sky, pouncing when they see an"
+    },
+	{
+      "type": "patchouli:crafting",
+      "recipe": "zombiekit:drone_components",
+	  "text": "enemy, and guarding the shelter all the time? And even in the face of a sea of zombies, drones can also be used as cruise missiles. After all, zombies are vulnerable in the face of heavy firepower. Of course, for individuals,"
+    },
+	{
+      "type": "patchouli:crafting",
+      "recipe": "zombiekit:drone",
+	  "text": "especially in the apocalypse, the cost of a drone is not low, but for survival, these are worth it."
+    },
+	{
+      "type": "patchouli:text",
+	  "text": "$(o)(There is a manual attached here)$()$(br)$(#6F6F6F)$(l)Leap L99pro Smart Drone$()$(br)$(#6F6F6F)Product Description$(li)Battery Capacity: 3.7V 7900mAh$(li)Charging method: Solar Power$(li)Recognition distance: 25m$(li)Recognition height: 15m(li)Flight mode switch: Adjust the knob with a wrench$(li)Maximum load: 300g$(li)Waterproof level: IP6"
+    },
+	{
+      "type": "patchouli:text",
+	  "text": "$(#6F6F6F)Precautions$(li)The waterproof function of this product only ensures that the drone can operate in the rain, it does not mean it can be submerged in water, so please keep it away from bodies of water when in use."
+    },
+	{
+      "type": "patchouli:text",
+	  "text": " "
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "0",
+    "1",
+    "2"
+  ],
+  "key": {
+    "0": {
+      "item": "minecraft:daylight_detector"
+    },
+    "1": {
+      "item": "zombiekit:drone_components"
+    },
+    "2": {
+      "item": "minecraft:tnt"
+    }
+  },
+  "result": {
+    "item": "zombiekit:drone_summon",
+    "count": 1
+  }
+}

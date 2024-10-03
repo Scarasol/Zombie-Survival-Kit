@@ -1,0 +1,137 @@
+{
+  "pools": [
+    {
+      "name": "zombiekit:weapon",
+      "rolls": {
+        "min": 2,
+        "max": 5
+      },
+      "entries": [
+        {
+          "type": "item",
+          "name": "zombiekit:knife",
+          "functions": [
+            {
+              "function": "set_count",
+              "count": 1
+            }
+          ],
+          "weight": 11
+        },	
+        {
+          "type": "item",
+          "name": "zombiekit:machete",
+          "functions": [
+            {
+              "function": "set_count",
+              "count": 1
+            }
+          ],
+          "weight": 11
+        },
+        {
+          "type": "item",
+          "name": "zombiekit:crowbar",
+          "functions": [
+            {
+              "function": "set_count",
+              "count": 1
+            }
+          ],
+          "weight": 11
+        },
+        {
+          "type": "item",
+          "name": "zombiekit:fire_axe",
+          "functions": [
+            {
+              "function": "set_count",
+              "count": 1
+            }
+          ],
+          "weight": 11
+        },
+        {
+          "type": "item",
+          "name": "zombiekit:triangular_thorn",
+          "functions": [
+            {
+              "function": "set_count",
+              "count": 1
+            }
+          ],
+          "weight": 1
+        },
+        {
+          "type": "item",
+          "name": "zombiekit:studded_baseball_bat",
+          "functions": [
+            {
+              "function": "set_count",
+              "count": 1
+            }
+          ],
+          "weight": 11
+        },
+        {
+          "type": "item",
+          "name": "zombiekit:wrench",
+          "functions": [
+            {
+              "function": "set_count",
+              "count": 1
+            }
+          ],
+          "weight": 11
+        },
+        {
+          "type": "item",
+          "name": "zombiekit:rake",
+          "functions": [
+            {
+              "function": "set_count",
+              "count": 1
+            }
+          ],
+          "weight": 11
+        },
+        {
+          "type": "item",
+          "name": "minecraft:shield",
+          "functions": [
+            {
+              "function": "set_count",
+              "count": 1
+            }
+          ],
+          "weight": 11
+        },
+        {
+          "type": "item",
+          "name": "minecraft:arrow",
+          "functions": [
+            {
+              "function": "set_count",
+              "count": {
+				  "min": 12,
+				  "max": 28
+			  }
+            }
+          ],
+          "weight": 8
+        },
+        {
+          "type": "item",
+          "name": "minecraft:crossbow",
+          "functions": [
+            {
+              "function": "set_count",
+              "count": 1
+            }
+          ],
+          "weight": 3
+        }
+      ]
+    }
+  ]
+}

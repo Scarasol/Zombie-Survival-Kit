@@ -1,0 +1,26 @@
+{
+  "name": "超宽带雷达",
+  "icon": "zombiekit:ultra_wideband_radar",
+  "category": "zombiekit:shelter",
+  "sortnum": 6,
+  "pages": [
+    {
+      "type": "patchouli:spotlight",
+	  "item": "zombiekit:ultra_wideband_radar",
+	  "text": "在电力匮乏的时候，如何在黑夜中发现靠近庇护所的丧尸成了棘手的问题。在电影里，往往都是使用雷达，精准定位敌人的位置，我们为什么就不能借鉴一下呢？你可能觉得我在开玩笑，但是超宽带雷达真的做得到。现在，你只需要找一个守夜不会犯困的人就行了。不仅如此，这种便携的雷达也能用"
+    },
+	{
+      "type": "patchouli:crafting",
+      "recipe": "zombiekit:ultra_wideband_radar",
+	  "text": "于搜刮物资，提前知道有没有丧尸要给你一个生日惊喜！"
+    },
+	{
+      "type": "patchouli:text",
+	  "text": "$(o)（这里有一张说明书）$()$(br)$(#6F6F6F)$(l)星科 YC-5D28PK 生命探测仪$()$(br)$(#6F6F6F)规格参数$(li)持续工作时间：6h$(li)中心频率：400MHz$(li)带宽：2GHz$(li)探测距离：≥30m$(li)探测精度：±10cm$(li)电源：大容量蓄电池$(br2)优点$(li)强穿透性：采用低频超宽带雷达技术，可穿透废墟等复杂介质。$(li)三维立体定位：采用MIMO架"
+    },
+	{
+      "type": "patchouli:text",
+	  "text": "$(#6F6F6F)构设计，具备目标体三维定位能力。$(li)灵敏度高：检测人体心肺运动探测能力。$(li)环境适应性强：具备全天候全天时作业能力，适应各种恶劣环境。$(li)实时性高：具备运动目标实时检测现实能力。"
+    }
+  ]
+}

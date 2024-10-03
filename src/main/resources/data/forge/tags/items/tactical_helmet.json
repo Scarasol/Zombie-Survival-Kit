@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "zombiekit:standard_tactical_helmet",
+    "zombiekit:desert_tactical_helmet",
+    "zombiekit:forest_tactical_helmet",
+    "zombiekit:snow_tactical_helmet"
+  ]
+}

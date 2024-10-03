@@ -1,0 +1,29 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " 1 ",
+    "345",
+    " 7 "
+  ],
+  "key": {
+    "1": {
+      "item": "zombiekit:fibre"
+    },
+    "3": {
+      "item": "zombiekit:fibre"
+    },
+    "4": {
+      "item": "zombiekit:hydrogen_nitrate"
+    },
+    "5": {
+      "item": "zombiekit:fibre"
+    },
+    "7": {
+      "item": "zombiekit:fibre"
+    }
+  },
+  "result": {
+    "item": "zombiekit:nitrocellulose",
+    "count": 2
+  }
+}

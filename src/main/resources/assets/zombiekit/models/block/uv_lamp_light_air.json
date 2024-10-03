@@ -1,0 +1,8 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "zombiekit:blocks/uvlamplight",
+    "particle": "zombiekit:blocks/uvlamplight"
+  },
+  "render_type": "cutout"
+}

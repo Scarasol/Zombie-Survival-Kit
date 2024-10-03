@@ -1,0 +1,141 @@
+{
+  "pools": [
+    {
+      "name": "zombiekit:agriculture",
+      "rolls": {
+        "min": 4,
+        "max": 7
+      },
+      "entries": [
+        {
+          "type": "item",
+          "name": "minecraft:sugar_cane",
+          "functions": [
+            {
+              "function": "set_count",
+              "count": {
+				  "min": 3,
+				  "max": 8
+			  }
+            }
+          ],
+          "weight": 20
+        },	
+        {
+          "type": "item",
+          "name": "minecraft:sea_pickle",
+          "functions": [
+            {
+              "function": "set_count",
+              "count": {
+				  "min": 5,
+				  "max": 12
+			  }
+            }
+          ],
+          "weight": 15
+        },
+        {
+          "type": "item",
+          "name": "minecraft:crimson_fungus",
+          "functions": [
+            {
+              "function": "set_count",
+              "count":{
+				  "min": 3,
+				  "max": 8
+			  }
+            }
+          ],
+          "weight": 10
+        },
+        {
+          "type": "item",
+          "name": "minecraft:warped_fungus",
+          "functions": [
+            {
+              "function": "set_count",
+              "count": {
+				  "min": 3,
+				  "max": 5
+			  }
+            }
+          ],
+          "weight": 5
+        },
+        {
+          "type": "item",
+          "name": "minecraft:bamboo",
+          "functions": [
+            {
+              "function": "set_count",
+              "count": {
+				  "min": 5,
+				  "max": 8
+			  }
+            }
+          ],
+          "weight": 5
+        },
+        {
+          "type": "item",
+          "name": "minecraft:cocoa_beans",
+          "functions": [
+            {
+              "function": "set_count",
+              "count": {
+				  "min": 3,
+				  "max": 8
+			  }
+            }
+          ],
+          "weight": 5
+        },
+        {
+          "type": "item",
+          "name": "minecraft:chorus_fruit",
+          "functions": [
+            {
+              "function": "set_count",
+              "count": {
+				  "min": 1,
+				  "max": 3
+			  }
+            }
+          ],
+          "weight": 5
+        },
+		{
+          "type": "tag",
+          "name": "forge:mushrooms",
+		  "expand": true,
+          "functions": [
+            {
+              "function": "set_count",
+              "count": {
+                "min": 5,
+                "max": 12
+              }
+            }
+          ],
+          "weight": 20
+        },
+		{
+          "type": "tag",
+          "name": "minecraft:flowers",
+		  "expand": true,
+          "functions": [
+            {
+              "function": "set_count",
+              "count": {
+                "min": 5,
+                "max": 12
+              }
+            }
+          ],
+          "weight": 15
+        }	
+      ]
+    }
+  ]
+}

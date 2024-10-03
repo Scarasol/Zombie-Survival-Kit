@@ -1,0 +1,15 @@
+{
+  "name": "zombiekit:pond_basement",
+  "fallback": "minecraft:empty",
+  "elements": [
+	{	
+      "weight": 1,
+      "element": {
+        "location": "zombiekit:shelter/pond_basement",
+        "processors": "minecraft:empty",
+		"projection": "rigid",
+        "element_type": "single_pool_element"
+      }
+    }
+  ]
+}

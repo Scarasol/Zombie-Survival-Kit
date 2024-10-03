@@ -1,0 +1,19 @@
+{
+  "replace": false,
+  "values": [
+    "zombiekit:netherite_baseball_bat",
+    "zombiekit:studded_baseball_bat",
+    "zombiekit:baseball_bat",
+    "zombiekit:netherite_crowbar",
+    "zombiekit:crowbar",
+    "zombiekit:netherite_fire_axe",
+    "zombiekit:fire_axe",
+    "zombiekit:triangular_thorn",
+    "zombiekit:netherite_knife",
+    "zombiekit:knife",
+    "zombiekit:netherite_rake",
+    "zombiekit:rake",
+    "zombiekit:netherite_machete",
+    "zombiekit:machete"
+  ]
+}
