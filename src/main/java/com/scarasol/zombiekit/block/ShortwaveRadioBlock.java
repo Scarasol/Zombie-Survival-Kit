@@ -144,6 +144,8 @@ public class ShortwaveRadioBlock extends Block {
 
     public static void loadRadioString(LevelAccessor world){
         String workRadioToString = MapVariables.get(world).radio_location;
+        if ("\"\"".equals(workRadioToString))
+            workRadioToString = "";
         if (!"".equals(workRadioToString)){
             for (String posStr : workRadioToString.split(";")){
                 String[] pos = posStr.split(",");
