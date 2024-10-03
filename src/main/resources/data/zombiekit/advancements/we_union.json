@@ -1,0 +1,31 @@
+{
+  "display": {
+    "icon": {
+      "item": "zombiekit:shortwave_radio"
+    },
+    "title": {
+      "translate": "advancements.we_union.title"
+    },
+    "description": {
+      "translate": "advancements.we_union.descr"
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "we_union": {
+      "trigger": "minecraft:placed_block",
+      "conditions": {
+        "location": [
+          {
+            "condition": "minecraft:block_state_property",
+            "block": "zombiekit:shortwave_radio"
+          }
+        ]
+      }
+    }
+  },
+  "parent": "zombiekit:zombie_kit"
+}

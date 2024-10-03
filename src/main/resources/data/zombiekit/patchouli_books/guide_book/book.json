@@ -1,0 +1,9 @@
+{
+  "name": "zombiekit.gui.book.name",
+  "landing_text": "zombiekit.gui.book.landing_text",
+  "subtitle": "zombiekit.gui.book.subtitle",
+  "creative_tab": "zombiekit_misc",
+  "book_texture": "zombiekit:textures/gui/guide_book.png",
+  "model": "zombiekit:guide_book",
+  "use_resource_pack": true
+}

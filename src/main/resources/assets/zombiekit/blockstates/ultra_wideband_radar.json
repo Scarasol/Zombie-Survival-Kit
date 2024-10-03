@@ -1,0 +1,264 @@
+{
+  "variants": {
+    "facing=north,radar_open=true,radar_ele=1": {
+      "model": "zombiekit:block/uwr_open_1",
+      "x":90
+    },
+    "facing=north,radar_open=true,radar_ele=2": {
+      "model": "zombiekit:block/uwr_open_2",
+      "x":90
+    },
+    "facing=north,radar_open=true,radar_ele=3": {
+      "model": "zombiekit:block/uwr_open_3",
+      "x":90
+    },
+    "facing=north,radar_open=true,radar_ele=4": {
+      "model": "zombiekit:block/uwr_open_4",
+      "x":90
+    },
+    "facing=north,radar_open=true,radar_ele=5": {
+      "model": "zombiekit:block/uwr_close_5",
+      "x":90
+    },
+    "facing=north,radar_open=false,radar_ele=1": {
+      "model": "zombiekit:block/uwr_close_1",
+      "x":90
+    },
+    "facing=north,radar_open=false,radar_ele=2": {
+      "model": "zombiekit:block/uwr_close_2",
+      "x":90
+    },
+    "facing=north,radar_open=false,radar_ele=3": {
+      "model": "zombiekit:block/uwr_close_3",
+      "x":90
+    },
+    "facing=north,radar_open=false,radar_ele=4": {
+      "model": "zombiekit:block/uwr_close_4",
+      "x":90
+    },
+    "facing=north,radar_open=false,radar_ele=5": {
+      "model": "zombiekit:block/uwr_close_5",
+      "x":90
+    },
+    "facing=east,radar_open=true,radar_ele=1": {
+      "model": "zombiekit:block/uwr_open_1",
+      "y":90,
+      "x":90
+    },
+    "facing=east,radar_open=true,radar_ele=2": {
+      "model": "zombiekit:block/uwr_open_2",
+      "y":90,
+      "x":90
+    },
+    "facing=east,radar_open=true,radar_ele=3": {
+      "model": "zombiekit:block/uwr_open_3",
+      "y":90,
+      "x":90
+    },
+    "facing=east,radar_open=true,radar_ele=4": {
+      "model": "zombiekit:block/uwr_open_4",
+      "y":90,
+      "x":90
+    },
+    "facing=east,radar_open=true,radar_ele=5": {
+      "model": "zombiekit:block/uwr_close_5",
+      "y":90,
+      "x":90
+    },
+    "facing=east,radar_open=false,radar_ele=1": {
+      "model": "zombiekit:block/uwr_close_1",
+      "y":90,
+      "x":90
+    },
+    "facing=east,radar_open=false,radar_ele=2": {
+      "model": "zombiekit:block/uwr_close_2",
+      "y":90,
+      "x":90
+    },
+    "facing=east,radar_open=false,radar_ele=3": {
+      "model": "zombiekit:block/uwr_close_3",
+      "y":90,
+      "x":90
+    },
+    "facing=east,radar_open=false,radar_ele=4": {
+      "model": "zombiekit:block/uwr_close_4",
+      "y":90,
+      "x":90
+    },
+    "facing=east,radar_open=false,radar_ele=5": {
+      "model": "zombiekit:block/uwr_close_5",
+      "y":90,
+      "x":90
+    },
+    "facing=south,radar_open=true,radar_ele=1": {
+      "model": "zombiekit:block/uwr_open_1",
+      "y":180,
+      "x":90
+    },
+    "facing=south,radar_open=true,radar_ele=2": {
+      "model": "zombiekit:block/uwr_open_2",
+      "y":180,
+      "x":90
+    },
+    "facing=south,radar_open=true,radar_ele=3": {
+      "model": "zombiekit:block/uwr_open_3",
+      "y":180,
+      "x":90
+    },
+    "facing=south,radar_open=true,radar_ele=4": {
+      "model": "zombiekit:block/uwr_open_4",
+      "y":180,
+      "x":90
+    },
+    "facing=south,radar_open=true,radar_ele=5": {
+      "model": "zombiekit:block/uwr_close_5",
+      "y":180,
+      "x":90
+    },
+    "facing=south,radar_open=false,radar_ele=1": {
+      "model": "zombiekit:block/uwr_close_1",
+      "y":180,
+      "x":90
+    },
+    "facing=south,radar_open=false,radar_ele=2": {
+      "model": "zombiekit:block/uwr_close_2",
+      "y":180,
+      "x":90
+    },
+    "facing=south,radar_open=false,radar_ele=3": {
+      "model": "zombiekit:block/uwr_close_3",
+      "y":180,
+      "x":90
+    },
+    "facing=south,radar_open=false,radar_ele=4": {
+      "model": "zombiekit:block/uwr_close_4",
+      "y":180,
+      "x":90
+    },
+    "facing=south,radar_open=false,radar_ele=5": {
+      "model": "zombiekit:block/uwr_close_5",
+      "y":180,
+      "x":90
+    },
+    "facing=west,radar_open=true,radar_ele=1": {
+      "model": "zombiekit:block/uwr_open_1",
+      "y":270,
+      "x":90
+    },
+    "facing=west,radar_open=true,radar_ele=2": {
+      "model": "zombiekit:block/uwr_open_2",
+      "y":270,
+      "x":90
+    },
+    "facing=west,radar_open=true,radar_ele=3": {
+      "model": "zombiekit:block/uwr_open_3",
+      "y":270,
+      "x":90
+    },
+    "facing=west,radar_open=true,radar_ele=4": {
+      "model": "zombiekit:block/uwr_open_4",
+      "y":270,
+      "x":90
+    },
+    "facing=west,radar_open=true,radar_ele=5": {
+      "model": "zombiekit:block/uwr_close_5",
+      "y":270,
+      "x":90
+    },
+    "facing=west,radar_open=false,radar_ele=1": {
+      "model": "zombiekit:block/uwr_close_1",
+      "y":270,
+      "x":90
+    },
+    "facing=west,radar_open=false,radar_ele=2": {
+      "model": "zombiekit:block/uwr_close_2",
+      "y":270,
+      "x":90
+    },
+    "facing=west,radar_open=false,radar_ele=3": {
+      "model": "zombiekit:block/uwr_close_3",
+      "y":270,
+      "x":90
+    },
+    "facing=west,radar_open=false,radar_ele=4": {
+      "model": "zombiekit:block/uwr_close_4",
+      "y":270,
+      "x":90
+    },
+    "facing=west,radar_open=false,radar_ele=5": {
+      "model": "zombiekit:block/uwr_close_5",
+      "y":270,
+      "x":90
+    },
+    "facing=up,radar_open=true,radar_ele=1": {
+      "model": "zombiekit:block/uwr_open_1"
+    },
+    "facing=up,radar_open=true,radar_ele=2": {
+      "model": "zombiekit:block/uwr_open_2"
+    },
+    "facing=up,radar_open=true,radar_ele=3": {
+      "model": "zombiekit:block/uwr_open_3"
+    },
+    "facing=up,radar_open=true,radar_ele=4": {
+      "model": "zombiekit:block/uwr_open_4"
+    },
+    "facing=up,radar_open=true,radar_ele=5": {
+      "model": "zombiekit:block/uwr_close_5"
+    },
+    "facing=up,radar_open=false,radar_ele=1": {
+      "model": "zombiekit:block/uwr_close_1"
+    },
+    "facing=up,radar_open=false,radar_ele=2": {
+      "model": "zombiekit:block/uwr_close_2"
+    },
+    "facing=up,radar_open=false,radar_ele=3": {
+      "model": "zombiekit:block/uwr_close_3"
+    },
+    "facing=up,radar_open=false,radar_ele=4": {
+      "model": "zombiekit:block/uwr_close_4"
+    },
+    "facing=up,radar_open=false,radar_ele=5": {
+      "model": "zombiekit:block/uwr_close_5"
+    },
+	"facing=down,radar_open=true,radar_ele=1": {
+      "model": "zombiekit:block/uwr_open_1",
+      "x": 180
+    },
+    "facing=down,radar_open=true,radar_ele=2": {
+      "model": "zombiekit:block/uwr_open_2",
+      "x": 180
+    },
+    "facing=down,radar_open=true,radar_ele=3": {
+      "model": "zombiekit:block/uwr_open_3",
+      "x": 180
+    },
+    "facing=down,radar_open=true,radar_ele=4": {
+      "model": "zombiekit:block/uwr_open_4",
+      "x": 180
+    },
+    "facing=down,radar_open=true,radar_ele=5": {
+      "model": "zombiekit:block/uwr_close_5",
+      "x": 180
+    },
+    "facing=down,radar_open=false,radar_ele=1": {
+      "model": "zombiekit:block/uwr_close_1",
+      "x": 180
+    },
+    "facing=down,radar_open=false,radar_ele=2": {
+      "model": "zombiekit:block/uwr_close_2",
+      "x": 180
+    },
+    "facing=down,radar_open=false,radar_ele=3": {
+      "model": "zombiekit:block/uwr_close_3",
+      "x": 180
+    },
+    "facing=down,radar_open=false,radar_ele=4": {
+      "model": "zombiekit:block/uwr_close_4",
+      "x": 180
+    },
+    "facing=down,radar_open=false,radar_ele=5": {
+      "model": "zombiekit:block/uwr_close_5",
+      "x": 180
+    }
+  }
+}

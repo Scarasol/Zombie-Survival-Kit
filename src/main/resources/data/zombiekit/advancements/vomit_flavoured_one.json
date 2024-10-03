@@ -1,0 +1,30 @@
+{
+  "display": {
+    "icon": {
+      "item": "zombiekit:suspicious_drug"
+    },
+    "title": {
+      "translate": "advancements.vomit_flavoured_one.title"
+    },
+    "description": {
+      "translate": "advancements.vomit_flavoured_one.descr"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "vomit_flavoured_one": {
+      "trigger": "minecraft:consume_item",
+      "conditions": {
+        "item": {
+          "items": [
+            "zombiekit:suspicious_drug"
+          ]
+        }
+      }
+    }
+  },
+  "parent": "zombiekit:zombie_kit"
+}

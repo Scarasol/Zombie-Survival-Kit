@@ -1,0 +1,27 @@
+{
+  "name": "Saltpeter",
+  "icon": "zombiekit:saltpeter",
+  "category": "zombiekit:note",
+  "sortnum": 0,
+  "pages": [
+    {
+      "type": "patchouli:spotlight",
+	  "item": "zombiekit:saltpeter",
+	  "text": "$(#a97b1d)In the East, there is a traditional technique for making saltpeter, locally known as 'saltpeter boiling'. Every morning, people would walk out of their homes, carrying a bamboo basket on their backs, to the river beach to dig a greyish-white clay needed for the preparation of saltpeter, which is rich in nitrate"
+    },
+	{
+      "type": "patchouli:text",
+	  "text": "$(#a97b1d)minerals. After bringing the clay back home, they would mix it with plant ash to make 'saltpeter soil', which helps increase the potassium content in the soil and reduce the volatilization of nitrates. Then they put the saltpeter soil into a pot filled with water and repeatedly filter it, leaving the liquid in the pot, this step is called 'leaching saltpeter'. Finally, they place the pot on a bonfire, light it, and boil it until all the 'saltpeter water' in the pot is"
+    },
+	{
+      "type": "patchouli:image",
+	  "title": "Saltpeter Boiling",
+	  "images": ["zombiekit:textures/gui/entries/saltpeter.png"],
+	  "text": "$(#a97b1d)dried up. The layer of crystals formed at the bottom"
+    },
+	{
+      "type": "patchouli:text",
+	  "text": "$(#a97b1d)of the pot is saltpeter."
+    }
+  ]
+}

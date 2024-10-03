@@ -1,0 +1,40 @@
+{
+  "display": {
+    "icon": {
+      "item": "minecraft:iron_pickaxe"
+    },
+    "title": {
+      "translate": "advancements.grave_digger.title"
+    },
+    "description": {
+      "translate": "advancements.grave_digger.descr"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": true
+  },
+  "criteria": {
+    "grave_digger": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "zombiekit:scarasol",
+              "zombiekit:kyoko",
+              "zombiekit:konn_gara",
+              "zombiekit:white_food_chestplate",
+              "zombiekit:karazhan",
+              "zombiekit:iron_curtain",
+              "zombiekit:flame",
+              "zombiekit:lhx_qing",
+              "zombiekit:sona_bakemono"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "parent": "zombiekit:zombie_kit"
+}

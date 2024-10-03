@@ -1,0 +1,13 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "zombiekit:block/uvlamplight",
+    "up": "zombiekit:block/uvlamplight",
+    "north": "zombiekit:block/uvlamplight",
+    "east": "zombiekit:block/uvlamplight",
+    "south": "zombiekit:block/uvlamplight",
+    "west": "zombiekit:block/uvlamplight",
+    "particle": "zombiekit:block/uvlamplight"
+  },
+  "render_type": "cutout"
+}

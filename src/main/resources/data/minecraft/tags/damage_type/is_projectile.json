@@ -1,0 +1,8 @@
+{
+  "replace": false,
+  "values": [
+    "zombiekit:heavy_machine_gun",
+    "zombiekit:heavy_machine_gun_bypass_armor",
+    "zombiekit:wrench"
+  ]
+}

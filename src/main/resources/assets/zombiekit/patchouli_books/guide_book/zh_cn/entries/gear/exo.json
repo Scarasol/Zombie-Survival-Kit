@@ -1,0 +1,18 @@
+{
+  "name": "EXO-417",
+  "icon": "zombiekit:exo_chestplate",
+  "category": "zombiekit:gear",
+  "sortnum": 4,
+  "pages": [
+    {
+      "type": "patchouli:image",
+	  "title": "EXO-417",
+	  "images": ["zombiekit:textures/gui/entries/exo_cn.png", "zombiekit:textures/gui/entries/exo_a.png", "zombiekit:textures/gui/entries/exo_b.png", "zombiekit:textures/gui/entries/exo_c.png", "zombiekit:textures/gui/entries/exo_d.png", "zombiekit:textures/gui/entries/exo.png"]
+    },
+	{
+      "type": "patchouli:text",
+	  "title": "EXO-417",
+	  "text": "$(o)(这是一组照片，并不属于原书籍的内容，似乎是上一位主人贴在这里的，内容是一份机密报告书的内容，照片前几张写着一些参数和制作工艺，最后一张则是一名全副武装的军人，穿戴着复杂的机械。照片旁边用笔写着什么，可惜已经被血污盖住，难以辨认)"
+    }
+  ]
+}

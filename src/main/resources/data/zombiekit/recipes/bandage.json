@@ -1,0 +1,29 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " 1 ",
+    "345",
+    " 7 "
+  ],
+  "key": {
+    "1": {
+      "item": "zombiekit:cloth"
+    },
+    "3": {
+      "item": "zombiekit:cloth"
+    },
+    "4": {
+      "item": "zombiekit:alcohol"
+    },
+    "5": {
+      "item": "zombiekit:cloth"
+    },
+    "7": {
+      "item": "zombiekit:cloth"
+    }
+  },
+  "result": {
+    "item": "zombiekit:bandage",
+    "count": 4
+  }
+}

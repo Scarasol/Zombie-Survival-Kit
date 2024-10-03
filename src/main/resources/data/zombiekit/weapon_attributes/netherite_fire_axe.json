@@ -1,0 +1,9 @@
+{
+  "parent": "bettercombat:axe",
+  "attributes" : {
+    "attacks": [
+      {"hitbox": "FORWARD_BOX"},
+      {"hitbox": "FORWARD_BOX"}
+    ]
+  }
+}

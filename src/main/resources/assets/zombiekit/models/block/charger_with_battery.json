@@ -1,0 +1,9 @@
+{
+  "parent": "zombiekit:custom/charger_with_battery",
+  "textures": {
+    "all": "zombiekit:block/charger_with_battery",
+    "particle": "zombiekit:block/chargerbreak",
+    "1": "zombiekit:block/charger_with_battery"
+  },
+  "render_type": "cutout"
+}

@@ -1,0 +1,16 @@
+{   
+    "start_pool": "zombiekit:shelter",
+    "size": 3,
+    "biomes": "#zombiekit:has_structure/shelter",
+	"start_height": {
+		"absolute": 0
+	},
+	"max_distance_from_center": 100,
+	"project_start_to_heightmap": "WORLD_SURFACE_WG",
+	"use_expansion_hack": false,
+	"terrain_adaptation": "beard_thin",
+	"step": "vegetal_decoration",
+    "spawn_overrides": {
+    },
+    "type": "minecraft:jigsaw"
+}

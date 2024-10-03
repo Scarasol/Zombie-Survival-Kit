@@ -1,0 +1,7 @@
+{
+  "replace": false,
+  "values": [
+    "desert",
+    "#minecraft:is_badlands"
+  ]
+}

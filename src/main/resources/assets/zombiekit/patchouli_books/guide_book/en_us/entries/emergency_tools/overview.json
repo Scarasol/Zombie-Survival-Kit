@@ -1,0 +1,16 @@
+{
+  "name": "Emergency Tools",
+  "icon": "minecraft:writable_book",
+  "category": "zombiekit:emergency_tools",
+  "sortnum": 0,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "Emergency tools often seem unnecessary in daily life, appearing less important than food, safety, and medicine. However, these tools are specifically designed for high-stress situations; they are not meant for minor day-to-day issues. When faced with a real emergency, that's when they truly shine. It's always better to question why you're carrying these tools in times of peace than to regret not having them when your life is on the line!"
+    },
+	{
+      "type": "patchouli:text",
+      "text": ""
+    }
+  ]
+}

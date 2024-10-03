@@ -1,0 +1,18 @@
+{
+  "name": "Bandage",
+  "icon": "zombiekit:bandage",
+  "category": "zombiekit:medical",
+  "sortnum": 2,
+  "pages": [
+    {
+      "type": "patchouli:spotlight",
+	  "item": "zombiekit:bandage",
+      "text": "The scent of blood is like cannabis to zombies. Never allow the smell of blood to cling to you, or you'll attract a horde of die-hard fans. And certainly, don't bring that bloody aroma into your sanctuary. You wouldn't want to wake up only to find a bunch of over-enthusiastic junkies who can't wait to devour you."
+    },
+	{
+      "type": "patchouli:crafting",
+      "recipe": "zombiekit:bandage",
+	  "text": "Hence, having some gauze and bandages for stopping bleeding and dressing wounds is a crucial preparation. "
+    }
+  ]
+}

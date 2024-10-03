@@ -1,0 +1,26 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "  2",
+    " 4 ",
+    "67 "
+  ],
+  "key": {
+    "2": {
+      "tag": "forge:stripped_log"
+    },
+    "4": {
+      "tag": "forge:stripped_log"
+    },
+    "6": {
+      "tag": "forge:stripped_log"
+    },
+    "7": {
+      "item": "minecraft:leather"
+    }
+  },
+  "result": {
+    "item": "zombiekit:baseball_bat",
+    "count": 1
+  }
+}

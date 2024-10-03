@@ -1,0 +1,41 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "012",
+    "345",
+    "678"
+  ],
+  "key": {
+    "0": {
+      "item": "minecraft:raw_copper"
+    },
+    "1": {
+      "item": "zombiekit:saltpeter"
+    },
+    "2": {
+      "item": "minecraft:raw_copper"
+    },
+    "3": {
+      "item": "zombiekit:saltpeter"
+    },
+    "4": {
+      "item": "minecraft:raw_copper"
+    },
+    "5": {
+      "item": "zombiekit:saltpeter"
+    },
+    "6": {
+      "item": "minecraft:raw_copper"
+    },
+    "7": {
+      "item": "zombiekit:saltpeter"
+    },
+    "8": {
+      "item": "minecraft:raw_copper"
+    }
+  },
+  "result": {
+    "item": "zombiekit:crude_nitrate",
+    "count": 2
+  }
+}

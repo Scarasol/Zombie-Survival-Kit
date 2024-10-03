@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "zombiekit:standard_tactical_leggings",
+    "zombiekit:desert_tactical_leggings",
+    "zombiekit:forest_tactical_leggings",
+    "zombiekit:snow_tactical_leggings"
+  ]
+}

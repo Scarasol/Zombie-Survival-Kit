@@ -1,0 +1,32 @@
+{
+  "display": {
+    "icon": {
+      "item": "zombiekit:heavy_machine_gun_summon"
+    },
+    "title": {
+      "translate": "advancements.heavy_machine_gun_adv.title"
+    },
+    "description": {
+      "translate": "advancements.heavy_machine_gun_adv.descr"
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "heavy_machine_gun_adv": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "zombiekit:heavy_machine_gun_summon"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "parent": "zombiekit:zombie_kit"
+}

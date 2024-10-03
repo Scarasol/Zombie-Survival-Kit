@@ -1,0 +1,27 @@
+{
+  "name": "硝石",
+  "icon": "zombiekit:saltpeter",
+  "category": "zombiekit:note",
+  "sortnum": 0,
+  "pages": [
+    {
+      "type": "patchouli:spotlight",
+	  "item": "zombiekit:saltpeter",
+	  "text": "$(#a97b1d)在东方有一种用于制取硝石的传统技术，当地人称之为“熬硝”。每天早晨，人们就纷纷走出家门，背着一个竹筐，去河边滩涂挖制备硝石所需的一种灰白色泥土，这种泥土中富含硝酸盐矿物。将泥土背回家后，他们会加入草木灰一起搅拌制成“硝土”，这样有利于增加泥土中的钾含量以及减少硝酸盐的"
+    },
+	{
+      "type": "patchouli:image",
+	  "title": "熬硝",
+	  "images": ["zombiekit:textures/gui/entries/saltpeter.png"],
+	  "text": "$(#a97b1d)挥发。接着将硝土放入装满水的锅中反复过滤留下锅中"
+    },
+	{
+      "type": "patchouli:text",
+	  "text": "$(#a97b1d)的液体，这一步被称为“淋硝”。最后将锅放置在篝火上，生火进行熬煮，一直把锅中的“硝水”全部煮干，最后锅底形成的一层晶体，就是硝石。"
+    },
+	{
+      "type": "patchouli:text",
+	  "text": " "
+    }
+  ]
+}

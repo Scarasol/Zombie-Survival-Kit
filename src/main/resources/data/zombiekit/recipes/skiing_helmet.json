@@ -1,0 +1,35 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "012",
+    "345",
+    " 7 "
+  ],
+  "key": {
+    "0": {
+      "item": "zombiekit:rubber"
+    },
+    "1": {
+      "item": "zombiekit:rubber"
+    },
+    "2": {
+      "item": "zombiekit:rubber"
+    },
+    "3": {
+      "item": "zombiekit:plastics"
+    },
+    "4": {
+      "item": "minecraft:glass"
+    },
+    "5": {
+      "item": "zombiekit:plastics"
+    },
+    "7": {
+      "item": "zombiekit:cloth"
+    }
+  },
+  "result": {
+    "item": "zombiekit:skiing_helmet",
+    "count": 1
+  }
+}

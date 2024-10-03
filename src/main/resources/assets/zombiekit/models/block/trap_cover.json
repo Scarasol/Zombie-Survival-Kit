@@ -1,0 +1,9 @@
+{
+  "parent": "zombiekit:custom/trap_cover",
+  "textures": {
+    "all": "zombiekit:block/trap_cover",
+    "particle": "zombiekit:block/trap_cover",
+    "0": "zombiekit:block/trap_cover"
+  },
+  "render_type": "cutout"
+}

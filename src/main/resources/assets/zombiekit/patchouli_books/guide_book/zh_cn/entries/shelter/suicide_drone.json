@@ -1,0 +1,35 @@
+{
+  "name": "自杀式无人机",
+  "icon": "zombiekit:drone_summon",
+  "category": "zombiekit:shelter",
+  "sortnum": 10,
+  "pages": [
+    {
+      "type": "patchouli:spotlight",
+	  "item": "zombiekit:drone_summon",
+	  "text": "现代战争告诉我们，无人机是无往不利的新型武器，可靠的侦查能力，超长的滞空时间以及智能的追踪寻敌等等功能。试想一下吧，有什么比一群无人机在空中盘旋，看到敌人就会扑上去，无时无刻守护庇护所更让人安心呢？而且就算是面对尸潮，无人机也可以当做巡飞弹使用，毕竟丧尸们在重火"
+    },
+	{
+      "type": "patchouli:crafting",
+      "recipe": "zombiekit:drone_components",
+	  "text": "力面前不堪一击。当然对于个人来说，尤其是在末世，一架无人机的成本并不低，但是为了活下去，这些都是值得的。"
+    },
+	{
+      "type": "patchouli:crafting",
+      "recipe": "zombiekit:drone",
+	  "text": " "
+    },
+	{
+      "type": "patchouli:text",
+	  "text": "$(o)（这里有一张说明书）$()$(br)$(#6F6F6F)$(l)飞跃L99pro智能无人机$()$(br)$(#6F6F6F)商品描述$(li)电池容量：3.7V 7900mAh$(li)充电方式：太阳能$(li)识别距离：25m$(li)识别高度：15m$(li)飞行模式切换：使用扳手通过调节旋钮进行调节$(li)最大载荷：300g$(li)防水等级：IP6$(br2)注意事项$(li)本产品的防水功能仅能保证无人机可以在雨中运行，不代表可以浸泡在水中，因"
+    },
+	{
+      "type": "patchouli:text",
+	  "text": "$(#6F6F6F)此使用时请远离水体。"
+    },
+	{
+      "type": "patchouli:text",
+	  "text": " "
+    }
+  ]
+}

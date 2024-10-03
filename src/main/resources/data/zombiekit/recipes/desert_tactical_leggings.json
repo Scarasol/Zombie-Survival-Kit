@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:smithing_transform",
+  "template": [],
+  "base": {
+    "tag": "forge:tactical_leggings"
+  },
+  "addition": {
+    "item": "zombiekit:desert_camouflage_dye"
+  },
+  "result": {
+    "item": "zombiekit:desert_tactical_leggings"
+  }
+}

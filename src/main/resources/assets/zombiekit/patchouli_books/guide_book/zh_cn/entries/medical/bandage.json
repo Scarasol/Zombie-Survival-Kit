@@ -1,0 +1,18 @@
+{
+  "name": "绷带",
+  "icon": "zombiekit:bandage",
+  "category": "zombiekit:medical",
+  "sortnum": 2,
+  "pages": [
+    {
+      "type": "patchouli:spotlight",
+	  "item": "zombiekit:bandage",
+      "text": "血腥味，这对于丧尸来说如同大麻一般。永远不要让自己身上出现血腥味，否则你会收获一大批狗仔粉丝的。更不要把血腥味带入自己的基地里，你也不希望一觉睡起来就发现自己被一群磕嗨了热情到想要吃掉你的瘾君子们包围了吧。因此，准备一些可以止血和包扎伤口的纱布绷带还是很有必要的。"
+    },
+	{
+      "type": "patchouli:crafting",
+      "recipe": "zombiekit:bandage",
+	  "text": " "
+    }
+  ]
+}

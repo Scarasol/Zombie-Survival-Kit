@@ -1,0 +1,9 @@
+{
+  "parent": "zombiekit:custom/injector",
+  "textures": {
+    "all": "zombiekit:block/injector",
+    "particle": "zombiekit:block/injector",
+    "5": "zombiekit:block/injector"
+  },
+  "render_type": "cutout"
+}

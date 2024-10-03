@@ -1,0 +1,24 @@
+{
+  "name": "Shelter's Location",
+  "icon": "minecraft:writable_book",
+  "category": "zombiekit:shelter",
+  "sortnum": 2,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "The most crucial aspect of a shelter is its location, and don't underestimate the complexity of this decision. In the city, resources are abundant, and with some simple modifications, any house can serve as a temporary shelter. However, just like the resources, zombies are also plentiful in urban areas. In remote places, the population is sparse, and the terrain"
+    },
+	{
+      "type": "patchouli:text",
+      "text": "offers concealment, allowing you to defend yourself with natural advantages. But in such areas, you'll have to be resourceful like Robinson Crusoe. Moreover, being hard to attack also means it's challenging to escape, and your makeshift wooden cabin might not be as sturdy as concrete and steel. Once the outer defenses are breached, you'll have no way out. In conclusion, balancing the pros and cons of various conditions is the most important thing"
+    },
+	{
+      "type": "patchouli:text",
+      "text": "to do in this situation. "
+    },
+	{
+      "type": "patchouli:text",
+      "text": " "
+    }
+  ]
+}

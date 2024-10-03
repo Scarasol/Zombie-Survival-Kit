@@ -1,0 +1,17 @@
+{
+  "name": "Machete",
+  "icon": "zombiekit:machete",
+  "category": "zombiekit:weapons",
+  "sortnum": 2,
+  "pages": [
+    {
+      "type": "patchouli:spotlight",
+	  "item": "zombiekit:machete",
+      "text": "The classic weapon of all time, buddy, is the trusty machete. It's not only practical in daily life but its outstanding design enhances its chopping ability. No fancy frills, just a sweeping cleave to bring down any zombie, giving you a fighting chance in close combat."
+    },
+	{
+      "type": "patchouli:crafting",
+      "recipe": "zombiekit:machete"
+    }
+  ]
+}

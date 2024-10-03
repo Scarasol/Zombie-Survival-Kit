@@ -1,0 +1,41 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "012",
+    "345",
+    "678"
+  ],
+  "key": {
+    "0": {
+      "item": "zombiekit:fibre"
+    },
+    "1": {
+      "item": "zombiekit:fibre"
+    },
+    "2": {
+      "item": "zombiekit:fibre"
+    },
+    "3": {
+      "item": "zombiekit:fibre"
+    },
+    "4": {
+      "item": "zombiekit:fibre"
+    },
+    "5": {
+      "item": "zombiekit:fibre"
+    },
+    "6": {
+      "item": "zombiekit:fibre"
+    },
+    "7": {
+      "item": "zombiekit:fibre"
+    },
+    "8": {
+      "item": "zombiekit:fibre"
+    }
+  },
+  "result": {
+    "item": "zombiekit:cloth",
+    "count": 1
+  }
+}

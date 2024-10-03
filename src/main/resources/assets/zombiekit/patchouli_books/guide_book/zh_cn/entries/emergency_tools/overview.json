@@ -1,0 +1,16 @@
+{
+  "name": "应急工具",
+  "icon": "minecraft:writable_book",
+  "category": "zombiekit:emergency_tools",
+  "sortnum": 0,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "应急工具大多平时都用不上，看上去似乎没有食物，安全，药品重要。但是这类工具生来就是打高端局的，平常的小打小闹根本不在它们眼里。面对真正的突发情况时，才是它们大显身手的时候。平时抱怨为什么要带这些东西，总比死之前懊悔为什么没有这些东西强！"
+    },
+	{
+      "type": "patchouli:text",
+      "text": ""
+    }
+  ]
+}

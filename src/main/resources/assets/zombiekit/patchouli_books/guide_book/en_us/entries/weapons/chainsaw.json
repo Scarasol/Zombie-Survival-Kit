@@ -1,0 +1,26 @@
+{
+  "name": "Chainsaw",
+  "icon": "zombiekit:chainsaw",
+  "category": "zombiekit:weapons",
+  "sortnum": 9,
+  "pages": [
+    {
+      "type": "patchouli:spotlight",
+	  "item": "zombiekit:chainsaw",
+	  "text": "'The Texas Chainsaw Massacre' and 'Saw' are popular movies that have sparked our imagination about chainsaws. You may find them scary or exciting, but now you have a chance to turn that imagination into reality. After all, zombies won't accuse you of committing murder! With an endless number of zombies, this killing"
+    },
+	{
+      "type": "patchouli:crafting",
+      "recipe": "zombiekit:chainsaw",
+	  "text": "machine can not only saw through wood but also efficiently shred each zombie's head, turning them into a pile of flesh in just a few seconds. However, if you're a vegetarian, please have a barf bag ready. Also, gentlemen,"
+    },
+	{
+      "type": "patchouli:text",
+	  "text": "please note that the chainsaw's chain is quite fragile, so when dealing with tougher opponents, it's better to consider other options."
+    },
+	{
+      "type": "patchouli:text",
+	  "text": "$(o)(There is a manual attached here)$()$(br)$(#6F6F6F)$(l)Golden Industries P65C Blaze-Rod Electric Chainsaw$()$(br)$(#6F6F6F)Product Specifications$(li)Power Source: Battery pack$(li)Battery Parameters: 2500mAh * 15$(li)Chain Material: Hard alloy$(li)Idle Battery Life: 720 minutes$(li)Weight: 2.5kg"
+    }
+  ]
+}

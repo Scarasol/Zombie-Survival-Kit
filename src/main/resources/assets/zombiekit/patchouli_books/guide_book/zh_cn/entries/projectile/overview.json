@@ -1,0 +1,16 @@
+{
+  "name": "投掷物",
+  "icon": "minecraft:writable_book",
+  "category": "zombiekit:projectile",
+  "sortnum": 1,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "在丧尸末日最好的生存策略就是离聚居区越远越好！然而野外的物资杯水车薪，城市的物资令人垂涎三尺，高风险高回报，伙计。想进城搜刮物资，就需要做好对付尸潮的准备。砍刀只能让你多拉两个垫背的，而枪声就是丧尸开饭的信号。我们需要一些更浮夸的东西。"
+    },
+	{
+      "type": "patchouli:text",
+      "text": " "
+    }
+  ]
+}

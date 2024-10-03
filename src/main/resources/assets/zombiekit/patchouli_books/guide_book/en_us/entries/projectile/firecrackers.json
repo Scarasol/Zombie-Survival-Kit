@@ -1,0 +1,18 @@
+{
+  "name": "Firecrackers",
+  "icon": "zombiekit:firecracker",
+  "category": "zombiekit:projectile",
+  "sortnum": 5,
+  "pages": [
+    {
+      "type": "patchouli:spotlight",
+	  "item": "zombiekit:firecracker",
+      "text": "Compared to cautiously searching, it's a better choice to preemptively divert the attention of the zombies using something that creates noise. And what could be more effective at catching the curiosity of these inquisitive creatures than thunderous firecrackers? Those party-hungry zombies would"
+    },
+	{
+      "type": "patchouli:crafting",
+      "recipe": "zombiekit:firecracker",
+	  "text": "undoubtedly be drawn to this festive spectacle. And when the gathering is in full swing, don't forget to host a bonfire party – that's just how things are done!"
+    }
+  ]
+}

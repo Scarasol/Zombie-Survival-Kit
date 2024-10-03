@@ -1,0 +1,6 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "zombiekit:item/0xie_qing_zhu_she_qi_"
+  }
+}

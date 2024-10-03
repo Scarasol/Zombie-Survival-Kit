@@ -1,0 +1,10 @@
+{
+  "parent": "zombiekit:custom/chainsaw_off",
+  "textures": {
+    "0": "zombiekit:block/chainsaw_1"
+  },
+  "overrides": [
+  	{ "predicate": { "custom_model_data": 0 }, "model": "zombiekit:item/chainsaw" },
+    { "predicate": { "custom_model_data": 1 }, "model": "zombiekit:item/chainsaw_on" }
+  ]
+}

@@ -1,0 +1,34 @@
+{
+  "display": {
+    "icon": {
+      "item": "zombiekit:forest_camouflage_dye"
+    },
+    "title": {
+      "translate": "advancements.thats_an_invisibility_cloak.title"
+    },
+    "description": {
+      "translate": "advancements.thats_an_invisibility_cloak.descr"
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "thats_an_invisibility_cloak": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "zombiekit:snow_camouflage_dye",
+              "zombiekit:desert_camouflage_dye",
+              "zombiekit:forest_camouflage_dye"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "parent": "zombiekit:zombie_kit"
+}

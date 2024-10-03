@@ -1,0 +1,47 @@
+{
+  "display": {
+    "icon": {
+      "item": "zombiekit:bomb_helmet"
+    },
+    "title": {
+      "translate": "advancements.whos_your_daddy.title"
+    },
+    "description": {
+      "translate": "advancements.whos_your_daddy.descr"
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "whos_your_daddy": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "zombiekit:bomb_helmet"
+            ]
+          },
+          {
+            "items": [
+              "zombiekit:bomb_chestplate"
+            ]
+          },
+          {
+            "items": [
+              "zombiekit:bomb_leggings"
+            ]
+          },
+          {
+            "items": [
+              "zombiekit:bomb_boots"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "parent": "zombiekit:zombie_kit"
+}

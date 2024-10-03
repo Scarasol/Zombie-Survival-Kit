@@ -1,0 +1,9 @@
+{
+  "parent": "zombiekit:custom/landmine",
+  "textures": {
+    "all": "zombiekit:block/landmine2",
+    "particle": "zombiekit:block/landmine_break",
+    "1": "zombiekit:block/landmine2"
+  },
+  "render_type": "cutout"
+}

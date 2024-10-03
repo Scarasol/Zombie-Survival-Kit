@@ -1,0 +1,41 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "012",
+    "345",
+    "678"
+  ],
+  "key": {
+    "0": {
+      "item": "zombiekit:plastics"
+    },
+    "1": {
+      "item": "zombiekit:painkiller"
+    },
+    "2": {
+      "item": "zombiekit:plastics"
+    },
+    "3": {
+      "item": "minecraft:nether_wart"
+    },
+    "4": {
+      "tag": "minecraft:wool"
+    },
+    "5": {
+      "item": "minecraft:glistering_melon_slice"
+    },
+    "6": {
+      "item": "zombiekit:plastics"
+    },
+    "7": {
+      "item": "zombiekit:bandage"
+    },
+    "8": {
+      "item": "zombiekit:plastics"
+    }
+  },
+  "result": {
+    "item": "zombiekit:medical_kit",
+    "count": 1
+  }
+}

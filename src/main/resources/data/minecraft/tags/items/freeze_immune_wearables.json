@@ -1,0 +1,13 @@
+{
+  "replace": false,
+  "values": [
+    "zombiekit:skiing_boots",
+    "zombiekit:skiing_leggings",
+    "zombiekit:exo_boots",
+    "zombiekit:skiing_chestplate",
+    "zombiekit:exo_leggings",
+    "zombiekit:exo_chestplate",
+    "zombiekit:skiing_helmet",
+    "zombiekit:exo_helmet"
+  ]
+}

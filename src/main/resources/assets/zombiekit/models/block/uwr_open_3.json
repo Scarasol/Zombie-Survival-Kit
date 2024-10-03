@@ -1,0 +1,9 @@
+{
+  "parent": "zombiekit:custom/uwr_open_3",
+  "textures": {
+    "all": "zombiekit:block/uwr_open3",
+    "particle": "zombiekit:block/ultrawidebandradar_break",
+    "10": "zombiekit:block/uwr_open3"
+  },
+  "render_type": "cutout"
+}

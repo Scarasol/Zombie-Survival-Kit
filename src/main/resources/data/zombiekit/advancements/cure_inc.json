@@ -1,0 +1,30 @@
+{
+  "display": {
+    "icon": {
+      "item": "zombiekit:miracle"
+    },
+    "title": {
+      "translate": "advancements.cure_inc.title"
+    },
+    "description": {
+      "translate": "advancements.cure_inc.descr"
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "cure_inc": {
+      "trigger": "minecraft:consume_item",
+      "conditions": {
+        "item": {
+          "items": [
+            "zombiekit:miracle"
+          ]
+        }
+      }
+    }
+  },
+  "parent": "zombiekit:vomit_flavoured_one"
+}

@@ -1,0 +1,9 @@
+{
+  "parent": "zombiekit:custom/gas_tank",
+  "textures": {
+    "all": "zombiekit:block/gas_tank",
+    "particle": "zombiekit:block/gas_tank",
+    "0": "zombiekit:block/gas_tank"
+  },
+  "render_type": "cutout"
+}

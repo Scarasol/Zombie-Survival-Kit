@@ -1,0 +1,50 @@
+{
+  "name": "UV Lamp",
+  "icon": "zombiekit:uv_lamp",
+  "category": "zombiekit:shelter",
+  "sortnum": 7,
+  "pages": [
+    {
+      "type": "patchouli:spotlight",
+	  "item": "zombiekit:uv_lamp",
+	  "text": "We all know that zombies have an extreme aversion to sunlight, but they don't react to regular lights or flames. That's because what zombies are actually afraid of is ultraviolet (UV) light. Knowing this, we can install some high-powered UV floodlights around the base. This way, we can ensure proper illumination"
+    },
+	{
+      "type": "patchouli:crafting",
+      "recipe": "zombiekit:uv_lamp",
+	  "text": "while also safely repelling them. "
+    },
+	{
+      "type": "patchouli:text",
+	  "text": "$(o)(There is a manual attached here)$()$(br)$(#6F6F6F)$(l)Swime JP-263306 Sterilization Searchlight$()$(br)$(#6F6F6F)Product Specifications$(li)Average lifespan: 6900h$(li)Continuous working time: 12h$(li)Weight: 36kg$(li)Luminous flux: 30000lm$(li)Light source power: 900w$(li)Ultraviolet power: 25w$(li)Effective disinfection area: 225m²$(br2)Operation method:$(li)This product can be"
+    },
+	{
+      "type": "patchouli:text",
+	  "text": "$(#6F6F6F)remotely controlled by redstone. After loading the battery, it can automatically start upon receiving a redstone signal.$(br2)Precautions:$(li)When changing the battery, please unscrew the nut with a wrench before opening the battery cover. Do not pull it forcibly.$(li)When the ultraviolet function is turned on, please avoid long-term direct exposure to this product."
+    },
+	{
+      "type": "patchouli:text",
+	  "text": "$(#6F6F6F)Ultraviolet rays may burn the skin or cause other more serious injuries.$(li)Please make sure this product is securely installed before turning on the redstone light."
+    },
+	{
+      "type": "patchouli:text",
+	  "text": "$(o)(This is a piece of note:)$()$(br)$(#a97b1d)'Inference suggests a correlation between spontaneous combustion in zombies exposed to sunlight and the generation of a photosensitive substance within the zombie's metabolic reactions. This substance undergoes an exothermic reaction when exposed to ultraviolet (UV) light. If the UV radiation is sufficiently intense, it can generate enough heat within the zombie to ignite it. Zombies possess a "
+    },
+	{
+      "type": "patchouli:text",
+	  "text": "$(#a97b1d)rudimentary form of intelligence, causing them to instinctively avoid natural hazards such as flames or cliffs.Hence, areas with a high UV index may be mistakenly avoided by zombies as they might perceive them to be in direct sunlight. In further experiments, it has been observed that zombies prioritize hunting over avoiding sunlight, which presents a significant challenge in using UV light as a means to repel them."
+    },
+	{
+      "type": "patchouli:text",
+	  "text": "$(#a97b1d)However, UV radiation of a certain intensity still appears to weaken zombies. Similarly, since they do not spontaneously combust in sunlight, this method remains ineffective against the subtype known as 'corpse shells.' Based on observations, corpse shells seem capable of identifying and attacking light sources, though the precise reason for this behavior remains unclear. Thus, it is imperative to exercise extra caution when dealing with this variant,"
+    },
+	{
+      "type": "patchouli:text",
+	  "text": "$(#a97b1d)while also documenting whether similar behaviors manifest in other subtypes."
+    },
+	{
+      "type": "patchouli:text",
+	  "text": " "
+    }
+  ]
+}
