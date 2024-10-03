@@ -26,8 +26,8 @@ public class ExoOverlay extends GuiComponent {
         if (entity != null && ExoArmor.numberOfSuit(entity) >= 4 && event.getType() == RenderGameOverlayEvent.ElementType.ALL) {
             int width = event.getWindow().getGuiScaledWidth();
             int height = event.getWindow().getGuiScaledHeight();
-            int posX = width - 120;
-            int posY = height - 90;
+            int posX = width - com.scarasol.zombiekit.config.CommonConfig.EXO_HUD_WIDTH.get();
+            int posY = height - com.scarasol.zombiekit.config.CommonConfig.EXO_HUD_HEIGHT.get();
             RenderSystem.disableDepthTest();
             RenderSystem.depthMask(false);
             RenderSystem.enableBlend();

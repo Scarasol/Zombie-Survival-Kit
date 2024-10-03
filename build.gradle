@@ -18,7 +18,7 @@ apply plugin: 'net.minecraftforge.gradle'
 apply plugin: 'org.spongepowered.mixin'
 
 
-version = '2.0.0'
+version = '2.0.1'
 group = 'com.scarasol.zombiekit' // http://maven.apache.org/guides/mini/guide-naming-conventions.html
 archivesBaseName = 'zombiekit'
 
@@ -188,7 +188,7 @@ jar {
         attributes([
                 "Specification-Title"     : "Zombie Survival Kit",
                 "Specification-Vendor"    : "Scarasol",
-                "Specification-Version"   : "2.0.0", // We are version 1 of ourselves
+                "Specification-Version"   : "2.0.1", // We are version 1 of ourselves
                 "Implementation-Title"    : project.name,
                 "Implementation-Version"  : project.jar.archiveVersion,
                 "Implementation-Vendor"   : "Scarasol",

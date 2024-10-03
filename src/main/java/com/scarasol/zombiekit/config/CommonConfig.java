@@ -49,6 +49,8 @@ public class CommonConfig {
     public static final ForgeConfigSpec.ConfigValue<Integer> WRENCH_COOLDOWN;
 
     public static final ForgeConfigSpec.ConfigValue<Boolean> FLY_FUNCTION;
+    public static final ForgeConfigSpec.ConfigValue<Integer> EXO_HUD_WIDTH;
+    public static final ForgeConfigSpec.ConfigValue<Integer> EXO_HUD_HEIGHT;
 
     public static final ForgeConfigSpec.ConfigValue<Boolean> SWEEP;
     public static final ForgeConfigSpec.ConfigValue<Double> SWEEP_MULTIPLIER;
@@ -158,6 +160,10 @@ public class CommonConfig {
         BUILDER.push("EXO suit");
         FLY_FUNCTION = BUILDER.comment("Whether the exoskeleton suit can fly.")
                 .define("Fly Function", true);
+        EXO_HUD_WIDTH = BUILDER.comment("X offset of exo suit HUD")
+                .defineInRange("X offset", 120, 0, 2048);
+        EXO_HUD_HEIGHT = BUILDER.comment("Y offset of exo suit HUD")
+                .defineInRange("Y offset", 90, 0, 2048);
         BUILDER.pop();
 
         BUILDER.push("Misc");
